@@ -1,0 +1,16 @@
+{
+  "unpublishedCollection": {
+    "name": "metabase_session",
+    "pageId": "v2_finance_invoice_creation",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tmetabaseSession: () => {\n\t\tsession.run(()=>{\n\t\t\tstoreValue('session', session.data.id)\n\t\t})\n\t}\n}",
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "v2_finance_invoice_creation_metabase_session",
+  "deleted": false,
+  "gitSyncId": "6231701cf1c0af1ceded5043_62e0f5b11d816b5fddf417cf"
+}
