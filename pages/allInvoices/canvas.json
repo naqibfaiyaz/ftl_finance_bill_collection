@@ -3724,7 +3724,7 @@
                       "rightColumn": 39,
                       "textSize": "0.875rem",
                       "widgetId": "160hjta4s3",
-                      "tableData": "[\n  {\n    \"Amount\": \"Invoice Amount(with VAT/AIT)\",\n    \"Actual Amount\": \"{{readyInvoiceTbl.selectedRow.total_price_after_vat_ait}}\",\n    \"Collected Amount\": \"{{readyInvoiceTbl.selectedRow.received_amount==null?0:parseInt(readyInvoiceTbl.selectedRow.received_amount)}}\",\n    \"Due receivable\": \"{{(parseInt(readyInvoiceTbl.selectedRow.total_price_after_vat_ait)- parseInt(alreadyCollectedVatAit.text)).toFixed(2)\n\t }}\"\n  },\n  {\n    \"Amount\": \"Net to RedX (w/o VAT AIT)\",\n    \"Actual Amount\": \"{{readyInvoiceTbl.selectedRow.trip_total_revenue}}\",\n    \"Collected Amount\": \"{{readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait==null?0:parseInt(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait)}}\",\n    \"Due receivable\": \"{{\n(parseInt(net_to_redx.text)- parseInt(alreadyCollectedWoVatAit.text)).toFixed(2)}}\"\n  },\n  {\n    \"Amount\": \"VAT\",\n    \"Actual Amount\": \"{{parseInt(readyInvoiceTbl.selectedRow.vat)}}\",\n    \"Collected Amount\": \"{{parseInt(readyInvoiceTbl.selectedRow.received_vat_amount)}}\",\n    \"Due receivable\": \"{{\n(parseInt(vat.text)- parseInt(alreadyCollectedVat.text)).toFixed(2)}}\"\n  },\n  {\n    \"Amount\": \"AIT\",\n    \"Actual Amount\": \"{{parseInt(readyInvoiceTbl.selectedRow.ait)}}\",\n    \"Collected Amount\": \"{{parseInt(readyInvoiceTbl.selectedRow.received_ait_amount)}}\",\n    \"Due receivable\": \"{{\n(parseInt(ait.text)- parseInt(alreadyCollectedAit.text)).toFixed(2)}}\"\n  }\n]",
+                      "tableData": "[\n  {\n    \"Amount\": \"Invoice Amount(with VAT/AIT)\",\n    \"Actual Amount\": \"{{readyInvoiceTbl.selectedRow.total_price_after_vat_ait}}\",\n    \"Collected Amount\": \"{{readyInvoiceTbl.selectedRow.received_amount==null?0:parseInt(readyInvoiceTbl.selectedRow.received_amount)}}\",\n    \"Due receivable\": \"{{(parseInt(readyInvoiceTbl.selectedRow.total_price_after_vat_ait)- parseInt(readyInvoiceTbl.selectedRow.received_amount)).toFixed(2)\n\t }}\"\n  },\n  {\n    \"Amount\": \"Net to RedX (w/o VAT AIT)\",\n    \"Actual Amount\": \"{{readyInvoiceTbl.selectedRow.trip_total_revenue}}\",\n    \"Collected Amount\": \"{{readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait==null?0:parseInt(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait)}}\",\n    \"Due receivable\": \"{{\n(parseInt(readyInvoiceTbl.selectedRow.trip_total_revenue)- parseInt(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait==null?0:parseInt(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait))).toFixed(2)}}\"\n  },\n  {\n    \"Amount\": \"VAT\",\n    \"Actual Amount\": \"{{readyInvoiceTbl.selectedRow.vat== null?'0':(parseInt(readyInvoiceTbl.selectedRow.vat))}}\",\n    \"Collected Amount\": \"{{parseInt(readyInvoiceTbl.selectedRow.received_vat_amount)}}\",\n    \"Due receivable\": \"{{\nreadyInvoiceTbl.selectedRow.vat== null?(0-parseInt(readyInvoiceTbl.selectedRow.received_vat_amount)):\n(parseInt(readyInvoiceTbl.selectedRow.vat)- parseInt(readyInvoiceTbl.selectedRow.received_vat_amount)).toFixed(2)}}\"\n  },\n  {\n    \"Amount\": \"AIT\",\n    \"Actual Amount\": \"{{readyInvoiceTbl.selectedRow.ait== null?'0':parseInt(readyInvoiceTbl.selectedRow.ait)}}\",\n    \"Collected Amount\": \"{{parseInt(readyInvoiceTbl.selectedRow.received_ait_amount)}}\",\n    \"Due receivable\": \"{{\nreadyInvoiceTbl.selectedRow.ait== null?(0-parseInt(readyInvoiceTbl.selectedRow.received_ait_amount)):\n(parseInt(readyInvoiceTbl.selectedRow.ait)- parseInt(readyInvoiceTbl.selectedRow.received_ait_amount)).toFixed(2)}}\"\n  }\n]",
                       "label": "Data",
                       "searchKey": "",
                       "parentId": "6scr5gwx8s",
@@ -4133,9 +4133,6 @@
                                 },
                                 {
                                   "key": "borderRadius"
-                                },
-                                {
-                                  "key": "validation"
                                 }
                               ],
                               "labelPosition": "Left",
@@ -4143,7 +4140,7 @@
                               "inputType": "TEXT",
                               "isDisabled": false,
                               "key": "tv860i56gz",
-                              "validation": "{{ \nparseInt(collected_ait.text)<=(parseInt(readyInvoiceTbl.selectedRow.ait) - parseInt(readyInvoiceTbl.selectedRow.received_ait_amount))\n}}",
+                              "validation": "",
                               "labelTextSize": "0.875rem",
                               "isRequired": true,
                               "isDeprecated": false,
@@ -4661,9 +4658,6 @@
                                 },
                                 {
                                   "key": "borderRadius"
-                                },
-                                {
-                                  "key": "validation"
                                 }
                               ],
                               "labelPosition": "Left",
@@ -4671,7 +4665,7 @@
                               "inputType": "TEXT",
                               "isDisabled": false,
                               "key": "tv860i56gz",
-                              "validation": "{{ \nparseInt(collected_vat.text)<=(parseInt(readyInvoiceTbl.selectedRow.vat) - parseInt(readyInvoiceTbl.selectedRow.received_vat_amount))\n}}",
+                              "validation": "",
                               "labelTextSize": "0.875rem",
                               "isRequired": true,
                               "isDeprecated": false,
