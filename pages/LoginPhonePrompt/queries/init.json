@@ -8,7 +8,6 @@
       "pluginId": "restapi-plugin",
       "organizationId": "6194a39143aaaf0225a809ea",
       "datasourceConfiguration": {
-        "sshProxyEnabled": false,
         "url": "https://redx.shopup.com.bd"
       },
       "invalids": [],

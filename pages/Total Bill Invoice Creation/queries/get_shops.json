@@ -49,7 +49,11 @@
       "formData": {}
     },
     "executeOnLoad": true,
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "headers[0].value"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
