@@ -4341,16 +4341,6 @@
                 "appsmith.URL.queryParams.InvoiceNumber"
               ],
               "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "genInvoicePageMokam_get_invoice_detail",
-              "name": "get_invoice_detail",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "appsmith.URL.queryParams.InvoiceNumber"
-              ],
-              "timeoutInMillisecond": 10000
             }
           ],
           [

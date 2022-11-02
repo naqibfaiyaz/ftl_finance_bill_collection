@@ -375,6 +375,21 @@
                                 },
                                 {
                                   "key": "primaryColumns.challan_added_by.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.audit_received_time.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.audit_sent_time.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.last_user_name.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.demurrage_cost.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.hq_resend_time.computedValue"
                                 }
                               ],
                               "leftColumn": 0,
@@ -412,17 +427,16 @@
                               "widgetName": "Table1",
                               "defaultPageSize": 0,
                               "columnOrder": [
-                                "challan_status",
                                 "customColumn2",
                                 "id",
+                                "driver_name",
+                                "unloading_point",
+                                "shop_name",
+                                "username",
+                                "user_id",
                                 "truck_number",
                                 "fleet_tracking_id",
                                 "challannumber",
-                                "shop_name",
-                                "driver_name",
-                                "unloading_point",
-                                "username",
-                                "user_id",
                                 "loading_point",
                                 "delivery_date",
                                 "fleet_type",
@@ -431,12 +445,18 @@
                                 "challanattachmenturl",
                                 "driver_phone",
                                 "challan_entered_at",
+                                "challan_status",
                                 "hq_sent_time",
                                 "hq_received_time",
                                 "finance_received_time",
                                 "created_at",
                                 "updated_at",
-                                "challan_added_by"
+                                "challan_added_by",
+                                "audit_received_time",
+                                "audit_sent_time",
+                                "last_user_name",
+                                "demurrage_cost",
+                                "hq_resend_time"
                               ],
                               "dynamicPropertyPathList": [
                                 {
@@ -714,7 +734,7 @@
                                   "isCellVisible": true,
                                   "isDerived": true,
                                   "label": "Finance_received_status",
-                                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( Fetch_challan_data.data.filter(a=>a.fleet_tracking_id == currentRow.fleet_tracking_id && a.challan_status == 'sent_to_finance')[0]?'receive_pending':(Fetch_challan_data.data.filter(a=>a.fleet_tracking_id == currentRow.fleet_tracking_id)[0].challan_status)))}}",
+                                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( Fetch_challan_data.data.filter(a=>a.fleet_tracking_id == currentRow.fleet_tracking_id && (a.challan_status == 'sent_to_finance'|| a.challan_status == 'approved_by_audit' ))[0]?'receive_pending':(Fetch_challan_data.data.filter(a=>a.fleet_tracking_id == currentRow.fleet_tracking_id)[0].challan_status)))}}",
                                   "buttonStyle": "rgb(3, 179, 101)",
                                   "labelColor": "#FFFFFF",
                                   "cellBackground": "{{Table1.sanitizedTableData.map((currentRow) => ( Fetch_challan_data.data.filter(a=>a.fleet_tracking_id == currentRow.fleet_tracking_id && a.challan_status == 'received_by_finance')[0]?'#dcfce7':'#fca5a5'))}}",
@@ -732,7 +752,7 @@
                                   "textSize": "0.875rem",
                                   "enableFilter": true,
                                   "enableSort": true,
-                                  "isVisible": true,
+                                  "isVisible": false,
                                   "isDisabled": false,
                                   "isCellVisible": true,
                                   "isDerived": false,
@@ -929,6 +949,101 @@
                                   "label": "challan_added_by",
                                   "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.challan_added_by))}}",
                                   "cellBackground": ""
+                                },
+                                "audit_received_time": {
+                                  "index": 24,
+                                  "width": 150,
+                                  "id": "audit_received_time",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "audit_received_time",
+                                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.audit_received_time))}}",
+                                  "cellBackground": ""
+                                },
+                                "audit_sent_time": {
+                                  "index": 25,
+                                  "width": 150,
+                                  "id": "audit_sent_time",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "audit_sent_time",
+                                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.audit_sent_time))}}",
+                                  "cellBackground": ""
+                                },
+                                "last_user_name": {
+                                  "index": 26,
+                                  "width": 150,
+                                  "id": "last_user_name",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "last_user_name",
+                                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.last_user_name))}}",
+                                  "cellBackground": ""
+                                },
+                                "demurrage_cost": {
+                                  "index": 27,
+                                  "width": 150,
+                                  "id": "demurrage_cost",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "demurrage_cost",
+                                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.demurrage_cost))}}",
+                                  "cellBackground": ""
+                                },
+                                "hq_resend_time": {
+                                  "index": 28,
+                                  "width": 150,
+                                  "id": "hq_resend_time",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "hq_resend_time",
+                                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.hq_resend_time))}}",
+                                  "cellBackground": ""
                                 }
                               },
                               "onRowSelected": "",
@@ -946,7 +1061,7 @@
                                   "isCellVisible": true,
                                   "isDerived": true,
                                   "label": "Finance_received_status",
-                                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( Fetch_challan_data.data.filter(a=>a.fleet_tracking_id == currentRow.fleet_tracking_id && a.challan_status == 'sent_to_finance')[0]?'receive_pending':(Fetch_challan_data.data.filter(a=>a.fleet_tracking_id == currentRow.fleet_tracking_id)[0].challan_status)))}}",
+                                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( Fetch_challan_data.data.filter(a=>a.fleet_tracking_id == currentRow.fleet_tracking_id && (a.challan_status == 'sent_to_finance'|| a.challan_status == 'approved_by_audit' ))[0]?'receive_pending':(Fetch_challan_data.data.filter(a=>a.fleet_tracking_id == currentRow.fleet_tracking_id)[0].challan_status)))}}",
                                   "buttonStyle": "rgb(3, 179, 101)",
                                   "labelColor": "#FFFFFF",
                                   "cellBackground": "{{Table1.sanitizedTableData.map((currentRow) => ( Fetch_challan_data.data.filter(a=>a.fleet_tracking_id == currentRow.fleet_tracking_id && a.challan_status == 'received_by_finance')[0]?'#dcfce7':'#fca5a5'))}}",
@@ -958,7 +1073,7 @@
                               "rightColumn": 64,
                               "textSize": "0.875rem",
                               "widgetId": "dqn86z0u7m",
-                              "tableData": "{{Fetch_challan_data.data.filter(a=>a.challan_status=='sent_to_finance')}}",
+                              "tableData": "{{Fetch_challan_data.data.filter(a=>a.challan_status=='sent_to_finance' || a.challan_status =='approved_by_audit' )}}",
                               "label": "Data",
                               "searchKey": "",
                               "parentId": "tn2gvxwux5",
@@ -1988,7 +2103,7 @@
                     {
                       "boxShadow": "none",
                       "widgetName": "Button2",
-                      "onClick": "{{\nTabs1.selectedTab=='HO sent challans'?\n(Fetch_challan_data.run(() => (Fetch_challan_data.data.length-1>0?(showAlert('Data fetched successfully','success')):(showAlert('No data found for selected date range','info'))), () => showAlert('Data fetching failed','error'))):(Fetch_challan_data.run(() => (Fetch_challan_data.data.length-1>0?(showAlert('Data fetched successfully','success')):(showAlert('No data found for selected date range','info'))),() => showAlert('Data fetching failed','error')))\n}}",
+                      "onClick": "{{\n(Fetch_challan_data.run(() => (Fetch_challan_data.data.length-1>0?(showAlert('Data fetched successfully','success')):(showAlert('No data found for selected date range','info'))),() => showAlert('Data fetching failed','error')))\n}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "dynamicPropertyPathList": [
                         {
@@ -2071,21 +2186,7 @@
             }
           ]
         },
-        "layoutOnLoadActions": [
-          [
-            {
-              "id": "Challan hardcopy status_Fetch_challan_data",
-              "name": "Fetch_challan_data",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "moment(start.selectedDate).format('YYYY-MM-DD')",
-                "moment(end.selectedDate).format('YYYY-MM-DD')"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ]
-        ],
+        "layoutOnLoadActions": [],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
         "id": "Challan hardcopy status",
