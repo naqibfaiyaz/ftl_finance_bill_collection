@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT * FROM finance_trip_invoices where status in ({{isInvalidCheckBox.isChecked==true?\"'Invalid'\":\"'Ready-to-send', 'receiving-in-progress','Bill-accepted-by-client','receiving-complete'\"}})\nand\n{{isInvalidCheckBoxCopy.isChecked==true?\"((total_price_after_vat_ait - received_amount)<=0 or status ='receiving-complete')\":\"(total_price_after_vat_ait - received_amount)>0\"}}\nand trip_month = '{{moment(DatePicker1.selectedDate).format(\"MMM-YY\")}}'",
+      "body": "SELECT * FROM finance_trip_invoices where status in ({{isInvalidCheckBox.isChecked==true?\"'Invalid'\":\"'Ready-to-send', 'receiving-in-progress','Bill-accepted-by-client','receiving-complete'\"}})\nand\n{{isInvalidCheckBoxCopy.isChecked==true?\"((total_price_after_vat_ait - received_amount)<=0 or status ='receiving-complete')\":\"(total_price_after_vat_ait - received_amount)>0\"}}\nand trip_month = '{{moment(DatePicker1.selectedDate).format(\"MMM-YY\")}}'\n\nand invoice_number ='SFL-AUG-22-CR-2143/1'",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
