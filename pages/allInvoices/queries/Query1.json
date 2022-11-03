@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "UPDATE finance_trip_invoices set  received_amount = 0, last_user_data = null, last_collection_medium = null, last_trx_id = null,\nlast_proof_type = null, received_vat_amount = 0, received_ait_amount = 0, vat_proof_type = null, ait_proof_type = null,\nvat_collection_medium = null, ait_collection_medium = NULL, received_amount_wo_vat_ait = 0, hard_copy_of_bill = null, hard_copy_receiving_date= null, status = 'Ready-to-send'\nwhere id = 2666",
+      "body": "UPDATE finance_trip_invoices set received_amount = 0, last_user_data = null, last_collection_medium = null, last_trx_id = null,\nlast_proof_type = null, received_vat_amount = 0, received_ait_amount = 0, vat_proof_type = null, ait_proof_type = null,\nvat_collection_medium = null, ait_collection_medium = NULL, received_amount_wo_vat_ait = 0, hard_copy_of_bill = null, hard_copy_receiving_date= null, status = 'Ready-to-send'\nwhere invoice_number in ('ZSI-OCT-22-2372','DBTL-JUNE-22-CR-2048','MSM-OCT-22-2353','EGPF-OCT-22-2283/17','EGTL-FEB-22-CR-552','TII-JUN-22-CR-1080/1')",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {

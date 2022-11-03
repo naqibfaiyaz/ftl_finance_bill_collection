@@ -3541,7 +3541,7 @@
                               "inputType": "NUMBER",
                               "isDisabled": false,
                               "key": "mebc20zfb0",
-                              "validation": "{{\nparseInt(collected_net_to_redx.text) <= (parseInt(net_to_redx.text)- parseInt(alreadyCollectedWoVatAit.text)).toFixed(2)}}",
+                              "validation": "{{\nparseInt(collected_net_to_redx.text) <= (parseInt(readyInvoiceTbl.selectedRow.trip_total_revenue)- parseInt(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait)).toFixed(2)}}",
                               "labelTextSize": "0.875rem",
                               "isRequired": true,
                               "rightColumn": 33,
