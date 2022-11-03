@@ -5018,7 +5018,7 @@
                       "version": 3,
                       "totalRecordsCount": "200000",
                       "isLoading": false,
-                      "onSearchTextChanged": "{{storeValue('fleet_tracking_id',Table1.selectedRow)}}",
+                      "onSearchTextChanged": "{{storeValue('fleet_tracking_id',Table2.selectedRow)}}",
                       "childStylesheet": {
                         "button": {
                           "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -5075,7 +5075,8 @@
                         "vendor_name": 124,
                         "transport_team_member_name": 196,
                         "demurrage_fee": 158,
-                        "demurrage_remarks": 217
+                        "demurrage_remarks": 217,
+                        "fleet_requested_at": 188
                       },
                       "widgetName": "Table2",
                       "defaultPageSize": 0,
@@ -6743,14 +6744,17 @@
           ],
           [
             {
-              "id": "Total Bill Invoice Creation_get_shops",
-              "name": "get_shops",
+              "id": "Total Bill Invoice Creation_get_parcel_details",
+              "name": "get_parcel_details",
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [
-                "appsmith.store.access_token"
+                "Table1.selectedRow.SHOP_ID",
+                "appsmith.store.session",
+                "moment(DatePicker1.selectedDate).format('YYYY-MM-DD')",
+                "moment(DatePicker1Copy.selectedDate).format('YYYY-MM-DD')"
               ],
-              "timeoutInMillisecond": 10000
+              "timeoutInMillisecond": 100000000
             },
             {
               "id": "Total Bill Invoice Creation_metabase_session.metabaseSession",
@@ -6786,19 +6790,18 @@
                 "parseInt(search_shop_id.selectedOptionValue)"
               ],
               "timeoutInMillisecond": 10000
-            },
+            }
+          ],
+          [
             {
-              "id": "Total Bill Invoice Creation_get_parcel_details",
-              "name": "get_parcel_details",
+              "id": "Total Bill Invoice Creation_get_shops",
+              "name": "get_shops",
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [
-                "Table1.selectedRow.SHOP_ID",
-                "appsmith.store.session",
-                "moment(DatePicker1.selectedDate).format('YYYY-MM-DD')",
-                "moment(DatePicker1Copy.selectedDate).format('YYYY-MM-DD')"
+                "appsmith.store.access_token"
               ],
-              "timeoutInMillisecond": 100000000
+              "timeoutInMillisecond": 10000
             }
           ]
         ],
