@@ -1356,6 +1356,21 @@
                                 },
                                 {
                                   "key": "primaryColumns.customColumn1.cellBackground"
+                                },
+                                {
+                                  "key": "primaryColumns.audit_received_time.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.audit_sent_time.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.last_user_name.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.demurrage_cost.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.hq_resend_time.computedValue"
                                 }
                               ],
                               "leftColumn": 0,
@@ -1393,8 +1408,6 @@
                               "widgetName": "Table1Copy",
                               "defaultPageSize": 0,
                               "columnOrder": [
-                                "customColumn1",
-                                "challan_status",
                                 "id",
                                 "driver_name",
                                 "unloading_point",
@@ -1412,12 +1425,19 @@
                                 "challanattachmenturl",
                                 "driver_phone",
                                 "challan_entered_at",
+                                "challan_status",
                                 "hq_sent_time",
                                 "hq_received_time",
                                 "finance_received_time",
                                 "created_at",
                                 "updated_at",
-                                "challan_added_by"
+                                "challan_added_by",
+                                "audit_received_time",
+                                "audit_sent_time",
+                                "last_user_name",
+                                "demurrage_cost",
+                                "hq_resend_time",
+                                "customColumn1"
                               ],
                               "dynamicPropertyPathList": [
                                 {
@@ -1908,6 +1928,101 @@
                                   "buttonStyle": "rgb(3, 179, 101)",
                                   "cellBackground": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( Fetch_challan_data.data.filter(a=>a.fleet_tracking_id == currentRow.fleet_tracking_id && a.challan_status == 'received_by_finance')[0]?'#dcfce7':'#fca5a5'))}}",
                                   "labelColor": "#FFFFFF"
+                                },
+                                "audit_received_time": {
+                                  "index": 24,
+                                  "width": 150,
+                                  "id": "audit_received_time",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "audit_received_time",
+                                  "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.audit_received_time))}}",
+                                  "cellBackground": ""
+                                },
+                                "audit_sent_time": {
+                                  "index": 25,
+                                  "width": 150,
+                                  "id": "audit_sent_time",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "audit_sent_time",
+                                  "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.audit_sent_time))}}",
+                                  "cellBackground": ""
+                                },
+                                "last_user_name": {
+                                  "index": 26,
+                                  "width": 150,
+                                  "id": "last_user_name",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "last_user_name",
+                                  "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.last_user_name))}}",
+                                  "cellBackground": ""
+                                },
+                                "demurrage_cost": {
+                                  "index": 27,
+                                  "width": 150,
+                                  "id": "demurrage_cost",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "demurrage_cost",
+                                  "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.demurrage_cost))}}",
+                                  "cellBackground": ""
+                                },
+                                "hq_resend_time": {
+                                  "index": 28,
+                                  "width": 150,
+                                  "id": "hq_resend_time",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "hq_resend_time",
+                                  "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.hq_resend_time))}}",
+                                  "cellBackground": ""
                                 }
                               },
                               "onRowSelected": "",
@@ -2081,7 +2196,7 @@
                       "key": "nfp5ayui8t",
                       "labelTextSize": "0.875rem",
                       "isRequired": false,
-                      "defaultDate": "2022-07-14T09:34:06.424Z",
+                      "defaultDate": "2022-11-03T13:56:47.4747+06:00",
                       "isDeprecated": false,
                       "rightColumn": 25,
                       "widgetId": "liq0ickmyv",
