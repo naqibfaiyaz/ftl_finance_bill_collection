@@ -19,7 +19,7 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 64,
+          "version": 65,
           "minHeight": 860,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
@@ -2612,22 +2612,24 @@
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "collection_records_get_shops",
-              "name": "get_shops",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "appsmith.store.access_token"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
               "id": "collection_records_get_trip_collectables",
               "name": "get_trip_collectables",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
                 "invoice_table.selectedRows.map((a)=>a.id).join()"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "collection_records_get_shops",
+              "name": "get_shops",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "appsmith.store.access_token"
               ],
               "timeoutInMillisecond": 10000
             }

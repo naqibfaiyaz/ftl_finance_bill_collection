@@ -19,7 +19,7 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 64,
+          "version": 65,
           "minHeight": 730,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
@@ -6744,17 +6744,14 @@
           ],
           [
             {
-              "id": "Total Bill Invoice Creation_get_parcel_details",
-              "name": "get_parcel_details",
+              "id": "Total Bill Invoice Creation_get_shops",
+              "name": "get_shops",
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [
-                "Table1.selectedRow.SHOP_ID",
-                "appsmith.store.session",
-                "moment(DatePicker1.selectedDate).format('YYYY-MM-DD')",
-                "moment(DatePicker1Copy.selectedDate).format('YYYY-MM-DD')"
+                "appsmith.store.access_token"
               ],
-              "timeoutInMillisecond": 100000000
+              "timeoutInMillisecond": 10000
             },
             {
               "id": "Total Bill Invoice Creation_metabase_session.metabaseSession",
@@ -6790,18 +6787,19 @@
                 "parseInt(search_shop_id.selectedOptionValue)"
               ],
               "timeoutInMillisecond": 10000
-            }
-          ],
-          [
+            },
             {
-              "id": "Total Bill Invoice Creation_get_shops",
-              "name": "get_shops",
+              "id": "Total Bill Invoice Creation_get_parcel_details",
+              "name": "get_parcel_details",
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [
-                "appsmith.store.access_token"
+                "Table1.selectedRow.SHOP_ID",
+                "appsmith.store.session",
+                "moment(DatePicker1.selectedDate).format('YYYY-MM-DD')",
+                "moment(DatePicker1Copy.selectedDate).format('YYYY-MM-DD')"
               ],
-              "timeoutInMillisecond": 10000
+              "timeoutInMillisecond": 100000000
             }
           ]
         ],
