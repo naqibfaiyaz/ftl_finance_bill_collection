@@ -19,7 +19,7 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 64,
+          "version": 65,
           "minHeight": 900,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
@@ -3284,6 +3284,18 @@
           ],
           [
             {
+              "id": "genInvoicePageRedX_get_invoice",
+              "name": "get_invoice",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "appsmith.URL.queryParams.InvoiceNumber"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
               "id": "genInvoicePageRedX_generate_pdf",
               "name": "generate_pdf",
               "confirmBeforeExecute": false,
@@ -3307,18 +3319,6 @@
               ],
               "timeoutInMillisecond": 10000
             },
-            {
-              "id": "genInvoicePageRedX_get_invoice",
-              "name": "get_invoice",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "appsmith.URL.queryParams.InvoiceNumber"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
             {
               "id": "genInvoicePageRedX_get_shop_data",
               "name": "get_shop_data",
