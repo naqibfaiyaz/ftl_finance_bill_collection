@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "Query1",
+    "name": "update_query_for_testing",
     "datasource": {
       "name": "Postgres_latest",
       "pluginId": "postgres-plugin",
@@ -37,7 +37,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "allInvoices_Query1",
+  "id": "allInvoices_update_query_for_testing",
   "deleted": false,
   "gitSyncId": "6231701cf1c0af1ceded5043_635ff0320078c7553278c502"
 }
