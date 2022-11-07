@@ -350,7 +350,7 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button1Copy",
-                      "onClick": "{{post_collection_declaration.run(()=>{get_collection_declarations.run(()=>closeModal('collection_declaration_add'))})}}",
+                      "onClick": "{{post_collection_declaration.run(()=>{get_collection_declarations_v2.run(()=>closeModal('collection_declaration_add'))})}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "dynamicPropertyPathList": [
                         {
@@ -1401,7 +1401,7 @@
                       "rightColumn": 64,
                       "textSize": "0.875rem",
                       "widgetId": "se24qe51ag",
-                      "tableData": "{{get_collection_declarations.data}}",
+                      "tableData": "{{get_collection_declarations_v2.data}}",
                       "label": "Data",
                       "searchKey": "",
                       "parentId": "jrh8bb92cq",
@@ -1821,7 +1821,7 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button1",
-                      "onClick": "{{put_collection_declaration.run(()=>{get_collection_declarations.run(()=>closeModal('collection_declaration_add'))})}}",
+                      "onClick": "{{put_collection_declaration_v2.run(()=>{get_collection_declarations_v2.run(()=>closeModal('collection_declaration_add'))})}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "dynamicPropertyPathList": [
                         {
@@ -1882,7 +1882,7 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button2",
-                      "onClick": "{{put_collection_declaration.run(()=>{\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tget_collection_declarations.run(()=>{navigateTo('collection_records',{\n\tshop_id: shop_id_data_old.selectedOptionValue,\n\tcollection_id: put_collection_declaration.data[0].customer_collection_declation_id\n}, 'NEW_WINDOW')\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tcloseModal('collection_declaration_edit')})\t\t\t\t\t})}}",
+                      "onClick": "{{put_collection_declaration_v2.run(()=>{\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tget_collection_declarations_v2.run(()=>{navigateTo('collection_records',{\n\tshop_id: shop_id_data_old.selectedOptionValue,\n\tcollection_id: put_collection_declaration_v2.data[0].customer_collection_declation_id\n}, 'NEW_WINDOW')\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tcloseModal('collection_declaration_edit')})\t\t\t\t\t})}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "dynamicPropertyPathList": [
                         {
@@ -2787,7 +2787,8 @@
         "layoutOnLoadActions": [
           [
             {
-              "name": "get_collection_declarations",
+              "id": "collection declaration_get_collection_declarations_v2",
+              "name": "get_collection_declarations_v2",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],
