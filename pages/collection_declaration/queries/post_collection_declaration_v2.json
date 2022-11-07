@@ -13,7 +13,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "collection declaration",
+    "pageId": "collection_declaration",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -49,7 +49,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "collection declaration_post_collection_declaration_v2",
+  "id": "collection_declaration_post_collection_declaration_v2",
   "deleted": false,
   "gitSyncId": "6360ef20d33b91674415f83c_63636f53f30f9143c9f06873"
 }

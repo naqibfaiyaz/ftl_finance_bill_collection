@@ -1,6 +1,6 @@
 {
   "unpublishedPage": {
-    "name": "collection declaration",
+    "name": "collection_declaration",
     "slug": "collection-declaration",
     "layouts": [
       {
@@ -2787,7 +2787,7 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "collection declaration_get_shops_v4",
+              "id": "collection_declaration_get_shops_v4",
               "name": "get_shops_v4",
               "confirmBeforeExecute": false,
               "pluginType": "API",
@@ -2799,7 +2799,7 @@
           ],
           [
             {
-              "id": "collection declaration_get_collection_declarations_v2",
+              "id": "collection_declaration_get_collection_declarations_v2",
               "name": "get_collection_declarations_v2",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
@@ -2810,7 +2810,7 @@
         ],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
-        "id": "collection declaration",
+        "id": "collection_declaration",
         "deleted": false,
         "policies": [],
         "userPermissions": []

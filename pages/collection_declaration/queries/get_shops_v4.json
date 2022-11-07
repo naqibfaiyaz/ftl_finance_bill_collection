@@ -17,7 +17,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "collection declaration",
+    "pageId": "collection_declaration",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -65,7 +65,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "collection declaration_get_shops_v4",
+  "id": "collection_declaration_get_shops_v4",
   "deleted": false,
   "gitSyncId": "6360ef20d33b91674415f83c_63636ce1f30f9143c9f067c4"
 }
