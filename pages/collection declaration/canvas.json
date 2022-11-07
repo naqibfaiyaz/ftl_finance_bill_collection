@@ -1050,6 +1050,9 @@
                         },
                         {
                           "key": "primaryColumns.customColumn3.menuItems.menuItemj1ay9btva5.isDisabled"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn3.menuItems.menuItemz9cacajq8p.onClick"
                         }
                       ],
                       "displayName": "Table",
@@ -1382,7 +1385,7 @@
                               "widgetId": "lfmt4cghmq",
                               "isDisabled": false,
                               "isVisible": true,
-                              "onClick": "{{showModal('Modal1')}}"
+                              "onClick": "{{get_history_collection.run(()=>{showModal('collection_history')})}}"
                             }
                           },
                           "iconAlign": "left",
@@ -2296,7 +2299,7 @@
             },
             {
               "boxShadow": "none",
-              "widgetName": "Modal1",
+              "widgetName": "collection_history",
               "isCanvas": true,
               "displayName": "Modal",
               "iconSVG": "/static/media/icon.4975978e9a961fb0bfb4e38de7ecc7c5.svg",

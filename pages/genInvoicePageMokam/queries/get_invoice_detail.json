@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "get_trip_collectables",
+    "name": "get_invoice_detail",
     "datasource": {
       "name": "Postgres_latest",
       "pluginId": "postgres-plugin",
@@ -13,20 +13,20 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "collection_records",
+    "pageId": "genInvoicePageMokam",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT * FROM trip_level_invoice where finance_trip_invoice_id in ({{invoice_table.selectedRows.map((a)=>a.id).join()}})",
+      "body": "SELECT * FROM trip_invoices_collection where invoice_number={{appsmith.URL.queryParams.InvoiceNumber}} order by serial_for_challan",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
-          "value": false
+          "value": true
         }
       ]
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -36,14 +36,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "invoice_table.selectedRows.map((a)=>a.id).join()"
+      "appsmith.URL.queryParams.InvoiceNumber"
     ],
     "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "collection_records_get_trip_collectables",
+  "id": "genInvoicePageMokam_get_invoice_detail",
   "deleted": false,
-  "gitSyncId": "6231701cf1c0af1ceded5043_6360b0bbeb761c796cb91f21"
+  "gitSyncId": "6231701cf1c0af1ceded5043_6312fa7f9316f9675669b38c"
 }

@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "Fetch_challan_data",
+    "name": "Query3",
     "datasource": {
       "name": "Postgres_latest",
       "pluginId": "postgres-plugin",
@@ -13,12 +13,12 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Challan hardcopy status",
+    "pageId": "Total Bill Invoice Creation",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "select * from challan_movement where date(hq_sent_time) between {{moment(start.selectedDate).format('YYYY-MM-DD')}} and {{moment(end.selectedDate).format('YYYY-MM-DD')}}\nand challan_status !='duplicate_entry'",
+      "body": "SELECT * FROM public.\"fleet_inventory\" LIMIT 10;",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -26,25 +26,17 @@
         }
       ]
     },
-    "executeOnLoad": true,
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
+    "executeOnLoad": false,
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      "moment(end.selectedDate).format('YYYY-MM-DD')",
-      "moment(start.selectedDate).format('YYYY-MM-DD')"
-    ],
+    "jsonPathKeys": [],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Challan hardcopy status_Fetch_challan_data",
+  "id": "Total Bill Invoice Creation_Query3",
   "deleted": false,
-  "gitSyncId": "6231701cf1c0af1ceded5043_631063beaddcad7cb61f895b"
+  "gitSyncId": "6231701cf1c0af1ceded5043_6350f38f2b79bf615d820162"
 }
