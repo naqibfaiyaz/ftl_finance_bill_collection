@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "get_collection_declarations",
+    "name": "get_collection_declarations_v2",
     "datasource": {
       "name": "Postgres_latest",
       "pluginId": "postgres-plugin",
@@ -37,7 +37,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "collection declaration_get_collection_declarations",
+  "id": "collection declaration_get_collection_declarations_v2",
   "deleted": false,
   "gitSyncId": "6360ef20d33b91674415f83c_63636b3df30f9143c9f067a5"
 }
