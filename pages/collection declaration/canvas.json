@@ -867,7 +867,7 @@
                   "widgetName": "Canvas1",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 680,
+                  "bottomRow": 710,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
@@ -889,7 +889,7 @@
                       "borderColor": "#E0DEDE",
                       "isVisibleDownload": true,
                       "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
-                      "topRow": 9,
+                      "topRow": 12,
                       "isSortable": true,
                       "type": "TABLE_WIDGET_V2",
                       "inlineEditingSaveOption": "ROW_LEVEL",
@@ -1053,7 +1053,7 @@
                         }
                       ],
                       "displayName": "Table",
-                      "bottomRow": 66,
+                      "bottomRow": 69,
                       "columnWidthMap": {
                         "task": 245,
                         "step": 62,
