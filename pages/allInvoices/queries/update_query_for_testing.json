@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "Query12",
+    "name": "update_query_for_testing",
     "datasource": {
       "name": "Postgres_latest",
       "pluginId": "postgres-plugin",
@@ -13,12 +13,12 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Total Bill Invoice Creation",
+    "pageId": "allInvoices",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT * FROM public.\"invocie_collectable_received\" LIMIT 10;",
+      "body": "UPDATE finance_trip_invoices set received_amount = 0, last_user_data = null, last_collection_medium = null, last_trx_id = null,\nlast_proof_type = null, received_vat_amount = 0, received_ait_amount = 0, vat_proof_type = null, ait_proof_type = null,\nvat_collection_medium = null, ait_collection_medium = NULL, received_amount_wo_vat_ait = 0, hard_copy_of_bill = null, hard_copy_receiving_date= null, status = 'Ready-to-send'\nwhere invoice_number in ('ZSI-OCT-22-2372','DBTL-JUNE-22-CR-2048','MSM-OCT-22-2353','EGPF-OCT-22-2283/17','EGTL-FEB-22-CR-552','TII-JUN-22-CR-1080/1')",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -27,6 +27,7 @@
       ]
     },
     "executeOnLoad": false,
+    "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
     "messages": [],
@@ -36,7 +37,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Total Bill Invoice Creation_Query12",
+  "id": "allInvoices_update_query_for_testing",
   "deleted": false,
-  "gitSyncId": "6231701cf1c0af1ceded5043_6350f4c42b79bf615d820172"
+  "gitSyncId": "6231701cf1c0af1ceded5043_635ff0320078c7553278c502"
 }

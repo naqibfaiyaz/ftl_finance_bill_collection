@@ -5018,7 +5018,7 @@
                       "version": 3,
                       "totalRecordsCount": "200000",
                       "isLoading": false,
-                      "onSearchTextChanged": "{{storeValue('fleet_tracking_id',Table1.selectedRow)}}",
+                      "onSearchTextChanged": "{{storeValue('fleet_tracking_id',Table2.selectedRow)}}",
                       "childStylesheet": {
                         "button": {
                           "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -5075,7 +5075,8 @@
                         "vendor_name": 124,
                         "transport_team_member_name": 196,
                         "demurrage_fee": 158,
-                        "demurrage_remarks": 217
+                        "demurrage_remarks": 217,
+                        "fleet_requested_at": 188
                       },
                       "widgetName": "Table2",
                       "defaultPageSize": 0,
@@ -5499,7 +5500,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": false,
+                          "isVisible": true,
                           "isDisabled": false,
                           "isCellVisible": true,
                           "isDerived": false,
@@ -6147,7 +6148,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": false,
+                          "isVisible": true,
                           "isDisabled": false,
                           "isCellVisible": true,
                           "isDerived": false,

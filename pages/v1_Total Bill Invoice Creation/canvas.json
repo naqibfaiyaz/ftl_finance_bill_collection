@@ -19,7 +19,7 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 64,
+          "version": 65,
           "minHeight": 730,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
@@ -7743,17 +7743,14 @@
           ],
           [
             {
-              "id": "v1_Total Bill Invoice Creation_get_parcel_details",
-              "name": "get_parcel_details",
+              "id": "v1_Total Bill Invoice Creation_get_shops",
+              "name": "get_shops",
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [
-                "appsmith.store.session",
-                "Table1.selectedRow.SHOP_ID",
-                "moment(DatePicker1Copy.selectedDate).format('YYYY-MM-DD')",
-                "moment(DatePicker1.selectedDate).format('YYYY-MM-DD')"
+                "appsmith.store.access_token"
               ],
-              "timeoutInMillisecond": 100000000
+              "timeoutInMillisecond": 10000
             },
             {
               "id": "v1_Total Bill Invoice Creation_metabase_session.metabaseSession",
@@ -7782,12 +7779,25 @@
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
-                "parseInt(search_shop_id.selectedOptionValue)",
                 "\"'\"+get_parcel_details_v1.data.map((a)=>a.tracking_id).join(\"','\")+\"'\"",
+                "moment(DatePicker1.selectedDate).format('YYYY-MM-DD')",
                 "moment(DatePicker1Copy.selectedDate).format('YYYY-MM-DD')",
-                "moment(DatePicker1.selectedDate).format('YYYY-MM-DD')"
+                "parseInt(search_shop_id.selectedOptionValue)"
               ],
               "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "v1_Total Bill Invoice Creation_get_parcel_details",
+              "name": "get_parcel_details",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "Table1.selectedRow.SHOP_ID",
+                "appsmith.store.session",
+                "moment(DatePicker1.selectedDate).format('YYYY-MM-DD')",
+                "moment(DatePicker1Copy.selectedDate).format('YYYY-MM-DD')"
+              ],
+              "timeoutInMillisecond": 100000000
             }
           ],
           [
@@ -7798,22 +7808,10 @@
               "pluginType": "API",
               "jsonPathKeys": [
                 "appsmith.store.session",
-                "parseInt(Table1.selectedRow.SHOP_ID)",
-                "search_fleetIdCopy.text",
+                "moment(DatePicker1.selectedDate).format('YYYY-MM-DD')",
                 "moment(DatePicker1Copy.selectedDate).format('YYYY-MM-DD')",
-                "moment(DatePicker1.selectedDate).format('YYYY-MM-DD')"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "v1_Total Bill Invoice Creation_get_shops",
-              "name": "get_shops",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "appsmith.store.access_token"
+                "parseInt(Table1.selectedRow.SHOP_ID)",
+                "search_fleetIdCopy.text"
               ],
               "timeoutInMillisecond": 10000
             }

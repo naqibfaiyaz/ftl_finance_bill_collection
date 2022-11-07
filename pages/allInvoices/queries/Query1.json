@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "UPDATE finance_trip_invoices set  received_amount = 0, last_user_data = null, last_collection_medium = null, last_trx_id = null,\nlast_proof_type = null, received_vat_amount = 0, received_ait_amount = 0, vat_proof_type = null, ait_proof_type = null,\nvat_collection_medium = null, ait_collection_medium = NULL, received_amount_wo_vat_ait = 0, status = 'receiving-in-progress'\nwhere id = 2666",
+      "body": "SELECT * from finance_trip_invoices where received_amount_wo_vat_ait = 0 and (received_amount<  total_price_after_vat_ait)\n\n--and trip_month not in ('Sep-22','Oct-22','Nov-22')\n\nand trip_counts is null \nand (vat is null or ait is null)",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -39,5 +39,5 @@
   },
   "id": "allInvoices_Query1",
   "deleted": false,
-  "gitSyncId": "6231701cf1c0af1ceded5043_635ff0320078c7553278c502"
+  "gitSyncId": "6231701cf1c0af1ceded5043_636783ae0c3174227f40b86e"
 }

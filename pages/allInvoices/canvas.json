@@ -27,920 +27,6 @@
           "children": [
             {
               "boxShadow": "none",
-              "widgetName": "reserve",
-              "isCanvas": true,
-              "displayName": "Modal",
-              "iconSVG": "/static/media/icon.4975978e.svg",
-              "topRow": 84,
-              "bottomRow": 84,
-              "parentRowSpace": 1,
-              "type": "MODAL_WIDGET",
-              "hideCard": false,
-              "shouldScrollContents": true,
-              "animateLoading": true,
-              "parentColumnSpace": 1,
-              "leftColumn": 0,
-              "dynamicBindingPathList": [],
-              "children": [
-                {
-                  "boxShadow": "none",
-                  "widgetName": "Canvas4Copy",
-                  "displayName": "Canvas",
-                  "topRow": 0,
-                  "bottomRow": 840,
-                  "parentRowSpace": 1,
-                  "type": "CANVAS_WIDGET",
-                  "canExtend": true,
-                  "hideCard": true,
-                  "shouldScrollContents": false,
-                  "minHeight": 850,
-                  "parentColumnSpace": 1,
-                  "dynamicTriggerPathList": [],
-                  "leftColumn": 0,
-                  "dynamicBindingPathList": [],
-                  "children": [
-                    {
-                      "boxShadow": "none",
-                      "widgetName": "Text2Copy3",
-                      "dynamicPropertyPathList": [
-                        {
-                          "key": "fontSize"
-                        }
-                      ],
-                      "displayName": "Text",
-                      "iconSVG": "/static/media/icon.97c59b52.svg",
-                      "topRow": 36,
-                      "bottomRow": 40,
-                      "parentRowSpace": 10,
-                      "type": "TEXT_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "parentColumnSpace": 13.21875,
-                      "dynamicTriggerPathList": [],
-                      "overflow": "NONE",
-                      "fontFamily": "System Default",
-                      "leftColumn": 14,
-                      "dynamicBindingPathList": [],
-                      "truncateButtonColor": "#FFC13D",
-                      "text": "Already Collected with vat/ait",
-                      "key": "pphqnvj989",
-                      "labelTextSize": "0.875rem",
-                      "rightColumn": 29,
-                      "textAlign": "LEFT",
-                      "widgetId": "c07hml4lkm",
-                      "isVisible": true,
-                      "fontStyle": "BOLD",
-                      "textColor": "#231F20",
-                      "version": 1,
-                      "parentId": "59stemw18n",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "borderRadius": "0px",
-                      "fontSize": "0.875rem"
-                    },
-                    {
-                      "boxShadow": "none",
-                      "widgetName": "alreadyCollectedVatAit",
-                      "dynamicPropertyPathList": [
-                        {
-                          "key": "backgroundColor"
-                        }
-                      ],
-                      "displayName": "Text",
-                      "iconSVG": "/static/media/icon.97c59b52.svg",
-                      "topRow": 36,
-                      "bottomRow": 40,
-                      "parentRowSpace": 10,
-                      "type": "TEXT_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "parentColumnSpace": 13.21875,
-                      "dynamicTriggerPathList": [],
-                      "overflow": "NONE",
-                      "fontFamily": "System Default",
-                      "leftColumn": 29,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "text"
-                        },
-                        {
-                          "key": "backgroundColor"
-                        }
-                      ],
-                      "truncateButtonColor": "#FFC13D",
-                      "text": "{{readyInvoiceTbl.selectedRow.received_amount==null?0:parseInt(readyInvoiceTbl.selectedRow.received_amount)}}",
-                      "key": "pphqnvj989",
-                      "labelTextSize": "0.875rem",
-                      "rightColumn": 34,
-                      "backgroundColor": "{{collectableTxt.text-alreadyCollectedVatAit.text<0?'#DD4B34':''}}",
-                      "textAlign": "LEFT",
-                      "widgetId": "09l3ua9pdu",
-                      "isVisible": true,
-                      "fontStyle": "",
-                      "textColor": "#231F20",
-                      "version": 1,
-                      "parentId": "59stemw18n",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "borderRadius": "0px",
-                      "fontSize": "0.875rem"
-                    },
-                    {
-                      "boxShadow": "none",
-                      "widgetName": "Text2Copy3Copy",
-                      "dynamicPropertyPathList": [
-                        {
-                          "key": "fontSize"
-                        }
-                      ],
-                      "displayName": "Text",
-                      "iconSVG": "/static/media/icon.97c59b52.svg",
-                      "topRow": 40,
-                      "bottomRow": 44,
-                      "parentRowSpace": 10,
-                      "type": "TEXT_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "parentColumnSpace": 13.21875,
-                      "dynamicTriggerPathList": [],
-                      "overflow": "NONE",
-                      "fontFamily": "System Default",
-                      "leftColumn": 14,
-                      "dynamicBindingPathList": [],
-                      "truncateButtonColor": "#FFC13D",
-                      "text": "Already Collected w/o vat/ait",
-                      "key": "pphqnvj989",
-                      "labelTextSize": "0.875rem",
-                      "rightColumn": 29,
-                      "textAlign": "LEFT",
-                      "widgetId": "dr6ijlossj",
-                      "isVisible": true,
-                      "fontStyle": "BOLD",
-                      "textColor": "#231F20",
-                      "version": 1,
-                      "parentId": "59stemw18n",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "borderRadius": "0px",
-                      "fontSize": "0.875rem"
-                    },
-                    {
-                      "boxShadow": "none",
-                      "widgetName": "alreadyCollectedWoVatAit",
-                      "dynamicPropertyPathList": [
-                        {
-                          "key": "backgroundColor"
-                        }
-                      ],
-                      "displayName": "Text",
-                      "iconSVG": "/static/media/icon.97c59b52.svg",
-                      "topRow": 40,
-                      "bottomRow": 44,
-                      "parentRowSpace": 10,
-                      "type": "TEXT_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "parentColumnSpace": 13.21875,
-                      "dynamicTriggerPathList": [],
-                      "overflow": "NONE",
-                      "fontFamily": "System Default",
-                      "leftColumn": 29,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "text"
-                        },
-                        {
-                          "key": "backgroundColor"
-                        }
-                      ],
-                      "truncateButtonColor": "#FFC13D",
-                      "text": "{{readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait==null?0:parseInt(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait)}}",
-                      "key": "pphqnvj989",
-                      "labelTextSize": "0.875rem",
-                      "rightColumn": 34,
-                      "backgroundColor": "{{collectableTxt.text-alreadyCollectedVatAit.text<0?'#DD4B34':''}}",
-                      "textAlign": "LEFT",
-                      "widgetId": "6lgkefhz23",
-                      "isVisible": true,
-                      "fontStyle": "",
-                      "textColor": "#231F20",
-                      "version": 1,
-                      "parentId": "59stemw18n",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "borderRadius": "0px",
-                      "fontSize": "0.875rem"
-                    },
-                    {
-                      "widgetName": "Text6Copy1",
-                      "dynamicPropertyPathList": [
-                        {
-                          "key": "fontSize"
-                        }
-                      ],
-                      "displayName": "Text",
-                      "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
-                      "searchTags": [
-                        "typography",
-                        "paragraph",
-                        "label"
-                      ],
-                      "topRow": 22,
-                      "bottomRow": 26,
-                      "parentRowSpace": 10,
-                      "type": "TEXT_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "overflow": "NONE",
-                      "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-                      "parentColumnSpace": 6.95068359375,
-                      "dynamicTriggerPathList": [],
-                      "leftColumn": 17,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "fontFamily"
-                        },
-                        {
-                          "key": "borderRadius"
-                        }
-                      ],
-                      "shouldTruncate": false,
-                      "truncateButtonColor": "#FFC13D",
-                      "text": "VAT Amount",
-                      "key": "jzfmutwpgm",
-                      "isDeprecated": false,
-                      "rightColumn": 24,
-                      "textAlign": "LEFT",
-                      "widgetId": "cpsmd8xy0h",
-                      "isVisible": true,
-                      "fontStyle": "BOLD",
-                      "textColor": "#231F20",
-                      "version": 1,
-                      "parentId": "59stemw18n",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "fontSize": "0.875rem"
-                    },
-                    {
-                      "boxShadow": "none",
-                      "widgetName": "vat",
-                      "displayName": "Text",
-                      "iconSVG": "/static/media/icon.97c59b52.svg",
-                      "topRow": 22,
-                      "bottomRow": 26,
-                      "parentRowSpace": 10,
-                      "type": "TEXT_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "parentColumnSpace": 13.21875,
-                      "dynamicTriggerPathList": [],
-                      "overflow": "NONE",
-                      "fontFamily": "System Default",
-                      "leftColumn": 24,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "text"
-                        }
-                      ],
-                      "truncateButtonColor": "#FFC13D",
-                      "text": "{{parseInt(readyInvoiceTbl.selectedRow.vat)}}",
-                      "key": "pphqnvj989",
-                      "labelTextSize": "0.875rem",
-                      "rightColumn": 28,
-                      "textAlign": "LEFT",
-                      "widgetId": "084fv2avow",
-                      "isVisible": true,
-                      "fontStyle": "",
-                      "textColor": "#231F20",
-                      "version": 1,
-                      "parentId": "59stemw18n",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "borderRadius": "0px",
-                      "fontSize": "0.875rem"
-                    },
-                    {
-                      "boxShadow": "none",
-                      "widgetName": "alreadyCollectedVat",
-                      "displayName": "Text",
-                      "iconSVG": "/static/media/icon.97c59b52.svg",
-                      "topRow": 22,
-                      "bottomRow": 26,
-                      "parentRowSpace": 10,
-                      "type": "TEXT_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "parentColumnSpace": 13.21875,
-                      "dynamicTriggerPathList": [],
-                      "overflow": "NONE",
-                      "fontFamily": "System Default",
-                      "leftColumn": 32,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "text"
-                        }
-                      ],
-                      "truncateButtonColor": "#FFC13D",
-                      "text": "{{parseInt(readyInvoiceTbl.selectedRow.received_vat_amount)}}",
-                      "key": "pphqnvj989",
-                      "labelTextSize": "0.875rem",
-                      "rightColumn": 34,
-                      "textAlign": "LEFT",
-                      "widgetId": "1ahklngfh4",
-                      "isVisible": false,
-                      "fontStyle": "",
-                      "textColor": "#231F20",
-                      "version": 1,
-                      "parentId": "59stemw18n",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "borderRadius": "0px",
-                      "fontSize": "0.875rem"
-                    },
-                    {
-                      "widgetName": "Text6CopyCopy",
-                      "dynamicPropertyPathList": [
-                        {
-                          "key": "fontSize"
-                        }
-                      ],
-                      "displayName": "Text",
-                      "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
-                      "searchTags": [
-                        "typography",
-                        "paragraph",
-                        "label"
-                      ],
-                      "topRow": 26,
-                      "bottomRow": 30,
-                      "parentRowSpace": 10,
-                      "type": "TEXT_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "overflow": "NONE",
-                      "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-                      "parentColumnSpace": 6.95068359375,
-                      "dynamicTriggerPathList": [],
-                      "leftColumn": 17,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "fontFamily"
-                        },
-                        {
-                          "key": "borderRadius"
-                        }
-                      ],
-                      "shouldTruncate": false,
-                      "truncateButtonColor": "#FFC13D",
-                      "text": "AIT Amount",
-                      "key": "jzfmutwpgm",
-                      "isDeprecated": false,
-                      "rightColumn": 24,
-                      "textAlign": "LEFT",
-                      "widgetId": "jnttc3nejw",
-                      "isVisible": true,
-                      "fontStyle": "BOLD",
-                      "textColor": "#231F20",
-                      "version": 1,
-                      "parentId": "59stemw18n",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "fontSize": "0.875rem"
-                    },
-                    {
-                      "boxShadow": "none",
-                      "widgetName": "ait",
-                      "displayName": "Text",
-                      "iconSVG": "/static/media/icon.97c59b52.svg",
-                      "topRow": 26,
-                      "bottomRow": 30,
-                      "parentRowSpace": 10,
-                      "type": "TEXT_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "parentColumnSpace": 13.21875,
-                      "dynamicTriggerPathList": [],
-                      "overflow": "NONE",
-                      "fontFamily": "System Default",
-                      "leftColumn": 24,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "text"
-                        }
-                      ],
-                      "truncateButtonColor": "#FFC13D",
-                      "text": "{{parseInt(readyInvoiceTbl.selectedRow.ait)}}",
-                      "key": "pphqnvj989",
-                      "labelTextSize": "0.875rem",
-                      "rightColumn": 28,
-                      "textAlign": "LEFT",
-                      "widgetId": "zo1p1zaktr",
-                      "isVisible": true,
-                      "fontStyle": "",
-                      "textColor": "#231F20",
-                      "version": 1,
-                      "parentId": "59stemw18n",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "borderRadius": "0px",
-                      "fontSize": "0.875rem"
-                    },
-                    {
-                      "boxShadow": "none",
-                      "widgetName": "alreadyCollectedAit",
-                      "displayName": "Text",
-                      "iconSVG": "/static/media/icon.97c59b52.svg",
-                      "topRow": 26,
-                      "bottomRow": 30,
-                      "parentRowSpace": 10,
-                      "type": "TEXT_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "parentColumnSpace": 13.21875,
-                      "dynamicTriggerPathList": [],
-                      "overflow": "NONE",
-                      "fontFamily": "System Default",
-                      "leftColumn": 32,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "text"
-                        }
-                      ],
-                      "truncateButtonColor": "#FFC13D",
-                      "text": "{{parseInt(readyInvoiceTbl.selectedRow.received_ait_amount)}}",
-                      "key": "pphqnvj989",
-                      "labelTextSize": "0.875rem",
-                      "rightColumn": 34,
-                      "textAlign": "LEFT",
-                      "widgetId": "9ll5eeht6d",
-                      "isVisible": false,
-                      "fontStyle": "",
-                      "textColor": "#231F20",
-                      "version": 1,
-                      "parentId": "59stemw18n",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "borderRadius": "0px",
-                      "fontSize": "0.875rem"
-                    },
-                    {
-                      "widgetName": "Text8",
-                      "dynamicPropertyPathList": [
-                        {
-                          "key": "fontSize"
-                        }
-                      ],
-                      "displayName": "Text",
-                      "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
-                      "searchTags": [
-                        "typography",
-                        "paragraph",
-                        "label"
-                      ],
-                      "topRow": 6,
-                      "bottomRow": 10,
-                      "parentRowSpace": 10,
-                      "type": "TEXT_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "overflow": "NONE",
-                      "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-                      "parentColumnSpace": 13.28125,
-                      "dynamicTriggerPathList": [],
-                      "leftColumn": 19,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "fontFamily"
-                        },
-                        {
-                          "key": "borderRadius"
-                        }
-                      ],
-                      "shouldTruncate": false,
-                      "truncateButtonColor": "#FFC13D",
-                      "text": "Due receivable(with vat/ait)",
-                      "key": "a8sqaiupik",
-                      "isDeprecated": false,
-                      "rightColumn": 34,
-                      "textAlign": "LEFT",
-                      "widgetId": "i96i23vrjf",
-                      "isVisible": true,
-                      "fontStyle": "BOLD",
-                      "textColor": "#231F20",
-                      "version": 1,
-                      "parentId": "59stemw18n",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "fontSize": "0.875rem"
-                    },
-                    {
-                      "widgetName": "Text7",
-                      "displayName": "Text",
-                      "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
-                      "searchTags": [
-                        "typography",
-                        "paragraph",
-                        "label"
-                      ],
-                      "topRow": 6,
-                      "bottomRow": 10,
-                      "parentRowSpace": 10,
-                      "type": "TEXT_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "overflow": "NONE",
-                      "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-                      "parentColumnSpace": 13.28125,
-                      "dynamicTriggerPathList": [],
-                      "leftColumn": 34,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "fontFamily"
-                        },
-                        {
-                          "key": "borderRadius"
-                        },
-                        {
-                          "key": "text"
-                        }
-                      ],
-                      "shouldTruncate": false,
-                      "truncateButtonColor": "#FFC13D",
-                      "text": "{{(parseFloat(readyInvoiceTbl.selectedRow.total_price_after_vat_ait)- parseFloat(alreadyCollectedVatAit.text)).toFixed(2)\n\t }}",
-                      "key": "a8sqaiupik",
-                      "isDeprecated": false,
-                      "rightColumn": 39,
-                      "textAlign": "LEFT",
-                      "widgetId": "ebj3rirbsa",
-                      "isVisible": true,
-                      "fontStyle": "",
-                      "textColor": "#231F20",
-                      "version": 1,
-                      "parentId": "59stemw18n",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "fontSize": "0.875rem"
-                    },
-                    {
-                      "widgetName": "Text8Copy",
-                      "dynamicPropertyPathList": [
-                        {
-                          "key": "fontSize"
-                        }
-                      ],
-                      "displayName": "Text",
-                      "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
-                      "searchTags": [
-                        "typography",
-                        "paragraph",
-                        "label"
-                      ],
-                      "topRow": 10,
-                      "bottomRow": 14,
-                      "parentRowSpace": 10,
-                      "type": "TEXT_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "overflow": "NONE",
-                      "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-                      "parentColumnSpace": 13.28125,
-                      "dynamicTriggerPathList": [],
-                      "leftColumn": 19,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "fontFamily"
-                        },
-                        {
-                          "key": "borderRadius"
-                        }
-                      ],
-                      "shouldTruncate": false,
-                      "truncateButtonColor": "#FFC13D",
-                      "text": "Due receivable(w/o vat/ait)",
-                      "key": "a8sqaiupik",
-                      "isDeprecated": false,
-                      "rightColumn": 34,
-                      "textAlign": "LEFT",
-                      "widgetId": "f38mmlxinl",
-                      "isVisible": true,
-                      "fontStyle": "BOLD",
-                      "textColor": "#231F20",
-                      "version": 1,
-                      "parentId": "59stemw18n",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "fontSize": "0.875rem"
-                    },
-                    {
-                      "widgetName": "Text7Copy",
-                      "displayName": "Text",
-                      "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
-                      "searchTags": [
-                        "typography",
-                        "paragraph",
-                        "label"
-                      ],
-                      "topRow": 10,
-                      "bottomRow": 14,
-                      "parentRowSpace": 10,
-                      "type": "TEXT_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "overflow": "NONE",
-                      "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-                      "parentColumnSpace": 13.28125,
-                      "dynamicTriggerPathList": [],
-                      "leftColumn": 34,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "fontFamily"
-                        },
-                        {
-                          "key": "borderRadius"
-                        },
-                        {
-                          "key": "text"
-                        }
-                      ],
-                      "shouldTruncate": false,
-                      "truncateButtonColor": "#FFC13D",
-                      "text": "{{\n(parseInt(net_to_redx.text)- parseInt(alreadyCollectedWoVatAit.text)).toFixed(2)}}",
-                      "key": "a8sqaiupik",
-                      "isDeprecated": false,
-                      "rightColumn": 39,
-                      "textAlign": "LEFT",
-                      "widgetId": "o8qa8uwhlh",
-                      "isVisible": true,
-                      "fontStyle": "",
-                      "textColor": "#231F20",
-                      "version": 1,
-                      "parentId": "59stemw18n",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "fontSize": "0.875rem"
-                    },
-                    {
-                      "boxShadow": "none",
-                      "widgetName": "Text2",
-                      "dynamicPropertyPathList": [
-                        {
-                          "key": "fontSize"
-                        }
-                      ],
-                      "displayName": "Text",
-                      "iconSVG": "/static/media/icon.97c59b52.svg",
-                      "topRow": 6,
-                      "bottomRow": 10,
-                      "parentRowSpace": 10,
-                      "type": "TEXT_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "parentColumnSpace": 13.21875,
-                      "dynamicTriggerPathList": [],
-                      "overflow": "NONE",
-                      "fontFamily": "System Default",
-                      "leftColumn": 1,
-                      "dynamicBindingPathList": [],
-                      "truncateButtonColor": "#FFC13D",
-                      "text": "Invoice Amount(with VAT/AIT)",
-                      "key": "pphqnvj989",
-                      "labelTextSize": "0.875rem",
-                      "rightColumn": 14,
-                      "textAlign": "LEFT",
-                      "widgetId": "h61qp8jl0h",
-                      "isVisible": true,
-                      "fontStyle": "BOLD",
-                      "textColor": "#231F20",
-                      "version": 1,
-                      "parentId": "59stemw18n",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "borderRadius": "0px",
-                      "fontSize": "0.875rem"
-                    },
-                    {
-                      "boxShadow": "none",
-                      "widgetName": "collectableTxt",
-                      "displayName": "Text",
-                      "iconSVG": "/static/media/icon.97c59b52.svg",
-                      "topRow": 6,
-                      "bottomRow": 10,
-                      "parentRowSpace": 10,
-                      "type": "TEXT_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "parentColumnSpace": 13.21875,
-                      "dynamicTriggerPathList": [],
-                      "overflow": "NONE",
-                      "fontFamily": "System Default",
-                      "leftColumn": 14,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "text"
-                        }
-                      ],
-                      "truncateButtonColor": "#FFC13D",
-                      "text": "{{readyInvoiceTbl.selectedRow.total_price_after_vat_ait}}",
-                      "key": "pphqnvj989",
-                      "labelTextSize": "0.875rem",
-                      "rightColumn": 19,
-                      "textAlign": "LEFT",
-                      "widgetId": "tryh9aa0vm",
-                      "isVisible": true,
-                      "fontStyle": "",
-                      "textColor": "#231F20",
-                      "version": 1,
-                      "parentId": "59stemw18n",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "borderRadius": "0px",
-                      "fontSize": "0.875rem"
-                    },
-                    {
-                      "boxShadow": "none",
-                      "widgetName": "Text2Copy4",
-                      "dynamicPropertyPathList": [
-                        {
-                          "key": "fontSize"
-                        }
-                      ],
-                      "displayName": "Text",
-                      "iconSVG": "/static/media/icon.97c59b52.svg",
-                      "topRow": 10,
-                      "bottomRow": 14,
-                      "parentRowSpace": 10,
-                      "type": "TEXT_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "parentColumnSpace": 13.21875,
-                      "dynamicTriggerPathList": [],
-                      "overflow": "NONE",
-                      "fontFamily": "System Default",
-                      "leftColumn": 1,
-                      "dynamicBindingPathList": [],
-                      "truncateButtonColor": "#FFC13D",
-                      "text": "Net to RedX (w/o VAT AIT)",
-                      "key": "pphqnvj989",
-                      "labelTextSize": "0.875rem",
-                      "rightColumn": 14,
-                      "textAlign": "LEFT",
-                      "widgetId": "sqmdecw5cw",
-                      "isVisible": true,
-                      "fontStyle": "BOLD",
-                      "textColor": "#231F20",
-                      "version": 1,
-                      "parentId": "59stemw18n",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "borderRadius": "0px",
-                      "fontSize": "0.875rem"
-                    },
-                    {
-                      "boxShadow": "none",
-                      "widgetName": "net_to_redx",
-                      "displayName": "Text",
-                      "iconSVG": "/static/media/icon.97c59b52.svg",
-                      "topRow": 10,
-                      "bottomRow": 14,
-                      "parentRowSpace": 10,
-                      "type": "TEXT_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "parentColumnSpace": 13.21875,
-                      "dynamicTriggerPathList": [],
-                      "overflow": "NONE",
-                      "fontFamily": "System Default",
-                      "leftColumn": 14,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "text"
-                        }
-                      ],
-                      "truncateButtonColor": "#FFC13D",
-                      "text": "{{readyInvoiceTbl.selectedRow.trip_total_revenue}}",
-                      "key": "pphqnvj989",
-                      "labelTextSize": "0.875rem",
-                      "rightColumn": 19,
-                      "textAlign": "LEFT",
-                      "widgetId": "4bu64z91tf",
-                      "isVisible": true,
-                      "fontStyle": "",
-                      "textColor": "#231F20",
-                      "version": 1,
-                      "parentId": "59stemw18n",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "borderRadius": "0px",
-                      "fontSize": "0.875rem"
-                    },
-                    {
-                      "boxShadow": "none",
-                      "widgetName": "IconButton1Copy",
-                      "onClick": "{{closeModal('reserve')}}",
-                      "buttonColor": "#2E3D49",
-                      "displayName": "Icon Button",
-                      "iconSVG": "/static/media/icon.1a0c634a.svg",
-                      "topRow": 0,
-                      "bottomRow": 4,
-                      "type": "ICON_BUTTON_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "leftColumn": 56,
-                      "dynamicBindingPathList": [],
-                      "iconSize": 24,
-                      "isDisabled": false,
-                      "key": "bpld0xcedr",
-                      "labelTextSize": "0.875rem",
-                      "rightColumn": 64,
-                      "iconName": "cross",
-                      "widgetId": "2srxn9yf4u",
-                      "isVisible": true,
-                      "version": 1,
-                      "parentId": "59stemw18n",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "borderRadius": "0px",
-                      "buttonVariant": "TERTIARY"
-                    },
-                    {
-                      "boxShadow": "none",
-                      "widgetName": "receivablesCopy",
-                      "dynamicPropertyPathList": [
-                        {
-                          "key": "fontSize"
-                        }
-                      ],
-                      "displayName": "Text",
-                      "iconSVG": "/static/media/icon.97c59b52.svg",
-                      "topRow": 0,
-                      "bottomRow": 4,
-                      "type": "TEXT_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "dynamicTriggerPathList": [],
-                      "overflow": "NONE",
-                      "fontFamily": "System Default",
-                      "leftColumn": 1,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "text"
-                        }
-                      ],
-                      "truncateButtonColor": "#FFC13D",
-                      "text": "Mark Received Amount ({{readyInvoiceTbl.selectedRow.invoice_number}})",
-                      "key": "pphqnvj989",
-                      "labelTextSize": "0.875rem",
-                      "rightColumn": 52,
-                      "textAlign": "LEFT",
-                      "widgetId": "z5s6lwo66s",
-                      "isVisible": true,
-                      "fontStyle": "BOLD",
-                      "textColor": "#231F20",
-                      "version": 1,
-                      "parentId": "59stemw18n",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "borderRadius": "0px",
-                      "fontSize": "1.5rem"
-                    }
-                  ],
-                  "isDisabled": false,
-                  "key": "u8b5obq6te",
-                  "labelTextSize": "0.875rem",
-                  "rightColumn": 0,
-                  "detachFromLayout": true,
-                  "widgetId": "59stemw18n",
-                  "isVisible": true,
-                  "version": 1,
-                  "parentId": "nz5ln5tmqb",
-                  "renderMode": "CANVAS",
-                  "isLoading": false,
-                  "borderRadius": "0px"
-                }
-              ],
-              "key": "tcmlwnn93p",
-              "height": 850,
-              "labelTextSize": "0.875rem",
-              "rightColumn": 0,
-              "detachFromLayout": true,
-              "widgetId": "nz5ln5tmqb",
-              "canOutsideClickClose": true,
-              "canEscapeKeyClose": true,
-              "version": 2,
-              "parentId": "0",
-              "renderMode": "CANVAS",
-              "isLoading": false,
-              "borderRadius": "0px",
-              "width": 1098
-            },
-            {
-              "boxShadow": "none",
               "widgetName": "set_remarks",
               "isCanvas": true,
               "displayName": "Modal",
@@ -1678,6 +764,39 @@
                         },
                         {
                           "key": "primaryColumns.received_amount_wo_vat_ait.computedValue"
+                        },
+                        {
+                          "key": "derivedColumns.customColumn8.buttonColor"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn8.buttonColor"
+                        },
+                        {
+                          "key": "derivedColumns.customColumn8.borderRadius"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn8.borderRadius"
+                        },
+                        {
+                          "key": "derivedColumns.customColumn8.boxShadow"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn8.boxShadow"
+                        },
+                        {
+                          "key": "derivedColumns.customColumn8.buttonLabel"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn8.buttonLabel"
+                        },
+                        {
+                          "key": "primaryColumns.hard_copy.computedValue"
+                        },
+                        {
+                          "key": "derivedColumns.customColumn8.isCellVisible"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn8.isCellVisible"
                         }
                       ],
                       "leftColumn": 0,
@@ -1726,34 +845,32 @@
                         "hard_copy_receiving_date": 199,
                         "customColumn7": 210,
                         "collectable": 149,
-                        "received_amount_wo_vat_ait": 211
+                        "received_amount_wo_vat_ait": 211,
+                        "hard_copy_of_bill": 157
                       },
                       "widgetName": "readyInvoiceTbl",
                       "defaultPageSize": 0,
                       "columnOrder": [
                         "id",
                         "invoice_number",
-                        "total_price_after_vat_ait",
                         "trip_total_revenue",
-                        "received_amount",
-                        "customColumn7",
-                        "received_amount_wo_vat_ait",
-                        "customColumn3",
                         "client_name",
                         "trip_month",
                         "created_at",
                         "updated_at",
-                        "vat",
-                        "ait",
                         "sourcing_cost",
                         "spread",
                         "banner",
                         "columns_to_print",
                         "status",
+                        "customColumn7",
+                        "total_price_after_vat_ait",
                         "collectable",
+                        "received_amount",
+                        "received_amount_wo_vat_ait",
                         "shop_id",
-                        "trip_counts",
                         "user_data",
+                        "trip_counts",
                         "vat_rate",
                         "sd_rate",
                         "last_user_data",
@@ -1762,14 +879,19 @@
                         "last_proof_type",
                         "hard_copy_of_bill",
                         "hard_copy_receiving_date",
+                        "customColumn8",
+                        "vat",
                         "received_vat_amount",
+                        "ait",
                         "received_ait_amount",
                         "vat_proof_type",
                         "ait_proof_type",
                         "vat_collection_medium",
                         "ait_collection_medium",
+                        "hard_copy",
                         "customColumn1",
                         "customColumn2",
+                        "customColumn3",
                         "customColumn4",
                         "customColumn5",
                         "customColumn6"
@@ -1801,6 +923,9 @@
                         },
                         {
                           "key": "primaryColumns.customColumn2.isCellVisible"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn8.isCellVisible"
                         }
                       ],
                       "displayName": "Table",
@@ -1833,6 +958,9 @@
                         },
                         {
                           "key": "primaryColumns.customColumn6.onClick"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn8.onClick"
                         }
                       ],
                       "primaryColumns": {
@@ -1924,7 +1052,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellVisible": true,
                           "isDerived": false,
@@ -2057,7 +1185,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellVisible": true,
                           "isDerived": false,
@@ -2076,7 +1204,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellVisible": true,
                           "isDerived": false,
@@ -2114,7 +1242,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellVisible": true,
                           "isDerived": false,
@@ -2255,7 +1383,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellVisible": true,
                           "isDerived": false,
@@ -2274,7 +1402,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellVisible": true,
                           "isDerived": false,
@@ -2292,7 +1420,7 @@
                           "enableSort": true,
                           "isVisible": true,
                           "isDisabled": false,
-                          "isCellVisible": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( appsmith.store.is_finance_user?true:false))}}",
+                          "isCellVisible": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( \nappsmith.store.is_finance_user? moment(currentRow.created_at).format('YYYY-MM-DD') >='2022-10-26' && currentRow.hard_copy_of_bill == null?\nfalse:true:false\n))}}",
                           "isDerived": true,
                           "label": "Collection",
                           "computedValue": "",
@@ -2320,7 +1448,7 @@
                           "isDisabled": false,
                           "isCellVisible": true,
                           "isDerived": false,
-                          "label": "received_amount",
+                          "label": "received_amount_w_vat_ait",
                           "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( \n//(function() {\t\n//const price = parseFloat(currentRow.received_amount).toFixed(2);\n\n//let dollarUSLocale = Intl.NumberFormat(undefined, {\n\t//style: 'currency',\n\t//currency: 'BDT'\n//});\n\t//return dollarUSLocale.format(price).replace('BDT','')\n//})()\ncurrentRow.received_amount\n))}}",
                           "borderRadius": "0px",
                           "boxShadow": "none"
@@ -2335,7 +1463,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellVisible": true,
                           "isDerived": false,
@@ -2354,7 +1482,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellVisible": true,
                           "isDerived": false,
@@ -2373,7 +1501,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellVisible": true,
                           "isDerived": false,
@@ -2474,18 +1602,18 @@
                           "id": "hard_copy_of_bill",
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
-                          "columnType": "text",
+                          "columnType": "url",
                           "textColor": "",
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
-                          "isCellVisible": true,
                           "isDerived": false,
                           "label": "hard_copy_of_bill",
                           "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( currentRow.hard_copy_of_bill))}}",
-                          "cellBackground": ""
+                          "cellBackground": "",
+                          "iconName": ""
                         },
                         "hard_copy_receiving_date": {
                           "index": 27,
@@ -2555,7 +1683,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellVisible": true,
                           "isDerived": false,
@@ -2574,7 +1702,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellVisible": true,
                           "isDerived": false,
@@ -2593,7 +1721,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellVisible": true,
                           "isDerived": false,
@@ -2612,7 +1740,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellVisible": true,
                           "isDerived": false,
@@ -2653,6 +1781,47 @@
                           "isDerived": false,
                           "label": "received_amount_wo_vat_ait",
                           "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( currentRow.received_amount_wo_vat_ait))}}",
+                          "cellBackground": ""
+                        },
+                        "customColumn8": {
+                          "index": 42,
+                          "width": 150,
+                          "id": "customColumn8",
+                          "columnType": "button",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( currentRow.hard_copy_of_bill!=null?true:false))}}",
+                          "isDerived": true,
+                          "label": "Show Hard copy of bill",
+                          "computedValue": "",
+                          "buttonStyle": "rgb(3, 179, 101)",
+                          "labelColor": "#FFFFFF",
+                          "buttonColor": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( appsmith.theme.colors.primaryColor))}}",
+                          "borderRadius": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
+                          "boxShadow": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( 'none'))}}",
+                          "iconName": "",
+                          "buttonLabel": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( 'View hard copy'))}}",
+                          "onClick": "{{showModal('Modal2')}}"
+                        },
+                        "hard_copy": {
+                          "index": 35,
+                          "width": 150,
+                          "id": "hard_copy",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": false,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "hard_copy",
+                          "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( currentRow.hard_copy))}}",
                           "cellBackground": ""
                         }
                       },
@@ -2713,7 +1882,7 @@
                           "enableSort": true,
                           "isVisible": true,
                           "isDisabled": false,
-                          "isCellVisible": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( appsmith.store.is_finance_user?true:false))}}",
+                          "isCellVisible": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( \nappsmith.store.is_finance_user? moment(currentRow.created_at).format('YYYY-MM-DD') >='2022-10-26' && currentRow.hard_copy_of_bill == null?\nfalse:true:false\n))}}",
                           "isDerived": true,
                           "label": "Collection",
                           "computedValue": "",
@@ -2808,6 +1977,28 @@
                           "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( \n//(function() {\t\n//const price = parseFloat(currentRow.total_price_after_vat_ait-currentRow.received_amount).toFixed(2);\n\n// dollarUSLocale = Intl.NumberFormat(undefined, {\n\t//style: 'currency',\n\t//currency: 'BDT'\n//add_remarks.data});\n\t//return dollarUSLocale.format(price).replace('BDT','')\n//})()\n(currentRow.total_price_after_vat_ait-currentRow.received_amount).toFixed(2)\n))}}",
                           "buttonStyle": "rgb(3, 179, 101)",
                           "labelColor": "#FFFFFF"
+                        },
+                        "customColumn8": {
+                          "index": 42,
+                          "width": 150,
+                          "id": "customColumn8",
+                          "columnType": "button",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( currentRow.hard_copy_of_bill!=null?true:false))}}",
+                          "isDerived": true,
+                          "label": "Show Hard copy of bill",
+                          "computedValue": "",
+                          "buttonStyle": "rgb(3, 179, 101)",
+                          "labelColor": "#FFFFFF",
+                          "buttonColor": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( appsmith.theme.colors.primaryColor))}}",
+                          "borderRadius": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
+                          "boxShadow": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( 'none'))}}",
+                          "iconName": "",
+                          "buttonLabel": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( 'View hard copy'))}}",
+                          "onClick": "{{showModal('Modal2')}}"
                         }
                       },
                       "labelTextSize": "0.875rem",
@@ -3189,6 +2380,11 @@
                               "boxShadow": "none",
                               "widgetName": "statusOfInvoice",
                               "isFilterable": true,
+                              "dynamicPropertyPathList": [
+                                {
+                                  "key": "onOptionChange"
+                                }
+                              ],
                               "displayName": "Select",
                               "iconSVG": "/static/media/icon.bd99caba.svg",
                               "labelText": "Status",
@@ -3231,7 +2427,7 @@
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "borderRadius": "0px",
-                              "onOptionChange": "{{resetWidget(\"FilePicker1\",true)}}"
+                              "onOptionChange": "{{\nstatusOfInvoice.selectedOptionValue == 'Invalid' || statusOfInvoice.selectedOptionValue == 'Ready-to-send'?\nresetWidget(\"FilePicker1\",true):''}}"
                             },
                             {
                               "resetFormOnClick": false,
@@ -3724,7 +2920,7 @@
                       "rightColumn": 39,
                       "textSize": "0.875rem",
                       "widgetId": "160hjta4s3",
-                      "tableData": "[\n  {\n    \"Amount\": \"Invoice Amount(with VAT/AIT)\",\n    \"Actual Amount\": \"{{readyInvoiceTbl.selectedRow.total_price_after_vat_ait}}\",\n    \"Collected Amount\": \"{{readyInvoiceTbl.selectedRow.received_amount==null?0:parseInt(readyInvoiceTbl.selectedRow.received_amount)}}\",\n    \"Due receivable\": \"{{(parseInt(readyInvoiceTbl.selectedRow.total_price_after_vat_ait)- parseInt(alreadyCollectedVatAit.text)).toFixed(2)\n\t }}\"\n  },\n  {\n    \"Amount\": \"Net to RedX (w/o VAT AIT)\",\n    \"Actual Amount\": \"{{readyInvoiceTbl.selectedRow.trip_total_revenue}}\",\n    \"Collected Amount\": \"{{readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait==null?0:parseInt(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait)}}\",\n    \"Due receivable\": \"{{\n(parseInt(net_to_redx.text)- parseInt(alreadyCollectedWoVatAit.text)).toFixed(2)}}\"\n  },\n  {\n    \"Amount\": \"VAT\",\n    \"Actual Amount\": \"{{parseInt(readyInvoiceTbl.selectedRow.vat)}}\",\n    \"Collected Amount\": \"{{parseInt(readyInvoiceTbl.selectedRow.received_vat_amount)}}\",\n    \"Due receivable\": \"{{\n(parseInt(vat.text)- parseInt(alreadyCollectedVat.text)).toFixed(2)}}\"\n  },\n  {\n    \"Amount\": \"AIT\",\n    \"Actual Amount\": \"{{parseInt(readyInvoiceTbl.selectedRow.ait)}}\",\n    \"Collected Amount\": \"{{parseInt(readyInvoiceTbl.selectedRow.received_ait_amount)}}\",\n    \"Due receivable\": \"{{\n(parseInt(ait.text)- parseInt(alreadyCollectedAit.text)).toFixed(2)}}\"\n  }\n]",
+                      "tableData": "[\n  {\n    \"Amount\": \"Invoice Amount(with VAT/AIT)\",\n    \"Actual Amount\": \"{{readyInvoiceTbl.selectedRow.total_price_after_vat_ait}}\",\n    \"Collected Amount\": \"{{readyInvoiceTbl.selectedRow.received_amount==null?0:parseInt(readyInvoiceTbl.selectedRow.received_amount)}}\",\n    \"Due receivable\": \"{{(parseInt(readyInvoiceTbl.selectedRow.total_price_after_vat_ait)- parseInt(readyInvoiceTbl.selectedRow.received_amount)).toFixed(2)\n\t }}\"\n  },\n  {\n    \"Amount\": \"Net to RedX (w/o VAT AIT)\",\n    \"Actual Amount\": \"{{readyInvoiceTbl.selectedRow.trip_total_revenue}}\",\n    \"Collected Amount\": \"{{readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait==null?0:parseInt(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait)}}\",\n    \"Due receivable\": \"{{\n(parseInt(readyInvoiceTbl.selectedRow.trip_total_revenue)- parseInt(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait==null?0:parseInt(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait))).toFixed(2)}}\"\n  },\n  {\n    \"Amount\": \"VAT\",\n    \"Actual Amount\": \"{{readyInvoiceTbl.selectedRow.vat== null?'0':(parseInt(readyInvoiceTbl.selectedRow.vat))}}\",\n    \"Collected Amount\": \"{{parseInt(readyInvoiceTbl.selectedRow.received_vat_amount)}}\",\n    \"Due receivable\": \"{{\nreadyInvoiceTbl.selectedRow.vat== null?(0-parseInt(readyInvoiceTbl.selectedRow.received_vat_amount)):\n(parseInt(readyInvoiceTbl.selectedRow.vat)- parseInt(readyInvoiceTbl.selectedRow.received_vat_amount)).toFixed(2)}}\"\n  },\n  {\n    \"Amount\": \"AIT\",\n    \"Actual Amount\": \"{{readyInvoiceTbl.selectedRow.ait== null?'0':parseInt(readyInvoiceTbl.selectedRow.ait)}}\",\n    \"Collected Amount\": \"{{parseInt(readyInvoiceTbl.selectedRow.received_ait_amount)}}\",\n    \"Due receivable\": \"{{\nreadyInvoiceTbl.selectedRow.ait== null?(0-parseInt(readyInvoiceTbl.selectedRow.received_ait_amount)):\n(parseInt(readyInvoiceTbl.selectedRow.ait)- parseInt(readyInvoiceTbl.selectedRow.received_ait_amount)).toFixed(2)}}\"\n  }\n]",
                       "label": "Data",
                       "searchKey": "",
                       "parentId": "6scr5gwx8s",
@@ -4133,9 +3329,6 @@
                                 },
                                 {
                                   "key": "borderRadius"
-                                },
-                                {
-                                  "key": "validation"
                                 }
                               ],
                               "labelPosition": "Left",
@@ -4143,7 +3336,7 @@
                               "inputType": "TEXT",
                               "isDisabled": false,
                               "key": "tv860i56gz",
-                              "validation": "{{ \nparseInt(collected_ait.text)<=(parseInt(readyInvoiceTbl.selectedRow.ait) - parseInt(readyInvoiceTbl.selectedRow.received_ait_amount))\n}}",
+                              "validation": "",
                               "labelTextSize": "0.875rem",
                               "isRequired": true,
                               "isDeprecated": false,
@@ -4348,7 +3541,7 @@
                               "inputType": "NUMBER",
                               "isDisabled": false,
                               "key": "mebc20zfb0",
-                              "validation": "{{\nparseInt(collected_net_to_redx.text) <= (parseInt(net_to_redx.text)- parseInt(alreadyCollectedWoVatAit.text)).toFixed(2)}}",
+                              "validation": "{{\nparseInt(collected_net_to_redx.text) <= (parseInt(readyInvoiceTbl.selectedRow.trip_total_revenue)- parseInt(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait)).toFixed(2)}}",
                               "labelTextSize": "0.875rem",
                               "isRequired": true,
                               "rightColumn": 33,
@@ -4661,9 +3854,6 @@
                                 },
                                 {
                                   "key": "borderRadius"
-                                },
-                                {
-                                  "key": "validation"
                                 }
                               ],
                               "labelPosition": "Left",
@@ -4671,7 +3861,7 @@
                               "inputType": "TEXT",
                               "isDisabled": false,
                               "key": "tv860i56gz",
-                              "validation": "{{ \nparseInt(collected_vat.text)<=(parseInt(readyInvoiceTbl.selectedRow.vat) - parseInt(readyInvoiceTbl.selectedRow.received_vat_amount))\n}}",
+                              "validation": "",
                               "labelTextSize": "0.875rem",
                               "isRequired": true,
                               "isDeprecated": false,
@@ -5163,6 +4353,13 @@
                         "updated_at",
                         "remarks",
                         "remarks_added_by",
+                        "received_amount_wo_vat_ait",
+                        "received_ait_amount",
+                        "received_vat_amount",
+                        "vat_proof_type",
+                        "ait_proof_type",
+                        "ait_collection_medium",
+                        "vat_collection_medium",
                         "customColumn1",
                         "customColumn2",
                         "customColumn3"
@@ -5241,6 +4438,27 @@
                         },
                         {
                           "key": "primaryColumns.remarks_added_by.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.received_amount_wo_vat_ait.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.received_ait_amount.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.received_vat_amount.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.vat_proof_type.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.ait_proof_type.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.ait_collection_medium.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.vat_collection_medium.computedValue"
                         }
                       ],
                       "leftColumn": 0,
@@ -5534,6 +4752,139 @@
                           "isDerived": false,
                           "label": "remarks_added_by",
                           "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.remarks_added_by))}}",
+                          "cellBackground": ""
+                        },
+                        "received_amount_wo_vat_ait": {
+                          "index": 12,
+                          "width": 150,
+                          "id": "received_amount_wo_vat_ait",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "received_amount_wo_vat_ait",
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.received_amount_wo_vat_ait))}}",
+                          "cellBackground": ""
+                        },
+                        "received_ait_amount": {
+                          "index": 13,
+                          "width": 150,
+                          "id": "received_ait_amount",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "received_ait_amount",
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.received_ait_amount))}}",
+                          "cellBackground": ""
+                        },
+                        "received_vat_amount": {
+                          "index": 14,
+                          "width": 150,
+                          "id": "received_vat_amount",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "received_vat_amount",
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.received_vat_amount))}}",
+                          "cellBackground": ""
+                        },
+                        "vat_proof_type": {
+                          "index": 15,
+                          "width": 150,
+                          "id": "vat_proof_type",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "vat_proof_type",
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.vat_proof_type))}}",
+                          "cellBackground": ""
+                        },
+                        "ait_proof_type": {
+                          "index": 16,
+                          "width": 150,
+                          "id": "ait_proof_type",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "ait_proof_type",
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.ait_proof_type))}}",
+                          "cellBackground": ""
+                        },
+                        "ait_collection_medium": {
+                          "index": 17,
+                          "width": 150,
+                          "id": "ait_collection_medium",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "ait_collection_medium",
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.ait_collection_medium))}}",
+                          "cellBackground": ""
+                        },
+                        "vat_collection_medium": {
+                          "index": 18,
+                          "width": 150,
+                          "id": "vat_collection_medium",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "vat_collection_medium",
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.vat_collection_medium))}}",
                           "cellBackground": ""
                         }
                       },
@@ -6370,6 +5721,27 @@
                         },
                         {
                           "key": "primaryColumns.finance_trip_invoice_id.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.truck_price_remarks.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.received_amount.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.received_vat_amount.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.received_ait_amount.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.received_amount_wo_vat_ait.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.goods_type.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.vehicle_type.computedValue"
                         }
                       ],
                       "leftColumn": 0,
@@ -6443,7 +5815,14 @@
                         "additional_fee_remarks",
                         "truck_price_ait_evat",
                         "additional_fee_ait_evat",
-                        "finance_trip_invoice_id"
+                        "finance_trip_invoice_id",
+                        "truck_price_remarks",
+                        "received_amount",
+                        "received_vat_amount",
+                        "received_ait_amount",
+                        "received_amount_wo_vat_ait",
+                        "goods_type",
+                        "vehicle_type"
                       ],
                       "dynamicPropertyPathList": [],
                       "displayName": "Table",
@@ -7233,6 +6612,202 @@
                           "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"finance_trip_invoice_id\"]))}}",
                           "validation": {},
                           "cellBackground": ""
+                        },
+                        "truck_price_remarks": {
+                          "allowCellWrapping": false,
+                          "index": 31,
+                          "width": 150,
+                          "originalId": "truck_price_remarks",
+                          "id": "truck_price_remarks",
+                          "alias": "truck_price_remarks",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "truck_price_remarks",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"truck_price_remarks\"]))}}",
+                          "validation": {},
+                          "cellBackground": ""
+                        },
+                        "received_amount": {
+                          "allowCellWrapping": false,
+                          "index": 32,
+                          "width": 150,
+                          "originalId": "received_amount",
+                          "id": "received_amount",
+                          "alias": "received_amount",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "received_amount",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"received_amount\"]))}}",
+                          "validation": {},
+                          "cellBackground": ""
+                        },
+                        "received_vat_amount": {
+                          "allowCellWrapping": false,
+                          "index": 33,
+                          "width": 150,
+                          "originalId": "received_vat_amount",
+                          "id": "received_vat_amount",
+                          "alias": "received_vat_amount",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "received_vat_amount",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"received_vat_amount\"]))}}",
+                          "validation": {},
+                          "cellBackground": ""
+                        },
+                        "received_ait_amount": {
+                          "allowCellWrapping": false,
+                          "index": 34,
+                          "width": 150,
+                          "originalId": "received_ait_amount",
+                          "id": "received_ait_amount",
+                          "alias": "received_ait_amount",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "received_ait_amount",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"received_ait_amount\"]))}}",
+                          "validation": {},
+                          "cellBackground": ""
+                        },
+                        "received_amount_wo_vat_ait": {
+                          "allowCellWrapping": false,
+                          "index": 35,
+                          "width": 150,
+                          "originalId": "received_amount_wo_vat_ait",
+                          "id": "received_amount_wo_vat_ait",
+                          "alias": "received_amount_wo_vat_ait",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "received_amount_wo_vat_ait",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"received_amount_wo_vat_ait\"]))}}",
+                          "validation": {},
+                          "cellBackground": ""
+                        },
+                        "goods_type": {
+                          "allowCellWrapping": false,
+                          "index": 36,
+                          "width": 150,
+                          "originalId": "goods_type",
+                          "id": "goods_type",
+                          "alias": "goods_type",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "goods_type",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"goods_type\"]))}}",
+                          "validation": {},
+                          "cellBackground": ""
+                        },
+                        "vehicle_type": {
+                          "allowCellWrapping": false,
+                          "index": 37,
+                          "width": 150,
+                          "originalId": "vehicle_type",
+                          "id": "vehicle_type",
+                          "alias": "vehicle_type",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "vehicle_type",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"vehicle_type\"]))}}",
+                          "validation": {},
+                          "cellBackground": ""
                         }
                       },
                       "key": "tiv2702i8x",
@@ -7280,6 +6855,344 @@
               "isLoading": false,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "width": 1102
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "Modal2",
+              "isCanvas": true,
+              "displayName": "Modal",
+              "iconSVG": "/static/media/icon.4975978e9a961fb0bfb4e38de7ecc7c5.svg",
+              "searchTags": [
+                "dialog",
+                "popup",
+                "notification"
+              ],
+              "topRow": 0,
+              "bottomRow": 0,
+              "parentRowSpace": 1,
+              "type": "MODAL_WIDGET",
+              "hideCard": false,
+              "shouldScrollContents": true,
+              "animateLoading": true,
+              "parentColumnSpace": 1,
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "borderRadius"
+                }
+              ],
+              "children": [
+                {
+                  "boxShadow": "none",
+                  "widgetName": "Canvas9",
+                  "displayName": "Canvas",
+                  "topRow": 0,
+                  "bottomRow": 930,
+                  "parentRowSpace": 1,
+                  "type": "CANVAS_WIDGET",
+                  "canExtend": true,
+                  "hideCard": true,
+                  "shouldScrollContents": false,
+                  "minHeight": 940,
+                  "parentColumnSpace": 1,
+                  "dynamicTriggerPathList": [],
+                  "leftColumn": 0,
+                  "dynamicBindingPathList": [
+                    {
+                      "key": "borderRadius"
+                    },
+                    {
+                      "key": "accentColor"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "widgetName": "Text10Copy",
+                      "displayName": "Text",
+                      "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
+                      "searchTags": [
+                        "typography",
+                        "paragraph",
+                        "label"
+                      ],
+                      "topRow": 3,
+                      "bottomRow": 7,
+                      "parentRowSpace": 10,
+                      "type": "TEXT_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "overflow": "NONE",
+                      "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+                      "parentColumnSpace": 18.8125,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 39,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "fontFamily"
+                        },
+                        {
+                          "key": "borderRadius"
+                        }
+                      ],
+                      "shouldTruncate": false,
+                      "text": "Image Viewer",
+                      "key": "w5jjx0i2y5",
+                      "isDeprecated": false,
+                      "rightColumn": 55,
+                      "textAlign": "CENTER",
+                      "widgetId": "6hl7mw6p4j",
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "parentId": "vj640vy15x",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "fontSize": "1rem"
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "IconButton4",
+                      "onClick": "{{closeModal('Modal2')}}",
+                      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "displayName": "Icon Button",
+                      "iconSVG": "/static/media/icon.1a0c634ac75f9fa6b6ae7a8df882a3ba.svg",
+                      "searchTags": [
+                        "click",
+                        "submit"
+                      ],
+                      "topRow": 0,
+                      "bottomRow": 4,
+                      "type": "ICON_BUTTON_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "leftColumn": 58,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "buttonColor"
+                        },
+                        {
+                          "key": "borderRadius"
+                        }
+                      ],
+                      "iconSize": 24,
+                      "isDisabled": false,
+                      "key": "kj6yqedu3x",
+                      "isDeprecated": false,
+                      "rightColumn": 64,
+                      "iconName": "cross",
+                      "widgetId": "tl9jl9np24",
+                      "isVisible": true,
+                      "version": 1,
+                      "parentId": "vj640vy15x",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "buttonVariant": "TERTIARY"
+                    },
+                    {
+                      "resetFormOnClick": false,
+                      "boxShadow": "none",
+                      "widgetName": "Button4",
+                      "onClick": "{{closeModal('Modal2')}}",
+                      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "displayName": "Button",
+                      "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
+                      "searchTags": [
+                        "click",
+                        "submit"
+                      ],
+                      "topRow": 87,
+                      "bottomRow": 91,
+                      "type": "BUTTON_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "leftColumn": 47,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "buttonColor"
+                        },
+                        {
+                          "key": "borderRadius"
+                        }
+                      ],
+                      "text": "Close",
+                      "isDisabled": false,
+                      "key": "lw7f08d1qv",
+                      "isDeprecated": false,
+                      "rightColumn": 63,
+                      "isDefaultClickDisabled": true,
+                      "widgetId": "qh97ot2qpw",
+                      "buttonStyle": "PRIMARY",
+                      "isVisible": true,
+                      "recaptchaType": "V3",
+                      "version": 1,
+                      "parentId": "vj640vy15x",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "disabledWhenInvalid": false,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "buttonVariant": "SECONDARY",
+                      "placement": "CENTER"
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "DocumentViewer1",
+                      "isCanvas": false,
+                      "displayName": "Document Viewer",
+                      "iconSVG": "/static/media/icon.09fcd36be84f09ed7312b2ed6a307b27.svg",
+                      "searchTags": [
+                        "pdf"
+                      ],
+                      "topRow": 12,
+                      "bottomRow": 80,
+                      "parentRowSpace": 10,
+                      "type": "DOCUMENT_VIEWER_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "parentColumnSpace": 10.8125,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 2,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "borderRadius"
+                        },
+                        {
+                          "key": "accentColor"
+                        },
+                        {
+                          "key": "docUrl"
+                        }
+                      ],
+                      "key": "y4u0k5nves",
+                      "isDeprecated": false,
+                      "rightColumn": 36,
+                      "widgetId": "hyzrwhh1lq",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "isVisible": true,
+                      "version": 1,
+                      "parentId": "vj640vy15x",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "docUrl": "{{readyInvoiceTbl.selectedRow.hard_copy.type.includes('pdf')?readyInvoiceTbl.selectedRow.hard_copy.data:\"\"}}"
+                    },
+                    {
+                      "widgetName": "Text10",
+                      "displayName": "Text",
+                      "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
+                      "searchTags": [
+                        "typography",
+                        "paragraph",
+                        "label"
+                      ],
+                      "topRow": 3,
+                      "bottomRow": 7,
+                      "parentRowSpace": 10,
+                      "type": "TEXT_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "overflow": "NONE",
+                      "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+                      "parentColumnSpace": 18.8125,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 9,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "fontFamily"
+                        },
+                        {
+                          "key": "borderRadius"
+                        }
+                      ],
+                      "shouldTruncate": false,
+                      "text": "PDF Viewer",
+                      "key": "w5jjx0i2y5",
+                      "isDeprecated": false,
+                      "rightColumn": 25,
+                      "textAlign": "CENTER",
+                      "widgetId": "d4a46wpe3h",
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "parentId": "vj640vy15x",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "fontSize": "1rem"
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "Image3",
+                      "displayName": "Image",
+                      "iconSVG": "/static/media/icon.52d8fb963abcb95c79b10f1553389f22.svg",
+                      "topRow": 12,
+                      "bottomRow": 80,
+                      "parentRowSpace": 10,
+                      "type": "IMAGE_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "parentColumnSpace": 18.8125,
+                      "dynamicTriggerPathList": [],
+                      "imageShape": "RECTANGLE",
+                      "leftColumn": 37,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "borderRadius"
+                        },
+                        {
+                          "key": "image"
+                        }
+                      ],
+                      "defaultImage": "",
+                      "key": "lm2pehdqnc",
+                      "image": "{{readyInvoiceTbl.selectedRow.hard_copy.type.includes('image')?readyInvoiceTbl.selectedRow.hard_copy.data:\"\"}}",
+                      "isDeprecated": false,
+                      "rightColumn": 63,
+                      "objectFit": "cover",
+                      "widgetId": "7pf2yidjj7",
+                      "isVisible": true,
+                      "version": 1,
+                      "parentId": "vj640vy15x",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "maxZoomLevel": 1,
+                      "enableDownload": false,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "enableRotation": false
+                    }
+                  ],
+                  "isDisabled": false,
+                  "key": "j4t2xmq33p",
+                  "isDeprecated": false,
+                  "rightColumn": 0,
+                  "detachFromLayout": true,
+                  "widgetId": "vj640vy15x",
+                  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "isVisible": true,
+                  "version": 1,
+                  "parentId": "mykbvohh83",
+                  "renderMode": "CANVAS",
+                  "isLoading": false,
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
+                }
+              ],
+              "key": "sbq6g3re0h",
+              "height": 940,
+              "isDeprecated": false,
+              "rightColumn": 0,
+              "detachFromLayout": true,
+              "widgetId": "mykbvohh83",
+              "canOutsideClickClose": true,
+              "canEscapeKeyClose": true,
+              "version": 2,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "width": 1216
             }
           ]
         },
