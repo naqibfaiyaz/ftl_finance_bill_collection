@@ -245,7 +245,7 @@
                           "key": "options"
                         }
                       ],
-                      "options": "{{function(){\n\tlet data=[] \n     get_shops.data.shops.map((a, index) => {\nif(collection_declaration_tbl.tableData.map(b => b.shop_id).includes(a.id)) {\n\tget_shops.data.shops.splice(index, 1)\n}else{\n\tdata.push( {\n\t\tlabel: a.shopName,\n\t\tvalue: a.id\n\t})\n}\n\t\t })\n\t\treturn data\n\t}()}}",
+                      "options": "{{function(){\n\tlet data=[] \n     get_shops_v4.data.shops.map((a, index) => {\nif(collection_declaration_tbl.tableData.map(b => b.shop_id).includes(a.id)) {\n\tget_shops_v4.data.shops.splice(index, 1)\n}else{\n\tdata.push( {\n\t\tlabel: a.shopName,\n\t\tvalue: a.id\n\t})\n}\n\t\t })\n\t\treturn data\n\t}()}}",
                       "labelStyle": "BOLD",
                       "placeholderText": "Select Shop",
                       "isDisabled": false,
@@ -1050,6 +1050,9 @@
                         },
                         {
                           "key": "primaryColumns.customColumn3.menuItems.menuItemj1ay9btva5.isDisabled"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn3.menuItems.menuItemz9cacajq8p.onClick"
                         }
                       ],
                       "displayName": "Table",
@@ -1382,7 +1385,7 @@
                               "widgetId": "lfmt4cghmq",
                               "isDisabled": false,
                               "isVisible": true,
-                              "onClick": "{{showModal('Modal1')}}"
+                              "onClick": "{{get_history_collection.run(()=>{showModal('collection_history')})}}"
                             }
                           },
                           "iconAlign": "left",
@@ -1713,7 +1716,7 @@
                           "key": "options"
                         }
                       ],
-                      "options": "{{collection_declaration_tbl.triggeredRow.shop_id?[{\n\t\"label\": collection_declaration_tbl.triggeredRow.shop_name,\n\t\"value\": collection_declaration_tbl.triggeredRow.shop_id\n}]:get_shops.data.shops.map(a => {\n\treturn {\n\t\tlabel: a.shopName,\n\t\tvalue: a.id\n\t}\n})}}",
+                      "options": "{{collection_declaration_tbl.triggeredRow.shop_id?[{\n\t\"label\": collection_declaration_tbl.triggeredRow.shop_name,\n\t\"value\": collection_declaration_tbl.triggeredRow.shop_id\n}]:get_shops_v4.data.shops.map(a => {\n\treturn {\n\t\tlabel: a.shopName,\n\t\tvalue: a.id\n\t}\n})}}",
                       "labelStyle": "BOLD",
                       "placeholderText": "Select Shop",
                       "isDisabled": false,
@@ -2296,7 +2299,7 @@
             },
             {
               "boxShadow": "none",
-              "widgetName": "Modal1",
+              "widgetName": "collection_history",
               "isCanvas": true,
               "displayName": "Modal",
               "iconSVG": "/static/media/icon.4975978e9a961fb0bfb4e38de7ecc7c5.svg",
@@ -2794,8 +2797,8 @@
           ],
           [
             {
-              "id": "collection declaration_get_shops",
-              "name": "get_shops",
+              "id": "collection declaration_get_shops_v4",
+              "name": "get_shops_v4",
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [

@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "get_shops",
+    "name": "get_shops_v4",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
@@ -45,7 +45,8 @@
         {
           "value": true
         }
-      ]
+      ],
+      "formData": {}
     },
     "executeOnLoad": true,
     "dynamicBindingPathList": [
@@ -59,12 +60,12 @@
     "jsonPathKeys": [
       "appsmith.store.access_token"
     ],
-    "userSetOnLoad": false,
+    "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "collection declaration_get_shops",
+  "id": "collection declaration_get_shops_v4",
   "deleted": false,
   "gitSyncId": "6360ef20d33b91674415f83c_63636ce1f30f9143c9f067c4"
 }
