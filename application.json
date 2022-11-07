@@ -49,11 +49,11 @@
       "isDefault": false
     },
     {
-      "id": "collection_records",
+      "id": "collection declaration",
       "isDefault": false
     },
     {
-      "id": "collection declaration",
+      "id": "collection_records",
       "isDefault": false
     }
   ],

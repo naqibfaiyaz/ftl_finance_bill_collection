@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT * FROM finance_trip_invoices where status in ('Bill-accepted-by-client') and shop_id={{search_shop_id.selectedOptionValue}} and {{this.params.get_data}}",
+      "body": "SELECT * FROM finance_trip_invoices where shop_id={{search_shop_id.selectedOptionValue}} and status in ('Bill-accepted-by-client')",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -36,8 +36,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "search_shop_id.selectedOptionValue",
-      "this.params.get_data"
+      "search_shop_id.selectedOptionValue"
     ],
     "userSetOnLoad": true,
     "confirmBeforeExecute": false,
@@ -46,5 +45,5 @@
   },
   "id": "collection_records_get_collectables",
   "deleted": false,
-  "gitSyncId": "6231701cf1c0af1ceded5043_6360aa28dfa75b056e2ebd74"
+  "gitSyncId": "636895ab03193515321c3584_6368a8bf03193515321c37da"
 }

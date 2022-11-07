@@ -1879,7 +1879,7 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button2",
-                      "onClick": "{{put_collection_declaration.run(()=>{navigateTo('collection_records',{\n\tshop_id: shop_id_data_new.selectedOptionValue,\n\tcollection_id: post_collection_declaration.data[0].customer_collection_declation_id\n}, 'NEW_WINDOW')})}}",
+                      "onClick": "{{put_collection_declaration.run(()=>{\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tget_collection_declarations.run(()=>{navigateTo('collection_records',{\n\tshop_id: shop_id_data_old.selectedOptionValue,\n\tcollection_id: put_collection_declaration.data[0].customer_collection_declation_id\n}, 'NEW_WINDOW')\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tcloseModal('collection_declaration_edit')})\t\t\t\t\t})}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "dynamicPropertyPathList": [
                         {
@@ -2789,18 +2789,6 @@
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "collection declaration_get_history_collection",
-              "name": "get_history_collection",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "collection_declaration_tbl.triggeredRow.id"
-              ],
               "timeoutInMillisecond": 10000
             }
           ],

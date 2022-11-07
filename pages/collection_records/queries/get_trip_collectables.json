@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT * FROM trip_level_invoice where finance_trip_invoice_id in ({{invoice_table.selectedRows.map((a)=>a.id).join()}})",
+      "body": "SELECT * FROM trip_level_invoice where finance_trip_invoice_id in ({{invoice_table.selectedRows.map((a)=>a.id).join()}}) and status in ('Bill-accepted-by-client')",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -45,5 +45,5 @@
   },
   "id": "collection_records_get_trip_collectables",
   "deleted": false,
-  "gitSyncId": "6231701cf1c0af1ceded5043_6360b0bbeb761c796cb91f21"
+  "gitSyncId": "636895ab03193515321c3584_6368a904b7d12f577aa55927"
 }
