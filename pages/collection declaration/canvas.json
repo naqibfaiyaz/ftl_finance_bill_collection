@@ -350,7 +350,7 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button1Copy",
-                      "onClick": "{{post_collection_declaration.run(()=>{get_collection_declarations_v2.run(()=>closeModal('collection_declaration_add'))})}}",
+                      "onClick": "{{post_collection_declaration_v2.run(()=>{get_collection_declarations_v2.run(()=>closeModal('collection_declaration_add'))})}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "dynamicPropertyPathList": [
                         {
@@ -411,7 +411,7 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button2Copy",
-                      "onClick": "{{post_collection_declaration.run(()=>{navigateTo('collection_records',{\n\tshop_id: shop_id_data_new.selectedOptionValue,\n\tcollection_id: post_collection_declaration.data[0].customer_collection_declation_id\n}, 'NEW_WINDOW')})}}",
+                      "onClick": "{{post_collection_declaration_v2.run(()=>{navigateTo('collection_records',{\n\tshop_id: shop_id_data_new.selectedOptionValue,\n\tcollection_id: post_collection_declaration_v2.data[0].customer_collection_declation_id\n}, 'NEW_WINDOW')})}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "dynamicPropertyPathList": [
                         {
