@@ -19,7 +19,7 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 64,
+          "version": 65,
           "minHeight": 730,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
@@ -4592,15 +4592,55 @@
             }
           ]
         },
-        "layoutOnLoadActions": [],
-        "layoutOnLoadActionErrors": [
-          {
-            "code": 4041,
-            "message": "Cyclical dependency error encountered while parsing relationship [metabase_session : metabase_session.metabaseSession.actionConfiguration.body] where the relationship is denoted as (source : target).",
-            "errorType": "A cyclic dependency error has been encountered on current page, \nqueries on page load will not run. \n Please check debugger and Appsmith documentation for more information"
-          }
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "v1_finance_invoice_creation_session",
+              "name": "session",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "v1_finance_invoice_creation_get_shops",
+              "name": "get_shops",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "appsmith.store.access_token"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "v1_finance_invoice_creation_metabase_session.metabaseSession",
+              "name": "metabase_session.metabaseSession",
+              "collectionId": "v1_finance_invoice_creation_metabase_session",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "() => {\n  session.run(() => {\n    storeValue('metabase_session', session.data.id);\n  });\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "v1_finance_invoice_creation_get_invoice_details",
+              "name": "get_invoice_details",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "\"'\"+fleet_delivery_in_progress.data.body.fleets.map((a)=>a.fleetTrackingId).join(\"','\")+\"'\""
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
         ],
-        "validOnPageLoadActions": false,
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
         "id": "v1_finance_invoice_creation",
         "deleted": false,
         "policies": [],

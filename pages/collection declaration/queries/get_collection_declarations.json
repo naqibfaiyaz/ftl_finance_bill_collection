@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "get_trip_collectables",
+    "name": "get_collection_declarations",
     "datasource": {
       "name": "Postgres_latest",
       "pluginId": "postgres-plugin",
@@ -13,37 +13,31 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "collection_records",
+    "pageId": "collection declaration",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT * FROM trip_level_invoice where finance_trip_invoice_id in ({{invoice_table.selectedRows.map((a)=>a.id).join()}})",
+      "body": "SELECT * FROM customer_collection_declation ORDER BY unadjusted_amount desc;",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
-          "value": false
+          "value": true
         }
       ]
     },
-    "executeOnLoad": false,
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
+    "executeOnLoad": true,
+    "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      "invoice_table.selectedRows.map((a)=>a.id).join()"
-    ],
-    "userSetOnLoad": true,
+    "jsonPathKeys": [],
+    "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "collection_records_get_trip_collectables",
+  "id": "collection declaration_get_collection_declarations",
   "deleted": false,
-  "gitSyncId": "6231701cf1c0af1ceded5043_6360b0bbeb761c796cb91f21"
+  "gitSyncId": "6360ef20d33b91674415f83c_63636b3df30f9143c9f067a5"
 }

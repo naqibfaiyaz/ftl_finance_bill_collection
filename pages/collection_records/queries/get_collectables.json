@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT * FROM finance_trip_invoices where status in ('Bill-accepted-by-client') and shop_id={{search_shop_id.selectedOptionValue}}",
+      "body": "SELECT * FROM finance_trip_invoices where status in ('Bill-accepted-by-client') and shop_id={{search_shop_id.selectedOptionValue}} and {{this.params.get_data}}",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -36,7 +36,8 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "search_shop_id.selectedOptionValue"
+      "search_shop_id.selectedOptionValue",
+      "this.params.get_data"
     ],
     "userSetOnLoad": true,
     "confirmBeforeExecute": false,
