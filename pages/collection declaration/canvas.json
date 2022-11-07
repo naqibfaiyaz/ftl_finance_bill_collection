@@ -2797,18 +2797,6 @@
           ],
           [
             {
-              "id": "collection declaration_get_history_collection",
-              "name": "get_history_collection",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "collection_declaration_tbl.triggeredRow.id"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
               "id": "collection declaration_get_shops",
               "name": "get_shops",
               "confirmBeforeExecute": false,
