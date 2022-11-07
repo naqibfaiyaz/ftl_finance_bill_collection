@@ -1821,7 +1821,7 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button1",
-                      "onClick": "{{put_collection_declaration_v2.run(()=>{get_collection_declarations_v2.run(()=>closeModal('collection_declaration_add'))})}}",
+                      "onClick": "{{put_collection_declaration_v2.run(()=>{get_collection_declarations_v2.run(()=>closeModal('collection_declaration_edit'))})}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "dynamicPropertyPathList": [
                         {
@@ -2787,16 +2787,6 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "collection declaration_get_collection_declarations_v2",
-              "name": "get_collection_declarations_v2",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
               "id": "collection declaration_get_shops_v4",
               "name": "get_shops_v4",
               "confirmBeforeExecute": false,
@@ -2804,6 +2794,16 @@
               "jsonPathKeys": [
                 "appsmith.store.access_token"
               ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "collection declaration_get_collection_declarations_v2",
+              "name": "get_collection_declarations_v2",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
             }
           ]
