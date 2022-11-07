@@ -47,6 +47,14 @@
     {
       "id": "Client wise receivables",
       "isDefault": false
+    },
+    {
+      "id": "collection declaration",
+      "isDefault": false
+    },
+    {
+      "id": "collection_records",
+      "isDefault": false
     }
   ],
   "viewMode": false,
