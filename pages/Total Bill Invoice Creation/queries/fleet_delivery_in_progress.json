@@ -53,7 +53,8 @@
         {
           "value": true
         }
-      ]
+      ],
+      "formData": {}
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
