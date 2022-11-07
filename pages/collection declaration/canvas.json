@@ -2784,7 +2784,6 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "collection declaration_get_collection_declarations",
               "name": "get_collection_declarations",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
@@ -2794,7 +2793,6 @@
           ],
           [
             {
-              "id": "collection declaration_get_history_collection",
               "name": "get_history_collection",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
@@ -2806,7 +2804,6 @@
           ],
           [
             {
-              "id": "collection declaration_get_shops",
               "name": "get_shops",
               "confirmBeforeExecute": false,
               "pluginType": "API",
