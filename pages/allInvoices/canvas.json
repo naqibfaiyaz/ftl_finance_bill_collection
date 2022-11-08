@@ -798,7 +798,8 @@
                         "customColumn7": 210,
                         "collectable": 149,
                         "received_amount_wo_vat_ait": 211,
-                        "hard_copy_of_bill": 157
+                        "hard_copy_of_bill": 157,
+                        "total_receivable_with_vat_ait": 152
                       },
                       "widgetName": "readyInvoiceTbl",
                       "defaultPageSize": 0,
@@ -809,14 +810,15 @@
                         "trip_month",
                         "banner",
                         "status",
-                        "total_receivable_with_vat_ait",
                         "invoice_amount",
+                        "total_receivable_with_vat_ait",
                         "received_amount_w_vat_ait",
                         "received_amount_wo_vat_ait",
                         "shop_id",
                         "user_data",
                         "trip_counts",
                         "hard_copy_receiving_date",
+                        "customColumn8",
                         "vat",
                         "received_vat_amount",
                         "ait",
@@ -829,8 +831,7 @@
                         "customColumn4",
                         "customColumn5",
                         "customColumn6",
-                        "customColumn7",
-                        "customColumn8"
+                        "customColumn7"
                       ],
                       "dynamicPropertyPathList": [
                         {
@@ -1332,7 +1333,7 @@
                           "enableSort": true,
                           "isVisible": true,
                           "isDisabled": false,
-                          "isCellVisible": true,
+                          "isCellVisible": false,
                           "isDerived": true,
                           "label": "total_receivable_with_vat_ait",
                           "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( \n//(function() {\t\n//const price = parseFloat(currentRow.total_price_after_vat_ait-currentRow.received_amount).toFixed(2);\n\n// dollarUSLocale = Intl.NumberFormat(undefined, {\n\t//style: 'currency',\n\t//currency: 'BDT'\n//add_remarks.data});\n\t//return dollarUSLocale.format(price).replace('BDT','')\n//})()\n(currentRow.total_price_after_vat_ait-currentRow.received_amount).toFixed(2)\n))}}",
@@ -1414,7 +1415,7 @@
                           "isDisabled": false,
                           "isCellVisible": true,
                           "isDerived": false,
-                          "label": "total_receivable_with_vat_ait",
+                          "label": "total_receivable_with_vat_ait_2",
                           "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( currentRow.total_receivable_with_vat_ait))}}",
                           "cellBackground": ""
                         },
@@ -1603,7 +1604,7 @@
                           "enableSort": true,
                           "isVisible": true,
                           "isDisabled": false,
-                          "isCellVisible": true,
+                          "isCellVisible": false,
                           "isDerived": true,
                           "label": "total_receivable_with_vat_ait",
                           "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( \n//(function() {\t\n//const price = parseFloat(currentRow.total_price_after_vat_ait-currentRow.received_amount).toFixed(2);\n\n// dollarUSLocale = Intl.NumberFormat(undefined, {\n\t//style: 'currency',\n\t//currency: 'BDT'\n//add_remarks.data});\n\t//return dollarUSLocale.format(price).replace('BDT','')\n//})()\n(currentRow.total_price_after_vat_ait-currentRow.received_amount).toFixed(2)\n))}}",
