@@ -18,20 +18,26 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT * from finance_trip_invoices where received_amount_wo_vat_ait = 0 and (received_amount<  total_price_after_vat_ait)\n\n--and trip_month not in ('Sep-22','Oct-22','Nov-22')\n\nand trip_counts is null \nand (vat is null or ait is null)",
+      "body": "SELECT id, invoice_number, client_name, trip_month, banner, status,\n(total_price_after_vat_ait - received_amount) as total_receivable_with_vat_ait,\ntotal_price_after_vat_ait as invoice_amount,\nreceived_amount as received_amount_w_vat_ait,\nreceived_amount_wo_vat_ait,\nshop_id, user_data,trip_counts,hard_copy_receiving_date,vat,received_vat_amount, ait, received_ait_amount,\nhard_copy_of_bill,\nreplace(hard_copy_of_bill, '''','')::json->0 hard_copy FROM finance_trip_invoices where status != 'Invalid'\nand trip_month = '{{moment(DatePicker1.selectedDate).format(\"MMM-YY\")}}'",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
-          "value": true
+          "value": false
         }
       ]
     },
     "executeOnLoad": false,
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "moment(DatePicker1.selectedDate).format(\"MMM-YY\")"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],

@@ -556,25 +556,7 @@
                           "key": "tableData"
                         },
                         {
-                          "key": "primaryColumns.last_trx_id.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.last_collection_medium.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.last_user_data.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.received_amount.computedValue"
-                        },
-                        {
                           "key": "primaryColumns.customColumn3.buttonLabel"
-                        },
-                        {
-                          "key": "primaryColumns.sd_rate.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.vat_rate.computedValue"
                         },
                         {
                           "key": "primaryColumns.user_data.computedValue"
@@ -589,19 +571,7 @@
                           "key": "primaryColumns.customColumn1.buttonLabel"
                         },
                         {
-                          "key": "primaryColumns.total_price_after_vat_ait.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.columns_to_print.computedValue"
-                        },
-                        {
                           "key": "primaryColumns.banner.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.spread.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.sourcing_cost.computedValue"
                         },
                         {
                           "key": "primaryColumns.ait.computedValue"
@@ -610,19 +580,10 @@
                           "key": "primaryColumns.vat.computedValue"
                         },
                         {
-                          "key": "primaryColumns.updated_at.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.created_at.computedValue"
-                        },
-                        {
                           "key": "primaryColumns.trip_month.computedValue"
                         },
                         {
                           "key": "primaryColumns.client_name.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.trip_total_revenue.computedValue"
                         },
                         {
                           "key": "primaryColumns.trip_counts.computedValue"
@@ -671,9 +632,6 @@
                         },
                         {
                           "key": "primaryColumns.customColumn4.buttonLabel"
-                        },
-                        {
-                          "key": "primaryColumns.last_proof_type.computedValue"
                         },
                         {
                           "key": "derivedColumns.customColumn4.isCellVisible"
@@ -742,21 +700,6 @@
                           "key": "primaryColumns.received_ait_amount.computedValue"
                         },
                         {
-                          "key": "primaryColumns.vat_proof_type.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.ait_proof_type.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.vat_collection_medium.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.ait_collection_medium.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.collectable.computedValue"
-                        },
-                        {
                           "key": "derivedColumns.customColumn7.computedValue"
                         },
                         {
@@ -797,6 +740,15 @@
                         },
                         {
                           "key": "primaryColumns.customColumn8.isCellVisible"
+                        },
+                        {
+                          "key": "primaryColumns.total_receivable_with_vat_ait.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.invoice_amount.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.received_amount_w_vat_ait.computedValue"
                         }
                       ],
                       "leftColumn": 0,
@@ -853,48 +805,32 @@
                       "columnOrder": [
                         "id",
                         "invoice_number",
-                        "trip_total_revenue",
                         "client_name",
                         "trip_month",
-                        "created_at",
-                        "updated_at",
-                        "sourcing_cost",
-                        "spread",
                         "banner",
-                        "columns_to_print",
                         "status",
-                        "customColumn7",
-                        "total_price_after_vat_ait",
-                        "collectable",
-                        "received_amount",
+                        "total_receivable_with_vat_ait",
+                        "invoice_amount",
+                        "received_amount_w_vat_ait",
                         "received_amount_wo_vat_ait",
                         "shop_id",
                         "user_data",
                         "trip_counts",
-                        "vat_rate",
-                        "sd_rate",
-                        "last_user_data",
-                        "last_collection_medium",
-                        "last_trx_id",
-                        "last_proof_type",
-                        "hard_copy_of_bill",
                         "hard_copy_receiving_date",
-                        "customColumn8",
                         "vat",
                         "received_vat_amount",
                         "ait",
                         "received_ait_amount",
-                        "vat_proof_type",
-                        "ait_proof_type",
-                        "vat_collection_medium",
-                        "ait_collection_medium",
+                        "hard_copy_of_bill",
                         "hard_copy",
                         "customColumn1",
                         "customColumn2",
                         "customColumn3",
                         "customColumn4",
                         "customColumn5",
-                        "customColumn6"
+                        "customColumn6",
+                        "customColumn7",
+                        "customColumn8"
                       ],
                       "dynamicPropertyPathList": [
                         {
@@ -1042,25 +978,6 @@
                           "borderRadius": "0px",
                           "boxShadow": "none"
                         },
-                        "trip_total_revenue": {
-                          "index": 3,
-                          "width": 150,
-                          "id": "trip_total_revenue",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": false,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "trip_total_revenue",
-                          "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( \n//(function() {\t\n//const price = parseFloat(currentRow.total_price_after_vat_ait).toFixed(2);\n\n//let dollarUSLocale = Intl.NumberFormat(undefined, {\n//\tstyle: 'currency',\n//\tcurrency: 'BDT'\n//});\n//\treturn dollarUSLocale.format(price).replace('BDT','')\n//})()\ncurrentRow.trip_total_revenue\n))}}",
-                          "borderRadius": "0px",
-                          "boxShadow": "none"
-                        },
                         "client_name": {
                           "index": 4,
                           "width": 150,
@@ -1096,44 +1013,6 @@
                           "isDerived": false,
                           "label": "trip_month",
                           "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( currentRow.trip_month))}}",
-                          "borderRadius": "0px",
-                          "boxShadow": "none"
-                        },
-                        "created_at": {
-                          "index": 6,
-                          "width": 150,
-                          "id": "created_at",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": false,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "created_at",
-                          "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( currentRow.created_at))}}",
-                          "borderRadius": "0px",
-                          "boxShadow": "none"
-                        },
-                        "updated_at": {
-                          "index": 7,
-                          "width": 150,
-                          "id": "updated_at",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": false,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "updated_at",
-                          "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( currentRow.updated_at))}}",
                           "borderRadius": "0px",
                           "boxShadow": "none"
                         },
@@ -1175,44 +1054,6 @@
                           "borderRadius": "0px",
                           "boxShadow": "none"
                         },
-                        "sourcing_cost": {
-                          "index": 10,
-                          "width": 150,
-                          "id": "sourcing_cost",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": false,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "sourcing_cost",
-                          "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( currentRow.sourcing_cost))}}",
-                          "borderRadius": "0px",
-                          "boxShadow": "none"
-                        },
-                        "spread": {
-                          "index": 11,
-                          "width": 150,
-                          "id": "spread",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": false,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "spread",
-                          "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( currentRow.spread))}}",
-                          "borderRadius": "0px",
-                          "boxShadow": "none"
-                        },
                         "banner": {
                           "index": 12,
                           "width": 150,
@@ -1229,63 +1070,6 @@
                           "isDerived": false,
                           "label": "banner",
                           "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( currentRow.banner))}}",
-                          "borderRadius": "0px",
-                          "boxShadow": "none"
-                        },
-                        "columns_to_print": {
-                          "index": 13,
-                          "width": 150,
-                          "id": "columns_to_print",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": false,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "columns_to_print",
-                          "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( currentRow.columns_to_print))}}",
-                          "borderRadius": "0px",
-                          "boxShadow": "none"
-                        },
-                        "collectable": {
-                          "index": 15,
-                          "width": 150,
-                          "id": "collectable",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": false,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "total_receivable_wo_vat_ait",
-                          "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( currentRow.trip_total_revenue))}}",
-                          "borderRadius": "0px",
-                          "boxShadow": "none"
-                        },
-                        "total_price_after_vat_ait": {
-                          "index": 16,
-                          "width": 150,
-                          "id": "total_price_after_vat_ait",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "invoice_amount",
-                          "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( currentRow.total_price_after_vat_ait))}}",
                           "borderRadius": "0px",
                           "boxShadow": "none"
                         },
@@ -1373,44 +1157,6 @@
                           "borderRadius": "0px",
                           "boxShadow": "none"
                         },
-                        "vat_rate": {
-                          "index": 19,
-                          "width": 150,
-                          "id": "vat_rate",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": false,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "vat_rate",
-                          "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( currentRow.vat_rate))}}",
-                          "borderRadius": "0px",
-                          "boxShadow": "none"
-                        },
-                        "sd_rate": {
-                          "index": 20,
-                          "width": 150,
-                          "id": "sd_rate",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": false,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "sd_rate",
-                          "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( currentRow.sd_rate))}}",
-                          "borderRadius": "0px",
-                          "boxShadow": "none"
-                        },
                         "customColumn3": {
                           "index": 23,
                           "width": 150,
@@ -1431,101 +1177,6 @@
                           "labelColor": "#FFFFFF",
                           "buttonLabel": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( 'Mark Receive'))}}",
                           "onClick": "{{get_received_details.run(()=>showModal('receivedFromInvoiceModal'))}}",
-                          "borderRadius": "0px",
-                          "boxShadow": "none"
-                        },
-                        "received_amount": {
-                          "index": 21,
-                          "width": 150,
-                          "id": "received_amount",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "received_amount_w_vat_ait",
-                          "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( \n//(function() {\t\n//const price = parseFloat(currentRow.received_amount).toFixed(2);\n\n//let dollarUSLocale = Intl.NumberFormat(undefined, {\n\t//style: 'currency',\n\t//currency: 'BDT'\n//});\n\t//return dollarUSLocale.format(price).replace('BDT','')\n//})()\ncurrentRow.received_amount\n))}}",
-                          "borderRadius": "0px",
-                          "boxShadow": "none"
-                        },
-                        "last_user_data": {
-                          "index": 22,
-                          "width": 150,
-                          "id": "last_user_data",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": false,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "last_user_data",
-                          "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( currentRow.last_user_data))}}",
-                          "borderRadius": "0px",
-                          "boxShadow": "none"
-                        },
-                        "last_collection_medium": {
-                          "index": 23,
-                          "width": 150,
-                          "id": "last_collection_medium",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": false,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "last_collection_medium",
-                          "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( currentRow.last_collection_medium))}}",
-                          "borderRadius": "0px",
-                          "boxShadow": "none"
-                        },
-                        "last_trx_id": {
-                          "index": 24,
-                          "width": 150,
-                          "id": "last_trx_id",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": false,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "last_trx_id",
-                          "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( currentRow.last_trx_id))}}",
-                          "borderRadius": "0px",
-                          "boxShadow": "none"
-                        },
-                        "last_proof_type": {
-                          "index": 25,
-                          "width": 150,
-                          "id": "last_proof_type",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": false,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "last_proof_type",
-                          "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( currentRow.last_proof_type?JSON.parse(currentRow.last_proof_type.replace(\"'\",\"\").replace(\"'\",\"\"))[0].data:null))}}",
                           "borderRadius": "0px",
                           "boxShadow": "none"
                         },
@@ -1672,82 +1323,6 @@
                           "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( currentRow.received_ait_amount))}}",
                           "cellBackground": ""
                         },
-                        "vat_proof_type": {
-                          "index": 30,
-                          "width": 150,
-                          "id": "vat_proof_type",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textColor": "",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": false,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "vat_proof_type",
-                          "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( currentRow.vat_proof_type))}}",
-                          "cellBackground": ""
-                        },
-                        "ait_proof_type": {
-                          "index": 31,
-                          "width": 150,
-                          "id": "ait_proof_type",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textColor": "",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": false,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "ait_proof_type",
-                          "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( currentRow.ait_proof_type))}}",
-                          "cellBackground": ""
-                        },
-                        "vat_collection_medium": {
-                          "index": 32,
-                          "width": 150,
-                          "id": "vat_collection_medium",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textColor": "",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": false,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "vat_collection_medium",
-                          "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( currentRow.vat_collection_medium))}}",
-                          "cellBackground": ""
-                        },
-                        "ait_collection_medium": {
-                          "index": 33,
-                          "width": 150,
-                          "id": "ait_collection_medium",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textColor": "",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": false,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "ait_collection_medium",
-                          "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( currentRow.ait_collection_medium))}}",
-                          "cellBackground": ""
-                        },
                         "customColumn7": {
                           "index": 40,
                           "width": 150,
@@ -1822,6 +1397,63 @@
                           "isDerived": false,
                           "label": "hard_copy",
                           "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( currentRow.hard_copy))}}",
+                          "cellBackground": ""
+                        },
+                        "total_receivable_with_vat_ait": {
+                          "index": 6,
+                          "width": 150,
+                          "id": "total_receivable_with_vat_ait",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "total_receivable_with_vat_ait",
+                          "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( currentRow.total_receivable_with_vat_ait))}}",
+                          "cellBackground": ""
+                        },
+                        "invoice_amount": {
+                          "index": 7,
+                          "width": 150,
+                          "id": "invoice_amount",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "invoice_amount",
+                          "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( currentRow.invoice_amount))}}",
+                          "cellBackground": ""
+                        },
+                        "received_amount_w_vat_ait": {
+                          "index": 8,
+                          "width": 150,
+                          "id": "received_amount_w_vat_ait",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "received_amount_w_vat_ait",
+                          "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( currentRow.received_amount_w_vat_ait))}}",
                           "cellBackground": ""
                         }
                       },
@@ -2218,27 +1850,23 @@
                     },
                     {
                       "boxShadow": "none",
-                      "widgetName": "Select1",
+                      "widgetName": "MultiSelect1",
                       "isFilterable": true,
-                      "dynamicPropertyPathList": [
-                        {
-                          "key": "onOptionChange"
-                        }
-                      ],
-                      "displayName": "Select",
-                      "iconSVG": "/static/media/icon.bd99caba5853ad71e4b3d8daffacb3a2.svg",
+                      "displayName": "MultiSelect",
+                      "iconSVG": "/static/media/icon.a3495809ae48291a64404f3bb04b0e69.svg",
                       "labelText": "Status",
                       "searchTags": [
-                        "dropdown"
+                        "dropdown",
+                        "tags"
                       ],
                       "topRow": 6,
                       "bottomRow": 10,
                       "parentRowSpace": 10,
                       "labelWidth": 5,
-                      "type": "SELECT_WIDGET",
+                      "type": "MULTI_SELECT_WIDGET_V2",
                       "serverSideFiltering": false,
                       "hideCard": false,
-                      "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( \nappsmith.store.valueOf('last_status').last_status))(Select1.options, Select1.serverSideFiltering) }}",
+                      "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( appsmith.store.last_selected_status))(MultiSelect1.options, MultiSelect1.serverSideFiltering) }}",
                       "animateLoading": true,
                       "parentColumnSpace": 17.625,
                       "dynamicTriggerPathList": [
@@ -2260,14 +1888,14 @@
                       ],
                       "labelPosition": "Left",
                       "options": "[\n  {\n    \"label\": \"Ready-to-send\",\n    \"value\": \"Ready-to-send\"\n  },\n  {\n    \"label\": \"receiving-in-progress\",\n    \"value\": \"receiving-in-progress\"\n  },\n  {\n    \"label\": \"Bill-accepted-by-client\",\n    \"value\": \"Bill-accepted-by-client\"\n  }\n]",
-                      "placeholderText": "Select option",
+                      "placeholderText": "Select option(s)",
                       "isDisabled": false,
-                      "key": "f8ykmhwk27",
+                      "key": "8k0c0k69qo",
                       "labelTextSize": "0.875rem",
                       "isRequired": false,
                       "isDeprecated": false,
                       "rightColumn": 38,
-                      "widgetId": "yf1wfuggpa",
+                      "widgetId": "9spxqakw5o",
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
                       "version": 1,
@@ -2276,7 +1904,7 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "onOptionChange": "{{storeValue('last_status',Select1.selectedOptionValue)}}"
+                      "onOptionChange": "{{storeValue('last_selected_status',MultiSelect1.selectedOptionValues.join(\",\"))}}"
                     }
                   ],
                   "key": "0mv3bbec1o",
