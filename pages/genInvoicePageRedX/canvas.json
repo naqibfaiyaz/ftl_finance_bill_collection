@@ -3284,18 +3284,6 @@
           ],
           [
             {
-              "id": "genInvoicePageRedX_get_invoice",
-              "name": "get_invoice",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "appsmith.URL.queryParams.InvoiceNumber"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
               "id": "genInvoicePageRedX_generate_pdf",
               "name": "generate_pdf",
               "confirmBeforeExecute": false,
@@ -3320,13 +3308,25 @@
               "timeoutInMillisecond": 10000
             },
             {
+              "id": "genInvoicePageRedX_get_invoice",
+              "name": "get_invoice",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "appsmith.URL.queryParams.InvoiceNumber"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
               "id": "genInvoicePageRedX_get_shop_data",
               "name": "get_shop_data",
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [
-                "appsmith.URL.queryParams.shop_id",
-                "appsmith.store.access_token"
+                "appsmith.store.access_token",
+                "appsmith.URL.queryParams.shop_id"
               ],
               "timeoutInMillisecond": 10000
             }

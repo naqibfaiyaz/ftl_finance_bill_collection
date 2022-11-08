@@ -19,7 +19,7 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 64,
+          "version": 65,
           "minHeight": 730,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
@@ -4357,19 +4357,6 @@
           ],
           [
             {
-              "id": "genInvoicePageMokam_get_shop_data",
-              "name": "get_shop_data",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "appsmith.URL.queryParams.shop_id",
-                "appsmith.store.access_token"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
               "id": "genInvoicePageMokam_generate_pdf",
               "name": "generate_pdf",
               "confirmBeforeExecute": false,
@@ -4390,6 +4377,19 @@
                 "trip_count.text",
                 "vat_rate.text",
                 "vat_value.text"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "genInvoicePageMokam_get_shop_data",
+              "name": "get_shop_data",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "appsmith.URL.queryParams.shop_id",
+                "appsmith.store.access_token"
               ],
               "timeoutInMillisecond": 10000
             }
