@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT\nrequired_date, fleet_id,fleet_tracking_id,invoice_number, shop_id\nFROM trip_level_invoice where \nfleet_tracking_id in ({{\"'\"+get_parcel_details_v1.data.map((a)=>a.tracking_id).join(\"','\")+\"'\"}}) \nand\nstatus not in ('Invalid')\nand date(required_date) between '{{moment(DatePicker1.selectedDate).format('YYYY-MM-DD')}}' and '{{moment(DatePicker1Copy.selectedDate).format('YYYY-MM-DD')}}'\nand shop_id = {{parseInt(search_shop_id.selectedOptionValue)}}",
+      "body": "SELECT\nrequired_date, fleet_id,fleet_tracking_id,invoice_number, shop_id\nFROM trip_level_invoice where \nfleet_tracking_id in ({{\"'\"+ (search_fleetIdCopy.text==null ||search_fleetIdCopy.text==''? (get_parcel_details_v1.data.map((a)=>a.tracking_id).join(\"','\")+\"'\"): (Api1.data.map((a)=>a.tracking_id).join(\"','\")+\"'\"))}}) \nand\nstatus not in ('Invalid')\nand date(required_date) between '{{moment(DatePicker1.selectedDate).format('YYYY-MM-DD')}}' and '{{moment(DatePicker1Copy.selectedDate).format('YYYY-MM-DD')}}'\nand shop_id = {{parseInt(search_shop_id.selectedOptionValue)}}",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -36,7 +36,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "\"'\"+get_parcel_details_v1.data.map((a)=>a.tracking_id).join(\"','\")+\"'\"",
+      "\"'\"+ (search_fleetIdCopy.text==null ||search_fleetIdCopy.text==''? (get_parcel_details_v1.data.map((a)=>a.tracking_id).join(\"','\")+\"'\"): (Api1.data.map((a)=>a.tracking_id).join(\"','\")+\"'\"))",
       "moment(DatePicker1.selectedDate).format('YYYY-MM-DD')",
       "moment(DatePicker1Copy.selectedDate).format('YYYY-MM-DD')",
       "parseInt(search_shop_id.selectedOptionValue)"

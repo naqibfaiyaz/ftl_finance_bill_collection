@@ -604,12 +604,6 @@
                           "key": "primaryColumns.customColumn3.isCellVisible"
                         },
                         {
-                          "key": "derivedColumns.customColumn1.isCellVisible"
-                        },
-                        {
-                          "key": "primaryColumns.customColumn1.isCellVisible"
-                        },
-                        {
                           "key": "isVisible"
                         },
                         {
@@ -749,6 +743,12 @@
                         },
                         {
                           "key": "primaryColumns.received_amount_w_vat_ait.computedValue"
+                        },
+                        {
+                          "key": "derivedColumns.customColumn1.isCellVisible"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn1.isCellVisible"
                         }
                       ],
                       "leftColumn": 0,

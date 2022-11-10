@@ -6781,10 +6781,10 @@
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
-                "\"'\"+get_parcel_details_v1.data.map((a)=>a.tracking_id).join(\"','\")+\"'\"",
-                "moment(DatePicker1.selectedDate).format('YYYY-MM-DD')",
+                "parseInt(search_shop_id.selectedOptionValue)",
+                "\"'\"+ (search_fleetIdCopy.text==null ||search_fleetIdCopy.text==''? (get_parcel_details_v1.data.map((a)=>a.tracking_id).join(\"','\")+\"'\"): (Api1.data.map((a)=>a.tracking_id).join(\"','\")+\"'\"))",
                 "moment(DatePicker1Copy.selectedDate).format('YYYY-MM-DD')",
-                "parseInt(search_shop_id.selectedOptionValue)"
+                "moment(DatePicker1.selectedDate).format('YYYY-MM-DD')"
               ],
               "timeoutInMillisecond": 10000
             },
