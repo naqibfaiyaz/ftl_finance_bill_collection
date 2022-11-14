@@ -3189,7 +3189,7 @@
                               "parentRowSpace": 10,
                               "autoFocus": false,
                               "type": "INPUT_WIDGET_V2",
-                              "maxNum": "{{parseInt(readyInvoiceTbl.selectedRow.trip_total_revenue)- parseInt(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait==null?0:parseInt(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait))}}",
+                              "maxNum": "{{parseInt(readyInvoiceTbl.selectedRow.net_to_redx_invoice_amount_wo_vat_ait_)- parseInt(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait==null?0:parseInt(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait))}}",
                               "hideCard": false,
                               "animateLoading": true,
                               "parentColumnSpace": 13.21875,
@@ -3214,7 +3214,7 @@
                               "inputType": "NUMBER",
                               "isDisabled": false,
                               "key": "mebc20zfb0",
-                              "validation": "{{\nparseInt(collected_net_to_redx.text) <= (parseInt(readyInvoiceTbl.selectedRow.trip_total_revenue)- parseInt(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait)).toFixed(2)}}",
+                              "validation": "{{\nparseInt(collected_net_to_redx.text) <= (parseInt(readyInvoiceTbl.selectedRow.net_to_redx_invoice_amount_wo_vat_ait_)- parseInt(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait)).toFixed(2)}}",
                               "labelTextSize": "0.875rem",
                               "isRequired": true,
                               "rightColumn": 33,
@@ -3229,7 +3229,7 @@
                               "isLoading": false,
                               "borderRadius": "0px",
                               "iconAlign": "left",
-                              "defaultText": "{{\nreadyInvoiceTbl.selectedRow.trip_total_revenue-(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait==null?0:parseInt(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait))>0?(readyInvoiceTbl.selectedRow.trip_total_revenue-(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait==null?0:parseInt(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait))):0\n}}"
+                              "defaultText": "{{\nreadyInvoiceTbl.selectedRow.net_to_redx_invoice_amount_wo_vat_ait_-(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait==null?0:parseInt(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait))>0?(readyInvoiceTbl.selectedRow.net_to_redx_invoice_amount_wo_vat_ait_-(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait==null?0:parseInt(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait))):0\n}}"
                             },
                             {
                               "boxShadow": "none",
