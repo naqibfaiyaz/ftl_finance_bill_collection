@@ -6794,10 +6794,10 @@
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [
-                "Table1.selectedRow.SHOP_ID",
                 "appsmith.store.session",
-                "moment(DatePicker1.selectedDate).format('YYYY-MM-DD')",
-                "moment(DatePicker1Copy.selectedDate).format('YYYY-MM-DD')"
+                "Table1.selectedRow.SHOP_ID",
+                "moment(DatePicker1Copy.selectedDate).format('YYYY-MM-DD')",
+                "moment(DatePicker1.selectedDate).format('YYYY-MM-DD')"
               ],
               "timeoutInMillisecond": 100000000
             }

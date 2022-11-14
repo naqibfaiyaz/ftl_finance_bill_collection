@@ -694,12 +694,6 @@
                           "key": "primaryColumns.received_ait_amount.computedValue"
                         },
                         {
-                          "key": "derivedColumns.customColumn7.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.customColumn7.computedValue"
-                        },
-                        {
                           "key": "primaryColumns.received_amount_wo_vat_ait.computedValue"
                         },
                         {
@@ -749,6 +743,9 @@
                         },
                         {
                           "key": "primaryColumns.customColumn1.isCellVisible"
+                        },
+                        {
+                          "key": "primaryColumns.net_to_redx_invoice_amount_wo_vat_ait_.computedValue"
                         }
                       ],
                       "leftColumn": 0,
@@ -805,16 +802,17 @@
                       "defaultPageSize": 0,
                       "columnOrder": [
                         "id",
-                        "invoice_number",
+                        "shop_id",
                         "client_name",
-                        "trip_month",
-                        "banner",
-                        "status",
+                        "invoice_number",
                         "invoice_amount",
+                        "net_to_redx_invoice_amount_wo_vat_ait_",
                         "total_receivable_with_vat_ait",
                         "received_amount_w_vat_ait",
                         "received_amount_wo_vat_ait",
-                        "shop_id",
+                        "status",
+                        "banner",
+                        "trip_month",
                         "user_data",
                         "trip_counts",
                         "hard_copy_receiving_date",
@@ -830,8 +828,7 @@
                         "customColumn3",
                         "customColumn4",
                         "customColumn5",
-                        "customColumn6",
-                        "customColumn7"
+                        "customColumn6"
                       ],
                       "dynamicPropertyPathList": [
                         {
@@ -932,7 +929,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellVisible": true,
                           "isDerived": false,
@@ -1324,22 +1321,6 @@
                           "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( currentRow.received_ait_amount))}}",
                           "cellBackground": ""
                         },
-                        "customColumn7": {
-                          "index": 40,
-                          "width": 150,
-                          "id": "customColumn7",
-                          "columnType": "text",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellVisible": false,
-                          "isDerived": true,
-                          "label": "total_receivable_with_vat_ait",
-                          "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( \n//(function() {\t\n//const price = parseFloat(currentRow.total_price_after_vat_ait-currentRow.received_amount).toFixed(2);\n\n// dollarUSLocale = Intl.NumberFormat(undefined, {\n\t//style: 'currency',\n\t//currency: 'BDT'\n//add_remarks.data});\n\t//return dollarUSLocale.format(price).replace('BDT','')\n//})()\n(currentRow.total_price_after_vat_ait-currentRow.received_amount).toFixed(2)\n))}}",
-                          "buttonStyle": "rgb(3, 179, 101)",
-                          "labelColor": "#FFFFFF"
-                        },
                         "received_amount_wo_vat_ait": {
                           "index": 34,
                           "width": 150,
@@ -1415,7 +1396,7 @@
                           "isDisabled": false,
                           "isCellVisible": true,
                           "isDerived": false,
-                          "label": "total_receivable_with_vat_ait_2",
+                          "label": "total_receivable_with_vat_ait",
                           "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( currentRow.total_receivable_with_vat_ait))}}",
                           "cellBackground": ""
                         },
@@ -1456,6 +1437,23 @@
                           "label": "received_amount_w_vat_ait",
                           "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( currentRow.received_amount_w_vat_ait))}}",
                           "cellBackground": ""
+                        },
+                        "net_to_redx_invoice_amount_wo_vat_ait_": {
+                          "index": 8,
+                          "width": 150,
+                          "id": "net_to_redx_invoice_amount_wo_vat_ait_",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "net_to_redx(invoice_amount_wo_vat_ait)",
+                          "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( currentRow.net_to_redx_invoice_amount_wo_vat_ait_))}}"
                         }
                       },
                       "onRowSelected": "",
@@ -1594,22 +1592,6 @@
                           "buttonLabel": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( 'Download'))}}",
                           "menuColor": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( appsmith.theme.colors.primaryColor))}}",
                           "onClick": "{{showModal('Modal1')}}"
-                        },
-                        "customColumn7": {
-                          "index": 40,
-                          "width": 150,
-                          "id": "customColumn7",
-                          "columnType": "text",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellVisible": false,
-                          "isDerived": true,
-                          "label": "total_receivable_with_vat_ait",
-                          "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( \n//(function() {\t\n//const price = parseFloat(currentRow.total_price_after_vat_ait-currentRow.received_amount).toFixed(2);\n\n// dollarUSLocale = Intl.NumberFormat(undefined, {\n\t//style: 'currency',\n\t//currency: 'BDT'\n//add_remarks.data});\n\t//return dollarUSLocale.format(price).replace('BDT','')\n//})()\n(currentRow.total_price_after_vat_ait-currentRow.received_amount).toFixed(2)\n))}}",
-                          "buttonStyle": "rgb(3, 179, 101)",
-                          "labelColor": "#FFFFFF"
                         },
                         "customColumn8": {
                           "index": 42,
@@ -2611,7 +2593,7 @@
                       "rightColumn": 39,
                       "textSize": "0.875rem",
                       "widgetId": "160hjta4s3",
-                      "tableData": "[\n  {\n    \"Amount\": \"Invoice Amount(with VAT/AIT)\",\n    \"Actual Amount\": \"{{readyInvoiceTbl.selectedRow.total_price_after_vat_ait}}\",\n    \"Collected Amount\": \"{{readyInvoiceTbl.selectedRow.received_amount==null?0:parseInt(readyInvoiceTbl.selectedRow.received_amount)}}\",\n    \"Due receivable\": \"{{(parseInt(readyInvoiceTbl.selectedRow.total_price_after_vat_ait)- parseInt(readyInvoiceTbl.selectedRow.received_amount)).toFixed(2)\n\t }}\"\n  },\n  {\n    \"Amount\": \"Net to RedX (w/o VAT AIT)\",\n    \"Actual Amount\": \"{{readyInvoiceTbl.selectedRow.trip_total_revenue}}\",\n    \"Collected Amount\": \"{{readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait==null?0:parseInt(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait)}}\",\n    \"Due receivable\": \"{{\n(parseInt(readyInvoiceTbl.selectedRow.trip_total_revenue)- parseInt(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait==null?0:parseInt(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait))).toFixed(2)}}\"\n  },\n  {\n    \"Amount\": \"VAT\",\n    \"Actual Amount\": \"{{readyInvoiceTbl.selectedRow.vat== null?'0':(parseInt(readyInvoiceTbl.selectedRow.vat))}}\",\n    \"Collected Amount\": \"{{parseInt(readyInvoiceTbl.selectedRow.received_vat_amount)}}\",\n    \"Due receivable\": \"{{\nreadyInvoiceTbl.selectedRow.vat== null?(0-parseInt(readyInvoiceTbl.selectedRow.received_vat_amount)):\n(parseInt(readyInvoiceTbl.selectedRow.vat)- parseInt(readyInvoiceTbl.selectedRow.received_vat_amount)).toFixed(2)}}\"\n  },\n  {\n    \"Amount\": \"AIT\",\n    \"Actual Amount\": \"{{readyInvoiceTbl.selectedRow.ait== null?'0':parseInt(readyInvoiceTbl.selectedRow.ait)}}\",\n    \"Collected Amount\": \"{{parseInt(readyInvoiceTbl.selectedRow.received_ait_amount)}}\",\n    \"Due receivable\": \"{{\nreadyInvoiceTbl.selectedRow.ait== null?(0-parseInt(readyInvoiceTbl.selectedRow.received_ait_amount)):\n(parseInt(readyInvoiceTbl.selectedRow.ait)- parseInt(readyInvoiceTbl.selectedRow.received_ait_amount)).toFixed(2)}}\"\n  }\n]",
+                      "tableData": "[\n  {\n    \"Amount\": \"Invoice Amount(with VAT/AIT)\",\n    \"Actual Amount\": \"{{readyInvoiceTbl.selectedRow.invoice_amount}}\",\n    \"Collected Amount\":\"{{readyInvoiceTbl.selectedRow.received_amount==null?0:parseInt(readyInvoiceTbl.selectedRow.received_amount)}}\",\n    \"Due receivable\":\"{{parseInt(readyInvoiceTbl.selectedRow.total_receivable_with_vat_ait).toFixed(2)}}\"\n  },\n  {\n    \"Amount\": \"Net to RedX (w/o VAT AIT)\",\n    \"Actual Amount\": \"{{readyInvoiceTbl.selectedRow.net_to_redx_invoice_amount_wo_vat_ait_}}\",\n    \"Collected Amount\": \"{{readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait==null?0:parseInt(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait)}}\",\n    \"Due receivable\": \"{{\n(parseInt(readyInvoiceTbl.selectedRow.net_to_redx_invoice_amount_wo_vat_ait_)- parseInt(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait==null?0:parseInt(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait))).toFixed(2)}}\"\n  },\n  {\n    \"Amount\": \"VAT\",\n    \"Actual Amount\": \"{{readyInvoiceTbl.selectedRow.vat== null?'0':(parseInt(readyInvoiceTbl.selectedRow.vat))}}\",\n    \"Collected Amount\": \"{{parseInt(readyInvoiceTbl.selectedRow.received_vat_amount)}}\",\n    \"Due receivable\": \"{{\nreadyInvoiceTbl.selectedRow.vat== null?(0-parseInt(readyInvoiceTbl.selectedRow.received_vat_amount)):\n(parseInt(readyInvoiceTbl.selectedRow.vat)- parseInt(readyInvoiceTbl.selectedRow.received_vat_amount)).toFixed(2)}}\"\n  },\n  {\n    \"Amount\": \"AIT\",\n    \"Actual Amount\": \"{{readyInvoiceTbl.selectedRow.ait== null?'0':parseInt(readyInvoiceTbl.selectedRow.ait)}}\",\n    \"Collected Amount\": \"{{parseInt(readyInvoiceTbl.selectedRow.received_ait_amount)}}\",\n    \"Due receivable\": \"{{\nreadyInvoiceTbl.selectedRow.ait== null?(0-parseInt(readyInvoiceTbl.selectedRow.received_ait_amount)):\n(parseInt(readyInvoiceTbl.selectedRow.ait)- parseInt(readyInvoiceTbl.selectedRow.received_ait_amount)).toFixed(2)}}\"\n  }\n]",
                       "label": "Data",
                       "searchKey": "",
                       "parentId": "6scr5gwx8s",
