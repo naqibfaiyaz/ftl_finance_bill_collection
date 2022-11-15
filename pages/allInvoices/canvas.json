@@ -1164,7 +1164,7 @@
                           "enableSort": true,
                           "isVisible": true,
                           "isDisabled": false,
-                          "isCellVisible": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( \nappsmith.store.is_finance_user? moment(currentRow.created_at).format('YYYY-MM-DD') >='2022-10-26' && currentRow.hard_copy_of_bill == null?\nfalse:true:false\n))}}",
+                          "isCellVisible": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( \nappsmith.store.is_finance_user? moment(currentRow.created_at).format('YYYY-MM-DD') >='2022-10-26' && currentRow.hard_copy_receiving_date == null?\nfalse:true:false\n))}}",
                           "isDerived": true,
                           "label": "Collection",
                           "computedValue": "",
@@ -1513,7 +1513,7 @@
                           "enableSort": true,
                           "isVisible": true,
                           "isDisabled": false,
-                          "isCellVisible": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( \nappsmith.store.is_finance_user? moment(currentRow.created_at).format('YYYY-MM-DD') >='2022-10-26' && currentRow.hard_copy_of_bill == null?\nfalse:true:false\n))}}",
+                          "isCellVisible": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( \nappsmith.store.is_finance_user? moment(currentRow.created_at).format('YYYY-MM-DD') >='2022-10-26' && currentRow.hard_copy_receiving_date == null?\nfalse:true:false\n))}}",
                           "isDerived": true,
                           "label": "Collection",
                           "computedValue": "",
@@ -2606,7 +2606,7 @@
                     {
                       "boxShadow": "none",
                       "widgetName": "IconButton1",
-                      "onClick": "{{set_status_to_received.run(() => closeModal('receivedFromInvoiceModal'), () => {})}}",
+                      "onClick": "{{closeModal('receivedFromInvoiceModal')}}",
                       "buttonColor": "#2E3D49",
                       "dynamicPropertyPathList": [],
                       "displayName": "Icon Button",
@@ -3459,7 +3459,7 @@
                               "resetFormOnClick": true,
                               "boxShadow": "none",
                               "widgetName": "Button1",
-                              "onClick": "{{post_received_data_v1.run(\n()=>get_all_invoices.run(\n()=>set_status_to_received.run(() =>get_all_invoices.run(\n()\t\t\t\t\t\t\t\t=>closeModal('receivedFromInvoiceModal') ))))\n\t}}",
+                              "onClick": "{{\nparseInt(collected_net_to_redx.text) == parseInt(readyInvoiceTbl.selectedRow.total_receivable_with_vat_ait)?\n\t(post_received_data_v1.run(\n()=>get_all_invoices.run(\n() => set_status_to_received.run(() =>closeModal('receivedFromInvoiceModal') ))))\n\n:(post_received_data_v1.run(\n()=>get_all_invoices.run(\n() =>closeModal('receivedFromInvoiceModal') )))\n\t}}",
                               "buttonColor": "#38AFF4",
                               "dynamicPropertyPathList": [
                                 {
