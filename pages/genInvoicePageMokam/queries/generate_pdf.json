@@ -40,6 +40,7 @@
         }
       ],
       "body": "{\n  \"in_word_text\": {{InWordsFinal.text}},\n  \"website\": \"https://apitemplate.io\",\n  \"document_id\": \"889856789012\",\n  \"invoice_number\": {{invoiceNumberFinal.text}},\n  \"issue_date_time\":{{issueDateFinal.text}},\n  \"due_date\":{{dueDateFinal.text}},\n  \"invoice_period\":{{invoicePeriodFinal.text}},\n  \"shop_id\":{{shopIdFinal.text}},\n  \"shop_name\":{{Text2.text}},\n  \"pickup_point\":{{Text2Copy.text}},\n\t\"redx_logo\":{{Image1.image}},\n  \"Description\":\"Transport Service\",\n  \"Unite_of_Supply\":\"NOS\",\n  \"Qty\":{{trip_count.text}},\n  \"Unit_Value\":\"\",\n  \"SD\":\"\",\n  \"SD_Amnt\":\"\",\n  \"VAT\":{{vat_rate.text}},\n  \"VAT_Amnt\":{{vat_value.text}},\n  \"Total_Value\":{{total_value.text}},\n  \"Total_Amount\":{{total_amount.text}},\n\t\"items\":{{Table3.tableData}}\n}",
+      "bodyFormData": [],
       "httpMethod": "POST",
       "selfReferencingDataPaths": [],
       "formData": {

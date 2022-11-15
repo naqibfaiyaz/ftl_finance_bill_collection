@@ -3456,7 +3456,7 @@
                           "key": "defaultOptionValue"
                         }
                       ],
-                      "options": "{{\nget_shops.data.shops.map(a => {\n\treturn {\n\t\tlabel: a.shopName,\n\t\tvalue: a.id\n\t}\n})\n}}",
+                      "options": "{{\nget_shops.data.shops.map(a => {\n\treturn {\n\t\tlabel: a.shopName,\n\t\tvalue: a.id\n\t}\n}).filter(b=>b.value==parseInt(appsmith.URL.queryParams.shop_id))\n}}",
                       "labelStyle": "BOLD",
                       "placeholderText": "Select Shop",
                       "isDisabled": false,

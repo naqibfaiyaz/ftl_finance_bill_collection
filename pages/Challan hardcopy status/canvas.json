@@ -390,6 +390,18 @@
                                 },
                                 {
                                   "key": "primaryColumns.hq_resend_time.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.load_in_time.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.load_out_time.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.unload_in_time.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.unload_out_time.computedValue"
                                 }
                               ],
                               "leftColumn": 0,
@@ -427,7 +439,6 @@
                               "widgetName": "Table1",
                               "defaultPageSize": 0,
                               "columnOrder": [
-                                "customColumn2",
                                 "id",
                                 "driver_name",
                                 "unloading_point",
@@ -456,7 +467,12 @@
                                 "audit_sent_time",
                                 "last_user_name",
                                 "demurrage_cost",
-                                "hq_resend_time"
+                                "hq_resend_time",
+                                "load_in_time",
+                                "load_out_time",
+                                "unload_in_time",
+                                "unload_out_time",
+                                "customColumn2"
                               ],
                               "dynamicPropertyPathList": [
                                 {
@@ -1044,6 +1060,82 @@
                                   "label": "hq_resend_time",
                                   "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.hq_resend_time))}}",
                                   "cellBackground": ""
+                                },
+                                "load_in_time": {
+                                  "index": 29,
+                                  "width": 150,
+                                  "id": "load_in_time",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "load_in_time",
+                                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.load_in_time))}}",
+                                  "cellBackground": ""
+                                },
+                                "load_out_time": {
+                                  "index": 30,
+                                  "width": 150,
+                                  "id": "load_out_time",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "load_out_time",
+                                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.load_out_time))}}",
+                                  "cellBackground": ""
+                                },
+                                "unload_in_time": {
+                                  "index": 31,
+                                  "width": 150,
+                                  "id": "unload_in_time",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "unload_in_time",
+                                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.unload_in_time))}}",
+                                  "cellBackground": ""
+                                },
+                                "unload_out_time": {
+                                  "index": 32,
+                                  "width": 150,
+                                  "id": "unload_out_time",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "unload_out_time",
+                                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.unload_out_time))}}",
+                                  "cellBackground": ""
                                 }
                               },
                               "onRowSelected": "",
@@ -1371,6 +1463,18 @@
                                 },
                                 {
                                   "key": "primaryColumns.hq_resend_time.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.load_in_time.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.load_out_time.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.unload_in_time.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.unload_out_time.computedValue"
                                 }
                               ],
                               "leftColumn": 0,
@@ -1437,6 +1541,10 @@
                                 "last_user_name",
                                 "demurrage_cost",
                                 "hq_resend_time",
+                                "load_in_time",
+                                "load_out_time",
+                                "unload_in_time",
+                                "unload_out_time",
                                 "customColumn1"
                               ],
                               "dynamicPropertyPathList": [
@@ -2022,6 +2130,82 @@
                                   "isDerived": false,
                                   "label": "hq_resend_time",
                                   "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.hq_resend_time))}}",
+                                  "cellBackground": ""
+                                },
+                                "load_in_time": {
+                                  "index": 29,
+                                  "width": 150,
+                                  "id": "load_in_time",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "load_in_time",
+                                  "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.load_in_time))}}",
+                                  "cellBackground": ""
+                                },
+                                "load_out_time": {
+                                  "index": 30,
+                                  "width": 150,
+                                  "id": "load_out_time",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "load_out_time",
+                                  "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.load_out_time))}}",
+                                  "cellBackground": ""
+                                },
+                                "unload_in_time": {
+                                  "index": 31,
+                                  "width": 150,
+                                  "id": "unload_in_time",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "unload_in_time",
+                                  "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.unload_in_time))}}",
+                                  "cellBackground": ""
+                                },
+                                "unload_out_time": {
+                                  "index": 32,
+                                  "width": 150,
+                                  "id": "unload_out_time",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "unload_out_time",
+                                  "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.unload_out_time))}}",
                                   "cellBackground": ""
                                 }
                               },
