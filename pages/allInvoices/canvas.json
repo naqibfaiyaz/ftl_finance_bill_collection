@@ -746,6 +746,9 @@
                         },
                         {
                           "key": "primaryColumns.net_to_redx_invoice_amount_wo_vat_ait_.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.created_at.computedValue"
                         }
                       ],
                       "leftColumn": 0,
@@ -802,33 +805,34 @@
                       "defaultPageSize": 0,
                       "columnOrder": [
                         "id",
-                        "shop_id",
-                        "client_name",
                         "invoice_number",
+                        "client_name",
+                        "trip_month",
+                        "banner",
+                        "status",
+                        "total_receivable_with_vat_ait",
                         "invoice_amount",
                         "net_to_redx_invoice_amount_wo_vat_ait_",
-                        "total_receivable_with_vat_ait",
                         "received_amount_w_vat_ait",
                         "received_amount_wo_vat_ait",
-                        "status",
-                        "banner",
-                        "trip_month",
+                        "shop_id",
                         "user_data",
                         "trip_counts",
                         "hard_copy_receiving_date",
-                        "customColumn8",
                         "vat",
                         "received_vat_amount",
                         "ait",
                         "received_ait_amount",
                         "hard_copy_of_bill",
                         "hard_copy",
+                        "created_at",
                         "customColumn1",
                         "customColumn2",
                         "customColumn3",
                         "customColumn4",
                         "customColumn5",
-                        "customColumn6"
+                        "customColumn6",
+                        "customColumn8"
                       ],
                       "dynamicPropertyPathList": [
                         {
@@ -1454,6 +1458,25 @@
                           "isDerived": false,
                           "label": "net_to_redx(invoice_amount_wo_vat_ait)",
                           "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( currentRow.net_to_redx_invoice_amount_wo_vat_ait_))}}"
+                        },
+                        "created_at": {
+                          "index": 21,
+                          "width": 150,
+                          "id": "created_at",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "created_at",
+                          "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( currentRow.created_at))}}",
+                          "cellBackground": ""
                         }
                       },
                       "onRowSelected": "",
@@ -2106,7 +2129,7 @@
                               "resetFormOnClick": false,
                               "boxShadow": "none",
                               "widgetName": "Button2",
-                              "onClick": "{{\n(statusOfInvoice.selectedOptionLabel!=readyInvoiceTbl.selectedRow.status)?\nput_status_invoice_2.run(()=>\n\t\t\tget_all_invoices.run(()=> closeModal('change_status')\t\t\t\t\t\t\n)):readyInvoiceTbl.selectedRow.status=='receiving-in-progress'?showAlert('You can not change the status once payment has started to come.', 'warning'):showAlert('You did not change the status.', 'warning')}}",
+                              "onClick": "{{\n(statusOfInvoice.selectedOptionLabel!=readyInvoiceTbl.selectedRow.status)?\nput_status_invoice.run(()=>\n\t\t\tget_all_invoices.run(()=> closeModal('change_status')\t\t\t\t\t\t\n)):readyInvoiceTbl.selectedRow.status=='receiving-in-progress'?showAlert('You can not change the status once payment has started to come.', 'warning'):showAlert('You did not change the status.', 'warning')}}",
                               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                               "dynamicPropertyPathList": [
                                 {
