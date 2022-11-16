@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "get_parcel_details",
+    "name": "get_parcel_details_panel",
     "datasource": {
       "name": "metabase",
       "pluginId": "restapi-plugin",
@@ -17,7 +17,7 @@
     "actionConfiguration": {
       "timeoutInMillisecond": 100000000,
       "paginationType": "NONE",
-      "path": "/api/card/7085/query/json",
+      "path": "/api/card/7220/query/json",
       "headers": [
         {
           "key": "X-Metabase-Session",
@@ -67,12 +67,12 @@
       "moment(DatePicker1Copy.selectedDate).format('YYYY-MM-DD')",
       "parseInt(search_shop_id.selectedOptionValue)"
     ],
-    "userSetOnLoad": true,
+    "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Total Bill Invoice Creation_get_parcel_details",
+  "id": "Total Bill Invoice Creation_get_parcel_details_panel",
   "deleted": false,
-  "gitSyncId": "6231701cf1c0af1ceded5043_634f82b75f559f5079c6d7d2"
+  "gitSyncId": "6231701cf1c0af1ceded5043_6374a20ae513ba7181092c39"
 }

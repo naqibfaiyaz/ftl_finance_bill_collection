@@ -2444,10 +2444,10 @@
                           "key": "primaryColumns.Collected_Amount.computedValue"
                         },
                         {
-                          "key": "tableData"
+                          "key": "primaryColumns.Due_receivable.computedValue"
                         },
                         {
-                          "key": "primaryColumns.Due_receivable.computedValue"
+                          "key": "tableData"
                         }
                       ],
                       "leftColumn": 0,
@@ -2616,7 +2616,7 @@
                       "rightColumn": 39,
                       "textSize": "0.875rem",
                       "widgetId": "160hjta4s3",
-                      "tableData": "[\n  {\n    \"Amount\": \"Invoice Amount(with VAT/AIT)\",\n    \"Actual Amount\": \"{{readyInvoiceTbl.selectedRow.invoice_amount}}\",\n    \"Collected Amount\":\"{{readyInvoiceTbl.selectedRow.received_amount==null?0:parseInt(readyInvoiceTbl.selectedRow.received_amount)}}\",\n    \"Due receivable\":\"{{parseInt(readyInvoiceTbl.selectedRow.total_receivable_with_vat_ait).toFixed(2)}}\"\n  },\n  {\n    \"Amount\": \"Net to RedX (w/o VAT AIT)\",\n    \"Actual Amount\": \"{{readyInvoiceTbl.selectedRow.net_to_redx_invoice_amount_wo_vat_ait_}}\",\n    \"Collected Amount\": \"{{readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait==null?0:parseInt(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait)}}\",\n    \"Due receivable\": \"{{\n(parseInt(readyInvoiceTbl.selectedRow.net_to_redx_invoice_amount_wo_vat_ait_)- parseInt(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait==null?0:parseInt(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait))).toFixed(2)}}\"\n  },\n  {\n    \"Amount\": \"VAT\",\n    \"Actual Amount\": \"{{readyInvoiceTbl.selectedRow.vat== null?'0':(parseInt(readyInvoiceTbl.selectedRow.vat))}}\",\n    \"Collected Amount\": \"{{parseInt(readyInvoiceTbl.selectedRow.received_vat_amount)}}\",\n    \"Due receivable\": \"{{\nreadyInvoiceTbl.selectedRow.vat== null?(0-parseInt(readyInvoiceTbl.selectedRow.received_vat_amount)):\n(parseInt(readyInvoiceTbl.selectedRow.vat)- parseInt(readyInvoiceTbl.selectedRow.received_vat_amount)).toFixed(2)}}\"\n  },\n  {\n    \"Amount\": \"AIT\",\n    \"Actual Amount\": \"{{readyInvoiceTbl.selectedRow.ait== null?'0':parseInt(readyInvoiceTbl.selectedRow.ait)}}\",\n    \"Collected Amount\": \"{{parseInt(readyInvoiceTbl.selectedRow.received_ait_amount)}}\",\n    \"Due receivable\": \"{{\nreadyInvoiceTbl.selectedRow.ait== null?(0-parseInt(readyInvoiceTbl.selectedRow.received_ait_amount)):\n(parseInt(readyInvoiceTbl.selectedRow.ait)- parseInt(readyInvoiceTbl.selectedRow.received_ait_amount)).toFixed(2)}}\"\n  }\n]",
+                      "tableData": "[\n  {\n    \"Amount\": \"Invoice Amount(with VAT/AIT)\",\n    \"Actual Amount\": \"{{readyInvoiceTbl.selectedRow.invoice_amount}}\",\n    \"Collected Amount\":\"{{readyInvoiceTbl.selectedRow.received_amount_w_vat_ait==null?0:parseFloat(readyInvoiceTbl.selectedRow.received_amount_w_vat_ait)}}\",\n    \"Due receivable\":\"{{parseFloat(readyInvoiceTbl.selectedRow.total_receivable_with_vat_ait).toFixed(2)}}\"\n  },\n  {\n    \"Amount\": \"Net to RedX (w/o VAT AIT)\",\n    \"Actual Amount\": \"{{readyInvoiceTbl.selectedRow.net_to_redx_invoice_amount_wo_vat_ait_}}\",\n    \"Collected Amount\": \"{{readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait==null?0:parseFloat(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait)}}\",\n    \"Due receivable\": \"{{\n(parseFloat(readyInvoiceTbl.selectedRow.net_to_redx_invoice_amount_wo_vat_ait_)- parseFloat(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait==null?0:parseFloat(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait))).toFixed(2)}}\"\n  },\n  {\n    \"Amount\": \"VAT\",\n    \"Actual Amount\": \"{{readyInvoiceTbl.selectedRow.vat== null?'0':(parseFloat(readyInvoiceTbl.selectedRow.vat))}}\",\n    \"Collected Amount\": \"{{parseFloat(readyInvoiceTbl.selectedRow.received_vat_amount)}}\",\n    \"Due receivable\": \"{{\nreadyInvoiceTbl.selectedRow.vat== null?(0-parseFloat(readyInvoiceTbl.selectedRow.received_vat_amount)):\n(parseFloat(readyInvoiceTbl.selectedRow.vat)- parseFloat(readyInvoiceTbl.selectedRow.received_vat_amount)).toFixed(2)}}\"\n  },\n  {\n    \"Amount\": \"AIT\",\n    \"Actual Amount\": \"{{readyInvoiceTbl.selectedRow.ait== null?'0':parseFloat(readyInvoiceTbl.selectedRow.ait)}}\",\n    \"Collected Amount\": \"{{parseFloat(readyInvoiceTbl.selectedRow.received_ait_amount)}}\",\n    \"Due receivable\": \"{{\nreadyInvoiceTbl.selectedRow.ait== null?(0-parseFloat(readyInvoiceTbl.selectedRow.received_ait_amount)):\n(parseFloat(readyInvoiceTbl.selectedRow.ait)- parseFloat(readyInvoiceTbl.selectedRow.received_ait_amount)).toFixed(2)}}\"\n  }\n]",
                       "label": "Data",
                       "searchKey": "",
                       "parentId": "6scr5gwx8s",
@@ -3031,6 +3031,12 @@
                                 },
                                 {
                                   "key": "borderRadius"
+                                },
+                                {
+                                  "key": "defaultText"
+                                },
+                                {
+                                  "key": "validation"
                                 }
                               ],
                               "labelPosition": "Left",
@@ -3038,7 +3044,7 @@
                               "inputType": "TEXT",
                               "isDisabled": false,
                               "key": "tv860i56gz",
-                              "validation": "",
+                              "validation": "{{\nparseInt(collected_ait.text) <= (parseInt(readyInvoiceTbl.selectedRow.ait)- parseInt(readyInvoiceTbl.selectedRow.received_ait_amount)).toFixed(2)}}",
                               "labelTextSize": "0.875rem",
                               "isRequired": true,
                               "isDeprecated": false,
@@ -3054,7 +3060,7 @@
                               "isLoading": false,
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                               "iconAlign": "left",
-                              "defaultText": "0"
+                              "defaultText": "{{\nreadyInvoiceTbl.selectedRow.ait-(readyInvoiceTbl.selectedRow.received_ait_amount==null?0:parseFloat(readyInvoiceTbl.selectedRow.received_ait_amount))>0?(readyInvoiceTbl.selectedRow.ait-(readyInvoiceTbl.selectedRow.received_ait_amount==null?0:parseFloat(readyInvoiceTbl.selectedRow.received_ait_amount))).toFixed(2):0\n}}"
                             },
                             {
                               "boxShadow": "none",
@@ -3218,7 +3224,7 @@
                               "parentRowSpace": 10,
                               "autoFocus": false,
                               "type": "INPUT_WIDGET_V2",
-                              "maxNum": "{{parseInt(readyInvoiceTbl.selectedRow.net_to_redx_invoice_amount_wo_vat_ait_)- parseInt(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait==null?0:parseInt(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait))}}",
+                              "maxNum": "{{parseFloat(readyInvoiceTbl.selectedRow.net_to_redx_invoice_amount_wo_vat_ait_)- parseFloat(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait==null?0:parseFloat(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait).toFixed(2))}}",
                               "hideCard": false,
                               "animateLoading": true,
                               "parentColumnSpace": 13.21875,
@@ -3258,7 +3264,7 @@
                               "isLoading": false,
                               "borderRadius": "0px",
                               "iconAlign": "left",
-                              "defaultText": "{{\nreadyInvoiceTbl.selectedRow.net_to_redx_invoice_amount_wo_vat_ait_-(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait==null?0:parseInt(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait))>0?(readyInvoiceTbl.selectedRow.net_to_redx_invoice_amount_wo_vat_ait_-(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait==null?0:parseInt(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait))):0\n}}"
+                              "defaultText": "{{\nreadyInvoiceTbl.selectedRow.net_to_redx_invoice_amount_wo_vat_ait_-(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait==null?0:parseFloat(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait))>0?(readyInvoiceTbl.selectedRow.net_to_redx_invoice_amount_wo_vat_ait_-(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait==null?0:parseFloat(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait))):0\n}}"
                             },
                             {
                               "boxShadow": "none",
@@ -3556,6 +3562,12 @@
                                 },
                                 {
                                   "key": "borderRadius"
+                                },
+                                {
+                                  "key": "defaultText"
+                                },
+                                {
+                                  "key": "validation"
                                 }
                               ],
                               "labelPosition": "Left",
@@ -3563,7 +3575,7 @@
                               "inputType": "TEXT",
                               "isDisabled": false,
                               "key": "tv860i56gz",
-                              "validation": "",
+                              "validation": "{{\nparseInt(collected_vat.text) <= (parseInt(readyInvoiceTbl.selectedRow.vat)- parseInt(readyInvoiceTbl.selectedRow.received_vat_amount)).toFixed(2)}}",
                               "labelTextSize": "0.875rem",
                               "isRequired": true,
                               "isDeprecated": false,
@@ -3580,7 +3592,7 @@
                               "isLoading": false,
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                               "iconAlign": "left",
-                              "defaultText": "0"
+                              "defaultText": "{{\nreadyInvoiceTbl.selectedRow.vat-(readyInvoiceTbl.selectedRow.received_vat_amount==null?0:parseFloat(readyInvoiceTbl.selectedRow.received_vat_amount))>0?(readyInvoiceTbl.selectedRow.vat-(readyInvoiceTbl.selectedRow.received_vat_amount==null?0:parseFloat(readyInvoiceTbl.selectedRow.received_vat_amount))).toFixed(2):0\n}}"
                             },
                             {
                               "widgetName": "Text6",

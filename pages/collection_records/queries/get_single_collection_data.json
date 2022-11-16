@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "get_collection_declarations_v2",
+    "name": "get_single_collection_data",
     "datasource": {
       "name": "Postgres_latest",
       "pluginId": "postgres-plugin",
@@ -13,12 +13,10 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "collection_declaration Copy",
+    "pageId": "collection_records",
     "actionConfiguration": {
-      "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT * FROM customer_collection_declation ORDER BY unadjusted_amount desc;",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -26,8 +24,7 @@
         }
       ]
     },
-    "executeOnLoad": true,
-    "dynamicBindingPathList": [],
+    "executeOnLoad": false,
     "isValid": true,
     "invalids": [],
     "messages": [],
@@ -37,7 +34,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "collection_declaration Copy_get_collection_declarations_v2",
+  "id": "collection_records_get_single_collection_data",
   "deleted": false,
-  "gitSyncId": "6231701cf1c0af1ceded5043_637480841351c74a8ce8bb1d"
+  "gitSyncId": "6231701cf1c0af1ceded5043_63749c6ec4406624f7ca6279"
 }

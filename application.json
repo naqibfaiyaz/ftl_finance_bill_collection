@@ -37,15 +37,11 @@
       "isDefault": false
     },
     {
-      "id": "collection_declaration",
-      "isDefault": false
-    },
-    {
       "id": "collection_records",
       "isDefault": false
     },
     {
-      "id": "collection_declaration Copy",
+      "id": "collection_declaration",
       "isDefault": false
     }
   ],
