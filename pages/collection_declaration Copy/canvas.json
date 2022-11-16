@@ -1,7 +1,7 @@
 {
   "unpublishedPage": {
-    "name": "collection_declaration",
-    "slug": "collection-declaration",
+    "name": "collection_declaration Copy",
+    "slug": "collection-declaration-copy",
     "layouts": [
       {
         "viewMode": false,
@@ -867,7 +867,7 @@
                   "widgetName": "Canvas1",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 1310,
+                  "bottomRow": 1170,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
@@ -889,7 +889,7 @@
                       "borderColor": "#E0DEDE",
                       "isVisibleDownload": true,
                       "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
-                      "topRow": 72,
+                      "topRow": 58,
                       "isSortable": true,
                       "type": "TABLE_WIDGET_V2",
                       "inlineEditingSaveOption": "ROW_LEVEL",
@@ -938,9 +938,6 @@
                           "key": "tableData"
                         },
                         {
-                          "key": "primaryColumns.id.computedValue"
-                        },
-                        {
                           "key": "primaryColumns.shop_id.computedValue"
                         },
                         {
@@ -948,12 +945,6 @@
                         },
                         {
                           "key": "primaryColumns.received_amount.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.adjusted_amount.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.unadjusted_amount.computedValue"
                         },
                         {
                           "key": "primaryColumns.proof_of_amount_received.computedValue"
@@ -965,16 +956,10 @@
                           "key": "primaryColumns.created_at.computedValue"
                         },
                         {
-                          "key": "primaryColumns.updated_at.computedValue"
-                        },
-                        {
                           "key": "primaryColumns.received_amount.buttonLabel"
                         },
                         {
                           "key": "primaryColumns.customColumn3.menuItems.menuItemj1ay9btva5.isDisabled"
-                        },
-                        {
-                          "key": "primaryColumns.customColumn3.menuButtonLabel"
                         },
                         {
                           "key": "primaryColumns.customColumn3.computedValue"
@@ -987,6 +972,9 @@
                         },
                         {
                           "key": "primaryColumns.customColumn3.boxShadow"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn3.menuButtonLabel"
                         }
                       ],
                       "leftColumn": 0,
@@ -1030,16 +1018,12 @@
                       "defaultPageSize": 0,
                       "columnOrder": [
                         "customColumn3",
-                        "id",
                         "shop_id",
                         "shop_name",
                         "received_amount",
-                        "adjusted_amount",
-                        "unadjusted_amount",
                         "proof_of_amount_received",
                         "receive_date",
-                        "created_at",
-                        "updated_at"
+                        "created_at"
                       ],
                       "dynamicPropertyPathList": [
                         {
@@ -1056,7 +1040,7 @@
                         }
                       ],
                       "displayName": "Table",
-                      "bottomRow": 129,
+                      "bottomRow": 115,
                       "columnWidthMap": {
                         "task": 245,
                         "step": 62,
@@ -1071,38 +1055,10 @@
                         },
                         {
                           "key": "primaryColumns.customColumn3.menuItems.menuItemj1ay9btva5.onClick"
-                        },
-                        {
-                          "key": "primaryColumns.customColumn3.menuItems.menuItemz9cacajq8p.onClick"
                         }
                       ],
                       "borderWidth": "1",
                       "primaryColumns": {
-                        "id": {
-                          "allowCellWrapping": false,
-                          "index": 0,
-                          "width": 150,
-                          "originalId": "id",
-                          "id": "id",
-                          "alias": "id",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "number",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellEditable": false,
-                          "isEditable": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "id",
-                          "isSaveVisible": true,
-                          "isDiscardVisible": true,
-                          "computedValue": "{{collection_declaration_tblCopy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id\"]))}}",
-                          "validation": {}
-                        },
                         "shop_id": {
                           "allowCellWrapping": false,
                           "index": 1,
@@ -1180,56 +1136,6 @@
                           "customAlias": "",
                           "buttonLabel": "{{collection_declaration_tblCopy.processedTableData.map((currentRow, currentIndex) => ( 'Action'))}}"
                         },
-                        "adjusted_amount": {
-                          "allowCellWrapping": false,
-                          "index": 4,
-                          "width": 150,
-                          "originalId": "adjusted_amount",
-                          "id": "adjusted_amount",
-                          "alias": "adjusted_amount",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "number",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellEditable": false,
-                          "isEditable": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "adjusted_amount",
-                          "isSaveVisible": true,
-                          "isDiscardVisible": true,
-                          "computedValue": "{{collection_declaration_tblCopy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"adjusted_amount\"]))}}",
-                          "validation": {}
-                        },
-                        "unadjusted_amount": {
-                          "allowCellWrapping": false,
-                          "index": 5,
-                          "width": 150,
-                          "originalId": "unadjusted_amount",
-                          "id": "unadjusted_amount",
-                          "alias": "unadjusted_amount",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "number",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellEditable": false,
-                          "isEditable": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "unadjusted_amount",
-                          "isSaveVisible": true,
-                          "isDiscardVisible": true,
-                          "computedValue": "{{collection_declaration_tblCopy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"unadjusted_amount\"]))}}",
-                          "validation": {}
-                        },
                         "proof_of_amount_received": {
                           "allowCellWrapping": false,
                           "index": 6,
@@ -1243,7 +1149,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellEditable": false,
                           "isEditable": false,
@@ -1306,31 +1212,6 @@
                           "computedValue": "{{collection_declaration_tblCopy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"created_at\"]))}}",
                           "validation": {}
                         },
-                        "updated_at": {
-                          "allowCellWrapping": false,
-                          "index": 9,
-                          "width": 150,
-                          "originalId": "updated_at",
-                          "id": "updated_at",
-                          "alias": "updated_at",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellEditable": false,
-                          "isEditable": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "updated_at",
-                          "isSaveVisible": true,
-                          "isDiscardVisible": true,
-                          "computedValue": "{{collection_declaration_tblCopy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"updated_at\"]))}}",
-                          "validation": {}
-                        },
                         "customColumn3": {
                           "allowCellWrapping": false,
                           "index": 10,
@@ -1358,7 +1239,7 @@
                           "buttonStyle": "rgb(3, 179, 101)",
                           "labelColor": "#FFFFFF",
                           "customAlias": "",
-                          "menuButtonLabel": "{{collection_declaration_tblCopy.processedTableData.map((currentRow, currentIndex) => ( ''))}}",
+                          "menuButtonLabel": "{{collection_declaration_tblCopy.processedTableData.map((currentRow, currentIndex) => ( '.'))}}",
                           "menuItems": {
                             "menuItem50tsipga03": {
                               "id": "menuItem50tsipga03",
@@ -1377,15 +1258,6 @@
                               "isDisabled": "{{collection_declaration_tbl.processedTableData.map((currentRow, currentIndex) => ( currentRow.unadjusted_amount>0?false:true))}}",
                               "isVisible": true,
                               "onClick": "{{navigateTo('collection_records',{shop_id: collection_declaration_tbl.triggeredRow.shop_id,\n\tcollection_id: collection_declaration_tbl.triggeredRow.id}, 'SAME_WINDOW')}}"
-                            },
-                            "menuItemz9cacajq8p": {
-                              "id": "menuItemz9cacajq8p",
-                              "index": 2,
-                              "label": "History",
-                              "widgetId": "lfmt4cghmq",
-                              "isDisabled": false,
-                              "isVisible": true,
-                              "onClick": "{{get_history_collection.run(()=>{showModal('collection_history')})}}"
                             }
                           },
                           "iconAlign": "left",
@@ -1497,24 +1369,6 @@
                         },
                         {
                           "key": "primaryColumns.received_amount.buttonLabel"
-                        },
-                        {
-                          "key": "primaryColumns.customColumn3.menuItems.menuItemj1ay9btva5.isDisabled"
-                        },
-                        {
-                          "key": "primaryColumns.customColumn3.menuButtonLabel"
-                        },
-                        {
-                          "key": "primaryColumns.customColumn3.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.customColumn3.menuColor"
-                        },
-                        {
-                          "key": "primaryColumns.customColumn3.borderRadius"
-                        },
-                        {
-                          "key": "primaryColumns.customColumn3.boxShadow"
                         }
                       ],
                       "leftColumn": 0,
@@ -1557,7 +1411,6 @@
                       "widgetName": "collection_declaration_tbl",
                       "defaultPageSize": 0,
                       "columnOrder": [
-                        "customColumn3",
                         "id",
                         "shop_id",
                         "shop_name",
@@ -1569,22 +1422,9 @@
                         "created_at",
                         "updated_at"
                       ],
-                      "dynamicPropertyPathList": [
-                        {
-                          "key": "primaryColumns.customColumn3.menuItems.menuItem50tsipga03.onClick"
-                        },
-                        {
-                          "key": "primaryColumns.customColumn3.menuItems.menuItemj1ay9btva5.onClick"
-                        },
-                        {
-                          "key": "primaryColumns.customColumn3.menuItems.menuItemj1ay9btva5.isDisabled"
-                        },
-                        {
-                          "key": "primaryColumns.customColumn3.menuItems.menuItemz9cacajq8p.onClick"
-                        }
-                      ],
+                      "dynamicPropertyPathList": [],
                       "displayName": "Table",
-                      "bottomRow": 65,
+                      "bottomRow": 52,
                       "columnWidthMap": {
                         "task": 245,
                         "step": 62,
@@ -1594,15 +1434,6 @@
                       "hideCard": false,
                       "parentColumnSpace": 19.5,
                       "dynamicTriggerPathList": [
-                        {
-                          "key": "primaryColumns.customColumn3.menuItems.menuItem50tsipga03.onClick"
-                        },
-                        {
-                          "key": "primaryColumns.customColumn3.menuItems.menuItemj1ay9btva5.onClick"
-                        },
-                        {
-                          "key": "primaryColumns.customColumn3.menuItems.menuItemz9cacajq8p.onClick"
-                        },
                         {
                           "key": "onRowSelected"
                         }
@@ -1861,70 +1692,6 @@
                           "isDiscardVisible": true,
                           "computedValue": "{{collection_declaration_tbl.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"updated_at\"]))}}",
                           "validation": {}
-                        },
-                        "customColumn3": {
-                          "allowCellWrapping": false,
-                          "index": 10,
-                          "width": 150,
-                          "originalId": "customColumn3",
-                          "id": "customColumn3",
-                          "alias": "customColumn3",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "menuButton",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellEditable": false,
-                          "isEditable": false,
-                          "isCellVisible": true,
-                          "isDerived": true,
-                          "label": "Action",
-                          "isSaveVisible": true,
-                          "isDiscardVisible": true,
-                          "computedValue": "{{collection_declaration_tbl.processedTableData.map((currentRow, currentIndex) => ( 'ss'))}}",
-                          "validation": {},
-                          "buttonStyle": "rgb(3, 179, 101)",
-                          "labelColor": "#FFFFFF",
-                          "customAlias": "",
-                          "menuButtonLabel": "{{collection_declaration_tbl.processedTableData.map((currentRow, currentIndex) => ( ''))}}",
-                          "menuItems": {
-                            "menuItem50tsipga03": {
-                              "id": "menuItem50tsipga03",
-                              "index": 0,
-                              "label": "Add Amount",
-                              "widgetId": "v2tfuhjpy8",
-                              "isDisabled": false,
-                              "isVisible": true,
-                              "onClick": "{{showModal('collection_declaration_edit')}}"
-                            },
-                            "menuItemj1ay9btva5": {
-                              "id": "menuItemj1ay9btva5",
-                              "index": 1,
-                              "label": "Adjust with trip/invoice",
-                              "widgetId": "8pf7narp4q",
-                              "isDisabled": "{{collection_declaration_tbl.processedTableData.map((currentRow, currentIndex) => ( currentRow.unadjusted_amount>0?false:true))}}",
-                              "isVisible": true,
-                              "onClick": "{{navigateTo('collection_records',{shop_id: collection_declaration_tbl.triggeredRow.shop_id,\n\tcollection_id: collection_declaration_tbl.triggeredRow.id}, 'SAME_WINDOW')}}"
-                            },
-                            "menuItemz9cacajq8p": {
-                              "id": "menuItemz9cacajq8p",
-                              "index": 2,
-                              "label": "History",
-                              "widgetId": "lfmt4cghmq",
-                              "isDisabled": false,
-                              "isVisible": true,
-                              "onClick": "{{get_history_collection.run(()=>{showModal('collection_history')})}}"
-                            }
-                          },
-                          "iconAlign": "left",
-                          "menuButtoniconName": "menu",
-                          "menuVariant": "TERTIARY",
-                          "menuColor": "{{collection_declaration_tbl.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.colors.primaryColor))}}",
-                          "borderRadius": "{{collection_declaration_tbl.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
-                          "boxShadow": "{{collection_declaration_tbl.processedTableData.map((currentRow, currentIndex) => ( 'none'))}}"
                         }
                       },
                       "onRowSelected": "{{get_history_collection.run()}}",
@@ -3319,7 +3086,7 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "collection_declaration_get_shops_v4",
+              "id": "collection_declaration Copy_get_shops_v4",
               "name": "get_shops_v4",
               "confirmBeforeExecute": false,
               "pluginType": "API",
@@ -3331,7 +3098,7 @@
           ],
           [
             {
-              "id": "collection_declaration_get_collection_declarations_v2",
+              "id": "collection_declaration Copy_get_collection_declarations_v2",
               "name": "get_collection_declarations_v2",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
@@ -3342,7 +3109,7 @@
         ],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
-        "id": "collection_declaration",
+        "id": "collection_declaration Copy",
         "deleted": false,
         "policies": [],
         "userPermissions": []
@@ -3353,5 +3120,5 @@
     "isHidden": false
   },
   "deleted": false,
-  "gitSyncId": "6360ef20d33b91674415f83c_63634d9a956dd31e95b0a838"
+  "gitSyncId": "6231701cf1c0af1ceded5043_637480841351c74a8ce8bb1b"
 }

@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "get_collectables",
+    "name": "get_history_collections",
     "datasource": {
       "name": "Postgres_latest",
       "pluginId": "postgres-plugin",
@@ -13,12 +13,12 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "collection_records",
+    "pageId": "collection_declaration Copy",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT * FROM finance_trip_invoices where shop_id={{search_shop_id.selectedOptionValue}} and status in ('Bill-accepted-by-client')",
+      "body": "SELECT customer_collection_declation.shop_id, customer_collection_declation.shop_name, customer_collection_declation_log.received_amount, customer_collection_declation_log.proof_of_amount_received, customer_collection_declation_log.receive_date, customer_collection_declation_log.created_at FROM customer_collection_declation_log \njoin customer_collection_declation\non customer_collection_declation.id=customer_collection_declation_log.customer_collection_declation_id\nwhere customer_collection_declation_id={{collection_declaration_tbl.selectedRow.id}}",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -36,14 +36,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "search_shop_id.selectedOptionValue"
+      "collection_declaration_tbl.selectedRow.id"
     ],
-    "userSetOnLoad": true,
+    "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "collection_records_get_collectables",
+  "id": "collection_declaration Copy_get_history_collections",
   "deleted": false,
-  "gitSyncId": "6231701cf1c0af1ceded5043_637087d38feb6d6fd7c01d9f"
+  "gitSyncId": "6231701cf1c0af1ceded5043_6374838ce513ba71810929e4"
 }

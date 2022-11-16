@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "select * from trip_invoices_collection order by id desc limit 1",
+      "body": "select * from customer_collection_declation order by id desc limit 1",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {

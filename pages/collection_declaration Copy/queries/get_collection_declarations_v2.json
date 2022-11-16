@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "get_collectables",
+    "name": "get_collection_declarations_v2",
     "datasource": {
       "name": "Postgres_latest",
       "pluginId": "postgres-plugin",
@@ -13,12 +13,12 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "collection_records",
+    "pageId": "collection_declaration Copy",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT * FROM finance_trip_invoices where shop_id={{search_shop_id.selectedOptionValue}} and status in ('Bill-accepted-by-client')",
+      "body": "SELECT * FROM customer_collection_declation ORDER BY unadjusted_amount desc;",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -26,24 +26,18 @@
         }
       ]
     },
-    "executeOnLoad": false,
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
+    "executeOnLoad": true,
+    "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      "search_shop_id.selectedOptionValue"
-    ],
-    "userSetOnLoad": true,
+    "jsonPathKeys": [],
+    "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "collection_records_get_collectables",
+  "id": "collection_declaration Copy_get_collection_declarations_v2",
   "deleted": false,
-  "gitSyncId": "6231701cf1c0af1ceded5043_637087d38feb6d6fd7c01d9f"
+  "gitSyncId": "6231701cf1c0af1ceded5043_637480841351c74a8ce8bb1d"
 }
