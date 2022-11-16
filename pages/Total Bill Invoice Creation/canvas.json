@@ -4022,7 +4022,7 @@
                             {
                               "boxShadow": "none",
                               "widgetName": "Search_btn",
-                              "onClick": "{{\nsearch_fleetIdCopy.text==null ||search_fleetIdCopy.text==''?\n(get_parcel_details_v1.run(\n()=>get_invoice_details.run(\n\t()=>challan_status.run(\n\t()=>showAlert('Successfully fetched','success'),\n\t()=>showAlert('challan data failed')),\n\t()=>showAlert('invoice data failed')),()=>showAlert('parcel data Failed','error')\n)\n):\n(Api1.run(\n()=>get_invoice_details.run(\n\t()=>challan_status.run(\n\t()=>showAlert('Successfully fetched','success'),\n\t()=>showAlert('challan data failed')),\n\t()=>showAlert('invoice data failed')),()=>showAlert('parcel data Failed','error')\n)\n)\n}}",
+                              "onClick": "{{\nsearch_fleetIdCopy.text==null ||search_fleetIdCopy.text==''?\n(get_parcel_details.run(\n()=>get_invoice_details.run(\n\t()=>challan_status.run(\n\t()=>showAlert('Successfully fetched','success'),\n\t()=>showAlert('challan data failed')),\n\t()=>showAlert('invoice data failed')),()=>showAlert('parcel data Failed','error')\n)\n):\n(Api1.run(\n()=>get_invoice_details.run(\n\t()=>challan_status.run(\n\t()=>showAlert('Successfully fetched','success'),\n\t()=>showAlert('challan data failed')),\n\t()=>showAlert('invoice data failed')),()=>showAlert('parcel data Failed','error')\n)\n)\n}}",
                               "buttonColor": "#03B365",
                               "dynamicPropertyPathList": [
                                 {
@@ -4850,31 +4850,13 @@
                           "key": "primaryColumns.total_price_after_vat_ait.computedValue"
                         },
                         {
-                          "key": "primaryColumns.driver_name.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.fleet_created_by_id.computedValue"
-                        },
-                        {
                           "key": "primaryColumns.tracking_id.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.parent_fleet_id.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.sales_team_member_name.computedValue"
                         },
                         {
                           "key": "primaryColumns.goods_type.computedValue"
                         },
                         {
-                          "key": "primaryColumns.sales_team_rate.computedValue"
-                        },
-                        {
                           "key": "primaryColumns.demurrage_remarks.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.business_unit.computedValue"
                         },
                         {
                           "key": "primaryColumns.transport_team_remarks.computedValue"
@@ -4884,9 +4866,6 @@
                         },
                         {
                           "key": "primaryColumns.AIT_Applicable.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.vendor_name.computedValue"
                         },
                         {
                           "key": "primaryColumns.body_cost.computedValue"
@@ -4907,19 +4886,10 @@
                           "key": "primaryColumns.AIT_Value.computedValue"
                         },
                         {
-                          "key": "primaryColumns.transport_team_member_name.computedValue"
-                        },
-                        {
                           "key": "primaryColumns.vat_applicable.computedValue"
                         },
                         {
-                          "key": "primaryColumns.estimated_distance.computedValue"
-                        },
-                        {
                           "key": "primaryColumns.load_point.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.updated_at.computedValue"
                         },
                         {
                           "key": "primaryColumns.fleet_id.computedValue"
@@ -4929,9 +4899,6 @@
                         },
                         {
                           "key": "primaryColumns.trip_month.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.transport_team_first_involved_at.computedValue"
                         },
                         {
                           "key": "primaryColumns.fleet_requested_at.computedValue"
@@ -4949,37 +4916,16 @@
                           "key": "primaryColumns.Banner.computedValue"
                         },
                         {
-                          "key": "primaryColumns.extra_data.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.created_at.computedValue"
-                        },
-                        {
                           "key": "primaryColumns.shop_ID.computedValue"
                         },
                         {
-                          "key": "primaryColumns.sales_team_remarks.computedValue"
-                        },
-                        {
                           "key": "primaryColumns.truckPriceRemarks.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.is_revised.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.vehicle_size.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.requirement_category.computedValue"
                         },
                         {
                           "key": "primaryColumns.vehicle_type.computedValue"
                         },
                         {
                           "key": "primaryColumns.Comma_Seperated_Column.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.driver_phone.computedValue"
                         },
                         {
                           "key": "derivedColumns.customColumn35.computedValue"
@@ -5007,6 +4953,9 @@
                         },
                         {
                           "key": "primaryColumns.base_fare_ait.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.net_to_redx.computedValue"
                         }
                       ],
                       "leftColumn": 0,
@@ -5082,66 +5031,49 @@
                       "defaultPageSize": 0,
                       "columnOrder": [
                         "customColumn35",
-                        "customColumn36",
-                        "fleet_requested_at",
-                        "driver_name",
-                        "fleet_created_by_id",
                         "tracking_id",
-                        "payment_method",
-                        "shop_ID",
-                        "shop_name",
-                        "challanNumber",
-                        "vehicle_number",
-                        "load_point",
-                        "unload_point",
-                        "base_fare",
-                        "demurrage_fee",
-                        "demurrage_remarks",
-                        "total_truck_price",
-                        "total_price_after_vat_ait",
-                        "base_fare_ait",
-                        "additional_fee_AIT",
-                        "calculated_VAT",
-                        "calculated_AIT",
-                        "parent_fleet_id",
-                        "sales_team_member_name",
                         "goods_type",
-                        "sales_team_rate",
-                        "business_unit",
-                        "billing_type",
-                        "AIT_Applicable",
-                        "vat_applicable",
-                        "VAT_Value",
-                        "AIT_Value",
-                        "requirement_type",
+                        "demurrage_remarks",
+                        "net_to_redx",
                         "transport_team_remarks",
+                        "billing_type",
+                        "unload_point",
+                        "shop_name",
+                        "AIT_Applicable",
+                        "payment_method",
+                        "body_cost",
+                        "VAT_Value",
+                        "requirement_type",
                         "id",
-                        "transport_team_member_name",
+                        "base_fare",
+                        "challanNumber",
+                        "additional_fee_AIT",
+                        "AIT_Value",
+                        "vat_applicable",
                         "finance_received_time",
-                        "estimated_distance",
-                        "updated_at",
+                        "load_point",
+                        "vehicle_number",
                         "fleet_id",
                         "status",
                         "challan_status",
-                        "vendor_name",
                         "transport_team_rate",
                         "trip_month",
-                        "transport_team_first_involved_at",
+                        "fleet_requested_at",
+                        "demurrage_fee",
                         "collectible",
+                        "total_truck_price",
                         "demurrage_cost",
                         "Banner",
-                        "extra_data",
-                        "created_at",
-                        "sales_team_remarks",
+                        "calculated_AIT",
+                        "calculated_VAT",
+                        "shop_ID",
                         "truckPriceRemarks",
-                        "is_revised",
-                        "vehicle_size",
-                        "requirement_category",
                         "vehicle_type",
+                        "total_price_after_vat_ait",
+                        "base_fare_ait",
                         "spread",
                         "Comma_Seperated_Column",
-                        "driver_phone",
-                        "body_cost"
+                        "customColumn36"
                       ],
                       "dynamicPropertyPathList": [
                         {
@@ -5400,42 +5332,6 @@
                           "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.total_price_after_vat_ait))}}",
                           "cellBackground": "transparent"
                         },
-                        "driver_name": {
-                          "index": 0,
-                          "width": 150,
-                          "id": "driver_name",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": false,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "driver_name",
-                          "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.driver_name))}}",
-                          "cellBackground": "transparent"
-                        },
-                        "fleet_created_by_id": {
-                          "index": 1,
-                          "width": 150,
-                          "id": "fleet_created_by_id",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": false,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "fleet_created_by_id",
-                          "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.fleet_created_by_id))}}",
-                          "cellBackground": "transparent"
-                        },
                         "tracking_id": {
                           "index": 2,
                           "width": 150,
@@ -5452,42 +5348,6 @@
                           "isDerived": false,
                           "label": "fleet_tracking_id",
                           "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.tracking_id))}}",
-                          "cellBackground": "transparent"
-                        },
-                        "parent_fleet_id": {
-                          "index": 3,
-                          "width": 150,
-                          "id": "parent_fleet_id",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": false,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "parent_fleet_id",
-                          "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.parent_fleet_id))}}",
-                          "cellBackground": "transparent"
-                        },
-                        "sales_team_member_name": {
-                          "index": 4,
-                          "width": 150,
-                          "id": "sales_team_member_name",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": false,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "sales_team_member_name",
-                          "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.sales_team_member_name))}}",
                           "cellBackground": "transparent"
                         },
                         "goods_type": {
@@ -5508,24 +5368,6 @@
                           "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.goods_type))}}",
                           "cellBackground": "transparent"
                         },
-                        "sales_team_rate": {
-                          "index": 6,
-                          "width": 150,
-                          "id": "sales_team_rate",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": false,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "sales_team_rate",
-                          "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.sales_team_rate))}}",
-                          "cellBackground": "transparent"
-                        },
                         "demurrage_remarks": {
                           "index": 7,
                           "width": 150,
@@ -5542,24 +5384,6 @@
                           "isDerived": false,
                           "label": "Total_additional_fee_remarks",
                           "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.demurrage_remarks))}}",
-                          "cellBackground": "transparent"
-                        },
-                        "business_unit": {
-                          "index": 8,
-                          "width": 150,
-                          "id": "business_unit",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": false,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "business_unit",
-                          "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.business_unit))}}",
                           "cellBackground": "transparent"
                         },
                         "transport_team_remarks": {
@@ -5614,24 +5438,6 @@
                           "isDerived": false,
                           "label": "AIT_Applicable",
                           "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.AIT_Applicable))}}",
-                          "cellBackground": "transparent"
-                        },
-                        "vendor_name": {
-                          "index": 16,
-                          "width": 150,
-                          "id": "vendor_name",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "vendor_name",
-                          "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.vendor_name))}}",
                           "cellBackground": "transparent"
                         },
                         "body_cost": {
@@ -5742,24 +5548,6 @@
                           "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.AIT_Value))}}",
                           "cellBackground": "transparent"
                         },
-                        "transport_team_member_name": {
-                          "index": 24,
-                          "width": 150,
-                          "id": "transport_team_member_name",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "transport_team_member_name",
-                          "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.transport_team_member_name))}}",
-                          "cellBackground": "transparent"
-                        },
                         "vat_applicable": {
                           "index": 25,
                           "width": 150,
@@ -5778,24 +5566,6 @@
                           "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.vat_applicable))}}",
                           "cellBackground": "transparent"
                         },
-                        "estimated_distance": {
-                          "index": 26,
-                          "width": 150,
-                          "id": "estimated_distance",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": false,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "estimated_distance",
-                          "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.estimated_distance))}}",
-                          "cellBackground": "transparent"
-                        },
                         "load_point": {
                           "index": 27,
                           "width": 150,
@@ -5812,24 +5582,6 @@
                           "isDerived": false,
                           "label": "load_point",
                           "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.load_point))}}",
-                          "cellBackground": "transparent"
-                        },
-                        "updated_at": {
-                          "index": 29,
-                          "width": 150,
-                          "id": "updated_at",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": false,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "updated_at",
-                          "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.updated_at))}}",
                           "cellBackground": "transparent"
                         },
                         "fleet_id": {
@@ -5884,24 +5636,6 @@
                           "isDerived": false,
                           "label": "trip_month",
                           "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.trip_month))}}",
-                          "cellBackground": "transparent"
-                        },
-                        "transport_team_first_involved_at": {
-                          "index": 36,
-                          "width": 150,
-                          "id": "transport_team_first_involved_at",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "transport_team_first_involved_at",
-                          "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.transport_team_first_involved_at))}}",
                           "cellBackground": "transparent"
                         },
                         "fleet_requested_at": {
@@ -5994,42 +5728,6 @@
                           "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.Banner))}}",
                           "cellBackground": "transparent"
                         },
-                        "extra_data": {
-                          "index": 44,
-                          "width": 150,
-                          "id": "extra_data",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "extra_data",
-                          "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.extra_data))}}",
-                          "cellBackground": "transparent"
-                        },
-                        "created_at": {
-                          "index": 45,
-                          "width": 150,
-                          "id": "created_at",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": false,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "created_at",
-                          "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.created_at))}}",
-                          "cellBackground": "transparent"
-                        },
                         "shop_ID": {
                           "index": 47,
                           "width": 150,
@@ -6048,24 +5746,6 @@
                           "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.shop_ID))}}",
                           "cellBackground": "transparent"
                         },
-                        "sales_team_remarks": {
-                          "index": 48,
-                          "width": 150,
-                          "id": "sales_team_remarks",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "sales_team_remarks",
-                          "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.sales_team_remarks))}}",
-                          "cellBackground": "transparent"
-                        },
                         "truckPriceRemarks": {
                           "index": 49,
                           "width": 150,
@@ -6082,60 +5762,6 @@
                           "isDerived": false,
                           "label": "LC_number",
                           "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.truckPriceRemarks))}}",
-                          "cellBackground": "transparent"
-                        },
-                        "is_revised": {
-                          "index": 50,
-                          "width": 150,
-                          "id": "is_revised",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": false,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "is_revised",
-                          "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.is_revised))}}",
-                          "cellBackground": "transparent"
-                        },
-                        "vehicle_size": {
-                          "index": 51,
-                          "width": 150,
-                          "id": "vehicle_size",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": false,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "vehicle_size",
-                          "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.vehicle_size))}}",
-                          "cellBackground": "transparent"
-                        },
-                        "requirement_category": {
-                          "index": 52,
-                          "width": 150,
-                          "id": "requirement_category",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": false,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "requirement_category",
-                          "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.requirement_category))}}",
                           "cellBackground": "transparent"
                         },
                         "vehicle_type": {
@@ -6172,24 +5798,6 @@
                           "isDerived": false,
                           "label": "Comma_Seperated_Column",
                           "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.Comma_Seperated_Column))}}",
-                          "cellBackground": "transparent"
-                        },
-                        "driver_phone": {
-                          "index": 57,
-                          "width": 150,
-                          "id": "driver_phone",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": false,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "driver_phone",
-                          "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.driver_phone))}}",
                           "cellBackground": "transparent"
                         },
                         "finance_received_time": {
@@ -6283,6 +5891,25 @@
                           "label": "base_fare_ait",
                           "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.base_fare_ait))}}",
                           "cellBackground": "transparent"
+                        },
+                        "net_to_redx": {
+                          "index": 3,
+                          "width": 150,
+                          "id": "net_to_redx",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "net_to_redx",
+                          "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.net_to_redx))}}",
+                          "cellBackground": "transparent"
                         }
                       },
                       "defaultSearchText": "",
@@ -6326,7 +5953,7 @@
                       "rightColumn": 64,
                       "textSize": "0.875rem",
                       "widgetId": "tarlzgt3ny",
-                      "tableData": "{{\nsearch_fleetIdCopy.text==null ||search_fleetIdCopy.text==''?\nget_parcel_details_v1.data: Api1.data\n}}",
+                      "tableData": "{{\nsearch_fleetIdCopy.text==null ||search_fleetIdCopy.text==''?\nget_parcel_details.data: Api1.data\n}}",
                       "label": "Data",
                       "searchKey": "",
                       "parentId": "6y2wur3g2z",
