@@ -5031,10 +5031,10 @@
                       "defaultPageSize": 0,
                       "columnOrder": [
                         "customColumn35",
+                        "customColumn36",
                         "tracking_id",
                         "goods_type",
                         "demurrage_remarks",
-                        "net_to_redx",
                         "transport_team_remarks",
                         "billing_type",
                         "unload_point",
@@ -5073,7 +5073,7 @@
                         "base_fare_ait",
                         "spread",
                         "Comma_Seperated_Column",
-                        "customColumn36"
+                        "net_to_redx"
                       ],
                       "dynamicPropertyPathList": [
                         {
@@ -5893,7 +5893,7 @@
                           "cellBackground": "transparent"
                         },
                         "net_to_redx": {
-                          "index": 3,
+                          "index": 41,
                           "width": 150,
                           "id": "net_to_redx",
                           "horizontalAlignment": "LEFT",
@@ -6668,16 +6668,6 @@
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "Total Bill Invoice Creation_get_shops",
-              "name": "get_shops",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "appsmith.store.access_token"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
               "id": "Total Bill Invoice Creation_metabase_session.metabaseSession",
               "name": "metabase_session.metabaseSession",
               "collectionId": "Total Bill Invoice Creation_metabase_session",
@@ -6696,6 +6686,18 @@
               "jsonPathKeys": [
                 "Table2.tableData.map(a=>a.tracking_id).join(\"','\")",
                 "search_shop_id.selectedOptionValue"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Total Bill Invoice Creation_get_shops",
+              "name": "get_shops",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "appsmith.store.access_token"
               ],
               "timeoutInMillisecond": 10000
             }

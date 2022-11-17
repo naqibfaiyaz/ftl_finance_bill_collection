@@ -17,7 +17,7 @@
     "actionConfiguration": {
       "timeoutInMillisecond": 10000000,
       "paginationType": "NONE",
-      "path": "/api/card/6609/query/json",
+      "path": "/api/card/7085/query/json",
       "headers": [
         {
           "key": "content-type",
