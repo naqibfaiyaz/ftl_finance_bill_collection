@@ -1117,7 +1117,7 @@
                           "menuColor": "#03B365",
                           "labelColor": "#FFFFFF",
                           "buttonLabel": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( 'Generate'))}}",
-                          "onClick": "{{currentRow.status!='Invalid'?currentRow.banner=='Mokam'?navigateTo('genInvoicePageMokam',{'shop_id':currentRow.shop_id,'banner': currentRow.banner, 'InvoiceNumber':currentRow.invoice_number},'NEW_WINDOW',currentRow.client_name,'NEW_WINDOW'):navigateTo('genInvoicePageRedX',{'shop_id':currentRow.shop_id,'banner': currentRow.banner, 'InvoiceNumber':currentRow.invoice_number},'NEW_WINDOW',currentRow.client_name,'NEW_WINDOW'):showAlert(\"This invoice is marked as invalid, cannot generate for printing. Revert to 'Ready-to-send'.\")}}",
+                          "onClick": "{{currentRow.status!='Invalid'?currentRow.banner.toLowerCase()=='mokam'?navigateTo('genInvoicePageMokam',{'shop_id':currentRow.shop_id,'banner': currentRow.banner, 'InvoiceNumber':currentRow.invoice_number},'NEW_WINDOW',currentRow.client_name,'NEW_WINDOW'):navigateTo('genInvoicePageRedX',{'shop_id':currentRow.shop_id,'banner': currentRow.banner, 'InvoiceNumber':currentRow.invoice_number},'NEW_WINDOW',currentRow.client_name,'NEW_WINDOW'):showAlert(\"This invoice is marked as invalid, cannot generate for printing. Revert to 'Ready-to-send'.\")}}",
                           "borderRadius": "0px",
                           "boxShadow": "none"
                         },

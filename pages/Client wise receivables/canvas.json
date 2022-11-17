@@ -638,17 +638,6 @@
                 "appsmith.store.session"
               ],
               "timeoutInMillisecond": 1000000
-            },
-            {
-              "id": "Client wise receivables_get_receivable_data_one_shop",
-              "name": "get_receivable_data_one_shop",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "appsmith.store.session",
-                "search_shop_id.selectedOptionValue"
-              ],
-              "timeoutInMillisecond": 1000000
             }
           ],
           [
@@ -661,6 +650,19 @@
                 "appsmith.store.access_token"
               ],
               "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Client wise receivables_get_receivable_data_one_shop",
+              "name": "get_receivable_data_one_shop",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "appsmith.store.session",
+                "search_shop_id.selectedOptionValue"
+              ],
+              "timeoutInMillisecond": 1000000
             }
           ]
         ],

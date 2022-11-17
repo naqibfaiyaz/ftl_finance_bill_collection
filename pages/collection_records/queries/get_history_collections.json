@@ -13,7 +13,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "collection_declaration",
+    "pageId": "collection_records",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -38,12 +38,12 @@
     "jsonPathKeys": [
       "collection_declaration_tbl.selectedRow.id"
     ],
-    "userSetOnLoad": true,
+    "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "collection_declaration_get_history_collections",
+  "id": "collection_records_get_history_collections",
   "deleted": false,
-  "gitSyncId": "6231701cf1c0af1ceded5043_6374838ce513ba71810929e4"
+  "gitSyncId": "6231701cf1c0af1ceded5043_6375bbc41351c74a8ce8d71e"
 }

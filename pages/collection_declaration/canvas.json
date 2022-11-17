@@ -199,7 +199,7 @@
                         }
                       ],
                       "shouldTruncate": false,
-                      "text": "{{received_amount_new.text-unadjusted_amount_new.text}}",
+                      "text": "{{received_amount_new.text-unadjusted_amount_new.text }}",
                       "key": "e4p648xiw8",
                       "isDeprecated": false,
                       "rightColumn": 33,
@@ -411,7 +411,7 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button2Copy",
-                      "onClick": "{{post_collection_declaration_v2.run(()=>{get_collection_declarations_v2.run(()=>{navigateTo('collection_records',{\n\tshop_id: shop_id_data_new.selectedOptionValue,\n\tcollection_id: post_collection_declaration_v2.data[0].single_customer_collection_declation_id\n}, 'NEW_WINDOW')})})}}",
+                      "onClick": "{{post_collection_declaration_v2.run(()=>{get_collection_declarations_v2.run(()=>{navigateTo('collection_records_v2',{\n\tshop_id: shop_id_data_new.selectedOptionValue,\n\tcollection_id: post_collection_declaration_v2.data[0].single_customer_collection_declation_id\n}, 'NEW_WINDOW')})})}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "dynamicPropertyPathList": [
                         {
@@ -801,6 +801,58 @@
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "files": [],
                       "maxNumFiles": "1"
+                    },
+                    {
+                      "widgetName": "Text3",
+                      "displayName": "Text",
+                      "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
+                      "searchTags": [
+                        "typography",
+                        "paragraph",
+                        "label"
+                      ],
+                      "topRow": 52,
+                      "bottomRow": 56,
+                      "parentRowSpace": 10,
+                      "type": "TEXT_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "overflow": "NONE",
+                      "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+                      "parentColumnSpace": 18.8125,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 19,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "truncateButtonColor"
+                        },
+                        {
+                          "key": "fontFamily"
+                        },
+                        {
+                          "key": "borderRadius"
+                        },
+                        {
+                          "key": "text"
+                        }
+                      ],
+                      "shouldTruncate": false,
+                      "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "text": "{{shop_id_data_new.selectedOptionValue}}",
+                      "key": "g6u0pzj4ax",
+                      "isDeprecated": false,
+                      "rightColumn": 35,
+                      "textAlign": "LEFT",
+                      "widgetId": "yoilp9niuo",
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "parentId": "1e58lna0v2",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "fontSize": "1rem"
                     }
                   ],
                   "isDisabled": false,
@@ -978,6 +1030,12 @@
                         },
                         {
                           "key": "primaryColumns.id.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.adjusted_amount.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.unadjusted_amount.computedValue"
                         }
                       ],
                       "leftColumn": 0,
@@ -1017,17 +1075,19 @@
                       "defaultSelectedRowIndices": [
                         0
                       ],
-                      "widgetName": "collection_declaration_tbl_log",
+                      "widgetName": "single_collection_tbl",
                       "defaultPageSize": 0,
                       "columnOrder": [
                         "customColumn3",
                         "id",
+                        "receive_date",
                         "shop_id",
                         "shop_name",
                         "received_amount",
-                        "proof_of_amount_received",
-                        "receive_date",
-                        "created_at"
+                        "created_at",
+                        "adjusted_amount",
+                        "unadjusted_amount",
+                        "proof_of_amount_received"
                       ],
                       "dynamicPropertyPathList": [
                         {
@@ -1082,7 +1142,7 @@
                           "label": "shop_id",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{collection_declaration_tbl_log.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"shop_id\"]))}}",
+                          "computedValue": "{{single_collection_tbl.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"shop_id\"]))}}",
                           "validation": {}
                         },
                         "shop_name": {
@@ -1107,7 +1167,7 @@
                           "label": "shop_name",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{collection_declaration_tbl_log.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"shop_name\"]))}}",
+                          "computedValue": "{{single_collection_tbl.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"shop_name\"]))}}",
                           "validation": {}
                         },
                         "received_amount": {
@@ -1132,10 +1192,10 @@
                           "label": "received_amount",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{collection_declaration_tbl_log.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"received_amount\"]))}}",
+                          "computedValue": "{{single_collection_tbl.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"received_amount\"]))}}",
                           "validation": {},
                           "customAlias": "",
-                          "buttonLabel": "{{collection_declaration_tbl_log.processedTableData.map((currentRow, currentIndex) => ( 'Action'))}}"
+                          "buttonLabel": "{{single_collection_tbl.processedTableData.map((currentRow, currentIndex) => ( 'Action'))}}"
                         },
                         "proof_of_amount_received": {
                           "allowCellWrapping": false,
@@ -1159,7 +1219,7 @@
                           "label": "proof_of_amount_received",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{collection_declaration_tbl_log.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"proof_of_amount_received\"]))}}",
+                          "computedValue": "{{single_collection_tbl.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"proof_of_amount_received\"]))}}",
                           "validation": {}
                         },
                         "receive_date": {
@@ -1184,7 +1244,7 @@
                           "label": "receive_date",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{collection_declaration_tbl_log.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"receive_date\"]))}}",
+                          "computedValue": "{{single_collection_tbl.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"receive_date\"]))}}",
                           "validation": {},
                           "outputFormat": "YYYY-MM-DD"
                         },
@@ -1210,7 +1270,7 @@
                           "label": "created_at",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{collection_declaration_tbl_log.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"created_at\"]))}}",
+                          "computedValue": "{{single_collection_tbl.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"created_at\"]))}}",
                           "validation": {}
                         },
                         "customColumn3": {
@@ -1235,12 +1295,12 @@
                           "label": "Action",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{collection_declaration_tbl_log.processedTableData.map((currentRow, currentIndex) => ( 'ss'))}}",
+                          "computedValue": "{{single_collection_tbl.processedTableData.map((currentRow, currentIndex) => ( 'ss'))}}",
                           "validation": {},
                           "buttonStyle": "rgb(3, 179, 101)",
                           "labelColor": "#FFFFFF",
                           "customAlias": "",
-                          "menuButtonLabel": "{{collection_declaration_tbl_log.processedTableData.map((currentRow, currentIndex) => ( '.'))}}",
+                          "menuButtonLabel": "{{single_collection_tbl.processedTableData.map((currentRow, currentIndex) => ( '.'))}}",
                           "menuItems": {
                             "menuItemj1ay9btva5": {
                               "id": "menuItemj1ay9btva5",
@@ -1249,15 +1309,15 @@
                               "widgetId": "8pf7narp4q",
                               "isDisabled": "{{collection_declaration_tbl.processedTableData.map((currentRow, currentIndex) => ( currentRow.unadjusted_amount>0?false:true))}}",
                               "isVisible": true,
-                              "onClick": "{{navigateTo('collection_records',{shop_id: collection_declaration_tbl.triggeredRow.shop_id,\n\tcollection_log_id: collection_declaration_tbl_log.triggeredRow.id}, 'SAME_WINDOW')}}"
+                              "onClick": "{{navigateTo('collection_records_v2',{shop_id: single_collection_tbl.triggeredRow.shop_id,\n\tcollection_id: single_collection_tbl.triggeredRow.id}, 'NEW_WINDOW')}}"
                             }
                           },
                           "iconAlign": "left",
                           "menuButtoniconName": "menu",
                           "menuVariant": "TERTIARY",
-                          "menuColor": "{{collection_declaration_tbl_log.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.colors.primaryColor))}}",
-                          "borderRadius": "{{collection_declaration_tbl_log.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
-                          "boxShadow": "{{collection_declaration_tbl_log.processedTableData.map((currentRow, currentIndex) => ( 'none'))}}"
+                          "menuColor": "{{single_collection_tbl.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.colors.primaryColor))}}",
+                          "borderRadius": "{{single_collection_tbl.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
+                          "boxShadow": "{{single_collection_tbl.processedTableData.map((currentRow, currentIndex) => ( 'none'))}}"
                         },
                         "id": {
                           "allowCellWrapping": false,
@@ -1283,7 +1343,63 @@
                           "label": "collection log id",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{collection_declaration_tbl_log.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id\"]))}}",
+                          "computedValue": "{{single_collection_tbl.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id\"]))}}",
+                          "validation": {},
+                          "cellBackground": ""
+                        },
+                        "adjusted_amount": {
+                          "allowCellWrapping": false,
+                          "index": 7,
+                          "width": 150,
+                          "originalId": "adjusted_amount",
+                          "id": "adjusted_amount",
+                          "alias": "adjusted_amount",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "number",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "adjusted_amount",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{single_collection_tbl.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"adjusted_amount\"]))}}",
+                          "validation": {},
+                          "cellBackground": ""
+                        },
+                        "unadjusted_amount": {
+                          "allowCellWrapping": false,
+                          "index": 8,
+                          "width": 150,
+                          "originalId": "unadjusted_amount",
+                          "id": "unadjusted_amount",
+                          "alias": "unadjusted_amount",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "number",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "unadjusted_amount",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{single_collection_tbl.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"unadjusted_amount\"]))}}",
                           "validation": {},
                           "cellBackground": ""
                         }
@@ -1997,7 +2113,7 @@
                       "fontSize": "1rem"
                     },
                     {
-                      "widgetName": "unadjusted_amount_old",
+                      "widgetName": "unadjusted_amount_edit",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
                       "searchTags": [
@@ -2028,7 +2144,7 @@
                         }
                       ],
                       "shouldTruncate": false,
-                      "text": "{{!isNaN(parseInt(received_amount_old.text))?parseInt(collection_declaration_tbl.triggeredRow.unadjusted_amount)+parseInt(received_amount_old.text):parseInt(collection_declaration_tbl.triggeredRow.unadjusted_amount)}}",
+                      "text": "{{!isNaN(parseInt(received_amount_edit.text))?parseInt(collection_declaration_tbl.triggeredRow.unadjusted_amount)+parseInt(received_amount_edit.text):parseInt(collection_declaration_tbl.triggeredRow.unadjusted_amount)}}",
                       "key": "e4p648xiw8",
                       "isDeprecated": false,
                       "rightColumn": 33,
@@ -2045,7 +2161,7 @@
                       "fontSize": "1rem"
                     },
                     {
-                      "widgetName": "adjusted_amount_old",
+                      "widgetName": "adjusted_amount_edit",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
                       "searchTags": [
@@ -2094,7 +2210,7 @@
                     },
                     {
                       "boxShadow": "none",
-                      "widgetName": "shop_id_data_old",
+                      "widgetName": "shop_id_data_edit",
                       "isFilterable": true,
                       "displayName": "Select",
                       "iconSVG": "/static/media/icon.bd99caba.svg",
@@ -2105,7 +2221,7 @@
                       "type": "SELECT_WIDGET",
                       "serverSideFiltering": false,
                       "hideCard": false,
-                      "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( collection_declaration_tbl.triggeredRow.shop_id))(shop_id_data_old.options, shop_id_data_old.serverSideFiltering) }}",
+                      "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( collection_declaration_tbl.triggeredRow.shop_id))(shop_id_data_edit.options, shop_id_data_edit.serverSideFiltering) }}",
                       "animateLoading": false,
                       "parentColumnSpace": 19.5,
                       "dynamicTriggerPathList": [
@@ -2269,7 +2385,7 @@
                         }
                       ],
                       "text": "Close as unadjusted",
-                      "isDisabled": "{{received_amount_old.isValid && shop_id_data_old.selectedOptionLabel && proof_doc_old.image?false:true}}",
+                      "isDisabled": "{{received_amount_edit.isValid && shop_id_data_edit.selectedOptionLabel && proof_doc_edit.image?false:true}}",
                       "key": "nnonlt6m0f",
                       "isDeprecated": false,
                       "rightColumn": 19,
@@ -2291,7 +2407,7 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button2",
-                      "onClick": "{{put_collection_declaration_v2.run(()=>{\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tget_collection_declarations_v2.run(()=>{navigateTo('collection_records',{\n\tshop_id: shop_id_data_old.selectedOptionValue,\n\tcollection_id: put_collection_declaration_v2.data[0].customer_collection_declation_id\n}, 'NEW_WINDOW')\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tcloseModal('collection_declaration_edit')})\t\t\t\t\t})}}",
+                      "onClick": "{{put_collection_declaration_v2.run(()=>{\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tget_collection_declarations_v2.run(()=>{navigateTo('collection_records_v2',{\n\tshop_id: shop_id_data_edit.selectedOptionValue,\n\tcollection_id: put_collection_declaration_v2.data[0].customer_collection_declation_id\n}, 'NEW_WINDOW')\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tcloseModal('collection_declaration_edit')})\t\t\t\t\t})}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "dynamicPropertyPathList": [
                         {
@@ -2330,7 +2446,7 @@
                         }
                       ],
                       "text": "Adjust with invoice and trip",
-                      "isDisabled": "{{received_amount_old.isValid && shop_id_data_old.selectedOptionLabel && proof_doc_old.image?false:true}}",
+                      "isDisabled": "{{received_amount_edit.isValid && shop_id_data_edit.selectedOptionLabel && proof_doc_edit.image?false:true}}",
                       "key": "nnonlt6m0f",
                       "isDeprecated": false,
                       "rightColumn": 35,
@@ -2350,7 +2466,7 @@
                     },
                     {
                       "boxShadow": "none",
-                      "widgetName": "received_amount_old",
+                      "widgetName": "received_amount_edit",
                       "displayName": "Input",
                       "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
                       "searchTags": [
@@ -2448,7 +2564,7 @@
                     },
                     {
                       "boxShadow": "none",
-                      "widgetName": "receive_date_old",
+                      "widgetName": "receive_date_edit",
                       "minDate": "1920-12-31T18:30:00.000Z",
                       "dateFormat": "YYYY-MM-DD HH:mm",
                       "dynamicPropertyPathList": [
@@ -2558,7 +2674,7 @@
                           "children": [
                             {
                               "boxShadow": "none",
-                              "widgetName": "proof_doc_old",
+                              "widgetName": "proof_doc_edit",
                               "displayName": "Image",
                               "iconSVG": "/static/media/icon.52d8fb963abcb95c79b10f1553389f22.svg",
                               "topRow": 0,
@@ -2581,7 +2697,7 @@
                               ],
                               "defaultImage": "",
                               "key": "p5jw4h958l",
-                              "image": "{{proof_of_amount_received_old.files[0].data}}",
+                              "image": "{{proof_of_amount_received_edit.files[0].data}}",
                               "isDeprecated": false,
                               "rightColumn": 64,
                               "objectFit": "contain",
@@ -2628,7 +2744,7 @@
                     },
                     {
                       "boxShadow": "none",
-                      "widgetName": "proof_of_amount_received_old",
+                      "widgetName": "proof_of_amount_received_edit",
                       "buttonColor": "#3b82f6",
                       "displayName": "FilePicker",
                       "iconSVG": "/static/media/icon.7c5ad9c357928c6ff5701bf51a56c2e5.svg",

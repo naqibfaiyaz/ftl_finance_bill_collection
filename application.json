@@ -43,6 +43,10 @@
     {
       "id": "collection_declaration",
       "isDefault": false
+    },
+    {
+      "id": "collection_records_v2",
+      "isDefault": false
     }
   ],
   "viewMode": false,

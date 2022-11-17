@@ -1,7 +1,7 @@
 {
   "unpublishedPage": {
-    "name": "collection_records",
-    "slug": "collection-records",
+    "name": "collection_records_v2",
+    "slug": "collection-records-v2",
     "layouts": [
       {
         "viewMode": false,
@@ -1889,7 +1889,7 @@
                   "widgetName": "Canvas1",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 1760,
+                  "bottomRow": 1290,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
@@ -1911,7 +1911,7 @@
                       "borderColor": "#E0DEDE",
                       "isVisibleDownload": true,
                       "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
-                      "topRow": 19,
+                      "topRow": 18,
                       "isSortable": true,
                       "type": "TABLE_WIDGET_V2",
                       "inlineEditingSaveOption": "ROW_LEVEL",
@@ -1981,24 +1981,6 @@
                           "key": "primaryColumns.received_amount.buttonLabel"
                         },
                         {
-                          "key": "primaryColumns.customColumn3.menuItems.menuItemj1ay9btva5.isDisabled"
-                        },
-                        {
-                          "key": "primaryColumns.customColumn3.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.customColumn3.menuColor"
-                        },
-                        {
-                          "key": "primaryColumns.customColumn3.borderRadius"
-                        },
-                        {
-                          "key": "primaryColumns.customColumn3.boxShadow"
-                        },
-                        {
-                          "key": "primaryColumns.customColumn3.menuButtonLabel"
-                        },
-                        {
                           "key": "primaryColumns.id.computedValue"
                         },
                         {
@@ -2048,46 +2030,33 @@
                       "widgetName": "collection_declaration_tbl_log",
                       "defaultPageSize": 0,
                       "columnOrder": [
-                        "customColumn3",
                         "id",
                         "receive_date",
-                        "shop_id",
                         "shop_name",
                         "received_amount",
+                        "unadjusted_amount",
+                        "shop_id",
                         "created_at",
                         "adjusted_amount",
-                        "unadjusted_amount",
                         "proof_of_amount_received"
                       ],
-                      "dynamicPropertyPathList": [
-                        {
-                          "key": "primaryColumns.customColumn3.menuItems.menuItem50tsipga03.onClick"
-                        },
-                        {
-                          "key": "primaryColumns.customColumn3.menuItems.menuItemj1ay9btva5.onClick"
-                        },
-                        {
-                          "key": "primaryColumns.customColumn3.menuItems.menuItemj1ay9btva5.isDisabled"
-                        },
-                        {
-                          "key": "primaryColumns.customColumn3.menuItems.menuItemz9cacajq8p.onClick"
-                        }
-                      ],
+                      "dynamicPropertyPathList": [],
                       "displayName": "Table",
-                      "bottomRow": 36,
+                      "bottomRow": 39,
                       "columnWidthMap": {
                         "task": 245,
                         "step": 62,
-                        "status": 75
+                        "status": 75,
+                        "customColumn3": 77,
+                        "received_amount": 106,
+                        "receive_date": 115,
+                        "shop_name": 134,
+                        "id": 75
                       },
                       "parentRowSpace": 10,
                       "hideCard": false,
                       "parentColumnSpace": 19.5,
-                      "dynamicTriggerPathList": [
-                        {
-                          "key": "primaryColumns.customColumn3.menuItems.menuItemj1ay9btva5.onClick"
-                        }
-                      ],
+                      "dynamicTriggerPathList": [],
                       "borderWidth": "1",
                       "primaryColumns": {
                         "shop_id": {
@@ -2243,52 +2212,6 @@
                           "computedValue": "{{collection_declaration_tbl_log.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"created_at\"]))}}",
                           "validation": {}
                         },
-                        "customColumn3": {
-                          "allowCellWrapping": false,
-                          "index": 10,
-                          "width": 150,
-                          "originalId": "customColumn3",
-                          "id": "customColumn3",
-                          "alias": "customColumn3",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "menuButton",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellEditable": false,
-                          "isEditable": false,
-                          "isCellVisible": true,
-                          "isDerived": true,
-                          "label": "Action",
-                          "isSaveVisible": true,
-                          "isDiscardVisible": true,
-                          "computedValue": "{{collection_declaration_tbl_log.processedTableData.map((currentRow, currentIndex) => ( 'ss'))}}",
-                          "validation": {},
-                          "buttonStyle": "rgb(3, 179, 101)",
-                          "labelColor": "#FFFFFF",
-                          "customAlias": "",
-                          "menuButtonLabel": "{{collection_declaration_tbl_log.processedTableData.map((currentRow, currentIndex) => ( '.'))}}",
-                          "menuItems": {
-                            "menuItemj1ay9btva5": {
-                              "id": "menuItemj1ay9btva5",
-                              "index": 0,
-                              "label": "Adjust with trip/invoice",
-                              "widgetId": "8pf7narp4q",
-                              "isDisabled": "{{collection_declaration_tbl.processedTableData.map((currentRow, currentIndex) => ( currentRow.unadjusted_amount>0?false:true))}}",
-                              "isVisible": true,
-                              "onClick": "{{navigateTo('collection_records',{shop_id: collection_declaration_tbl.triggeredRow.shop_id,\n\tcollection_id: collection_declaration_tbl_log.triggeredRow.id}, 'SAME_WINDOW')}}"
-                            }
-                          },
-                          "iconAlign": "left",
-                          "menuButtoniconName": "menu",
-                          "menuVariant": "TERTIARY",
-                          "menuColor": "{{collection_declaration_tbl_log.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.colors.primaryColor))}}",
-                          "borderRadius": "{{collection_declaration_tbl_log.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
-                          "boxShadow": "{{collection_declaration_tbl_log.processedTableData.map((currentRow, currentIndex) => ( 'none'))}}"
-                        },
                         "id": {
                           "allowCellWrapping": false,
                           "index": 6,
@@ -2376,7 +2299,7 @@
                       },
                       "key": "ezdwdfizp1",
                       "isDeprecated": false,
-                      "rightColumn": 64,
+                      "rightColumn": 26,
                       "textSize": "0.875rem",
                       "widgetId": "qobew9qpmc",
                       "tableData": "{{get_history_collections.data}}",
@@ -2395,7 +2318,7 @@
                       "borderColor": "#E0DEDE",
                       "isVisibleDownload": false,
                       "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
-                      "topRow": 76,
+                      "topRow": 18,
                       "isSortable": false,
                       "type": "TABLE_WIDGET_V2",
                       "inlineEditingSaveOption": "ROW_LEVEL",
@@ -2459,7 +2382,7 @@
                           "key": "primaryColumns.id.computedValue"
                         }
                       ],
-                      "leftColumn": 0,
+                      "leftColumn": 26,
                       "delimiter": ",",
                       "defaultSelectedRowIndex": 0,
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -2507,12 +2430,12 @@
                       ],
                       "dynamicPropertyPathList": [],
                       "displayName": "Table",
-                      "bottomRow": 97,
+                      "bottomRow": 39,
                       "columnWidthMap": {
                         "task": 245,
                         "step": 62,
                         "status": 75,
-                        "Amount": 206,
+                        "Amount": 197,
                         "id": 60
                       },
                       "parentRowSpace": 10,
@@ -2649,7 +2572,7 @@
                       },
                       "key": "crm2quaeqg",
                       "isDeprecated": false,
-                      "rightColumn": 43,
+                      "rightColumn": 64,
                       "textSize": "0.875rem",
                       "widgetId": "tnjq2wq1l0",
                       "tableData": "[\n  {\n\t\"id\": 1,\n    \"Amount\": \"Invoice Amount(with VAT/AIT)\",\n    \"Actual Amount\": {{trip_table.selectedRows.map(a=>a.total_price_after_vat_ait).reduce((partialSum, a) => partialSum + a, 0).toFixed(1)}},\n    \"Collected Amount\": {{parseInt(trip_table.selectedRows.map(a=>a.received_amount).reduce((partialSum, a) => partialSum + a, 0).toFixed(1))}},\n    \"Due receivable\": {{((trip_table.selectedRows.map(a=>a.total_price_after_vat_ait).reduce((partialSum, a) => partialSum + a, 0).toFixed(1))-(trip_table.selectedRows.map(a=>a.received_amount).reduce((partialSum, a) => partialSum + a, 0).toFixed(1))).toFixed(2)\n\t }}\n  },\n  {\n\t\"id\": 2,\n    \"Amount\": \"Net to RedX (w/o VAT AIT)\",\n    \"Actual Amount\": {{trip_table.selectedRows.map(a=>a.total_revenue).reduce((partialSum, a) => partialSum + a, 0).toFixed(1)}},\n    \"Collected Amount\": {{trip_table.selectedRows.map(a=>a.received_amount_wo_vat_ait).reduce((partialSum, a) => partialSum + a, 0).toFixed(1)}},\n    \"Due receivable\": {{(trip_table.selectedRows.map(a=>a.total_revenue).reduce((partialSum, a) => partialSum + a, 0).toFixed(1)- (trip_table.selectedRows.map(a=>a.received_amount_wo_vat_ait).reduce((partialSum, a) => partialSum + a, 0).toFixed(1))).toFixed(2)}}\n\t},\n  {\n\t\"id\": 3,\n    \"Amount\": \"VAT\",\n    \"Actual Amount\": {{trip_table.selectedRows.map(a=>a.vat).reduce((partialSum, a) => partialSum + a, 0).toFixed(1)}},\n    \"Collected Amount\": {{trip_table.selectedRows.map(a=>a.received_vat_amount).reduce((partialSum, a) => partialSum + a, 0).toFixed(1)}},\n    \"Due receivable\": {{(trip_table.selectedRows.map(a=>a.vat).reduce((partialSum, a) => partialSum + a, 0).toFixed(1)- trip_table.selectedRows.map(a=>a.received_vat_amount).reduce((partialSum, a) => partialSum + a, 0).toFixed(1)).toFixed(2)}}\n  },\n  {\n\t\"id\": 4,\n    \"Amount\": \"AIT\",\n    \"Actual Amount\": {{trip_table.selectedRows.map(a=>a.ait).reduce((partialSum, a) => partialSum + a, 0).toFixed(1)}},\n    \"Collected Amount\": {{trip_table.selectedRows.map(a=>a.received_ait_amount).reduce((partialSum, a) => partialSum + a, 0).toFixed(1)}},\n    \"Due receivable\": {{\n(trip_table.selectedRows.map(a=>a.ait).reduce((partialSum, a) => partialSum + a, 0).toFixed(1)- trip_table.selectedRows.map(a=>a.received_ait_amount).reduce((partialSum, a) => partialSum + a, 0).toFixed(1)).toFixed(2)}}\n  }\n]",
@@ -2668,7 +2591,7 @@
                       "borderColor": "#E0DEDE",
                       "isVisibleDownload": true,
                       "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
-                      "topRow": 128,
+                      "topRow": 81,
                       "isSortable": true,
                       "type": "TABLE_WIDGET_V2",
                       "inlineEditingSaveOption": "ROW_LEVEL",
@@ -2831,7 +2754,7 @@
                           "key": "primaryColumns.vehicle_type.computedValue"
                         }
                       ],
-                      "leftColumn": 0,
+                      "leftColumn": 1,
                       "delimiter": ",",
                       "defaultSelectedRowIndex": 0,
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -2913,13 +2836,14 @@
                       ],
                       "dynamicPropertyPathList": [],
                       "displayName": "Table",
-                      "bottomRow": 174,
+                      "bottomRow": 127,
                       "columnWidthMap": {
                         "task": 245,
                         "step": 62,
                         "status": 230.00000000000003,
                         "truck_price_with_ait": 206,
-                        "total_price_after_vat_ait": 216
+                        "total_price_after_vat_ait": 216,
+                        "received_amount_wo_vat_ait": 233
                       },
                       "parentRowSpace": 10,
                       "hideCard": false,
@@ -3964,7 +3888,7 @@
                       "borderColor": "#E0DEDE",
                       "isVisibleDownload": true,
                       "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
-                      "topRow": 101,
+                      "topRow": 50,
                       "isSortable": true,
                       "type": "TABLE_WIDGET_V2",
                       "inlineEditingSaveOption": "ROW_LEVEL",
@@ -4118,7 +4042,7 @@
                           "key": "tableData"
                         }
                       ],
-                      "leftColumn": 0,
+                      "leftColumn": 1,
                       "delimiter": ",",
                       "defaultSelectedRowIndex": 0,
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -4195,7 +4119,7 @@
                       ],
                       "dynamicPropertyPathList": [],
                       "displayName": "Table",
-                      "bottomRow": 128,
+                      "bottomRow": 77,
                       "columnWidthMap": {
                         "task": 245,
                         "step": 62,
@@ -5087,7 +5011,7 @@
                       "onRowSelected": "",
                       "key": "pmls00y2qf",
                       "isDeprecated": false,
-                      "rightColumn": 64,
+                      "rightColumn": 63,
                       "textSize": "0.875rem",
                       "widgetId": "vm52jxfbxd",
                       "tableData": "{{get_collectables.data}}",
@@ -5162,14 +5086,19 @@
                       "widgetName": "Button2",
                       "onClick": "{{showModal('Modal1')}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "isDisabled"
+                        }
+                      ],
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
                       "searchTags": [
                         "click",
                         "submit"
                       ],
-                      "topRow": 4,
-                      "bottomRow": 8,
+                      "topRow": 77,
+                      "bottomRow": 81,
                       "parentRowSpace": 10,
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
@@ -5180,20 +5109,23 @@
                           "key": "onClick"
                         }
                       ],
-                      "leftColumn": 48,
+                      "leftColumn": 47,
                       "dynamicBindingPathList": [
                         {
                           "key": "buttonColor"
                         },
                         {
                           "key": "borderRadius"
+                        },
+                        {
+                          "key": "isDisabled"
                         }
                       ],
                       "text": "Settle collection",
-                      "isDisabled": false,
+                      "isDisabled": "{{get_history_collections.data[0].unadjusted_amount<trip_table.selectedRows.reduce((partialSum, a) => partialSum + a.total_price_after_vat_ait, 0)-trip_table.selectedRows.reduce((partialSum, a) => partialSum + a.received_amount, 0)}}",
                       "key": "ak8qer3gar",
                       "isDeprecated": false,
-                      "rightColumn": 64,
+                      "rightColumn": 63,
                       "isDefaultClickDisabled": true,
                       "widgetId": "zyncy62ym5",
                       "isVisible": true,
@@ -5224,8 +5156,8 @@
                         "click",
                         "submit"
                       ],
-                      "topRow": 97,
-                      "bottomRow": 101,
+                      "topRow": 46,
+                      "bottomRow": 50,
                       "parentRowSpace": 10,
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
@@ -5260,7 +5192,7 @@
                       "isLoading": false,
                       "disabledWhenInvalid": false,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "buttonVariant": "TERTIARY",
+                      "buttonVariant": "PRIMARY",
                       "placement": "CENTER"
                     }
                   ],
@@ -5298,7 +5230,19 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "collection_records_get_shops",
+              "id": "collection_records_v2_get_history_collections",
+              "name": "get_history_collections",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "appsmith.URL.queryParams.collection_id"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "collection_records_v2_get_shops",
               "name": "get_shops",
               "confirmBeforeExecute": false,
               "pluginType": "API",
@@ -5311,7 +5255,7 @@
         ],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
-        "id": "collection_records",
+        "id": "collection_records_v2",
         "deleted": false,
         "policies": [],
         "userPermissions": []
@@ -5322,5 +5266,5 @@
     "isHidden": false
   },
   "deleted": false,
-  "gitSyncId": "636895ab03193515321c3584_6368a8988f12af63a43d3a27"
+  "gitSyncId": "6231701cf1c0af1ceded5043_6375bbd5b9cf46780e15c91f"
 }
