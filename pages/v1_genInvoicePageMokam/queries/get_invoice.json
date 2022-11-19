@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "get_collection_declarations_v2",
+    "name": "get_invoice",
     "datasource": {
       "name": "Postgres_latest",
       "pluginId": "postgres-plugin",
@@ -13,31 +13,37 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "collection_declaration",
+    "pageId": "v1_genInvoicePageMokam",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT * FROM customer_collection_declation ORDER BY unadjusted_amount desc;",
+      "body": "SELECT * FROM finance_trip_invoices where invoice_number={{appsmith.URL.queryParams.InvoiceNumber}}\nand status != 'Invalid'",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
-          "value": false
+          "value": true
         }
       ]
     },
     "executeOnLoad": true,
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
-    "userSetOnLoad": false,
+    "jsonPathKeys": [
+      "appsmith.URL.queryParams.InvoiceNumber"
+    ],
+    "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "collection_declaration_get_collection_declarations_v2",
+  "id": "v1_genInvoicePageMokam_get_invoice",
   "deleted": false,
-  "gitSyncId": "6231701cf1c0af1ceded5043_637480841351c74a8ce8bb1d"
+  "gitSyncId": "6231701cf1c0af1ceded5043_6312fa7562862f234d3ba15e"
 }

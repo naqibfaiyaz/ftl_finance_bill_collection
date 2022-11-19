@@ -57,10 +57,10 @@
         "key": "path"
       },
       {
-        "key": "headers[0].value"
+        "key": "queryParameters[0].value"
       },
       {
-        "key": "queryParameters[0].value"
+        "key": "headers[0].value"
       }
     ],
     "isValid": true,
@@ -77,5 +77,5 @@
   },
   "id": "genInvoicePageMokam_get_shop_data",
   "deleted": false,
-  "gitSyncId": "6231701cf1c0af1ceded5043_6231f852f1c0af1ceded5b9c"
+  "gitSyncId": "6231701cf1c0af1ceded5043_637910cdb87c411aad41f08c"
 }

@@ -2,10 +2,11 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "get_shops",
+    "name": "get_shop_data",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
+      "organizationId": "6194a39143aaaf0225a809ea",
       "datasourceConfiguration": {
         "sshProxyEnabled": false,
         "url": "https://redx.shopup.com.bd"
@@ -17,26 +18,26 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "collection_records_v2",
+    "pageId": "v1_genInvoicePageMokam",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/api/legacy/v4/redx/shops",
+      "path": "/api/legacy/v1/logistics/merchant-onboarding/requests",
       "headers": [
         {
           "key": "Authorization",
-          "value": "Bearer {{appsmith.store.access_token}}"
+          "value": "{{appsmith.store.access_token}}"
+        },
+        {
+          "key": "content-type",
+          "value": "application/json"
         }
       ],
       "encodeParamsToggle": true,
       "queryParameters": [
         {
-          "key": "merchantType",
-          "value": "b2b"
-        },
-        {
-          "key": "includeShopUserRoles",
-          "value": "false"
+          "key": "shop",
+          "value": "{{appsmith.URL.queryParams.shop_id}}"
         }
       ],
       "httpMethod": "GET",
@@ -46,18 +47,27 @@
           "value": true
         }
       ],
-      "formData": {}
+      "formData": {
+        "apiContentType": "application/json"
+      }
     },
     "executeOnLoad": true,
     "dynamicBindingPathList": [
       {
+        "key": "path"
+      },
+      {
         "key": "headers[0].value"
+      },
+      {
+        "key": "queryParameters[0].value"
       }
     ],
     "isValid": true,
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
+      "appsmith.URL.queryParams.shop_id",
       "appsmith.store.access_token"
     ],
     "userSetOnLoad": false,
@@ -65,7 +75,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "collection_records_v2_get_shops",
+  "id": "v1_genInvoicePageMokam_get_shop_data",
   "deleted": false,
-  "gitSyncId": "6231701cf1c0af1ceded5043_6375bbd6b9cf46780e15c922"
+  "gitSyncId": "6231701cf1c0af1ceded5043_6231f852f1c0af1ceded5b9c"
 }

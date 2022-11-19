@@ -19,7 +19,7 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 65,
+          "version": 67,
           "minHeight": 860,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
@@ -3864,7 +3864,7 @@
                           "key": "defaultOptionValue"
                         }
                       ],
-                      "options": "{{\nget_shops.data.shops.map(a => {\n\treturn {\n\t\tlabel: a.shopName,\n\t\tvalue: a.id\n\t}\n}).filter(b=>b.value==parseInt(appsmith.URL.queryParams.shop_id))\n}}",
+                      "options": "{{\nget_shops.data.shops.map(a => {\n\treturn {\n\t\tlabel: a.shopName,\n\t\tvalue: a.id\n\t}\n})\n\t//.filter(b=>b.value==parseInt(appsmith.URL.queryParams.shop_id))\n}}",
                       "labelStyle": "BOLD",
                       "placeholderText": "Select Shop",
                       "isDisabled": false,

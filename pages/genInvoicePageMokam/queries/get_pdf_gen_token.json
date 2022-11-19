@@ -2,13 +2,12 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "get_shops",
+    "name": "get_pdf_gen_token",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "sshProxyEnabled": false,
-        "url": "https://redx.shopup.com.bd"
+        "url": "https://asia-southeast1-fleet-service-8ea76.cloudfunctions.net"
       },
       "invalids": [],
       "messages": [],
@@ -17,55 +16,48 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "collection_records_v2",
+    "pageId": "genInvoicePageMokam",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/api/legacy/v4/redx/shops",
+      "path": "/redxFleetService/api/v1/token/cred",
       "headers": [
         {
-          "key": "Authorization",
-          "value": "Bearer {{appsmith.store.access_token}}"
+          "key": "content-type",
+          "value": "application/json"
         }
       ],
       "encodeParamsToggle": true,
-      "queryParameters": [
-        {
-          "key": "merchantType",
-          "value": "b2b"
-        },
-        {
-          "key": "includeShopUserRoles",
-          "value": "false"
-        }
-      ],
-      "httpMethod": "GET",
+      "queryParameters": [],
+      "body": "{\n    \"username\": \"redx-fleet-api-user\",\n    \"password\": \"@R3dX5733T3i274622$%@\"\n}",
+      "bodyFormData": [],
+      "httpMethod": "POST",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
           "value": true
         }
       ],
-      "formData": {}
+      "formData": {
+        "apiContentType": "application/json"
+      }
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
-        "key": "headers[0].value"
+        "key": "datasourceUrl"
       }
     ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      "appsmith.store.access_token"
-    ],
-    "userSetOnLoad": false,
+    "jsonPathKeys": [],
+    "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "collection_records_v2_get_shops",
+  "id": "genInvoicePageMokam_get_pdf_gen_token",
   "deleted": false,
-  "gitSyncId": "6231701cf1c0af1ceded5043_6375bbd6b9cf46780e15c922"
+  "gitSyncId": "6231701cf1c0af1ceded5043_637910cdb87c411aad41f08a"
 }

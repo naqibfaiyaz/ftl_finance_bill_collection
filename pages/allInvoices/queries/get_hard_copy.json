@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "get_collection_declarations_v2",
+    "name": "get_hard_copy",
     "datasource": {
       "name": "Postgres_latest",
       "pluginId": "postgres-plugin",
@@ -13,31 +13,37 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "collection_declaration",
+    "pageId": "allInvoices",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT * FROM customer_collection_declation ORDER BY unadjusted_amount desc;",
+      "body": "SELECT created_at, id, hard_copy_of_bill,\nreplace(hard_copy_of_bill, '''','')::json->0 hard_copy\nFROM finance_trip_invoices \nwhere id={{readyInvoiceTbl.triggeredRow.id}}",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
-          "value": false
+          "value": true
         }
       ]
     },
     "executeOnLoad": true,
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "readyInvoiceTbl.triggeredRow.id"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "collection_declaration_get_collection_declarations_v2",
+  "id": "allInvoices_get_hard_copy",
   "deleted": false,
-  "gitSyncId": "6231701cf1c0af1ceded5043_637480841351c74a8ce8bb1d"
+  "gitSyncId": "6231701cf1c0af1ceded5043_6378a0f26cfaa70690e33ce2"
 }

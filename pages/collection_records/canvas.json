@@ -19,7 +19,7 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 65,
+          "version": 67,
           "minHeight": 860,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
@@ -5296,6 +5296,18 @@
           ]
         },
         "layoutOnLoadActions": [
+          [
+            {
+              "id": "collection_records_get_history_collections",
+              "name": "get_history_collections",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "collection_declaration_tbl.selectedRow.id"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
           [
             {
               "id": "collection_records_get_shops",

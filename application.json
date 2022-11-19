@@ -9,7 +9,7 @@
       "isDefault": false
     },
     {
-      "id": "genInvoicePageMokam",
+      "id": "v1_genInvoicePageMokam",
       "isDefault": false
     },
     {
@@ -46,6 +46,10 @@
     },
     {
       "id": "collection_records_v2",
+      "isDefault": false
+    },
+    {
+      "id": "genInvoicePageMokam",
       "isDefault": false
     }
   ],
