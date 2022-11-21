@@ -4314,7 +4314,7 @@
                             {
                               "boxShadow": "none",
                               "widgetName": "Search_btn",
-                              "onClick": "{{\nmoment(DatePicker1.selectedDate).format('YYYY-MM-DD') >='2022-11-01' && moment(DatePicker1Copy.selectedDate).format('YYYY-MM-DD') >='2022-11-01' ?\n(search_fleetIdCopy.text==null ||search_fleetIdCopy.text==''?\n(get_parcel_details_panel.run(\n()=>get_invoice_details.run(\n\t()=>challan_status.run(\n\t()=>showAlert('Successfully fetched','success'),\n\t()=>showAlert('challan data failed')),\n\t()=>showAlert('invoice data failed')),()=>showAlert('parcel data Failed','error')\n)\n):\n(Api1Copy.run(\n()=>get_invoice_details.run(\n\t()=>challan_status.run(\n\t()=>showAlert('Successfully fetched','success'),\n\t()=>showAlert('challan data failed')),\n\t()=>showAlert('invoice data failed')),()=>showAlert('parcel data Failed','error')\n)\n)):\n(search_fleetIdCopy.text==null ||search_fleetIdCopy.text==''?\n(get_parcel_details.run(\n()=>get_invoice_details.run(\n\t()=>challan_status.run(\n\t()=>showAlert('Successfully fetched','success'),\n\t()=>showAlert('challan data failed')),\n\t()=>showAlert('invoice data failed')),()=>showAlert('parcel data Failed','error')\n)\n):\n(Api1.run(\n()=>get_invoice_details.run(\n\t()=>challan_status.run(\n\t()=>showAlert('Successfully fetched','success'),\n\t()=>showAlert('challan data failed')),\n\t()=>showAlert('invoice data failed')),()=>showAlert('parcel data Failed','error')\n)\n))\n}}",
+                              "onClick": "{{\n(moment(DatePicker1.selectedDate).format('YYYY-MM-DD') >='2022-11-01')?(search_fleetIdCopy.text==null ||search_fleetIdCopy.text==''?\n(get_parcel_details_panel.run(\n()=>get_invoice_details.run(\n\t()=>challan_status.run(\n\t()=>showAlert('Successfully fetched','success'),\n\t()=>showAlert('challan data failed')),\n\t()=>showAlert('invoice data failed')),()=>showAlert('parcel data Failed','error')\n)\n):\n(Api1Copy.run(\n()=>get_invoice_details.run(\n\t()=>challan_status.run(\n\t()=>showAlert('Successfully fetched','success'),\n\t()=>showAlert('challan data failed')),\n\t()=>showAlert('invoice data failed')),()=>showAlert('parcel data Failed','error')\n)\n)):\n(search_fleetIdCopy.text==null ||search_fleetIdCopy.text==''?\n(get_parcel_details.run(\n()=>get_invoice_details.run(\n\t()=>challan_status.run(\n\t()=>showAlert('Successfully fetched','success'),\n\t()=>showAlert('challan data failed')),\n\t()=>showAlert('invoice data failed')),()=>showAlert('parcel data Failed','error')\n)\n):\n(Api1.run(\n()=>get_invoice_details.run(\n\t()=>challan_status.run(\n\t()=>showAlert('Successfully fetched','success'),\n\t()=>showAlert('challan data failed')),\n\t()=>showAlert('invoice data failed')),()=>showAlert('parcel data Failed','error')\n)\n))\n}}",
                               "buttonColor": "#03B365",
                               "dynamicPropertyPathList": [
                                 {
@@ -4837,7 +4837,7 @@
                         }
                       ],
                       "truncateButtonColor": "#FFC13D",
-                      "text": "{{\nsearch_fleetIdCopy.text==null ||search_fleetIdCopy.text==''?'t':'f'\n\n}}",
+                      "text": "{{\nsearch_fleetIdCopy.text==null ||search_fleetIdCopy.text==''?'t':'f'\n\n\n\n}}",
                       "key": "uzqt0xvaz1",
                       "labelTextSize": "0.875rem",
                       "rightColumn": 43,
@@ -6953,10 +6953,20 @@
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
+                "\"'\"+(moment(DatePicker1.selectedDate).format('YYYY-MM-DD') >='2022-11-01' && moment(DatePicker1Copy.selectedDate).format('YYYY-MM-DD') >='2022-11-01') ? \"'\"+(search_fleetIdCopy.text==null ||search_fleetIdCopy.text==''? (get_parcel_details_panel.data.map((a)=>a.tracking_id).join(\"','\")+\"'\"): (Api1Copy.data.map((a)=>a.tracking_id).join(\"','\")+\"'\")):(search_fleetIdCopy.text==null ||search_fleetIdCopy.text==''? (get_parcel_details.data.map((a)=>a.tracking_id).join(\"','\")+\"'\"): (Api1.data.map((a)=>a.tracking_id).join(\"','\")+\"'\"))",
                 "parseInt(search_shop_id.selectedOptionValue)",
-                "\"'\"+ (search_fleetIdCopy.text==null ||search_fleetIdCopy.text==''? (get_parcel_details.data.map((a)=>a.tracking_id).join(\"','\")+\"'\"): (Api1.data.map((a)=>a.tracking_id).join(\"','\")+\"'\"))",
                 "moment(DatePicker1Copy.selectedDate).format('YYYY-MM-DD')",
                 "moment(DatePicker1.selectedDate).format('YYYY-MM-DD')"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Total Bill Invoice Creation_get_shops",
+              "name": "get_shops",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "appsmith.store.access_token"
               ],
               "timeoutInMillisecond": 10000
             },
@@ -6979,47 +6989,6 @@
               "jsonPathKeys": [
                 "Table2.tableData.map(a=>a.tracking_id).join(\"','\")",
                 "search_shop_id.selectedOptionValue"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "Total Bill Invoice Creation_Api1Copy",
-              "name": "Api1Copy",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "appsmith.store.session",
-                "parseInt(search_shop_id.selectedOptionValue)",
-                "search_fleetIdCopy.text",
-                "moment(DatePicker1Copy.selectedDate).format('YYYY-MM-DD')",
-                "moment(DatePicker1.selectedDate).format('YYYY-MM-DD')"
-              ],
-              "timeoutInMillisecond": 10000000
-            },
-            {
-              "id": "Total Bill Invoice Creation_get_parcel_details_panel",
-              "name": "get_parcel_details_panel",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "appsmith.store.session",
-                "parseInt(search_shop_id.selectedOptionValue)",
-                "moment(DatePicker1Copy.selectedDate).format('YYYY-MM-DD')",
-                "moment(DatePicker1.selectedDate).format('YYYY-MM-DD')"
-              ],
-              "timeoutInMillisecond": 100000000
-            }
-          ],
-          [
-            {
-              "id": "Total Bill Invoice Creation_get_shops",
-              "name": "get_shops",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "appsmith.store.access_token"
               ],
               "timeoutInMillisecond": 10000
             }

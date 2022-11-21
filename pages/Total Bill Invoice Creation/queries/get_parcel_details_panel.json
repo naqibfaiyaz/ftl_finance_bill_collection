@@ -44,7 +44,7 @@
         "apiContentType": "application/json"
       }
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
         "key": "path"
@@ -67,7 +67,7 @@
       "moment(DatePicker1Copy.selectedDate).format('YYYY-MM-DD')",
       "parseInt(search_shop_id.selectedOptionValue)"
     ],
-    "userSetOnLoad": false,
+    "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
