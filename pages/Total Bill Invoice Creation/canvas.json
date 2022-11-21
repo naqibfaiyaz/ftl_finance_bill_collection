@@ -5247,7 +5247,7 @@
                           "key": "primaryColumns.base_fare_ait.computedValue"
                         },
                         {
-                          "key": "primaryColumns.net_to_redx.computedValue"
+                          "key": "primaryColumns.netToRedX.computedValue"
                         }
                       ],
                       "leftColumn": 0,
@@ -5360,12 +5360,12 @@
                         "calculated_VAT",
                         "shop_ID",
                         "truckPriceRemarks",
+                        "netToRedX",
                         "vehicle_type",
                         "total_price_after_vat_ait",
                         "base_fare_ait",
                         "spread",
-                        "Comma_Seperated_Column",
-                        "net_to_redx"
+                        "Comma_Seperated_Column"
                       ],
                       "dynamicPropertyPathList": [
                         {
@@ -6184,23 +6184,24 @@
                           "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.base_fare_ait))}}",
                           "cellBackground": "transparent"
                         },
-                        "net_to_redx": {
-                          "index": 41,
+                        "netToRedX": {
+                          "index": 36,
                           "width": 150,
-                          "id": "net_to_redx",
+                          "id": "netToRedX",
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
                           "columnType": "text",
                           "textColor": "",
                           "textSize": "0.875rem",
+                          "fontStyle": "",
                           "enableFilter": true,
                           "enableSort": true,
                           "isVisible": true,
                           "isDisabled": false,
                           "isCellVisible": true,
                           "isDerived": false,
-                          "label": "net_to_redx",
-                          "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.net_to_redx))}}",
+                          "label": "netToRedX",
+                          "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.netToRedX))}}",
                           "cellBackground": "transparent"
                         }
                       },
@@ -6245,7 +6246,7 @@
                       "rightColumn": 64,
                       "textSize": "0.875rem",
                       "widgetId": "tarlzgt3ny",
-                      "tableData": "{{\nsearch_fleetIdCopy.text==null ||search_fleetIdCopy.text==''?\nget_parcel_details.data: Api1.data\n}}",
+                      "tableData": "{{\nmoment(DatePicker1.selectedDate).format('YYYY-MM-DD') >='2022-11-01' && moment(DatePicker1Copy.selectedDate).format('YYYY-MM-DD') >='2022-11-01' ?\nsearch_fleetIdCopy.text==null ||search_fleetIdCopy.text==''?\nget_parcel_details_panel.data: Api1Copy.data:\nsearch_fleetIdCopy.text==null ||search_fleetIdCopy.text==''?\nget_parcel_details.data: Api1.data\n}}",
                       "label": "Data",
                       "searchKey": "",
                       "parentId": "6y2wur3g2z",
@@ -6980,6 +6981,35 @@
                 "search_shop_id.selectedOptionValue"
               ],
               "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Total Bill Invoice Creation_Api1Copy",
+              "name": "Api1Copy",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "appsmith.store.session",
+                "parseInt(search_shop_id.selectedOptionValue)",
+                "search_fleetIdCopy.text",
+                "moment(DatePicker1Copy.selectedDate).format('YYYY-MM-DD')",
+                "moment(DatePicker1.selectedDate).format('YYYY-MM-DD')"
+              ],
+              "timeoutInMillisecond": 10000000
+            },
+            {
+              "id": "Total Bill Invoice Creation_get_parcel_details_panel",
+              "name": "get_parcel_details_panel",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "appsmith.store.session",
+                "parseInt(search_shop_id.selectedOptionValue)",
+                "moment(DatePicker1Copy.selectedDate).format('YYYY-MM-DD')",
+                "moment(DatePicker1.selectedDate).format('YYYY-MM-DD')"
+              ],
+              "timeoutInMillisecond": 100000000
             }
           ],
           [
