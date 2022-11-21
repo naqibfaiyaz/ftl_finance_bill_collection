@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "generate_pdf_v2",
+    "name": "generate_pdf_mokam_regular",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
@@ -79,7 +79,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "genInvoicePageMokam_generate_pdf_v2",
+  "id": "genInvoicePageMokam_generate_pdf_mokam_regular",
   "deleted": false,
   "gitSyncId": "6231701cf1c0af1ceded5043_637910cdb87c411aad41f08e"
 }

@@ -124,7 +124,7 @@
                       "rightColumn": 55,
                       "textAlign": "LEFT",
                       "widgetId": "knt9a9ujzu",
-                      "isVisible": "{{generate_pdf_v2.data.download_url == null?false:true}}",
+                      "isVisible": "{{\nText4.text!=''}}",
                       "fontStyle": "BOLD",
                       "textColor": "#231F20",
                       "version": 1,
@@ -175,7 +175,7 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "text": "{{generate_pdf_v2.data.download_url}}",
+                      "text": "{{\nbilling_formats.data.filter(a=>a.Billing_format == 'lc' )?\ngenerate_pdf_redx_lc.data.download_url:\nbilling_formats.data.filter(a=>a.Billing_format == 'date-loading-unloading' )?\nredx_date_loading_unloading.data.download_url:\ngenerate_pdf_redx_regular.data.download_url\n}}",
                       "key": "quyx7d1wiy",
                       "isDeprecated": false,
                       "rightColumn": 61,
@@ -892,6 +892,7 @@
                               "hideCard": false,
                               "animateLoading": true,
                               "parentColumnSpace": 6.83203125,
+                              "dynamicTriggerPathList": [],
                               "resetOnSubmit": true,
                               "leftColumn": 0,
                               "dynamicBindingPathList": [
@@ -909,7 +910,7 @@
                               "widgetId": "hdg4535s4o",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                               "isVisible": true,
-                              "label": "",
+                              "label": "Attn:",
                               "version": 2,
                               "parentId": "lo8kxe0zn2",
                               "renderMode": "CANVAS",
@@ -1540,14 +1541,14 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button3",
-                      "onClick": "{{\nget_pdf_gen_token.run(()=>generate_pdf_v2.run(()=> showModal('Modal1'), () => showAlert('Something went wrong,')))\n}}",
+                      "onClick": "{{\nbilling_formats.data.filter(a=>a.Billing_format == 'lc' )?\nget_pdf_gen_token.run(()=>generate_pdf_redx_lc.run(()=> showModal('Modal1') && storeValue('downloaded_pdf','1'), () => showAlert('Something went wrong,'))):\nbilling_formats.data.filter(a=>a.Billing_format == 'date-loading-unloading')?\nget_pdf_gen_token.run(()=>redx_date_loading_unloading.run(()=> showModal('Modal1') && storeValue('downloaded_pdf','1'), () => showAlert('Something went wrong,'))):\nget_pdf_gen_token.run(()=>generate_pdf_redx_regular.run(()=> showModal('Modal1') && storeValue('downloaded_pdf','1'), () => showAlert('Something went wrong,')))\n}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "dynamicPropertyPathList": [
                         {
-                          "key": "onClick"
+                          "key": "isVisible"
                         },
                         {
-                          "key": "isVisible"
+                          "key": "onClick"
                         }
                       ],
                       "displayName": "Button",
@@ -1587,7 +1588,7 @@
                       "rightColumn": 61,
                       "isDefaultClickDisabled": true,
                       "widgetId": "boxn8s1gkr",
-                      "isVisible": "{{generate_pdf_v2.data.download_url == null?true:false}}",
+                      "isVisible": "{{\nText4.text==''}}",
                       "recaptchaType": "V3",
                       "version": 1,
                       "parentId": "pst4r222hb",
@@ -3342,7 +3343,7 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "docUrl": "{{generate_pdf_v2.data.download_url}}"
+                      "docUrl": "{{\nbilling_formats.data.filter(a=>a.Billing_format == 'lc')?\ngenerate_pdf_redx_lc.data.download_url:\ngenerate_pdf_redx_regular.data.download_url}}"
                     }
                   ],
                   "isDisabled": false,
@@ -3379,6 +3380,17 @@
         },
         "layoutOnLoadActions": [
           [
+            {
+              "id": "genInvoicePageRedX_billing_formats",
+              "name": "billing_formats",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "appsmith.store.session",
+                "appsmith.URL.queryParams.shop_id"
+              ],
+              "timeoutInMillisecond": 100000000
+            },
             {
               "id": "genInvoicePageRedX_get_topsheet_data_v2",
               "name": "get_topsheet_data_v2",

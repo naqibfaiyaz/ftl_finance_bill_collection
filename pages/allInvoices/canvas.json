@@ -743,6 +743,12 @@
                         },
                         {
                           "key": "primaryColumns.created_at.computedValue"
+                        },
+                        {
+                          "key": "derivedColumns.customColumn9.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn9.computedValue"
                         }
                       ],
                       "leftColumn": 0,
@@ -824,7 +830,8 @@
                         "customColumn4",
                         "customColumn5",
                         "customColumn6",
-                        "customColumn8"
+                        "customColumn8",
+                        "customColumn9"
                       ],
                       "dynamicPropertyPathList": [
                         {
@@ -1437,6 +1444,22 @@
                           "label": "created_at",
                           "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( currentRow.created_at))}}",
                           "cellBackground": ""
+                        },
+                        "customColumn9": {
+                          "index": 27,
+                          "width": 150,
+                          "id": "customColumn9",
+                          "columnType": "text",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": true,
+                          "label": "customColumn9",
+                          "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( billing_formats.data.filter(a=>a.SHOP_ID == currentRow.shop_id)[0]?billing_formats.data.filter(a=>a.SHOP_ID == currentRow.shop_id)[0].Billing_format:''))}}",
+                          "buttonStyle": "rgb(3, 179, 101)",
+                          "labelColor": "#FFFFFF"
                         }
                       },
                       "onRowSelected": "",
@@ -1597,6 +1620,22 @@
                           "iconName": "",
                           "buttonLabel": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( 'View hard copy'))}}",
                           "onClick": "{{showModal('Modal2')}}"
+                        },
+                        "customColumn9": {
+                          "index": 27,
+                          "width": 150,
+                          "id": "customColumn9",
+                          "columnType": "text",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": true,
+                          "label": "customColumn9",
+                          "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( billing_formats.data.filter(a=>a.SHOP_ID == currentRow.shop_id)[0]?billing_formats.data.filter(a=>a.SHOP_ID == currentRow.shop_id)[0].Billing_format:''))}}",
+                          "buttonStyle": "rgb(3, 179, 101)",
+                          "labelColor": "#FFFFFF"
                         }
                       },
                       "labelTextSize": "0.875rem",
@@ -7084,6 +7123,16 @@
             }
           ],
           [
+            {
+              "id": "allInvoices_billing_formats",
+              "name": "billing_formats",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "appsmith.store.session"
+              ],
+              "timeoutInMillisecond": 100000000
+            },
             {
               "id": "allInvoices_get_hard_copy",
               "name": "get_hard_copy",
