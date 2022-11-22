@@ -6193,7 +6193,6 @@
                           "columnType": "text",
                           "textColor": "",
                           "textSize": "0.875rem",
-                          "fontStyle": "",
                           "enableFilter": true,
                           "enableSort": true,
                           "isVisible": true,
@@ -6947,19 +6946,6 @@
             }
           ],
           [
-            {
-              "id": "Total Bill Invoice Creation_get_invoice_details",
-              "name": "get_invoice_details",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "\"'\"+(moment(DatePicker1.selectedDate).format('YYYY-MM-DD') >='2022-11-01' && moment(DatePicker1Copy.selectedDate).format('YYYY-MM-DD') >='2022-11-01') ? \"'\"+(search_fleetIdCopy.text==null ||search_fleetIdCopy.text==''? (get_parcel_details_panel.data.map((a)=>a.tracking_id).join(\"','\")+\"'\"): (Api1Copy.data.map((a)=>a.tracking_id).join(\"','\")+\"'\")):(search_fleetIdCopy.text==null ||search_fleetIdCopy.text==''? (get_parcel_details.data.map((a)=>a.tracking_id).join(\"','\")+\"'\"): (Api1.data.map((a)=>a.tracking_id).join(\"','\")+\"'\"))",
-                "parseInt(search_shop_id.selectedOptionValue)",
-                "moment(DatePicker1Copy.selectedDate).format('YYYY-MM-DD')",
-                "moment(DatePicker1.selectedDate).format('YYYY-MM-DD')"
-              ],
-              "timeoutInMillisecond": 10000
-            },
             {
               "id": "Total Bill Invoice Creation_get_shops",
               "name": "get_shops",
