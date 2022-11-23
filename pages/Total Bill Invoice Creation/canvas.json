@@ -2125,7 +2125,7 @@
                         }
                       ],
                       "truncateButtonColor": "#FFC13D",
-                      "text": "{{Table2.selectedRows.map((a)=>a.net_to_redx).reduce((sum, cost)=>sum+cost).toFixed(2)}}",
+                      "text": "{{\nTable2.selectedRows.map((a)=>a.netToRedX).reduce((sum, cost)=>parseFloat(sum)+parseFloat(cost))\n\n\n}}",
                       "key": "xzedz5t2cc",
                       "labelTextSize": "0.875rem",
                       "rightColumn": 26,
@@ -2929,7 +2929,7 @@
                         }
                       ],
                       "truncateButtonColor": "#FFC13D",
-                      "text": "{{Table2.selectedRows.map((a)=>a.calculated_VAT).reduce((sum, cost)=>sum+cost)}}",
+                      "text": "{{Table2.selectedRows.map((a)=>a.calculated_VAT).reduce((sum,cost)=>parseFloat(sum)+parseFloat(cost))\n\n\n}}",
                       "key": "xzedz5t2cc",
                       "labelTextSize": "0.875rem",
                       "rightColumn": 26,
@@ -3002,7 +3002,7 @@
                         }
                       ],
                       "truncateButtonColor": "#FFC13D",
-                      "text": "{{Table2.selectedRows.map((a)=>a.calculated_AIT).reduce((sum, cost)=>sum+cost)}}",
+                      "text": "{{Table2.selectedRows.map((a)=>a.calculated_AIT).reduce((sum, cost)=>parseFloat(sum)+parseFloat(cost))}}",
                       "key": "xzedz5t2cc",
                       "labelTextSize": "0.875rem",
                       "rightColumn": 26,
@@ -3075,7 +3075,7 @@
                         }
                       ],
                       "truncateButtonColor": "#FFC13D",
-                      "text": "{{Table2.selectedRows.map((a)=>a.total_price_after_vat_ait).reduce((sum, cost)=>sum+cost)}}",
+                      "text": "{{Table2.selectedRows.map((a)=>a.total_price_after_vat_ait).reduce((sum, cost)=>parseFloat(sum)+parseFloat(cost))}}",
                       "key": "xzedz5t2cc",
                       "labelTextSize": "0.875rem",
                       "rightColumn": 26,
