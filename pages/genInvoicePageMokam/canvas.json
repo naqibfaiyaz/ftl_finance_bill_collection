@@ -1594,7 +1594,7 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button3",
-                      "onClick": "{{\n\nget_invoice.data[0].generated_pdf != null? showModal('generated_pdf'):\n\n(\nbilling_formats.data.filter(a=>a.Billing_format == 'lc' )?\n\tget_pdf_gen_token.run(\n\t\t\t\t\t\t()=>lc.run(\n\t\t\t\t\t\t\t\t\t\t\t\t\t()=> insert_pdf_url.run(\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t()=> get_invoice.run(()=>showModal('Modal1')),\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t()=>showAlert('URL insertion failed,')\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t),\n\t\t\t\t\t\t\t\t\t\t\t\t\t() => showAlert('Something went wrong,')\n\t\t\t\t\t\t\t\t\t\t\t\t\t)\n\t\t\t\t\t\t)\t\t\t\t\t\t\t\n\t:\nbilling_formats.data.filter(a=>a.Billing_format == 'date-loading-unloading')?\n\tget_pdf_gen_token.run(\n\t\t\t\t\t\t()=>date_loading_unloading.run(\n\t\t\t\t\t\t\t\t\t\t\t\t\t()=> insert_pdf_url.run(\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t()=> get_invoice.run(()=>showModal('Modal1')),\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t()=>showAlert('URL insertion failed,')\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t),\n\t\t\t\t\t\t\t\t\t\t\t\t\t() => showAlert('Something went wrong,')\n\t\t\t\t\t\t\t\t\t\t\t\t\t)\n\t\t\t\t\t\t)\n\t:\n\t\n\tget_pdf_gen_token.run(\n\t\t\t\t\t\t()=>regular.run(\n\t\t\t\t\t\t\t\t\t\t\t\t\t()=> insert_pdf_url.run(\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t()=> get_invoice.run(()=>showModal('Modal1')),\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t()=>showAlert('URL insertion failed,')\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t),\n\t\t\t\t\t\t\t\t\t\t\t\t\t() => showAlert('Something went wrong,')\n\t\t\t\t\t\t\t\t\t\t\t\t\t)\n\t\t\t\t\t\t)\n\n)\t\n}}",
+                      "onClick": "{{\nget_invoice.data[0].generated_pdf !== null? showModal('generated_pdf'):\n\n(\nbilling_format.data[0].Billing_format== 'lc'?\n\tget_pdf_gen_token.run(\n\t\t\t\t\t\t()=>lc.run(\n\t\t\t\t\t\t\t\t\t\t\t\t\t()=> insert_pdf_url.run(\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t()=> get_invoice.run(()=>showModal('Modal1')),\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t()=>showAlert('URL insertion failed,')\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t),\n\t\t\t\t\t\t\t\t\t\t\t\t\t() => showAlert('Something went wrong,')\n\t\t\t\t\t\t\t\t\t\t\t\t\t)\n\t\t\t\t\t\t)\t\t\t\t\t\t\t\n\t:\nbilling_format.data[0].Billing_format== 'date-loading-unloading'?\n\tget_pdf_gen_token.run(\n\t\t\t\t\t\t()=>date_loading_unloading.run(\n\t\t\t\t\t\t\t\t\t\t\t\t\t()=> insert_pdf_url.run(\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t()=> get_invoice.run(()=>showModal('Modal1')),\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t()=>showAlert('URL insertion failed,')\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t),\n\t\t\t\t\t\t\t\t\t\t\t\t\t() => showAlert('Something went wrong,')\n\t\t\t\t\t\t\t\t\t\t\t\t\t)\n\t\t\t\t\t\t)\n\t:\n\t\n\tget_pdf_gen_token.run(\n\t\t\t\t\t\t()=>regular.run(\n\t\t\t\t\t\t\t\t\t\t\t\t\t()=> insert_pdf_url.run(\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t()=> get_invoice.run(()=>showModal('Modal1')),\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t()=>showAlert('URL insertion failed,')\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t),\n\t\t\t\t\t\t\t\t\t\t\t\t\t() => showAlert('Something went wrong,')\n\t\t\t\t\t\t\t\t\t\t\t\t\t)\n\t\t\t\t\t\t)\n\n)\t\n}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "dynamicPropertyPathList": [
                         {
@@ -3447,7 +3447,7 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "docUrl": "{{\nbilling_formats.data.filter(a=>a.Billing_format == 'date-loading-unloading')?\ndate_loading_unloading.data.download_url:\nregular.data.download_url}}"
+                      "docUrl": "{{\nbilling_format.data[0].Billing_format == 'lc'?\nlc.data.download_url:\nbilling_format.data[0].Billing_format == 'date-loading-unloading'?\ndate_loading_unloading.data.download_url:\nregular.data.download_url}}"
                     }
                   ],
                   "isDisabled": false,
@@ -3497,19 +3497,6 @@
           ],
           [
             {
-              "id": "genInvoicePageMokam_billing_formats",
-              "name": "billing_formats",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "appsmith.store.session",
-                "appsmith.URL.queryParams.shop_id"
-              ],
-              "timeoutInMillisecond": 100000000
-            }
-          ],
-          [
-            {
               "id": "genInvoicePageMokam_get_invoice",
               "name": "get_invoice",
               "confirmBeforeExecute": false,
@@ -3518,6 +3505,19 @@
                 "appsmith.URL.queryParams.InvoiceNumber"
               ],
               "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "genInvoicePageMokam_billing_format",
+              "name": "billing_format",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "appsmith.store.session",
+                "appsmith.URL.queryParams.shop_id"
+              ],
+              "timeoutInMillisecond": 100000000
             }
           ],
           [

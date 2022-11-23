@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "billing_formats",
+    "name": "billing_format",
     "datasource": {
       "name": "metabase",
       "pluginId": "restapi-plugin",
@@ -13,7 +13,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "genInvoicePageRedX",
+    "pageId": "genInvoicePageMokam",
     "actionConfiguration": {
       "timeoutInMillisecond": 100000000,
       "paginationType": "NONE",
@@ -65,12 +65,12 @@
       "appsmith.URL.queryParams.shop_id",
       "appsmith.store.session"
     ],
-    "userSetOnLoad": true,
+    "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "genInvoicePageRedX_billing_formats",
+  "id": "genInvoicePageMokam_billing_format",
   "deleted": false,
-  "gitSyncId": "6231701cf1c0af1ceded5043_637a74b081ec176e8277a45e"
+  "gitSyncId": "6231701cf1c0af1ceded5043_637a808981ec176e8277a516"
 }
