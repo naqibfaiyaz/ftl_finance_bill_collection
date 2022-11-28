@@ -3497,18 +3497,6 @@
           ],
           [
             {
-              "id": "genInvoicePageMokam_get_invoice",
-              "name": "get_invoice",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "appsmith.URL.queryParams.InvoiceNumber"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
               "id": "genInvoicePageMokam_billing_format",
               "name": "billing_format",
               "confirmBeforeExecute": false,
@@ -3518,6 +3506,16 @@
                 "appsmith.URL.queryParams.shop_id"
               ],
               "timeoutInMillisecond": 100000000
+            },
+            {
+              "id": "genInvoicePageMokam_get_invoice",
+              "name": "get_invoice",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "appsmith.URL.queryParams.InvoiceNumber"
+              ],
+              "timeoutInMillisecond": 10000
             }
           ],
           [
@@ -3544,7 +3542,7 @@
     ],
     "userPermissions": [],
     "policies": [],
-    "isHidden": false
+    "isHidden": true
   },
   "deleted": false,
   "gitSyncId": "6231701cf1c0af1ceded5043_637910cdb87c411aad41f086"

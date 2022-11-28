@@ -1,0 +1,16 @@
+{
+  "unpublishedCollection": {
+    "name": "LockConsignmentsHandler",
+    "pageId": "Total Bill Invoice Creation",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n  handleLock: async () => {\n    try {\n      const res = await LockConsignments.run({\n        fleetTrackingIds: Table2.selectedRows.map((row) => {\n          return row.fleet_tracking_id;\n        }),\n      });\n      if (res.isError) {\n        showAlert(res.message ?? \"Something went wrong\", \"error\");\n        return;\n      }\n      showAlert(\"Successfully locked consignments\", \"success\");\n      return;\n    } catch (err) {\n      showAlert(err.message ?? \"Something went wrong\", \"error\");\n      return;\n    }\n  },\n};\n",
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Total Bill Invoice Creation_LockConsignmentsHandler",
+  "deleted": false,
+  "gitSyncId": "6231701cf1c0af1ceded5043_63832d62a943cc38d7dec551"
+}
