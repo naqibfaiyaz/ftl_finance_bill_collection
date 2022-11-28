@@ -1,0 +1,16 @@
+{
+  "unpublishedCollection": {
+    "name": "UnlockConsignmentsHandler",
+    "pageId": "allInvoices",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n  handleUnlock: async () => {\n    try {\n      const fleetTrackingIds = (\n        await get_fleetTrackingIds_of_invoic.run({\n          invoiceId: readyInvoiceTbl.selectedRow.id,\n        })\n      ).map((row) => {\n        return row.fleet_tracking_id;\n      });\n      const res = await UnlockConsignments.run({\n        fleetTrackingIds,\n      });\n      if (res.isError) {\n        showAlert(res.message ?? \"Something went wrong\", \"error\");\n        return;\n      }\n      showAlert(\"Successfully unlocked consignments\", \"success\");\n      return;\n    } catch (err) {\n      showAlert(err.message ?? \"Something went wrong\", \"error\");\n      return;\n    }\n  },\n};\n",
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "allInvoices_UnlockConsignmentsHandler",
+  "deleted": false,
+  "gitSyncId": "6231701cf1c0af1ceded5043_638337bfd4d99c4ab3bf7a38"
+}

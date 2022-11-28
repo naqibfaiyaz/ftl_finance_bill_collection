@@ -5263,7 +5263,7 @@
     ],
     "userPermissions": [],
     "policies": [],
-    "isHidden": false
+    "isHidden": true
   },
   "deleted": false,
   "gitSyncId": "6231701cf1c0af1ceded5043_6375bbd5b9cf46780e15c91f"
