@@ -2125,7 +2125,7 @@
                         }
                       ],
                       "truncateButtonColor": "#FFC13D",
-                      "text": "{{\nTable2.selectedRows.map((a)=>a.netToRedX).reduce((sum, cost)=>parseFloat(sum)+parseFloat(cost)).toFixed(2)\n}}",
+                      "text": "{{\nparseFloat(Table2.selectedRows.map((a)=>a.netToRedX).reduce((sum, cost)=>parseFloat(sum)+parseFloat(cost))).toFixed(2)\n}}",
                       "key": "xzedz5t2cc",
                       "labelTextSize": "0.875rem",
                       "rightColumn": 26,

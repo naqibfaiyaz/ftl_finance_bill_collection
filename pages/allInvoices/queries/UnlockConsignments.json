@@ -46,10 +46,10 @@
     "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
-        "key": "body"
+        "key": "headers[0].value"
       },
       {
-        "key": "headers[0].value"
+        "key": "body"
       }
     ],
     "isValid": true,
