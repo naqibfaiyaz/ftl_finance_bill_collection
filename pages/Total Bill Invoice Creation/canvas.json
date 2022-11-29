@@ -3694,7 +3694,7 @@
                               "resetFormOnClick": false,
                               "boxShadow": "none",
                               "widgetName": "FormButton1CopyCopy",
-                              "onClick": "{{\n  isDuplicateInvoiceTxt.text==\"No\"?post_invoice_data_trip_wise.run(\n  () => get_invoice_details.run(\t\t\t\t\tasync ()=> {showAlert('Invoice successfully generated','success');\n  await LockConsignmentsHandler.handleLock();\t\tcloseModal('summary_of_trip_wise_invoice');},\n              ()=>showAlert('InvoiceDatafetch failed','error')), \n            () => showAlert('Invoice creation error','error'))\n  :showAlert('Invoice already created for few trips','error')\n  }}",
+                              "onClick": "{{\n    isDuplicateInvoiceTxt.text==\"No\"?post_invoice_data_trip_wise.run(\n    async() => {await LockConsignmentsHandler.handleLock();\n    get_invoice_details.run(()=> {showAlert('Invoice successfully generated','success');\n            closeModal('summary_of_trip_wise_invoice');},\n                ()=>showAlert('InvoiceDatafetch failed','error'))}, \n              () => showAlert('Invoice creation error','error'))\n    :showAlert('Invoice already created for few trips','error')\n}}",
                               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                               "dynamicPropertyPathList": [
                                 {
