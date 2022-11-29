@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "Fetch_challan_data",
+    "name": "fetch_finance_received_challan",
     "datasource": {
       "name": "Postgres_latest",
       "pluginId": "postgres-plugin",
@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "select * from challan_movement where date(hq_sent_time) between '{{moment(start.selectedDate).format('YYYY-MM-DD')}}' and '{{moment(end.selectedDate).format('YYYY-MM-DD')}}'\nand challan_status !='duplicate_entry'\nand challan_status in ('approved_by_audit','sent_to_finance')",
+      "body": "select * from challan_movement where date(hq_sent_time) between '{{moment(start.selectedDate).format('YYYY-MM-DD')}}' and '{{moment(end.selectedDate).format('YYYY-MM-DD')}}'\nand challan_status !='duplicate_entry'\nand challan_status in ('received_by_finance')",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -26,7 +26,7 @@
         }
       ]
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -39,12 +39,12 @@
       "moment(end.selectedDate).format('YYYY-MM-DD')",
       "moment(start.selectedDate).format('YYYY-MM-DD')"
     ],
-    "userSetOnLoad": true,
+    "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Challan hardcopy status_Fetch_challan_data",
+  "id": "Challan hardcopy status_fetch_finance_received_challan",
   "deleted": false,
-  "gitSyncId": "6231701cf1c0af1ceded5043_631063beaddcad7cb61f895b"
+  "gitSyncId": "6231701cf1c0af1ceded5043_638609bb5f9c726831475198"
 }

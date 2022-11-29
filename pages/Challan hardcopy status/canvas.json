@@ -213,7 +213,11 @@
                       "shouldScrollContents": false,
                       "animateLoading": true,
                       "parentColumnSpace": 17.625,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onTabSelected"
+                        }
+                      ],
                       "leftColumn": 0,
                       "dynamicBindingPathList": [
                         {
@@ -439,6 +443,7 @@
                               "widgetName": "Table1",
                               "defaultPageSize": 0,
                               "columnOrder": [
+                                "customColumn2",
                                 "id",
                                 "driver_name",
                                 "unloading_point",
@@ -471,8 +476,7 @@
                                 "load_in_time",
                                 "load_out_time",
                                 "unload_in_time",
-                                "unload_out_time",
-                                "customColumn2"
+                                "unload_out_time"
                               ],
                               "dynamicPropertyPathList": [
                                 {
@@ -1165,7 +1169,7 @@
                               "rightColumn": 64,
                               "textSize": "0.875rem",
                               "widgetId": "dqn86z0u7m",
-                              "tableData": "{{Fetch_challan_data.data.filter(a=>a.challan_status=='sent_to_finance' || a.challan_status =='approved_by_audit' )}}",
+                              "tableData": "{{Fetch_challan_data.data}}",
                               "label": "Data",
                               "searchKey": "",
                               "parentId": "tn2gvxwux5",
@@ -1438,18 +1442,6 @@
                                   "key": "primaryColumns.challan_added_by.computedValue"
                                 },
                                 {
-                                  "key": "derivedColumns.customColumn1.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns.customColumn1.computedValue"
-                                },
-                                {
-                                  "key": "derivedColumns.customColumn1.cellBackground"
-                                },
-                                {
-                                  "key": "primaryColumns.customColumn1.cellBackground"
-                                },
-                                {
                                   "key": "primaryColumns.audit_received_time.computedValue"
                                 },
                                 {
@@ -1512,6 +1504,7 @@
                               "widgetName": "Table1Copy",
                               "defaultPageSize": 0,
                               "columnOrder": [
+                                "challan_status",
                                 "id",
                                 "driver_name",
                                 "unloading_point",
@@ -1529,7 +1522,6 @@
                                 "challanattachmenturl",
                                 "driver_phone",
                                 "challan_entered_at",
-                                "challan_status",
                                 "hq_sent_time",
                                 "hq_received_time",
                                 "finance_received_time",
@@ -1544,14 +1536,9 @@
                                 "load_in_time",
                                 "load_out_time",
                                 "unload_in_time",
-                                "unload_out_time",
-                                "customColumn1"
+                                "unload_out_time"
                               ],
-                              "dynamicPropertyPathList": [
-                                {
-                                  "key": "primaryColumns.customColumn1.cellBackground"
-                                }
-                              ],
+                              "dynamicPropertyPathList": [],
                               "displayName": "Table",
                               "bottomRow": 71,
                               "parentRowSpace": 10,
@@ -1822,7 +1809,7 @@
                                   "textSize": "0.875rem",
                                   "enableFilter": true,
                                   "enableSort": true,
-                                  "isVisible": true,
+                                  "isVisible": false,
                                   "isDisabled": false,
                                   "isCellVisible": true,
                                   "isDerived": false,
@@ -1955,13 +1942,13 @@
                                   "textSize": "0.875rem",
                                   "enableFilter": true,
                                   "enableSort": true,
-                                  "isVisible": false,
+                                  "isVisible": true,
                                   "isDisabled": false,
                                   "isCellVisible": true,
                                   "isDerived": false,
                                   "label": "challan_status",
                                   "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.challan_status))}}",
-                                  "cellBackground": ""
+                                  "cellBackground": "#4ade80"
                                 },
                                 "created_at": {
                                   "index": 21,
@@ -2019,23 +2006,6 @@
                                   "label": "challan_added_by",
                                   "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.challan_added_by))}}",
                                   "cellBackground": ""
-                                },
-                                "customColumn1": {
-                                  "index": 24,
-                                  "width": 150,
-                                  "id": "customColumn1",
-                                  "columnType": "text",
-                                  "enableFilter": true,
-                                  "enableSort": true,
-                                  "isVisible": true,
-                                  "isDisabled": false,
-                                  "isCellVisible": true,
-                                  "isDerived": true,
-                                  "label": "Finance_received_status",
-                                  "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( Fetch_challan_data.data.filter(a=>a.fleet_tracking_id == currentRow.fleet_tracking_id && a.challan_status == 'received_by_finance')[0]?'finance_received':(Fetch_challan_data.data.filter(a=>a.fleet_tracking_id == currentRow.fleet_tracking_id)[0].challan_status)))}}",
-                                  "buttonStyle": "rgb(3, 179, 101)",
-                                  "cellBackground": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( Fetch_challan_data.data.filter(a=>a.fleet_tracking_id == currentRow.fleet_tracking_id && a.challan_status == 'received_by_finance')[0]?'#dcfce7':'#fca5a5'))}}",
-                                  "labelColor": "#FFFFFF"
                                 },
                                 "audit_received_time": {
                                   "index": 24,
@@ -2211,30 +2181,12 @@
                               },
                               "onRowSelected": "",
                               "key": "w8x0dwkt0r",
-                              "derivedColumns": {
-                                "customColumn1": {
-                                  "index": 24,
-                                  "width": 150,
-                                  "id": "customColumn1",
-                                  "columnType": "text",
-                                  "enableFilter": true,
-                                  "enableSort": true,
-                                  "isVisible": true,
-                                  "isDisabled": false,
-                                  "isCellVisible": true,
-                                  "isDerived": true,
-                                  "label": "Finance_received_status",
-                                  "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( Fetch_challan_data.data.filter(a=>a.fleet_tracking_id == currentRow.fleet_tracking_id && a.challan_status == 'received_by_finance')[0]?'finance_received':(Fetch_challan_data.data.filter(a=>a.fleet_tracking_id == currentRow.fleet_tracking_id)[0].challan_status)))}}",
-                                  "buttonStyle": "rgb(3, 179, 101)",
-                                  "cellBackground": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( Fetch_challan_data.data.filter(a=>a.fleet_tracking_id == currentRow.fleet_tracking_id && a.challan_status == 'received_by_finance')[0]?'#dcfce7':'#fca5a5'))}}",
-                                  "labelColor": "#FFFFFF"
-                                }
-                              },
+                              "derivedColumns": {},
                               "isDeprecated": false,
                               "rightColumn": 64,
                               "textSize": "0.875rem",
                               "widgetId": "iwfsxgpi2q",
-                              "tableData": "{{Fetch_challan_data.data.filter(a=>a.challan_status=='received_by_finance')}}",
+                              "tableData": "{{fetch_finance_received_challan.data}}",
                               "label": "Data",
                               "searchKey": "",
                               "parentId": "dxw4djc68h",
@@ -2267,6 +2219,7 @@
                       "widgetId": "b4vfh49r68",
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "defaultTab": "",
+                      "onTabSelected": "{{fetch_finance_received_challan.run(() => showAlert('Finance received challans fetched','success'), () => showAlert('Error fetching data'))}}",
                       "shouldShowTabs": true,
                       "tabsObj": {
                         "tab1": {
@@ -2485,7 +2438,21 @@
             }
           ]
         },
-        "layoutOnLoadActions": [],
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Challan hardcopy status_fetch_finance_received_challan",
+              "name": "fetch_finance_received_challan",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "moment(start.selectedDate).format('YYYY-MM-DD')",
+                "moment(end.selectedDate).format('YYYY-MM-DD')"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
         "id": "Challan hardcopy status",
