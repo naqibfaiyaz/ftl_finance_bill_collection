@@ -802,6 +802,12 @@
                         },
                         {
                           "key": "primaryColumns.customColumn6.isCellVisible"
+                        },
+                        {
+                          "key": "derivedColumns.customColumn10.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn10.computedValue"
                         }
                       ],
                       "leftColumn": 0,
@@ -853,7 +859,8 @@
                         "received_amount_wo_vat_ait": 211,
                         "hard_copy_of_bill": 157,
                         "total_receivable_with_vat_ait": 152,
-                        "created_at": 187
+                        "created_at": 187,
+                        "customColumn10": 170
                       },
                       "widgetName": "readyInvoiceTbl",
                       "defaultPageSize": 0,
@@ -885,7 +892,8 @@
                         "customColumn5",
                         "customColumn6",
                         "customColumn8",
-                        "customColumn9"
+                        "customColumn9",
+                        "customColumn10"
                       ],
                       "dynamicPropertyPathList": [
                         {
@@ -1514,6 +1522,22 @@
                           "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( billing_formats.data.filter(a=>a.SHOP_ID == currentRow.shop_id)[0]?billing_formats.data.filter(a=>a.SHOP_ID == currentRow.shop_id)[0].Billing_format:''))}}",
                           "buttonStyle": "rgb(3, 179, 101)",
                           "labelColor": "#FFFFFF"
+                        },
+                        "customColumn10": {
+                          "index": 28,
+                          "width": 150,
+                          "id": "customColumn10",
+                          "columnType": "text",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": true,
+                          "label": "Payment_method",
+                          "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( payment_method.data.filter(a=>a.invoice_number==currentRow.invoice_number)[0]?payment_method.data.filter(a=>a.invoice_number==currentRow.invoice_number)[0].payment_method:''))}}",
+                          "buttonStyle": "rgb(3, 179, 101)",
+                          "labelColor": "#FFFFFF"
                         }
                       },
                       "onRowSelected": "",
@@ -1690,6 +1714,22 @@
                           "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( billing_formats.data.filter(a=>a.SHOP_ID == currentRow.shop_id)[0]?billing_formats.data.filter(a=>a.SHOP_ID == currentRow.shop_id)[0].Billing_format:''))}}",
                           "buttonStyle": "rgb(3, 179, 101)",
                           "labelColor": "#FFFFFF"
+                        },
+                        "customColumn10": {
+                          "index": 28,
+                          "width": 150,
+                          "id": "customColumn10",
+                          "columnType": "text",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": true,
+                          "label": "Payment_method",
+                          "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( payment_method.data.filter(a=>a.invoice_number==currentRow.invoice_number)[0]?payment_method.data.filter(a=>a.invoice_number==currentRow.invoice_number)[0].payment_method:''))}}",
+                          "buttonStyle": "rgb(3, 179, 101)",
+                          "labelColor": "#FFFFFF"
                         }
                       },
                       "labelTextSize": "0.875rem",
@@ -1813,7 +1853,7 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button3",
-                      "onClick": "{{\nRadioGroup1.selectedOptionValue == 'invoice_search'?\nget_all_invoices.run():shop_wise_invoices.run()}}",
+                      "onClick": "{{\nRadioGroup1.selectedOptionValue == 'invoice_search'?\nget_all_invoices.run(()=>payment_method.run()):shop_wise_invoices.run(()=>payment_method.run())}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "dynamicPropertyPathList": [
                         {
@@ -7280,6 +7320,18 @@
               "pluginType": "DB",
               "jsonPathKeys": [
                 "readyInvoiceTbl.triggeredRow.id"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "allInvoices_payment_method",
+              "name": "payment_method",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "get_all_invoices.data.map(a=>a.invoice_number).join(\"','\")"
               ],
               "timeoutInMillisecond": 10000
             }
