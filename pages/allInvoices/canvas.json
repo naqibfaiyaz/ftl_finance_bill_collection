@@ -1322,7 +1322,7 @@
                           "id": "hard_copy_receiving_date",
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
-                          "columnType": "text",
+                          "columnType": "date",
                           "textColor": "",
                           "textSize": "0.875rem",
                           "enableFilter": true,
@@ -1333,7 +1333,10 @@
                           "isDerived": false,
                           "label": "hard_copy_receiving_date",
                           "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( currentRow.hard_copy_receiving_date))}}",
-                          "cellBackground": ""
+                          "cellBackground": "",
+                          "iconName": "",
+                          "outputFormat": "YYYY-MM-DD",
+                          "inputFormat": "YYYY-MM-DD"
                         },
                         "received_vat_amount": {
                           "index": 28,
@@ -1494,7 +1497,7 @@
                           "id": "created_at",
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
-                          "columnType": "text",
+                          "columnType": "date",
                           "textColor": "",
                           "textSize": "0.875rem",
                           "enableFilter": true,
@@ -1505,7 +1508,10 @@
                           "isDerived": false,
                           "label": "created_at",
                           "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( currentRow.created_at))}}",
-                          "cellBackground": ""
+                          "cellBackground": "",
+                          "iconName": "",
+                          "inputFormat": "YYYY-MM-DD",
+                          "outputFormat": "YYYY-MM-DD"
                         },
                         "customColumn9": {
                           "index": 27,
@@ -1518,8 +1524,8 @@
                           "isDisabled": false,
                           "isCellVisible": false,
                           "isDerived": true,
-                          "label": "customColumn9",
-                          "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( billing_formats.data.filter(a=>a.SHOP_ID == currentRow.shop_id)[0]?billing_formats.data.filter(a=>a.SHOP_ID == currentRow.shop_id)[0].Billing_format:''))}}",
+                          "label": "Billing Format",
+                          "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( \nbilling_formats.data.filter(a=>a.SHOP_ID==currentRow.shop_id)[0]?billing_formats.data.filter(a=>a.SHOP_ID==currentRow.shop_id)[0].Billing_format:''\n))}}",
                           "buttonStyle": "rgb(3, 179, 101)",
                           "labelColor": "#FFFFFF"
                         },
@@ -1710,8 +1716,8 @@
                           "isDisabled": false,
                           "isCellVisible": false,
                           "isDerived": true,
-                          "label": "customColumn9",
-                          "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( billing_formats.data.filter(a=>a.SHOP_ID == currentRow.shop_id)[0]?billing_formats.data.filter(a=>a.SHOP_ID == currentRow.shop_id)[0].Billing_format:''))}}",
+                          "label": "Billing Format",
+                          "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( \nbilling_formats.data.filter(a=>a.SHOP_ID==currentRow.shop_id)[0]?billing_formats.data.filter(a=>a.SHOP_ID==currentRow.shop_id)[0].Billing_format:''\n))}}",
                           "buttonStyle": "rgb(3, 179, 101)",
                           "labelColor": "#FFFFFF"
                         },
@@ -7258,18 +7264,6 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "allInvoices_billing_formats",
-              "name": "billing_formats",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "appsmith.store.session"
-              ],
-              "timeoutInMillisecond": 100000000
-            }
-          ],
-          [
-            {
               "id": "allInvoices_get_received_details",
               "name": "get_received_details",
               "confirmBeforeExecute": false,
@@ -7277,16 +7271,6 @@
               "jsonPathKeys": [
                 "readyInvoiceTbl.selectedRow.invoice_number",
                 "readyInvoiceTbl.selectedRow.id"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "allInvoices_get_shops",
-              "name": "get_shops",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "appsmith.store.access_token"
               ],
               "timeoutInMillisecond": 10000
             },
@@ -7314,6 +7298,16 @@
           ],
           [
             {
+              "id": "allInvoices_billing_formats",
+              "name": "billing_formats",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "appsmith.store.session"
+              ],
+              "timeoutInMillisecond": 100000000
+            },
+            {
               "id": "allInvoices_get_hard_copy",
               "name": "get_hard_copy",
               "confirmBeforeExecute": false,
@@ -7325,6 +7319,16 @@
             }
           ],
           [
+            {
+              "id": "allInvoices_get_shops",
+              "name": "get_shops",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "appsmith.store.access_token"
+              ],
+              "timeoutInMillisecond": 10000
+            },
             {
               "id": "allInvoices_payment_method",
               "name": "payment_method",

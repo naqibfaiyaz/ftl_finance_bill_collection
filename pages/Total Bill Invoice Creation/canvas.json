@@ -5936,7 +5936,7 @@
                           "id": "fleet_requested_at",
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
-                          "columnType": "text",
+                          "columnType": "date",
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
@@ -5946,7 +5946,10 @@
                           "isDerived": false,
                           "label": "fleet_requested_at",
                           "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.fleet_requested_at))}}",
-                          "cellBackground": "transparent"
+                          "cellBackground": "transparent",
+                          "iconName": "",
+                          "outputFormat": "YYYY-MM-DD",
+                          "inputFormat": "YYYY-MM-DD"
                         },
                         "demurrage_fee": {
                           "index": 38,
