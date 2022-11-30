@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "UPDATE challan_movement set challan_status = 'received_by_finance', finance_received_time = '{{moment().format(\"YYYY-MM-DD HH:mm:ss\")}}', last_user_name = '{{appsmith.store.user_data}}' where fleet_tracking_id in ('{{Table1.selectedRows.map(a=>a.fleet_tracking_id).join(\"','\")}}') and challan_status !='duplicate_entry' ;",
+      "body": "update challan_movement as u set\n  bill_creation_eligibility = u2.customColumn3,\n\tchallan_status='received_by_finance',\n\tfinance_received_time = '{{moment().format(\"YYYY-MM-DD HH:mm:ss\")}}', last_user_name ='{{appsmith.store.user_data}}'\nfrom (values\n\t\t\t{{Table1.selectedRows.map((a)=>\"('\" + \n\t\t\ta.fleet_tracking_id+\"',\"+\n\t\t\ta.customColumn3+\")\").join()}}\n) as u2(fleet_tracking_id, customColumn3)\nwhere u2.fleet_tracking_id = u.fleet_tracking_id\n\nand u.fleet_tracking_id in ('{{Table1.selectedRows.map(a=>a.fleet_tracking_id).join(\"','\")}}') and challan_status !='duplicate_entry'\n\n",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -36,6 +36,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
+      "Table1.selectedRows.map((a)=>\"('\" + \n\t\t\ta.fleet_tracking_id+\"',\"+\n\t\t\ta.customColumn3+\")\").join()",
       "Table1.selectedRows.map(a=>a.fleet_tracking_id).join(\"','\")",
       "appsmith.store.user_data",
       "moment().format(\"YYYY-MM-DD HH:mm:ss\")"

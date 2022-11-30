@@ -19,7 +19,7 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 67,
+          "version": 69,
           "minHeight": 680,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
@@ -406,6 +406,18 @@
                                 },
                                 {
                                   "key": "primaryColumns.unload_out_time.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.customColumn3.computedValue"
+                                },
+                                {
+                                  "key": "derivedColumns.customColumn3.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.bill_creation_eligibility.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.audit_status.computedValue"
                                 }
                               ],
                               "leftColumn": 0,
@@ -438,16 +450,16 @@
                               "columnSizeMap": {
                                 "task": 245,
                                 "step": 62,
-                                "status": 75
+                                "status": 75,
+                                "bill_creation_eligibility": 175
                               },
                               "widgetName": "Table1",
                               "defaultPageSize": 0,
                               "columnOrder": [
-                                "customColumn2",
-                                "id",
                                 "driver_name",
                                 "unloading_point",
                                 "shop_name",
+                                "id",
                                 "username",
                                 "user_id",
                                 "truck_number",
@@ -476,7 +488,11 @@
                                 "load_in_time",
                                 "load_out_time",
                                 "unload_in_time",
-                                "unload_out_time"
+                                "unload_out_time",
+                                "bill_creation_eligibility",
+                                "audit_status",
+                                "customColumn2",
+                                "customColumn3"
                               ],
                               "dynamicPropertyPathList": [
                                 {
@@ -1140,6 +1156,61 @@
                                   "label": "unload_out_time",
                                   "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.unload_out_time))}}",
                                   "cellBackground": ""
+                                },
+                                "customColumn3": {
+                                  "index": 34,
+                                  "width": 150,
+                                  "id": "customColumn3",
+                                  "columnType": "number",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellVisible": true,
+                                  "isDerived": true,
+                                  "label": "invoice creation eligibility",
+                                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.audit_status== null?0:\n(currentRow.audit_status =='approved_by_audit'?1:0)))}}",
+                                  "buttonStyle": "rgb(3, 179, 101)",
+                                  "labelColor": "#FFFFFF",
+                                  "iconName": ""
+                                },
+                                "bill_creation_eligibility": {
+                                  "index": 33,
+                                  "width": 150,
+                                  "id": "bill_creation_eligibility",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": false,
+                                  "isDisabled": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "bill_creation_eligibility",
+                                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.bill_creation_eligibility))}}",
+                                  "cellBackground": ""
+                                },
+                                "audit_status": {
+                                  "index": 34,
+                                  "width": 150,
+                                  "id": "audit_status",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "audit_status",
+                                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.audit_status))}}",
+                                  "cellBackground": ""
                                 }
                               },
                               "onRowSelected": "",
@@ -1163,6 +1234,23 @@
                                   "cellBackground": "{{Table1.sanitizedTableData.map((currentRow) => ( Fetch_challan_data.data.filter(a=>a.fleet_tracking_id == currentRow.fleet_tracking_id && a.challan_status == 'received_by_finance')[0]?'#dcfce7':'#fca5a5'))}}",
                                   "textColor": "#18181b",
                                   "fontStyle": "ITALIC"
+                                },
+                                "customColumn3": {
+                                  "index": 34,
+                                  "width": 150,
+                                  "id": "customColumn3",
+                                  "columnType": "number",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellVisible": true,
+                                  "isDerived": true,
+                                  "label": "invoice creation eligibility",
+                                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.audit_status== null?0:\n(currentRow.audit_status =='approved_by_audit'?1:0)))}}",
+                                  "buttonStyle": "rgb(3, 179, 101)",
+                                  "labelColor": "#FFFFFF",
+                                  "iconName": ""
                                 }
                               },
                               "isDeprecated": false,
@@ -1275,6 +1363,7 @@
                               "isRequired": false,
                               "isDeprecated": false,
                               "rightColumn": 64,
+                              "dynamicHeight": "FIXED",
                               "widgetId": "h3hhgixmcs",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                               "isVisible": true,
@@ -1285,8 +1374,10 @@
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                              "maxDynamicHeight": 9000,
                               "iconAlign": "left",
-                              "defaultText": "{{Table1.selectedRows.length}}"
+                              "defaultText": "{{Table1.selectedRows.length}}",
+                              "minDynamicHeight": 4
                             }
                           ],
                           "isDisabled": false,
@@ -2216,6 +2307,7 @@
                       "key": "svfibcfbf7",
                       "isDeprecated": false,
                       "rightColumn": 64,
+                      "dynamicHeight": "FIXED",
                       "widgetId": "b4vfh49r68",
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "defaultTab": "",
@@ -2242,7 +2334,9 @@
                       "parentId": "hqp2k50e3s",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "maxDynamicHeight": 9000,
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -2282,6 +2376,7 @@
                       "defaultDate": "2022-07-14T09:34:06.424Z",
                       "isDeprecated": false,
                       "rightColumn": 12,
+                      "dynamicHeight": "FIXED",
                       "widgetId": "ifa3ihjjl1",
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
@@ -2294,9 +2389,11 @@
                       "isLoading": false,
                       "timePrecision": "minute",
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "maxDynamicHeight": 9000,
                       "firstDayOfWeek": 0,
                       "closeOnSelection": true,
-                      "maxDate": "2121-12-31T18:29:00.000Z"
+                      "maxDate": "2121-12-31T18:29:00.000Z",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -2336,6 +2433,7 @@
                       "defaultDate": "2022-11-03T13:56:47.4747+06:00",
                       "isDeprecated": false,
                       "rightColumn": 25,
+                      "dynamicHeight": "FIXED",
                       "widgetId": "liq0ickmyv",
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
@@ -2348,9 +2446,11 @@
                       "isLoading": false,
                       "timePrecision": "minute",
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "maxDynamicHeight": 9000,
                       "firstDayOfWeek": 0,
                       "closeOnSelection": true,
-                      "maxDate": "2121-12-31T18:29:00.000Z"
+                      "maxDate": "2121-12-31T18:29:00.000Z",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -2427,6 +2527,7 @@
               "backgroundColor": "#FFFFFF",
               "isDeprecated": false,
               "rightColumn": 64,
+              "dynamicHeight": "FIXED",
               "widgetId": "76m537ldjp",
               "containerStyle": "card",
               "isVisible": true,
@@ -2434,7 +2535,9 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "maxDynamicHeight": 9000,
+              "minDynamicHeight": 4
             }
           ]
         },
