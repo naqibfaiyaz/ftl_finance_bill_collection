@@ -19,7 +19,7 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 67,
+          "version": 69,
           "minHeight": 730,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
@@ -138,6 +138,7 @@
                       "labelTextSize": "0.875rem",
                       "rightColumn": 59,
                       "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "20037nd12d",
                       "isVisible": true,
                       "fontStyle": "BOLD",
@@ -147,7 +148,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "1.5rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "1.5rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -172,6 +175,7 @@
                       "labelTextSize": "0.875rem",
                       "rightColumn": 15,
                       "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "bpcrnlkzgp",
                       "isVisible": true,
                       "fontStyle": "BOLD",
@@ -181,7 +185,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -211,6 +217,7 @@
                       "rightColumn": 27,
                       "backgroundColor": "#e4e4e7",
                       "textAlign": "CENTER",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "r9t55dx0vw",
                       "isVisible": true,
                       "fontStyle": "",
@@ -220,7 +227,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -245,6 +254,7 @@
                       "labelTextSize": "0.875rem",
                       "rightColumn": 15,
                       "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "ithdbr2fpe",
                       "isVisible": true,
                       "fontStyle": "BOLD",
@@ -254,7 +264,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -284,6 +296,7 @@
                       "rightColumn": 27,
                       "backgroundColor": "#e4e4e7",
                       "textAlign": "CENTER",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "hypphqr4zf",
                       "isVisible": true,
                       "fontStyle": "",
@@ -293,7 +306,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -318,6 +333,7 @@
                       "labelTextSize": "0.875rem",
                       "rightColumn": 15,
                       "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "qkilznk5kq",
                       "isVisible": true,
                       "fontStyle": "BOLD",
@@ -327,7 +343,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -358,6 +376,7 @@
                       "rightColumn": 27,
                       "backgroundColor": "#e4e4e7",
                       "textAlign": "CENTER",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "vvk5i3wqqo",
                       "isVisible": true,
                       "fontStyle": "",
@@ -367,7 +386,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -392,6 +413,7 @@
                       "labelTextSize": "0.875rem",
                       "rightColumn": 15,
                       "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "5so6bij5ni",
                       "isVisible": true,
                       "fontStyle": "BOLD",
@@ -401,7 +423,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -431,6 +455,7 @@
                       "rightColumn": 27,
                       "backgroundColor": "#e4e4e7",
                       "textAlign": "CENTER",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "go3o8l4323",
                       "isVisible": true,
                       "fontStyle": "",
@@ -440,7 +465,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -465,6 +492,7 @@
                       "labelTextSize": "0.875rem",
                       "rightColumn": 15,
                       "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "wq4m7od2so",
                       "isVisible": true,
                       "fontStyle": "BOLD",
@@ -474,7 +502,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -504,6 +534,7 @@
                       "rightColumn": 27,
                       "backgroundColor": "#e4e4e7",
                       "textAlign": "CENTER",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "2ugw51qa7e",
                       "isVisible": true,
                       "fontStyle": "",
@@ -513,7 +544,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -538,6 +571,7 @@
                       "labelTextSize": "0.875rem",
                       "rightColumn": 15,
                       "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "ur2jif9x1t",
                       "isVisible": true,
                       "fontStyle": "BOLD",
@@ -547,7 +581,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -578,6 +614,7 @@
                       "backgroundColor": "#e4e4e7",
                       "disableLink": false,
                       "textAlign": "CENTER",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "vt7e4mj292",
                       "isVisible": true,
                       "fontStyle": "",
@@ -587,7 +624,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -612,6 +651,7 @@
                       "labelTextSize": "0.875rem",
                       "rightColumn": 15,
                       "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "ayww1vw4yh",
                       "isVisible": true,
                       "fontStyle": "BOLD",
@@ -621,7 +661,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -651,6 +693,7 @@
                       "rightColumn": 27,
                       "backgroundColor": "#e4e4e7",
                       "textAlign": "CENTER",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "qe8j8pc0p6",
                       "isVisible": true,
                       "fontStyle": "",
@@ -660,7 +703,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -685,6 +730,7 @@
                       "labelTextSize": "0.875rem",
                       "rightColumn": 15,
                       "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "4rb6t1tm79",
                       "isVisible": true,
                       "fontStyle": "BOLD",
@@ -694,7 +740,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -724,6 +772,7 @@
                       "rightColumn": 27,
                       "backgroundColor": "#e4e4e7",
                       "textAlign": "CENTER",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "jx5y87m92g",
                       "isVisible": true,
                       "fontStyle": "",
@@ -733,7 +782,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -758,6 +809,7 @@
                       "labelTextSize": "0.875rem",
                       "rightColumn": 15,
                       "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "au3yfwljuz",
                       "isVisible": true,
                       "fontStyle": "BOLD",
@@ -767,7 +819,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -797,6 +851,7 @@
                       "rightColumn": 27,
                       "backgroundColor": "#e4e4e7",
                       "textAlign": "CENTER",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "bl706wxgex",
                       "isVisible": true,
                       "fontStyle": "",
@@ -806,7 +861,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -831,6 +888,7 @@
                       "labelTextSize": "0.875rem",
                       "rightColumn": 15,
                       "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "549j53fw7t",
                       "isVisible": true,
                       "fontStyle": "BOLD",
@@ -840,7 +898,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -870,6 +930,7 @@
                       "rightColumn": 27,
                       "backgroundColor": "#e4e4e7",
                       "textAlign": "CENTER",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "w4nyajvdum",
                       "isVisible": true,
                       "fontStyle": "",
@@ -879,7 +940,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -904,6 +967,7 @@
                       "labelTextSize": "0.875rem",
                       "rightColumn": 15,
                       "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "59o0jlv2pc",
                       "isVisible": true,
                       "fontStyle": "BOLD",
@@ -913,7 +977,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -943,6 +1009,7 @@
                       "rightColumn": 27,
                       "backgroundColor": "#e4e4e7",
                       "textAlign": "CENTER",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "5nzfcj8xrn",
                       "isVisible": true,
                       "fontStyle": "",
@@ -952,7 +1019,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -977,6 +1046,7 @@
                       "labelTextSize": "0.875rem",
                       "rightColumn": 15,
                       "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "7j1g51ap5d",
                       "isVisible": true,
                       "fontStyle": "BOLD",
@@ -986,7 +1056,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -1016,6 +1088,7 @@
                       "rightColumn": 27,
                       "backgroundColor": "#e4e4e7",
                       "textAlign": "CENTER",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "trc9vbitpq",
                       "isVisible": true,
                       "fontStyle": "",
@@ -1025,7 +1098,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -1050,6 +1125,7 @@
                       "labelTextSize": "0.875rem",
                       "rightColumn": 15,
                       "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "ftl74o24vl",
                       "isVisible": true,
                       "fontStyle": "BOLD",
@@ -1059,7 +1135,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -1089,6 +1167,7 @@
                       "rightColumn": 27,
                       "backgroundColor": "#e4e4e7",
                       "textAlign": "CENTER",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "8p2k0ohp3v",
                       "isVisible": true,
                       "fontStyle": "",
@@ -1098,7 +1177,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -1172,6 +1253,7 @@
                               "rightColumn": 63,
                               "backgroundColor": "#e4e4e7",
                               "textAlign": "CENTER",
+                              "dynamicHeight": "FIXED",
                               "widgetId": "x7jc9eopkw",
                               "isVisible": true,
                               "fontStyle": "",
@@ -1181,7 +1263,9 @@
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                              "fontSize": "0.875rem"
+                              "maxDynamicHeight": 9000,
+                              "fontSize": "0.875rem",
+                              "minDynamicHeight": 4
                             },
                             {
                               "boxShadow": "none",
@@ -1207,6 +1291,7 @@
                               "labelTextSize": "0.875rem",
                               "rightColumn": 43,
                               "textAlign": "LEFT",
+                              "dynamicHeight": "FIXED",
                               "widgetId": "fanr9w2wrr",
                               "isVisible": true,
                               "fontStyle": "BOLD",
@@ -1216,7 +1301,9 @@
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "borderRadius": "0px",
-                              "fontSize": "0.875rem"
+                              "maxDynamicHeight": 9000,
+                              "fontSize": "0.875rem",
+                              "minDynamicHeight": 4
                             },
                             {
                               "boxShadow": "none",
@@ -1250,6 +1337,7 @@
                               "labelTextSize": "0.875rem",
                               "isRequired": false,
                               "rightColumn": 63,
+                              "dynamicHeight": "FIXED",
                               "widgetId": "v97cketq8j",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                               "isVisible": true,
@@ -1259,8 +1347,10 @@
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "borderRadius": "0px",
+                              "maxDynamicHeight": 9000,
                               "iconAlign": "left",
-                              "defaultText": "{{Table1.selectedRow.AIT_Value}}"
+                              "defaultText": "{{Table1.selectedRow.AIT_Value}}",
+                              "minDynamicHeight": 4
                             },
                             {
                               "boxShadow": "none",
@@ -1293,6 +1383,7 @@
                               "labelTextSize": "0.875rem",
                               "isRequired": false,
                               "rightColumn": 28,
+                              "dynamicHeight": "FIXED",
                               "widgetId": "0ek5jk1byl",
                               "accentColor": "#03B365",
                               "isVisible": true,
@@ -1302,7 +1393,9 @@
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "borderRadius": "0px",
-                              "defaultCheckedState": "{{Table1.selectedRow.ait_applicable == 'AIT_inclusive'}}"
+                              "defaultCheckedState": "{{Table1.selectedRow.ait_applicable == 'AIT_inclusive'}}",
+                              "maxDynamicHeight": 9000,
+                              "minDynamicHeight": 4
                             },
                             {
                               "boxShadow": "none",
@@ -1336,6 +1429,7 @@
                               "labelTextSize": "0.875rem",
                               "isRequired": false,
                               "rightColumn": 63,
+                              "dynamicHeight": "FIXED",
                               "widgetId": "rvyaftbs5t",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                               "isVisible": true,
@@ -1345,8 +1439,10 @@
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "borderRadius": "0px",
+                              "maxDynamicHeight": 9000,
                               "iconAlign": "left",
-                              "defaultText": "{{Table1.selectedRow.VAT_Value}}"
+                              "defaultText": "{{Table1.selectedRow.VAT_Value}}",
+                              "minDynamicHeight": 4
                             },
                             {
                               "boxShadow": "none",
@@ -1372,6 +1468,7 @@
                               "labelTextSize": "0.875rem",
                               "rightColumn": 43,
                               "textAlign": "LEFT",
+                              "dynamicHeight": "FIXED",
                               "widgetId": "sqds91thni",
                               "isVisible": true,
                               "fontStyle": "BOLD",
@@ -1381,7 +1478,9 @@
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "borderRadius": "0px",
-                              "fontSize": "0.875rem"
+                              "maxDynamicHeight": 9000,
+                              "fontSize": "0.875rem",
+                              "minDynamicHeight": 4
                             },
                             {
                               "boxShadow": "none",
@@ -1444,6 +1543,7 @@
                                       "labelTextSize": "0.875rem",
                                       "rightColumn": 22,
                                       "textAlign": "LEFT",
+                                      "dynamicHeight": "FIXED",
                                       "widgetId": "a6c2839qzz",
                                       "isVisible": true,
                                       "fontStyle": "BOLD",
@@ -1453,7 +1553,9 @@
                                       "renderMode": "CANVAS",
                                       "isLoading": false,
                                       "borderRadius": "0px",
-                                      "fontSize": "0.875rem"
+                                      "maxDynamicHeight": 9000,
+                                      "fontSize": "0.875rem",
+                                      "minDynamicHeight": 4
                                     },
                                     {
                                       "widgetName": "columns_to_printCopy",
@@ -1494,6 +1596,7 @@
                                       "rightColumn": 63,
                                       "backgroundColor": "#e4e4e7",
                                       "textAlign": "LEFT",
+                                      "dynamicHeight": "FIXED",
                                       "widgetId": "5ut2vd7hbo",
                                       "isVisible": true,
                                       "fontStyle": "",
@@ -1503,7 +1606,9 @@
                                       "renderMode": "CANVAS",
                                       "isLoading": false,
                                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                                      "fontSize": "0.875rem"
+                                      "maxDynamicHeight": 9000,
+                                      "fontSize": "0.875rem",
+                                      "minDynamicHeight": 4
                                     }
                                   ],
                                   "key": "6oppnoe2xf",
@@ -1525,6 +1630,7 @@
                               "labelTextSize": "0.875rem",
                               "backgroundColor": "#FFFFFF",
                               "rightColumn": 64,
+                              "dynamicHeight": "FIXED",
                               "widgetId": "czyjscvpko",
                               "containerStyle": "card",
                               "isVisible": true,
@@ -1532,7 +1638,9 @@
                               "parentId": "vhk1p86blx",
                               "renderMode": "CANVAS",
                               "isLoading": false,
-                              "borderRadius": "0px"
+                              "borderRadius": "0px",
+                              "maxDynamicHeight": 9000,
+                              "minDynamicHeight": 4
                             },
                             {
                               "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
@@ -1565,6 +1673,7 @@
                               "labelTextSize": "0.875rem",
                               "isRequired": false,
                               "rightColumn": 63,
+                              "dynamicHeight": "FIXED",
                               "widgetId": "jhl67oj3c5",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                               "isVisible": true,
@@ -1574,8 +1683,10 @@
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "borderRadius": "0px",
+                              "maxDynamicHeight": 9000,
                               "iconAlign": "left",
-                              "defaultText": "{{\nTable1.selectedRow.SHOP_NAME.replace(/[^a-zA-Z ]/g, \"\").split(/\\s/).reduce((response,word)=> response+=word.slice(0,1),'')+\"-\"+moment(DatePicker1.selectedDate).format('YY')+\"-\"+moment(DatePicker1Copy.selectedDate) .format('MMM')+\"-\"+moment().format('DD')+\"-\"+paymentMethod.text+\"-\"+Math.round(Math.random()*1000) + '-' +\n(get_invoice_details.data.map(a=>a.invoice_number).filter((item, i, ar) => ar.indexOf(item) === i).length + 1)\n}}"
+                              "defaultText": "{{\nTable1.selectedRow.SHOP_NAME.replace(/[^a-zA-Z ]/g, \"\").split(/\\s/).reduce((response,word)=> response+=word.slice(0,1),'')+\"-\"+moment(DatePicker1.selectedDate).format('YY')+\"-\"+moment(DatePicker1Copy.selectedDate) .format('MMM')+\"-\"+moment().format('DD')+\"-\"+paymentMethod.text+\"-\"+Math.round(Math.random()*1000) + '-' +\n(get_invoice_details.data.map(a=>a.invoice_number).filter((item, i, ar) => ar.indexOf(item) === i).length + 1)\n}}",
+                              "minDynamicHeight": 4
                             },
                             {
                               "boxShadow": "none",
@@ -1601,6 +1712,7 @@
                               "rightColumn": 29,
                               "backgroundColor": "#f0fdf4",
                               "textAlign": "LEFT",
+                              "dynamicHeight": "FIXED",
                               "widgetId": "tety9sk7q9",
                               "isVisible": true,
                               "fontStyle": "BOLD",
@@ -1610,7 +1722,9 @@
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "borderRadius": "0px",
-                              "fontSize": "0.875rem"
+                              "maxDynamicHeight": 9000,
+                              "fontSize": "0.875rem",
+                              "minDynamicHeight": 4
                             },
                             {
                               "boxShadow": "none",
@@ -1642,6 +1756,7 @@
                               "labelTextSize": "0.875rem",
                               "isRequired": false,
                               "rightColumn": 63,
+                              "dynamicHeight": "FIXED",
                               "widgetId": "hxt1p2jlzo",
                               "accentColor": "#03B365",
                               "isVisible": "",
@@ -1651,7 +1766,9 @@
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "borderRadius": "0px",
-                              "defaultCheckedState": ""
+                              "defaultCheckedState": "",
+                              "maxDynamicHeight": 9000,
+                              "minDynamicHeight": 4
                             },
                             {
                               "widgetName": "isVatInclusiveCopy",
@@ -1692,6 +1809,7 @@
                               "isRequired": false,
                               "isDeprecated": false,
                               "rightColumn": 28,
+                              "dynamicHeight": "FIXED",
                               "widgetId": "lkgcf0cefr",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                               "isVisible": true,
@@ -1701,7 +1819,9 @@
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                              "defaultCheckedState": "{{Table1.selectedRow.VAT_applicable == 'VAT_inclusive'}}"
+                              "defaultCheckedState": "{{Table1.selectedRow.VAT_applicable == 'VAT_inclusive'}}",
+                              "maxDynamicHeight": 9000,
+                              "minDynamicHeight": 4
                             },
                             {
                               "widgetName": "Text4",
@@ -1738,6 +1858,7 @@
                               "isDeprecated": false,
                               "rightColumn": 25,
                               "textAlign": "LEFT",
+                              "dynamicHeight": "FIXED",
                               "widgetId": "consqskywx",
                               "isVisible": true,
                               "fontStyle": "BOLD",
@@ -1747,7 +1868,9 @@
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                              "fontSize": "1rem"
+                              "maxDynamicHeight": 9000,
+                              "fontSize": "1rem",
+                              "minDynamicHeight": 4
                             },
                             {
                               "resetFormOnClick": false,
@@ -1835,12 +1958,15 @@
                       "labelTextSize": "0.875rem",
                       "backgroundColor": "white",
                       "rightColumn": 59,
+                      "dynamicHeight": "FIXED",
                       "widgetId": "pq4avxxr9k",
                       "isVisible": true,
                       "parentId": "ul7ni5wvdc",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "borderRadius": "0px"
+                      "borderRadius": "0px",
+                      "maxDynamicHeight": 9000,
+                      "minDynamicHeight": 4
                     }
                   ],
                   "isDisabled": false,
@@ -1863,6 +1989,7 @@
               "isDeprecated": false,
               "rightColumn": 0,
               "detachFromLayout": true,
+              "dynamicHeight": "FIXED",
               "widgetId": "vlk0uyld39",
               "canOutsideClickClose": true,
               "canEscapeKeyClose": true,
@@ -1871,7 +1998,9 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "width": 912
+              "maxDynamicHeight": 9000,
+              "width": 912,
+              "minDynamicHeight": 4
             },
             {
               "boxShadow": "none",
@@ -1946,6 +2075,7 @@
                       "labelTextSize": "0.875rem",
                       "rightColumn": 14,
                       "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "l599kcauyt",
                       "isVisible": true,
                       "fontStyle": "BOLD",
@@ -1955,7 +2085,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -1985,6 +2117,7 @@
                       "rightColumn": 26,
                       "backgroundColor": "#e4e4e7",
                       "textAlign": "CENTER",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "egrnb0azse",
                       "isVisible": true,
                       "fontStyle": "",
@@ -1994,7 +2127,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -2019,6 +2154,7 @@
                       "labelTextSize": "0.875rem",
                       "rightColumn": 14,
                       "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "hxv5wem6b7",
                       "isVisible": true,
                       "fontStyle": "BOLD",
@@ -2028,7 +2164,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -2058,6 +2196,7 @@
                       "rightColumn": 26,
                       "backgroundColor": "#e4e4e7",
                       "textAlign": "CENTER",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "8uvl4g2w71",
                       "isVisible": true,
                       "fontStyle": "",
@@ -2067,7 +2206,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -2092,6 +2233,7 @@
                       "labelTextSize": "0.875rem",
                       "rightColumn": 14,
                       "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "lahj2n58v2",
                       "isVisible": true,
                       "fontStyle": "BOLD",
@@ -2101,7 +2243,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -2131,6 +2275,7 @@
                       "rightColumn": 26,
                       "backgroundColor": "#e4e4e7",
                       "textAlign": "CENTER",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "osqmqed8j6",
                       "isVisible": true,
                       "fontStyle": "",
@@ -2140,7 +2285,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -2205,6 +2352,7 @@
                       "labelTextSize": "0.875rem",
                       "rightColumn": 58,
                       "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "6awitin1d9",
                       "isVisible": true,
                       "fontStyle": "BOLD",
@@ -2214,7 +2362,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "1.5rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "1.5rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -2239,6 +2389,7 @@
                       "labelTextSize": "0.875rem",
                       "rightColumn": 14,
                       "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "5lrgh85qgb",
                       "isVisible": true,
                       "fontStyle": "BOLD",
@@ -2248,7 +2399,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -2278,6 +2431,7 @@
                       "rightColumn": 26,
                       "backgroundColor": "#e4e4e7",
                       "textAlign": "CENTER",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "4cghwvknch",
                       "isVisible": true,
                       "fontStyle": "",
@@ -2287,7 +2441,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -2312,6 +2468,7 @@
                       "labelTextSize": "0.875rem",
                       "rightColumn": 14,
                       "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "ty7hpvk00l",
                       "isVisible": true,
                       "fontStyle": "BOLD",
@@ -2321,7 +2478,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -2351,6 +2510,7 @@
                       "rightColumn": 26,
                       "backgroundColor": "#e4e4e7",
                       "textAlign": "CENTER",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "nj594c37vw",
                       "isVisible": true,
                       "fontStyle": "",
@@ -2360,7 +2520,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -2385,6 +2547,7 @@
                       "labelTextSize": "0.875rem",
                       "rightColumn": 14,
                       "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "wooheakobq",
                       "isVisible": true,
                       "fontStyle": "BOLD",
@@ -2394,7 +2557,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -2424,6 +2589,7 @@
                       "rightColumn": 26,
                       "backgroundColor": "#e4e4e7",
                       "textAlign": "CENTER",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "b8413sirs9",
                       "isVisible": true,
                       "fontStyle": "",
@@ -2433,7 +2599,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -2458,6 +2626,7 @@
                       "labelTextSize": "0.875rem",
                       "rightColumn": 14,
                       "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "3smbsblqd8",
                       "isVisible": true,
                       "fontStyle": "BOLD",
@@ -2467,7 +2636,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -2497,6 +2668,7 @@
                       "rightColumn": 26,
                       "backgroundColor": "#e4e4e7",
                       "textAlign": "CENTER",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "83srkm08h1",
                       "isVisible": true,
                       "fontStyle": "",
@@ -2506,7 +2678,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -2531,6 +2705,7 @@
                       "labelTextSize": "0.875rem",
                       "rightColumn": 14,
                       "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "8jbrh15sxi",
                       "isVisible": true,
                       "fontStyle": "BOLD",
@@ -2540,7 +2715,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -2570,6 +2747,7 @@
                       "rightColumn": 26,
                       "backgroundColor": "#e4e4e7",
                       "textAlign": "CENTER",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "g3rrrsntga",
                       "isVisible": true,
                       "fontStyle": "",
@@ -2579,7 +2757,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -2604,6 +2784,7 @@
                       "labelTextSize": "0.875rem",
                       "rightColumn": 14,
                       "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "tbz8vpovh8",
                       "isVisible": true,
                       "fontStyle": "BOLD",
@@ -2613,7 +2794,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -2643,6 +2826,7 @@
                       "rightColumn": 26,
                       "backgroundColor": "#e4e4e7",
                       "textAlign": "CENTER",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "sr9edo9s4n",
                       "isVisible": true,
                       "fontStyle": "",
@@ -2652,7 +2836,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -2677,6 +2863,7 @@
                       "labelTextSize": "0.875rem",
                       "rightColumn": 14,
                       "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "zrpbjyc1w8",
                       "isVisible": true,
                       "fontStyle": "BOLD",
@@ -2686,7 +2873,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -2716,6 +2905,7 @@
                       "rightColumn": 26,
                       "backgroundColor": "#e4e4e7",
                       "textAlign": "CENTER",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "x2kj54f6dg",
                       "isVisible": true,
                       "fontStyle": "",
@@ -2725,7 +2915,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -2750,6 +2942,7 @@
                       "labelTextSize": "0.875rem",
                       "rightColumn": 14,
                       "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "ntrz2fon43",
                       "isVisible": true,
                       "fontStyle": "BOLD",
@@ -2759,7 +2952,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -2789,6 +2984,7 @@
                       "rightColumn": 26,
                       "backgroundColor": "#e4e4e7",
                       "textAlign": "CENTER",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "4nc587adgq",
                       "isVisible": true,
                       "fontStyle": "",
@@ -2798,7 +2994,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -2823,6 +3021,7 @@
                       "labelTextSize": "0.875rem",
                       "rightColumn": 14,
                       "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "4shyti8ap0",
                       "isVisible": true,
                       "fontStyle": "BOLD",
@@ -2832,7 +3031,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -2862,6 +3063,7 @@
                       "rightColumn": 26,
                       "backgroundColor": "#e4e4e7",
                       "textAlign": "CENTER",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "vunwin1wi3",
                       "isVisible": true,
                       "fontStyle": "",
@@ -2871,7 +3073,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -2896,6 +3100,7 @@
                       "labelTextSize": "0.875rem",
                       "rightColumn": 14,
                       "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "p66lrdqdqp",
                       "isVisible": true,
                       "fontStyle": "BOLD",
@@ -2905,7 +3110,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -2935,6 +3142,7 @@
                       "rightColumn": 26,
                       "backgroundColor": "#e4e4e7",
                       "textAlign": "CENTER",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "vdafa0qpqq",
                       "isVisible": true,
                       "fontStyle": "",
@@ -2944,7 +3152,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -2969,6 +3179,7 @@
                       "labelTextSize": "0.875rem",
                       "rightColumn": 14,
                       "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "nplduarwdf",
                       "isVisible": true,
                       "fontStyle": "BOLD",
@@ -2978,7 +3189,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -3008,6 +3221,7 @@
                       "rightColumn": 26,
                       "backgroundColor": "#e4e4e7",
                       "textAlign": "CENTER",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "qzt8kybrv2",
                       "isVisible": true,
                       "fontStyle": "",
@@ -3017,7 +3231,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -3042,6 +3258,7 @@
                       "labelTextSize": "0.875rem",
                       "rightColumn": 14,
                       "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "dp9x8k090i",
                       "isVisible": true,
                       "fontStyle": "BOLD",
@@ -3051,7 +3268,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -3081,6 +3300,7 @@
                       "rightColumn": 26,
                       "backgroundColor": "#e4e4e7",
                       "textAlign": "CENTER",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "tkxbuuy8hs",
                       "isVisible": true,
                       "fontStyle": "",
@@ -3090,7 +3310,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -3160,6 +3382,7 @@
                               "isDeprecated": false,
                               "rightColumn": 28,
                               "textAlign": "LEFT",
+                              "dynamicHeight": "FIXED",
                               "widgetId": "5y1idzwp57",
                               "isVisible": true,
                               "fontStyle": "BOLD",
@@ -3169,7 +3392,9 @@
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                              "fontSize": "1rem"
+                              "maxDynamicHeight": 9000,
+                              "fontSize": "1rem",
+                              "minDynamicHeight": 4
                             },
                             {
                               "boxShadow": "none",
@@ -3195,6 +3420,7 @@
                               "labelTextSize": "0.875rem",
                               "rightColumn": 43,
                               "textAlign": "LEFT",
+                              "dynamicHeight": "FIXED",
                               "widgetId": "vb2lmvce6k",
                               "isVisible": true,
                               "fontStyle": "BOLD",
@@ -3204,7 +3430,9 @@
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "borderRadius": "0px",
-                              "fontSize": "0.875rem"
+                              "maxDynamicHeight": 9000,
+                              "fontSize": "0.875rem",
+                              "minDynamicHeight": 4
                             },
                             {
                               "boxShadow": "none",
@@ -3238,6 +3466,7 @@
                               "labelTextSize": "0.875rem",
                               "isRequired": false,
                               "rightColumn": 63,
+                              "dynamicHeight": "FIXED",
                               "widgetId": "9b310c8oo9",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                               "isVisible": true,
@@ -3247,8 +3476,10 @@
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "borderRadius": "0px",
+                              "maxDynamicHeight": 9000,
                               "iconAlign": "left",
-                              "defaultText": "{{Table2.selectedRow.AIT_Value}}"
+                              "defaultText": "{{Table2.selectedRow.AIT_Value}}",
+                              "minDynamicHeight": 4
                             },
                             {
                               "boxShadow": "none",
@@ -3281,6 +3512,7 @@
                               "labelTextSize": "0.875rem",
                               "isRequired": false,
                               "rightColumn": 28,
+                              "dynamicHeight": "FIXED",
                               "widgetId": "cudv906y00",
                               "accentColor": "#03B365",
                               "isVisible": true,
@@ -3290,7 +3522,9 @@
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "borderRadius": "0px",
-                              "defaultCheckedState": "{{Table2.selectedRow.AIT_Applicable == 'AIT_inclusive'}}"
+                              "defaultCheckedState": "{{Table2.selectedRow.AIT_Applicable == 'AIT_inclusive'}}",
+                              "maxDynamicHeight": 9000,
+                              "minDynamicHeight": 4
                             },
                             {
                               "boxShadow": "none",
@@ -3324,6 +3558,7 @@
                               "labelTextSize": "0.875rem",
                               "isRequired": false,
                               "rightColumn": 63,
+                              "dynamicHeight": "FIXED",
                               "widgetId": "38w77fa53r",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                               "isVisible": true,
@@ -3333,8 +3568,10 @@
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "borderRadius": "0px",
+                              "maxDynamicHeight": 9000,
                               "iconAlign": "left",
-                              "defaultText": "{{Table2.selectedRow.VAT_Value}}"
+                              "defaultText": "{{Table2.selectedRow.VAT_Value}}",
+                              "minDynamicHeight": 4
                             },
                             {
                               "boxShadow": "none",
@@ -3360,6 +3597,7 @@
                               "labelTextSize": "0.875rem",
                               "rightColumn": 43,
                               "textAlign": "LEFT",
+                              "dynamicHeight": "FIXED",
                               "widgetId": "0jxocgim0x",
                               "isVisible": true,
                               "fontStyle": "BOLD",
@@ -3369,7 +3607,9 @@
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "borderRadius": "0px",
-                              "fontSize": "0.875rem"
+                              "maxDynamicHeight": 9000,
+                              "fontSize": "0.875rem",
+                              "minDynamicHeight": 4
                             },
                             {
                               "boxShadow": "none",
@@ -3432,6 +3672,7 @@
                                       "labelTextSize": "0.875rem",
                                       "rightColumn": 22,
                                       "textAlign": "LEFT",
+                                      "dynamicHeight": "FIXED",
                                       "widgetId": "9yrdull3u0",
                                       "isVisible": true,
                                       "fontStyle": "BOLD",
@@ -3441,7 +3682,9 @@
                                       "renderMode": "CANVAS",
                                       "isLoading": false,
                                       "borderRadius": "0px",
-                                      "fontSize": "0.875rem"
+                                      "maxDynamicHeight": 9000,
+                                      "fontSize": "0.875rem",
+                                      "minDynamicHeight": 4
                                     },
                                     {
                                       "widgetName": "columns_to_print",
@@ -3482,6 +3725,7 @@
                                       "rightColumn": 64,
                                       "backgroundColor": "#e4e4e7",
                                       "textAlign": "LEFT",
+                                      "dynamicHeight": "FIXED",
                                       "widgetId": "kvp4ohrj7w",
                                       "isVisible": true,
                                       "fontStyle": "",
@@ -3491,7 +3735,9 @@
                                       "renderMode": "CANVAS",
                                       "isLoading": false,
                                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                                      "fontSize": "0.875rem"
+                                      "maxDynamicHeight": 9000,
+                                      "fontSize": "0.875rem",
+                                      "minDynamicHeight": 4
                                     }
                                   ],
                                   "key": "6oppnoe2xf",
@@ -3513,6 +3759,7 @@
                               "labelTextSize": "0.875rem",
                               "backgroundColor": "#FFFFFF",
                               "rightColumn": 63,
+                              "dynamicHeight": "FIXED",
                               "widgetId": "8wgvqzch83",
                               "containerStyle": "card",
                               "isVisible": true,
@@ -3520,7 +3767,9 @@
                               "parentId": "3iyyvua5n2",
                               "renderMode": "CANVAS",
                               "isLoading": false,
-                              "borderRadius": "0px"
+                              "borderRadius": "0px",
+                              "maxDynamicHeight": 9000,
+                              "minDynamicHeight": 4
                             },
                             {
                               "boxShadow": "none",
@@ -3553,6 +3802,7 @@
                               "labelTextSize": "0.875rem",
                               "isRequired": false,
                               "rightColumn": 63,
+                              "dynamicHeight": "FIXED",
                               "widgetId": "pz4sybj2vk",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                               "isVisible": true,
@@ -3562,8 +3812,10 @@
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "borderRadius": "0px",
+                              "maxDynamicHeight": 9000,
                               "iconAlign": "left",
-                              "defaultText": "{{\nTable2.selectedRow.shop_name.replace(/[^a-zA-Z ]/g, \"\").split(/\\s/).reduce((response,word)=> response+=word.slice(0,1),'')+\"-\"+moment(DatePicker1.selectedDate).format('YY')+\"-\"+moment(DatePicker1Copy.selectedDate) .format('MMM')+\"-\"+moment().format('DD')+\"-\"+paymentMethod.text+\"-\"+Math.round(Math.random()*1000) + '-' +\n(get_invoice_details.data.map(a=>a.invoice_number).filter((item, i, ar) => ar.indexOf(item) === i).length + 1)\n}}"
+                              "defaultText": "{{\nTable2.selectedRow.shop_name.replace(/[^a-zA-Z ]/g, \"\").split(/\\s/).reduce((response,word)=> response+=word.slice(0,1),'')+\"-\"+moment(DatePicker1.selectedDate).format('YY')+\"-\"+moment(DatePicker1Copy.selectedDate) .format('MMM')+\"-\"+moment().format('DD')+\"-\"+paymentMethod.text+\"-\"+Math.round(Math.random()*1000) + '-' +\n(get_invoice_details.data.map(a=>a.invoice_number).filter((item, i, ar) => ar.indexOf(item) === i).length + 1)\n}}",
+                              "minDynamicHeight": 4
                             },
                             {
                               "boxShadow": "none",
@@ -3588,6 +3840,7 @@
                               "labelTextSize": "0.875rem",
                               "rightColumn": 24,
                               "textAlign": "LEFT",
+                              "dynamicHeight": "FIXED",
                               "widgetId": "imyxuvi4gt",
                               "isVisible": true,
                               "fontStyle": "BOLD",
@@ -3597,7 +3850,9 @@
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "borderRadius": "0px",
-                              "fontSize": "0.875rem"
+                              "maxDynamicHeight": 9000,
+                              "fontSize": "0.875rem",
+                              "minDynamicHeight": 4
                             },
                             {
                               "boxShadow": "none",
@@ -3629,6 +3884,7 @@
                               "labelTextSize": "0.875rem",
                               "isRequired": false,
                               "rightColumn": 63,
+                              "dynamicHeight": "FIXED",
                               "widgetId": "96j9kv8n9f",
                               "accentColor": "#03B365",
                               "isVisible": "",
@@ -3638,7 +3894,9 @@
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "borderRadius": "0px",
-                              "defaultCheckedState": ""
+                              "defaultCheckedState": "",
+                              "maxDynamicHeight": 9000,
+                              "minDynamicHeight": 4
                             },
                             {
                               "widgetName": "isVatInclusive",
@@ -3679,6 +3937,7 @@
                               "isRequired": false,
                               "isDeprecated": false,
                               "rightColumn": 28,
+                              "dynamicHeight": "FIXED",
                               "widgetId": "xvxtbptn92",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                               "isVisible": true,
@@ -3688,7 +3947,9 @@
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                              "defaultCheckedState": "{{Table2.selectedRow.vat_applicable == 'VAT_inclusive'}}"
+                              "defaultCheckedState": "{{Table2.selectedRow.vat_applicable == 'VAT_inclusive'}}",
+                              "maxDynamicHeight": 9000,
+                              "minDynamicHeight": 4
                             },
                             {
                               "resetFormOnClick": false,
@@ -3794,6 +4055,7 @@
                               "isDeprecated": false,
                               "rightColumn": 63,
                               "textAlign": "LEFT",
+                              "dynamicHeight": "FIXED",
                               "widgetId": "hr6rvjr1m5",
                               "isVisible": true,
                               "fontStyle": "",
@@ -3803,7 +4065,9 @@
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                              "fontSize": "1rem"
+                              "maxDynamicHeight": 9000,
+                              "fontSize": "1rem",
+                              "minDynamicHeight": 4
                             },
                             {
                               "boxShadow": "none",
@@ -3828,6 +4092,7 @@
                               "labelTextSize": "0.875rem",
                               "rightColumn": 10,
                               "textAlign": "LEFT",
+                              "dynamicHeight": "FIXED",
                               "widgetId": "5vejxh9rt4",
                               "isVisible": false,
                               "fontStyle": "BOLD",
@@ -3837,7 +4102,9 @@
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "borderRadius": "0px",
-                              "fontSize": "0.875rem"
+                              "maxDynamicHeight": 9000,
+                              "fontSize": "0.875rem",
+                              "minDynamicHeight": 4
                             },
                             {
                               "boxShadow": "none",
@@ -3867,6 +4134,7 @@
                               "rightColumn": 22,
                               "backgroundColor": "#e4e4e7",
                               "textAlign": "CENTER",
+                              "dynamicHeight": "FIXED",
                               "widgetId": "1dvq8jnjgg",
                               "isVisible": false,
                               "fontStyle": "",
@@ -3876,7 +4144,9 @@
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "borderRadius": "0px",
-                              "fontSize": "0.875rem"
+                              "maxDynamicHeight": 9000,
+                              "fontSize": "0.875rem",
+                              "minDynamicHeight": 4
                             }
                           ],
                           "key": "i8o14ygfyz",
@@ -3898,12 +4168,15 @@
                       "labelTextSize": "0.875rem",
                       "backgroundColor": "white",
                       "rightColumn": 62,
+                      "dynamicHeight": "FIXED",
                       "widgetId": "k6uh52vq1u",
                       "isVisible": true,
                       "parentId": "ubr3vkm7b7",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "borderRadius": "0px"
+                      "borderRadius": "0px",
+                      "maxDynamicHeight": 9000,
+                      "minDynamicHeight": 4
                     }
                   ],
                   "isDisabled": false,
@@ -3926,6 +4199,7 @@
               "isDeprecated": false,
               "rightColumn": 0,
               "detachFromLayout": true,
+              "dynamicHeight": "FIXED",
               "widgetId": "jb58k9qosh",
               "canOutsideClickClose": true,
               "canEscapeKeyClose": true,
@@ -3934,7 +4208,9 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "width": 904
+              "maxDynamicHeight": 9000,
+              "width": 904,
+              "minDynamicHeight": 4
             },
             {
               "boxShadow": "none",
@@ -3996,6 +4272,7 @@
                       "labelTextSize": "0.875rem",
                       "rightColumn": 40,
                       "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "s23vx8c5ta",
                       "isVisible": true,
                       "fontStyle": "BOLD",
@@ -4005,7 +4282,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -4035,6 +4314,7 @@
                       "rightColumn": 52,
                       "backgroundColor": "#e4e4e7",
                       "textAlign": "CENTER",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "m6q6pefwa4",
                       "isVisible": true,
                       "fontStyle": "",
@@ -4044,7 +4324,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "widgetName": "Text3",
@@ -4081,6 +4363,7 @@
                       "isDeprecated": false,
                       "rightColumn": 57,
                       "textAlign": "CENTER",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "zh9zcbt76n",
                       "isVisible": true,
                       "fontStyle": "BOLD",
@@ -4090,7 +4373,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "fontSize": "1.25rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "1.25rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -4115,6 +4400,7 @@
                       "labelTextSize": "0.875rem",
                       "rightColumn": 25,
                       "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "d128wfl2tv",
                       "isVisible": true,
                       "fontStyle": "BOLD",
@@ -4124,7 +4410,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -4153,6 +4441,7 @@
                       "labelTextSize": "0.875rem",
                       "rightColumn": 30,
                       "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "ye1azfxzny",
                       "isVisible": true,
                       "fontStyle": "BOLD",
@@ -4162,7 +4451,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -4239,6 +4530,7 @@
                               "labelTextSize": "0.875rem",
                               "isRequired": false,
                               "rightColumn": 29,
+                              "dynamicHeight": "FIXED",
                               "widgetId": "9ulx91xxn8",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                               "isVisible": true,
@@ -4247,7 +4539,9 @@
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "borderRadius": "0px",
-                              "onOptionChange": ""
+                              "maxDynamicHeight": 9000,
+                              "onOptionChange": "",
+                              "minDynamicHeight": 4
                             },
                             {
                               "boxShadow": "none",
@@ -4295,6 +4589,7 @@
                               "defaultDate": "{{moment(DatePicker1.selectedDate).endOf('month')}}",
                               "isDeprecated": false,
                               "rightColumn": 17,
+                              "dynamicHeight": "FIXED",
                               "widgetId": "4od3gl793z",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                               "isVisible": true,
@@ -4307,9 +4602,11 @@
                               "isLoading": false,
                               "timePrecision": "minute",
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                              "maxDynamicHeight": 9000,
                               "firstDayOfWeek": 0,
                               "closeOnSelection": true,
-                              "maxDate": "2121-12-31T18:29:00.000Z"
+                              "maxDate": "2121-12-31T18:29:00.000Z",
+                              "minDynamicHeight": 4
                             },
                             {
                               "boxShadow": "none",
@@ -4450,6 +4747,7 @@
                               "defaultDate": "{{moment().subtract(1, 'month').startOf('month')}}",
                               "isDeprecated": false,
                               "rightColumn": 9,
+                              "dynamicHeight": "FIXED",
                               "widgetId": "g7ayygvxpq",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                               "isVisible": true,
@@ -4462,9 +4760,11 @@
                               "isLoading": false,
                               "timePrecision": "minute",
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                              "maxDynamicHeight": 9000,
                               "firstDayOfWeek": 0,
                               "closeOnSelection": true,
-                              "maxDate": "2121-12-31T18:29:00.000Z"
+                              "maxDate": "2121-12-31T18:29:00.000Z",
+                              "minDynamicHeight": 4
                             },
                             {
                               "boxShadow": "none",
@@ -4509,6 +4809,7 @@
                               "isRequired": false,
                               "onTextChanged": "",
                               "rightColumn": 55,
+                              "dynamicHeight": "FIXED",
                               "widgetId": "1jc3ytkqqg",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                               "isVisible": true,
@@ -4518,8 +4819,10 @@
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "borderRadius": "0px",
+                              "maxDynamicHeight": 9000,
                               "iconAlign": "left",
-                              "defaultText": ""
+                              "defaultText": "",
+                              "minDynamicHeight": 4
                             },
                             {
                               "boxShadow": "none",
@@ -4598,6 +4901,7 @@
                       "labelTextSize": "0.875rem",
                       "backgroundColor": "#FFFFFF",
                       "rightColumn": 64,
+                      "dynamicHeight": "FIXED",
                       "widgetId": "jub6dn6z4b",
                       "containerStyle": "card",
                       "isVisible": true,
@@ -4605,7 +4909,9 @@
                       "parentId": "6y2wur3g2z",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "borderRadius": "0px"
+                      "borderRadius": "0px",
+                      "maxDynamicHeight": 9000,
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -4766,6 +5072,7 @@
                       "labelTextSize": "0.875rem",
                       "rightColumn": 9,
                       "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "afce21a6u4",
                       "isVisible": true,
                       "fontStyle": "BOLD",
@@ -4775,7 +5082,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -4804,6 +5113,7 @@
                       "labelTextSize": "0.875rem",
                       "rightColumn": 14,
                       "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "wetx8lmyex",
                       "isVisible": true,
                       "fontStyle": "BOLD",
@@ -4813,7 +5123,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -4842,6 +5154,7 @@
                       "labelTextSize": "0.875rem",
                       "rightColumn": 43,
                       "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "6amhi4k1le",
                       "isVisible": false,
                       "fontStyle": "BOLD",
@@ -4851,7 +5164,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "fontSize": "0.875rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
@@ -4937,6 +5252,7 @@
                       "backgroundColor": "{{appsmith.theme.colors.backgroundColor}}",
                       "isDeprecated": false,
                       "rightColumn": 64,
+                      "dynamicHeight": "FIXED",
                       "widgetId": "t0uod3ojxv",
                       "containerStyle": "card",
                       "isVisible": "{{\n//Table1.selectedRow.customColumn42 == 'F'?\n\t//((Table1.selectedRow.Billing_Type=='Total Bill' || Table1.selectedRow.Billing_Type==null)?false:true)\ntrue\n//:false\n}}",
@@ -4944,7 +5260,9 @@
                       "parentId": "6y2wur3g2z",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "maxDynamicHeight": 9000,
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -5028,6 +5346,7 @@
                       "isDeprecated": false,
                       "rightColumn": 46,
                       "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "s0eurocdet",
                       "isVisible": false,
                       "fontStyle": "BOLD",
@@ -5037,7 +5356,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "fontSize": "1rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "1rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "widgetName": "is_duplicate",
@@ -5077,6 +5398,7 @@
                       "isDeprecated": false,
                       "rightColumn": 49,
                       "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "2h0sh08gdx",
                       "isVisible": false,
                       "fontStyle": "BOLD",
@@ -5086,7 +5408,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "fontSize": "1rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "1rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "multiRowSelection": true,
@@ -6280,6 +6604,7 @@
               "labelTextSize": "0.875rem",
               "backgroundColor": "#FFFFFF",
               "rightColumn": 64,
+              "dynamicHeight": "FIXED",
               "widgetId": "zsccqtqsnc",
               "containerStyle": "card",
               "isVisible": true,
@@ -6287,7 +6612,9 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "borderRadius": "0px"
+              "borderRadius": "0px",
+              "maxDynamicHeight": 9000,
+              "minDynamicHeight": 4
             },
             {
               "boxShadow": "none",
@@ -6382,6 +6709,7 @@
                       "isRequired": false,
                       "onTextChanged": "{{Api1.run()}}",
                       "rightColumn": 33,
+                      "dynamicHeight": "FIXED",
                       "widgetId": "hy64ijq0jo",
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
@@ -6391,8 +6719,10 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
+                      "maxDynamicHeight": 9000,
                       "iconAlign": "left",
-                      "defaultText": ""
+                      "defaultText": "",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -6517,6 +6847,7 @@
                       "isDeprecated": false,
                       "rightColumn": 41,
                       "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "fqf3ea2zm8",
                       "isVisible": true,
                       "fontStyle": "BOLD",
@@ -6526,7 +6857,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "fontSize": "1.5rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "1.5rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -6609,6 +6942,7 @@
                       "isDeprecated": false,
                       "rightColumn": 63,
                       "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "uhwdg5ykya",
                       "isVisible": false,
                       "fontStyle": "BOLD",
@@ -6618,7 +6952,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "fontSize": "1rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "1rem",
+                      "minDynamicHeight": 4
                     }
                   ],
                   "isDisabled": false,
@@ -6641,6 +6977,7 @@
               "isDeprecated": false,
               "rightColumn": 0,
               "detachFromLayout": true,
+              "dynamicHeight": "FIXED",
               "widgetId": "cdfrlejhp0",
               "canOutsideClickClose": true,
               "canEscapeKeyClose": true,
@@ -6649,7 +6986,9 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "width": 1016
+              "maxDynamicHeight": 9000,
+              "width": 1016,
+              "minDynamicHeight": 4
             },
             {
               "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
