@@ -867,7 +867,7 @@
                           "children": [
                             {
                               "boxShadow": "none",
-                              "widgetName": "Text2",
+                              "widgetName": "shop_address",
                               "borderColor": "",
                               "displayName": "Text",
                               "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -910,7 +910,7 @@
                             },
                             {
                               "boxShadow": "none",
-                              "widgetName": "Text2Copy",
+                              "widgetName": "shop_name",
                               "borderColor": "",
                               "displayName": "Text",
                               "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -1474,7 +1474,7 @@
                             },
                             {
                               "boxShadow": "none",
-                              "widgetName": "Text2CopyCopyCopy",
+                              "widgetName": "BIN",
                               "borderColor": "",
                               "displayName": "Text",
                               "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -1514,7 +1514,7 @@
                             },
                             {
                               "boxShadow": "none",
-                              "widgetName": "Text2Copy1",
+                              "widgetName": "company",
                               "borderColor": "",
                               "displayName": "Text",
                               "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -1553,7 +1553,7 @@
                             },
                             {
                               "boxShadow": "none",
-                              "widgetName": "Text2CopyCopy",
+                              "widgetName": "company_address",
                               "borderColor": "",
                               "displayName": "Text",
                               "iconSVG": "/static/media/icon.97c59b52.svg",

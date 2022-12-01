@@ -915,9 +915,6 @@
                       ],
                       "dynamicPropertyPathList": [
                         {
-                          "key": "primaryColumns.customColumn2.onClick"
-                        },
-                        {
                           "key": "primaryColumns.customColumn3.onClick"
                         },
                         {
@@ -942,13 +939,13 @@
                           "key": "primaryColumns.customColumn8.isCellVisible"
                         },
                         {
-                          "key": "primaryColumns.customColumn2.isDisabled"
-                        },
-                        {
                           "key": "primaryColumns.customColumn8.onClick"
                         },
                         {
                           "key": "primaryColumns.customColumn6.isCellVisible"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn2.onClick"
                         }
                       ],
                       "displayName": "Table",
@@ -1191,7 +1188,7 @@
                           "enableFilter": true,
                           "enableSort": true,
                           "isVisible": true,
-                          "isDisabled": "false",
+                          "isDisabled": false,
                           "isCellVisible": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( appsmith.store.is_finance_user?true:false))}}",
                           "isDerived": true,
                           "label": "Generate PDF",
@@ -1540,7 +1537,7 @@
                           "enableSort": true,
                           "isVisible": true,
                           "isDisabled": false,
-                          "isCellVisible": false,
+                          "isCellVisible": true,
                           "isDerived": true,
                           "label": "Billing Format",
                           "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( \nbilling_formats.data.filter(a=>a.SHOP_ID==currentRow.shop_id)[0]?billing_formats.data.filter(a=>a.SHOP_ID==currentRow.shop_id)[0].Billing_format:''\n))}}",
@@ -1732,7 +1729,7 @@
                           "enableSort": true,
                           "isVisible": true,
                           "isDisabled": false,
-                          "isCellVisible": false,
+                          "isCellVisible": true,
                           "isDerived": true,
                           "label": "Billing Format",
                           "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( \nbilling_formats.data.filter(a=>a.SHOP_ID==currentRow.shop_id)[0]?billing_formats.data.filter(a=>a.SHOP_ID==currentRow.shop_id)[0].Billing_format:''\n))}}",
@@ -1883,7 +1880,7 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button3",
-                      "onClick": "{{\nRadioGroup1.selectedOptionValue == 'invoice_search'?\nget_all_invoices.run(()=>payment_method.run()):shop_wise_invoices.run(()=>payment_method.run())}}",
+                      "onClick": "{{\nRadioGroup1.selectedOptionValue == 'invoice_search'?\nget_all_invoices.run(()=>payment_method.run(()=>billing_formats.run())):shop_wise_invoices.run(()=>payment_method.run(()=>billing_formats.run()))\n}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "dynamicPropertyPathList": [
                         {
