@@ -3626,9 +3626,7 @@
                 "appsmith.store.session"
               ],
               "timeoutInMillisecond": 100000000
-            }
-          ],
-          [
+            },
             {
               "id": "genInvoicePageRedX_get_topsheet_data_v2",
               "name": "get_topsheet_data_v2",
@@ -3650,9 +3648,7 @@
                 "appsmith.URL.queryParams.InvoiceNumber"
               ],
               "timeoutInMillisecond": 10000
-            }
-          ],
-          [
+            },
             {
               "id": "genInvoicePageRedX_trip",
               "name": "trip",
