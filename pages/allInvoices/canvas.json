@@ -7455,8 +7455,8 @@
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
-                "isInvalidCheckBox.isChecked==true && isInvalidCheckBoxCopy.isChecked==true?\n\t\"and status in ('Invalid') and ((total_price_after_vat_ait - received_amount)<= 0 or status ='receiving-complete')\":\nisInvalidCheckBox.isChecked==true && isInvalidCheckBoxCopy.isChecked==false?\n\"and status in ('Invalid') and (total_price_after_vat_ait != received_amount)\" : isInvalidCheckBox.isChecked==false && isInvalidCheckBoxCopy.isChecked==false?\n\t'':\"status not in ('Invalid') and ((total_price_after_vat_ait - received_amount)<= 0 or status ='receiving-complete')\"",
-                "parseInt(search_shop_id.selectedOptionValue)"
+                "parseInt(search_shop_id.selectedOptionValue)",
+                "isInvalidCheckBox.isChecked==true && isInvalidCheckBoxCopy.isChecked==true?\n\t\"and status in ('Invalid') and ((total_price_after_vat_ait - received_amount)<= 0 or status ='receiving-complete')\":\nisInvalidCheckBox.isChecked==true && isInvalidCheckBoxCopy.isChecked==false?\n\"and status in ('Invalid') and (total_price_after_vat_ait != received_amount)\" : isInvalidCheckBox.isChecked==false && isInvalidCheckBoxCopy.isChecked==false?\n\t\"and status not in ('Invalid')\":\"status not in ('Invalid') and ((total_price_after_vat_ait - received_amount)<= 0 or status ='receiving-complete')\""
               ],
               "timeoutInMillisecond": 10000000
             },

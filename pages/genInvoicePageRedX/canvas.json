@@ -1777,7 +1777,7 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button3",
-                      "onClick": "{{\nget_invoice.data[0].generated_pdf !== null? showModal('generated_pdf'):\n(\nbilling_format.data[0].Billing_format== 'lc'?\n  get_pdf_gen_token.run(\n            ()=>lc.run(\n                          ()=> insert_pdf_url.run(\n                                      ()=> get_invoice.run(()=>showModal('Modal1')),\n                                      ()=>showAlert('URL insertion failed,')\n                                      ),\n                          () => showAlert('Something went wrong,')\n                          )\n            )             \n  :\nbilling_format.data[0].Billing_format== 'date-loading-unloading'?\n  get_pdf_gen_token.run(\n            ()=>date_loading_unloading.run(\n                          ()=> insert_pdf_url.run(\n                                      ()=> get_invoice.run(()=>showModal('Modal1')),\n                                      ()=>showAlert('URL insertion failed,')\n                                      ),\n                          () => showAlert('Something went wrong,')\n                          )\n            )\n  :\n  \n  get_pdf_gen_token.run(\n            ()=>regular.run(\n                          ()=> insert_pdf_url.run(\n                                      ()=> get_invoice.run(()=>showModal('Modal1')),\n                                      ()=>showAlert('URL insertion failed,')\n                                      ),\n                          () => showAlert('Something went wrong,')\n                          )\n            )\n) \n}}",
+                      "onClick": "{{\nget_invoice.data[0].generated_pdf !== null? showModal('generated_pdf'):\n(\nbilling_format.data[0].Billing_format== 'lc'?\n  get_pdf_gen_token.run(\n            ()=>lc.run(\n                          ()=> insert_pdf_url.run(\n                                      ()=> get_invoice.run(()=>showModal('Modal1')),\n                                      ()=>showAlert('URL insertion failed,')\n                                      ),\n                          () => showAlert('Something went wrong,')\n                          )\n            )             \n  :\nbilling_format.data[0].Billing_format== 'date-loading-unloading'?\n  get_pdf_gen_token.run(\n            ()=>date_loading_unloading.run(\n                          ()=> insert_pdf_url.run(\n                                      ()=> get_invoice.run(()=>showModal('Modal1')),\n                                      ()=>showAlert('URL insertion failed,')\n                                      ),\n                          () => showAlert('Something went wrong,')\n                          )\n            )\n  :\n\tbilling_format.data[0].Billing_format== 'trip'?\n  get_pdf_gen_token.run(\n            ()=>trip.run(\n                          ()=> insert_pdf_url.run(\n                                      ()=> get_invoice.run(()=>showModal('Modal1')),\n                                      ()=>showAlert('URL insertion failed,')\n                                      ),\n                          () => showAlert('Something went wrong,')\n                          )\n            ):\n  \n  get_pdf_gen_token.run(\n            ()=>regular.run(\n                          ()=> insert_pdf_url.run(\n                                      ()=> get_invoice.run(()=>showModal('Modal1')),\n                                      ()=>showAlert('URL insertion failed,')\n                                      ),\n                          () => showAlert('Something went wrong,')\n                          )\n            )\n) \n}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "dynamicPropertyPathList": [
                         {
@@ -3576,7 +3576,7 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "docUrl": "{{\nbilling_format.data[0].Billing_format == 'lc'?\nlc.data.download_url:\nbilling_format.data[0].Billing_format == 'date-loading-unloading'?\ndate_loading_unloading.data.download_url:\nregular.data.download_url}}"
+                      "docUrl": "{{\nbilling_format.data[0].Billing_format == 'lc'?\nlc.data.download_url:\nbilling_format.data[0].Billing_format == 'date-loading-unloading'?\ndate_loading_unloading.data.download_url:\nbilling_format.data[0].Billing_format == 'trip'?\ntrip.data.download_url:\nregular.data.download_url}}"
                     }
                   ],
                   "isDisabled": false,
@@ -3622,8 +3622,8 @@
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [
-                "appsmith.store.session",
-                "appsmith.URL.queryParams.shop_id"
+                "appsmith.URL.queryParams.shop_id",
+                "appsmith.store.session"
               ],
               "timeoutInMillisecond": 100000000
             }
@@ -3654,13 +3654,26 @@
           ],
           [
             {
+              "id": "genInvoicePageRedX_trip",
+              "name": "trip",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "get_pdf_gen_token.data.token",
+                "{\n  \"in_word_text\": InWordsFinal.text,\n  \"website\": \"https://apitemplate.io\",\n  \"document_id\": \"889856789012\",\n  \"invoice_number\": invoiceNumberFinal.text,\n  \"issue_date_time\": issueDateFinal.text,\n  \"due_date\":dueDateFinal.text,\n  \"invoice_period\":invoicePeriodFinal.text,\n  \"shop_id\":shopIdFinal.text,\n  \"shop_name\":Text2Copy.text,\n  \"pickup_point\":Text2.text, \n\t\"redx_logo\":\"https://redx.com.bd/images/new-redx-logo.svg\", \n  \"Description\": Table3.tableData[0].load_point ,\n\t\"Unite_of_Supply\": Table3.tableData[0].unload_point,\n  \"Qty\":Table3.tableData[0].fleet_requested_at,\n  \"Unit_Value\":Table3.tableData[0].vehicle_number,\n  \"VAT\": get_invoice.data[0].vat_rate,\n  \"VAT_Amnt\":get_invoice.data[0].vat,\n  \"Total_Value\":Table3.tableData[0].challan_number,\n  \"Total_Amount\":\n(function() {\t\nconst price = parseFloat(get_invoice.data[0].total_price_after_vat_ait).toFixed(2);\n\nlet dollarUSLocale = Intl.NumberFormat(undefined, {\n\tstyle: 'currency',\n\tcurrency: 'BDT'\n});\n\treturn dollarUSLocale.format(price).replace('BDT','').trim() \n})(), \n\t\"items\":get_topsheet_data_v2.data.map(a=>{\n\t\treturn {\n\t\t\t\"Fleet Requested At\": a.fleet_requested_at,\n\t\t\t\"Id\": a.id,\n\t\t\t\"Fleet Tracking Id\":a.fleet_tracking_id,\n\t\t\t\"Payment Method\":a.payment_method,\n\t\t\t\"Shop Id\":a.shop_id,\n\t\t\t\"Shop Name\":a.shop_name,\n\t\t\t\"Vehicle Number\":a.vehicle_number,\n\t\t\t\"Challan Number\":a.challan_number,\n\t\t\t\"LC Number\":a.lc_number,\n\t\t\t\"Load Point\":a.load_point,\n\t\t\t\"Unload Point\":a.unload_point,\n\t\t\t\"Base Fare\":a.base_fare,\n\t\t\t\"Total Additional Fee\":a.total_additional_fee,\n\t\t\t\"Total Amount [Incl.SD & VAT] (BDT)\": a.total_amount_incl_sd_vat,\n\t\t\t\"Remarks\":a.remarks.trim() \n\t\t}\n\t})\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
               "id": "genInvoicePageRedX_get_shop_data",
               "name": "get_shop_data",
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [
-                "appsmith.store.access_token",
-                "appsmith.URL.queryParams.shop_id"
+                "appsmith.URL.queryParams.shop_id",
+                "appsmith.store.access_token"
               ],
               "timeoutInMillisecond": 10000
             }
