@@ -128,7 +128,7 @@
                           "key": "accentColor"
                         }
                       ],
-                      "labelPosition": "Left",
+                      "labelPosition": "Auto",
                       "countryCode": "BD",
                       "labelStyle": "",
                       "isDisabled": false,

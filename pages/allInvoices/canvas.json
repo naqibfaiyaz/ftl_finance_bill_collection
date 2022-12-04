@@ -7396,14 +7396,12 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "allInvoices_billing_formats",
-              "name": "billing_formats",
+              "id": "allInvoices_session",
+              "name": "session",
               "confirmBeforeExecute": false,
               "pluginType": "API",
-              "jsonPathKeys": [
-                "appsmith.store.session"
-              ],
-              "timeoutInMillisecond": 100000000
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
             }
           ],
           [
@@ -7419,12 +7417,13 @@
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "allInvoices_get_shops",
-              "name": "get_shops",
+              "id": "allInvoices_metabase_session.metabaseSession",
+              "name": "metabase_session.metabaseSession",
+              "collectionId": "allInvoices_metabase_session",
               "confirmBeforeExecute": false,
-              "pluginType": "API",
+              "pluginType": "JS",
               "jsonPathKeys": [
-                "appsmith.store.access_token"
+                "() => {\n  session.run(() => {\n    storeValue('session', session.data.id);\n  });\n}"
               ],
               "timeoutInMillisecond": 10000
             },
@@ -7435,7 +7434,7 @@
               "pluginType": "DB",
               "jsonPathKeys": [
                 "parseInt(search_shop_id.selectedOptionValue)",
-                "isInvalidCheckBox.isChecked==true && isInvalidCheckBoxCopy.isChecked==true?\n\t\"status in ('Invalid') and ((total_price_after_vat_ait - received_amount)<= 0 or status ='receiving-complete')\":\nisInvalidCheckBox.isChecked==true && isInvalidCheckBoxCopy.isChecked==false?\n\"status in ('Invalid') and (total_price_after_vat_ait != received_amount)\" :\nisInvalidCheckBox.isChecked==false && isInvalidCheckBoxCopy.isChecked==false?\n\t\"status in (\"+ ( \"'\"+ MultiSelect1.selectedOptionValues.join(\"','\")+\"'\") + \") and (total_price_after_vat_ait != received_amount)\":\"status not in ('Invalid') and ((total_price_after_vat_ait - received_amount)<= 0 or status ='receiving-complete')\""
+                "isInvalidCheckBox.isChecked==true && isInvalidCheckBoxCopy.isChecked==true?\n\t\"and status in ('Invalid') and ((total_price_after_vat_ait - received_amount)<= 0 or status ='receiving-complete')\":\nisInvalidCheckBox.isChecked==true && isInvalidCheckBoxCopy.isChecked==false?\n\"and status in ('Invalid') and (total_price_after_vat_ait != received_amount)\" : isInvalidCheckBox.isChecked==false && isInvalidCheckBoxCopy.isChecked==false?\n\t'':\"status not in ('Invalid') and ((total_price_after_vat_ait - received_amount)<= 0 or status ='receiving-complete')\""
               ],
               "timeoutInMillisecond": 10000000
             },
@@ -7452,6 +7451,16 @@
           ],
           [
             {
+              "id": "allInvoices_billing_formats",
+              "name": "billing_formats",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "appsmith.store.session"
+              ],
+              "timeoutInMillisecond": 100000000
+            },
+            {
               "id": "allInvoices_get_hard_copy",
               "name": "get_hard_copy",
               "confirmBeforeExecute": false,
@@ -7463,6 +7472,16 @@
             }
           ],
           [
+            {
+              "id": "allInvoices_get_shops",
+              "name": "get_shops",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "appsmith.store.access_token"
+              ],
+              "timeoutInMillisecond": 10000
+            },
             {
               "id": "allInvoices_payment_method",
               "name": "payment_method",
