@@ -19,7 +19,7 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 67,
+          "version": 69,
           "minHeight": 730,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
@@ -128,6 +128,7 @@
                           "key": "accentColor"
                         }
                       ],
+                      "labelPosition": "Left",
                       "countryCode": "BD",
                       "labelStyle": "",
                       "isDisabled": false,
@@ -135,6 +136,7 @@
                       "labelTextSize": "0.875rem",
                       "isRequired": true,
                       "rightColumn": 52,
+                      "dynamicHeight": "FIXED",
                       "widgetId": "a88ecuopgp",
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "allowDialCodeChange": false,
@@ -146,8 +148,10 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
+                      "maxDynamicHeight": 9000,
                       "iconAlign": "left",
-                      "defaultText": ""
+                      "defaultText": "",
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -220,6 +224,7 @@
                       "labelTextSize": "0.875rem",
                       "isRequired": false,
                       "rightColumn": 52,
+                      "dynamicHeight": "FIXED",
                       "widgetId": "n59nq5v8ak",
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
@@ -229,8 +234,10 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
+                      "maxDynamicHeight": 9000,
                       "iconAlign": "left",
-                      "defaultText": ""
+                      "defaultText": "",
+                      "minDynamicHeight": 4
                     }
                   ],
                   "key": "o6wqhsu0j4",
@@ -252,6 +259,7 @@
               "labelTextSize": "0.875rem",
               "backgroundColor": "#FFFFFF",
               "rightColumn": 53,
+              "dynamicHeight": "FIXED",
               "widgetId": "yosjs95ihd",
               "containerStyle": "card",
               "isVisible": true,
@@ -259,7 +267,9 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "borderRadius": "0px"
+              "borderRadius": "0px",
+              "maxDynamicHeight": 9000,
+              "minDynamicHeight": 4
             }
           ]
         },

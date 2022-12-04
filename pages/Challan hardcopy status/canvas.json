@@ -451,7 +451,8 @@
                                 "task": 245,
                                 "step": 62,
                                 "status": 75,
-                                "bill_creation_eligibility": 175
+                                "bill_creation_eligibility": 175,
+                                "customColumn3": 196
                               },
                               "widgetName": "Table1",
                               "defaultPageSize": 0,
@@ -1169,7 +1170,7 @@
                                   "isCellVisible": true,
                                   "isDerived": true,
                                   "label": "invoice creation eligibility",
-                                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.audit_status== null?0:\n(currentRow.audit_status =='approved_by_audit'?1:0)))}}",
+                                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.audit_status== null?1:\n(currentRow.audit_status =='approved_by_audit'?1:0)))}}",
                                   "buttonStyle": "rgb(3, 179, 101)",
                                   "labelColor": "#FFFFFF",
                                   "iconName": ""
@@ -1247,7 +1248,7 @@
                                   "isCellVisible": true,
                                   "isDerived": true,
                                   "label": "invoice creation eligibility",
-                                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.audit_status== null?0:\n(currentRow.audit_status =='approved_by_audit'?1:0)))}}",
+                                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.audit_status== null?1:\n(currentRow.audit_status =='approved_by_audit'?1:0)))}}",
                                   "buttonStyle": "rgb(3, 179, 101)",
                                   "labelColor": "#FFFFFF",
                                   "iconName": ""
@@ -1558,6 +1559,12 @@
                                 },
                                 {
                                   "key": "primaryColumns.unload_out_time.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.bill_creation_eligibility.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.audit_status.computedValue"
                                 }
                               ],
                               "leftColumn": 0,
@@ -1595,7 +1602,6 @@
                               "widgetName": "Table1Copy",
                               "defaultPageSize": 0,
                               "columnOrder": [
-                                "challan_status",
                                 "id",
                                 "driver_name",
                                 "unloading_point",
@@ -1613,6 +1619,7 @@
                                 "challanattachmenturl",
                                 "driver_phone",
                                 "challan_entered_at",
+                                "challan_status",
                                 "hq_sent_time",
                                 "hq_received_time",
                                 "finance_received_time",
@@ -1627,7 +1634,9 @@
                                 "load_in_time",
                                 "load_out_time",
                                 "unload_in_time",
-                                "unload_out_time"
+                                "unload_out_time",
+                                "bill_creation_eligibility",
+                                "audit_status"
                               ],
                               "dynamicPropertyPathList": [],
                               "displayName": "Table",
@@ -2267,6 +2276,44 @@
                                   "isDerived": false,
                                   "label": "unload_out_time",
                                   "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.unload_out_time))}}",
+                                  "cellBackground": ""
+                                },
+                                "bill_creation_eligibility": {
+                                  "index": 33,
+                                  "width": 150,
+                                  "id": "bill_creation_eligibility",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "bill_creation_eligibility",
+                                  "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.bill_creation_eligibility))}}",
+                                  "cellBackground": ""
+                                },
+                                "audit_status": {
+                                  "index": 34,
+                                  "width": 150,
+                                  "id": "audit_status",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "audit_status",
+                                  "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.audit_status))}}",
                                   "cellBackground": ""
                                 }
                               },
