@@ -7,6 +7,7 @@
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
+        "sshProxyEnabled": false,
         "url": "https://asia-southeast1-fleet-service-8ea76.cloudfunctions.net"
       },
       "invalids": [],

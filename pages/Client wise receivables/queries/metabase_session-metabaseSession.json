@@ -16,7 +16,7 @@
     "pageId": "Client wise receivables",
     "collectionId": "Client wise receivables_metabase_session",
     "actionConfiguration": {
-      "timeoutInMillisecond": 0,
+      "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "body": "() => {\n  session.run(() => {\n    storeValue('session', session.data.id);\n  });\n}",
