@@ -1,0 +1,16 @@
+{
+  "unpublishedCollection": {
+    "name": "metabase_session",
+    "pageId": "genInvoicePageMokam",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tmetabaseSession: () => {\n\t\tsession.run(()=>{\n\t\t\tstoreValue('session', session.data.id)\n\t\t})\n\t}\n}",
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "genInvoicePageMokam_metabase_session",
+  "deleted": false,
+  "gitSyncId": "6231701cf1c0af1ceded5043_638ddbc09956db2c13d10fed"
+}
