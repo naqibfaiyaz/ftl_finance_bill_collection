@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "get_topsheet_data",
+    "name": "insert_pdf_url",
     "datasource": {
       "name": "Postgres_latest",
       "pluginId": "postgres-plugin",
@@ -13,12 +13,12 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "genInvoicePageRedX",
+    "pageId": "date_lot_product_redx_invoice",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT date(required_date) as fleet_requested_at,fleet_id as ID,fleet_tracking_id , payment_method,shop_id, shop_name,vehicle_number, challan_number, truck_price_remarks as LC_number, load_point,unload_point, truck_price as base_fare, additional_fee as total_additional_fee, total_price_after_vat_ait as \"Total Amount [Incl.SD & VAT] (BDT)\", additional_fee_remarks as REMARKS\nFROM trip_level_invoice where invoice_number={{appsmith.URL.queryParams.InvoiceNumber}} \nand status != 'Invalid'\n--order by serial_for_challan",
+      "body": "UPDATE finance_trip_invoices\n  SET generated_pdf = {{\nbilling_format.data[0].Billing_format == 'lc'?\nlc.data.download_url:\nbilling_format.data[0].Billing_format == 'date-loading-unloading'?\ndate_loading_unloading.data.download_url:\nregular.data.download_url\n}}\n  WHERE invoice_number = {{appsmith.URL.queryParams.InvoiceNumber}}\n\tand status!= 'Invalid'",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -36,14 +36,15 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "appsmith.URL.queryParams.InvoiceNumber"
+      "appsmith.URL.queryParams.InvoiceNumber",
+      "billing_format.data[0].Billing_format == 'lc'?\nlc.data.download_url:\nbilling_format.data[0].Billing_format == 'date-loading-unloading'?\ndate_loading_unloading.data.download_url:\nregular.data.download_url"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "genInvoicePageRedX_get_topsheet_data",
+  "id": "date_lot_product_redx_invoice_insert_pdf_url",
   "deleted": false,
-  "gitSyncId": "6231701cf1c0af1ceded5043_6358084f0e05b60ea4e7f36b"
+  "gitSyncId": "6231701cf1c0af1ceded5043_638db06f3b14013e8f50acb0"
 }

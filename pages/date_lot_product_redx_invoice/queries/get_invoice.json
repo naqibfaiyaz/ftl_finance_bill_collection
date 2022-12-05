@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "get_topsheet_data_v2",
+    "name": "get_invoice",
     "datasource": {
       "name": "Postgres_latest",
       "pluginId": "postgres-plugin",
@@ -13,12 +13,12 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "genInvoicePageRedX",
+    "pageId": "date_lot_product_redx_invoice",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT date(required_date) as fleet_requested_at,fleet_id as ID,fleet_tracking_id , payment_method,shop_id, shop_name,vehicle_number, challan_number, truck_price_remarks as LC_number, load_point,unload_point, truck_price as base_fare, additional_fee as total_additional_fee, total_price_after_vat_ait as Total_Amount_Incl_SD_Vat,goods_type, additional_fee_remarks as REMARKS\nFROM trip_level_invoice where invoice_number={{appsmith.URL.queryParams.InvoiceNumber}} \nand status != 'Invalid'\n--order by serial_for_challan",
+      "body": "SELECT * FROM finance_trip_invoices where invoice_number={{appsmith.URL.queryParams.InvoiceNumber}}\nand status != 'Invalid'",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -43,7 +43,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "genInvoicePageRedX_get_topsheet_data_v2",
+  "id": "date_lot_product_redx_invoice_get_invoice",
   "deleted": false,
-  "gitSyncId": "6231701cf1c0af1ceded5043_638dd4bc3b14013e8f50b155"
+  "gitSyncId": "6231701cf1c0af1ceded5043_638db06f3b14013e8f50aca6"
 }

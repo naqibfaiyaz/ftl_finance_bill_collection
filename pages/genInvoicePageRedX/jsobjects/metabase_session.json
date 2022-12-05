@@ -1,0 +1,16 @@
+{
+  "unpublishedCollection": {
+    "name": "metabase_session",
+    "pageId": "genInvoicePageRedX",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tmetabaseSession: () => {\n\t\tsession.run(()=>{\n\t\t\tstoreValue('session', session.data.id)\n\t\t})\n\t}\n}",
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "genInvoicePageRedX_metabase_session",
+  "deleted": false,
+  "gitSyncId": "6231701cf1c0af1ceded5043_638dd4a92913ba43778b90d5"
+}

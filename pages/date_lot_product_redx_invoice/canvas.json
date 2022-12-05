@@ -1,7 +1,7 @@
 {
   "unpublishedPage": {
-    "name": "genInvoicePageRedX",
-    "slug": "geninvoicepageredx",
+    "name": "date_lot_product_redx_invoice",
+    "slug": "date-lot-product-redx-invoice",
     "layouts": [
       {
         "viewMode": false,
@@ -1777,7 +1777,7 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button3",
-                      "onClick": "{{\nget_invoice.data[0].generated_pdf !== null? showModal('generated_pdf'):\n(\nbilling_format.data[0].Billing_format== 'lc'?\n  get_pdf_gen_token.run(\n            ()=>lc.run(\n                          ()=> insert_pdf_url.run(\n                                      ()=> get_invoice.run(()=>showModal('Modal1')),\n                                      ()=>showAlert('URL insertion failed,')\n                                      ),\n                          () => showAlert('Something went wrong,')\n                          )\n            )             \n  :\nbilling_format.data[0].Billing_format== 'date-loading-unloading'?\n  get_pdf_gen_token.run(\n            ()=>date_loading_unloading.run(\n                          ()=> insert_pdf_url.run(\n                                      ()=> get_invoice.run(()=>showModal('Modal1')),\n                                      ()=>showAlert('URL insertion failed,')\n                                      ),\n                          () => showAlert('Something went wrong,')\n                          )\n            )\n  :\n\tbilling_format.data[0].Billing_format== 'trip'?\n  get_pdf_gen_token.run(\n            ()=>trip.run(\n                          ()=> insert_pdf_url.run(\n                                      ()=> get_invoice.run(()=>showModal('Modal1')),\n                                      ()=>showAlert('URL insertion failed,')\n                                      ),\n                          () => showAlert('Something went wrong,')\n                          )\n            ):\n\tbilling_format.data[0].Billing_format== 'date-lot-product'? get_pdf_gen_token.run(()=>get_parcel_details.run(            ()=>date_lot_product.run(\n                          ()=> insert_pdf_url.run(\n                                      ()=> get_invoice.run(()=>showModal('Modal1')),\n                                      ()=>showAlert('URL insertion failed,')\n                                      ),\n                          () => showAlert('Something went wrong,')\n                          )\n            )\n  )\n : get_pdf_gen_token.run(\n            ()=>regular.run(\n                          ()=> insert_pdf_url.run(\n                                      ()=> get_invoice.run(()=>showModal('Modal1')),\n                                      ()=>showAlert('URL insertion failed,')\n                                      ),\n                          () => showAlert('Something went wrong,')\n                          )\n            )\n) \n}}",
+                      "onClick": "{{\nget_invoice.data[0].generated_pdf !== null? showModal('generated_pdf'):\n(\nbilling_format.data[0].Billing_format== 'lc'?\n  get_pdf_gen_token.run(\n            ()=>lc.run(\n                          ()=> insert_pdf_url.run(\n                                      ()=> get_invoice.run(()=>showModal('Modal1')),\n                                      ()=>showAlert('URL insertion failed,')\n                                      ),\n                          () => showAlert('Something went wrong,')\n                          )\n            )             \n  :\nbilling_format.data[0].Billing_format== 'date-loading-unloading'?\n  get_pdf_gen_token.run(\n            ()=>date_loading_unloading.run(\n                          ()=> insert_pdf_url.run(\n                                      ()=> get_invoice.run(()=>showModal('Modal1')),\n                                      ()=>showAlert('URL insertion failed,')\n                                      ),\n                          () => showAlert('Something went wrong,')\n                          )\n            )\n  :\n\tbilling_format.data[0].Billing_format== 'trip'?\n  get_pdf_gen_token.run(\n            ()=>trip.run(\n                          ()=> insert_pdf_url.run(\n                                      ()=> get_invoice.run(()=>showModal('Modal1')),\n                                      ()=>showAlert('URL insertion failed,')\n                                      ),\n                          () => showAlert('Something went wrong,')\n                          )\n            ):\n  \n  get_pdf_gen_token.run(\n            ()=>regular.run(\n                          ()=> insert_pdf_url.run(\n                                      ()=> get_invoice.run(()=>showModal('Modal1')),\n                                      ()=>showAlert('URL insertion failed,')\n                                      ),\n                          () => showAlert('Something went wrong,')\n                          )\n            )\n) \n}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "dynamicPropertyPathList": [
                         {
@@ -3608,7 +3608,7 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "docUrl": "{{\nbilling_format.data[0].Billing_format == 'lc'?\nlc.data.download_url:\nbilling_format.data[0].Billing_format == 'date-loading-unloading'?\ndate_loading_unloading.data.download_url:\nbilling_format.data[0].Billing_format == 'trip'?\ntrip.data.download_url:billing_format.data[0].Billing_format == 'date-lot-product'?\ndate_lot_product.data.download_url:\nregular.data.download_url}}"
+                      "docUrl": "{{\nbilling_format.data[0].Billing_format == 'lc'?\nlc.data.download_url:\nbilling_format.data[0].Billing_format == 'date-loading-unloading'?\ndate_loading_unloading.data.download_url:\nbilling_format.data[0].Billing_format == 'trip'?\ntrip.data.download_url:\nregular.data.download_url}}"
                     }
                   ],
                   "isDisabled": false,
@@ -3649,18 +3649,18 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "genInvoicePageRedX_billing_format",
+              "id": "date_lot_product_redx_invoice_billing_format",
               "name": "billing_format",
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [
-                "appsmith.URL.queryParams.shop_id",
-                "appsmith.store.session"
+                "appsmith.store.session",
+                "appsmith.URL.queryParams.shop_id"
               ],
               "timeoutInMillisecond": 100000000
             },
             {
-              "id": "genInvoicePageRedX_get_topsheet_data_v2",
+              "id": "date_lot_product_redx_invoice_get_topsheet_data_v2",
               "name": "get_topsheet_data_v2",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
@@ -3672,7 +3672,7 @@
           ],
           [
             {
-              "id": "genInvoicePageRedX_get_invoice",
+              "id": "date_lot_product_redx_invoice_get_invoice",
               "name": "get_invoice",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
@@ -3684,27 +3684,13 @@
           ],
           [
             {
-              "id": "genInvoicePageRedX_get_parcel_details",
-              "name": "get_parcel_details",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "appsmith.store.session",
-                "parseInt(Table3.tableData[0].shop_id)",
-                "Table3.tableData.map(a=>a.fleet_tracking_id).join(\",\")"
-              ],
-              "timeoutInMillisecond": 100000000
-            }
-          ],
-          [
-            {
-              "id": "genInvoicePageRedX_get_shop_data",
+              "id": "date_lot_product_redx_invoice_get_shop_data",
               "name": "get_shop_data",
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [
-                "appsmith.URL.queryParams.shop_id",
-                "appsmith.store.access_token"
+                "appsmith.store.access_token",
+                "appsmith.URL.queryParams.shop_id"
               ],
               "timeoutInMillisecond": 10000
             }
@@ -3712,7 +3698,7 @@
         ],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
-        "id": "genInvoicePageRedX",
+        "id": "date_lot_product_redx_invoice",
         "deleted": false,
         "policies": [],
         "userPermissions": []
@@ -3723,5 +3709,5 @@
     "isHidden": true
   },
   "deleted": false,
-  "gitSyncId": "6231701cf1c0af1ceded5043_6236ca444d9aea1b062ad520"
+  "gitSyncId": "6231701cf1c0af1ceded5043_638db06f3b14013e8f50aca4"
 }

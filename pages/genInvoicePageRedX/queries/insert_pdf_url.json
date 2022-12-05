@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "UPDATE finance_trip_invoices\n  SET generated_pdf = {{\nbilling_format.data[0].Billing_format == 'lc'?\nlc.data.download_url:\nbilling_format.data[0].Billing_format == 'date-loading-unloading'?\ndate_loading_unloading.data.download_url:\nregular.data.download_url\n}}\n  WHERE invoice_number = {{appsmith.URL.queryParams.InvoiceNumber}}\n\tand status!= 'Invalid'",
+      "body": "UPDATE finance_trip_invoices\n  SET generated_pdf = {{\nbilling_format.data[0].Billing_format == 'lc'?\nlc.data.download_url:\nbilling_format.data[0].Billing_format == 'date-loading-unloading'?\ndate_loading_unloading.data.download_url:\nbilling_format.data[0].Billing_format == 'date-lot-product'?\ndate_lot_product.data.download_url:\nregular.data.download_url\n}}\n  WHERE invoice_number = {{appsmith.URL.queryParams.InvoiceNumber}}\n\tand status!= 'Invalid'",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -37,7 +37,7 @@
     "messages": [],
     "jsonPathKeys": [
       "appsmith.URL.queryParams.InvoiceNumber",
-      "billing_format.data[0].Billing_format == 'lc'?\nlc.data.download_url:\nbilling_format.data[0].Billing_format == 'date-loading-unloading'?\ndate_loading_unloading.data.download_url:\nregular.data.download_url"
+      "billing_format.data[0].Billing_format == 'lc'?\nlc.data.download_url:\nbilling_format.data[0].Billing_format == 'date-loading-unloading'?\ndate_loading_unloading.data.download_url:\nbilling_format.data[0].Billing_format == 'date-lot-product'?\ndate_lot_product.data.download_url:\nregular.data.download_url"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

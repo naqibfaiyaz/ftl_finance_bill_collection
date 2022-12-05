@@ -373,12 +373,12 @@
                   "widgetName": "Canvas1",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 1190,
+                  "bottomRow": 1270,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
                   "hideCard": true,
-                  "minHeight": 400,
+                  "minHeight": 1270,
                   "parentColumnSpace": 1,
                   "leftColumn": 0,
                   "dynamicBindingPathList": [],
@@ -481,9 +481,11 @@
                       "parentId": "c5u4zyt6mc",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "originalTopRow": 20,
                       "borderRadius": "0px",
                       "defaultCheckedState": false,
                       "maxDynamicHeight": 9000,
+                      "originalBottomRow": 24,
                       "minDynamicHeight": 4
                     },
                     {
@@ -855,6 +857,7 @@
                         }
                       },
                       "borderRadius": "0px",
+                      "originalBottomRow": 117,
                       "primaryColumnId": "id",
                       "columnSizeMap": {
                         "task": 245,
@@ -1199,7 +1202,7 @@
                           "menuColor": "#03B365",
                           "labelColor": "#FFFFFF",
                           "buttonLabel": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( 'Generate'))}}",
-                          "onClick": "{{currentRow.status!='Invalid'?currentRow.banner.toLowerCase()=='mokam'?navigateTo('genInvoicePageMokam',{'shop_id':currentRow.shop_id,'banner': currentRow.banner.toLowerCase(), 'InvoiceNumber':currentRow.invoice_number},'NEW_WINDOW',currentRow.client_name,'NEW_WINDOW'):navigateTo('genInvoicePageRedX',{'shop_id':currentRow.shop_id,'banner': currentRow.banner, 'InvoiceNumber':currentRow.invoice_number},'NEW_WINDOW',currentRow.client_name,'NEW_WINDOW'):showAlert(\"This invoice is marked as invalid, cannot generate for printing. Revert to 'Ready-to-send'.\")}}",
+                          "onClick": "{{\n\ncurrentRow.status!='Invalid'?\ncurrentRow.banner.toLowerCase()=='mokam'?\n\tnavigateTo('genInvoicePageMokam',{'shop_id':currentRow.shop_id,'banner': currentRow.banner.toLowerCase(), 'InvoiceNumber':currentRow.invoice_number},'NEW_WINDOW',currentRow.client_name,'NEW_WINDOW')\n\t:navigateTo('genInvoicePageRedX',{'shop_id':currentRow.shop_id,'banner': currentRow.banner, 'InvoiceNumber':currentRow.invoice_number},'NEW_WINDOW',currentRow.client_name,'NEW_WINDOW')\n:showAlert(\"This invoice is marked as invalid, cannot generate for printing. Revert to 'Ready-to-send'.\")\n\n}}",
                           "borderRadius": "0px",
                           "boxShadow": "none"
                         },
@@ -1764,6 +1767,7 @@
                       "renderMode": "CANVAS",
                       "horizontalAlignment": "LEFT",
                       "isVisibleSearch": "true",
+                      "originalTopRow": 24,
                       "isVisiblePagination": true,
                       "verticalAlignment": "CENTER"
                     },
@@ -1804,9 +1808,11 @@
                       "parentId": "c5u4zyt6mc",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "originalTopRow": 20,
                       "borderRadius": "0px",
                       "defaultCheckedState": false,
                       "maxDynamicHeight": 9000,
+                      "originalBottomRow": 24,
                       "minDynamicHeight": 4
                     },
                     {
@@ -2098,7 +2104,9 @@
                       "parentId": "c5u4zyt6mc",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
+                      "originalTopRow": 16,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "originalBottomRow": 20
                     }
                   ],
                   "key": "0mv3bbec1o",
@@ -7406,18 +7414,6 @@
           ],
           [
             {
-              "id": "allInvoices_billing_formats",
-              "name": "billing_formats",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "appsmith.store.session"
-              ],
-              "timeoutInMillisecond": 100000000
-            }
-          ],
-          [
-            {
               "id": "allInvoices_get_received_details",
               "name": "get_received_details",
               "confirmBeforeExecute": false,
@@ -7425,16 +7421,6 @@
               "jsonPathKeys": [
                 "readyInvoiceTbl.selectedRow.id",
                 "readyInvoiceTbl.selectedRow.invoice_number"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "allInvoices_get_shops",
-              "name": "get_shops",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "appsmith.store.access_token"
               ],
               "timeoutInMillisecond": 10000
             },
@@ -7473,17 +7459,27 @@
           ],
           [
             {
-              "id": "allInvoices_get_hard_copy",
-              "name": "get_hard_copy",
+              "id": "allInvoices_billing_formats",
+              "name": "billing_formats",
               "confirmBeforeExecute": false,
-              "pluginType": "DB",
+              "pluginType": "API",
               "jsonPathKeys": [
-                "readyInvoiceTbl.triggeredRow.id"
+                "appsmith.store.session"
               ],
-              "timeoutInMillisecond": 10000
+              "timeoutInMillisecond": 100000000
             }
           ],
           [
+            {
+              "id": "allInvoices_get_shops",
+              "name": "get_shops",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "appsmith.store.access_token"
+              ],
+              "timeoutInMillisecond": 10000
+            },
             {
               "id": "allInvoices_payment_method",
               "name": "payment_method",

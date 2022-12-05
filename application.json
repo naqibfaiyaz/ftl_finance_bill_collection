@@ -51,6 +51,10 @@
     {
       "id": "genInvoicePageMokam",
       "isDefault": false
+    },
+    {
+      "id": "date_lot_product_redx_invoice",
+      "isDefault": false
     }
   ],
   "viewMode": false,
