@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT invoice_number, payment_method FROM trip_level_invoice where status != 'Invalid'\nand invoice_number in ('{{get_all_invoices.data.map(a=>a.invoice_number).join(\"','\")}}')\ngroup by 1,2",
+      "body": "SELECT invoice_number, payment_method FROM trip_level_invoice where status != 'Invalid'\nand invoice_number in ('{{\n\t\t\t\t\t\t\t\t\t\t\t RadioGroup1.selectedOptionValue == 'invoice_search'?\nget_all_invoices.data.map(a=>a.invoice_number).join(\"','\"): shop_wise_invoices.data.map(a=>a.invoice_number).join(\"','\")}}')\ngroup by 1,2",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -36,7 +36,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "get_all_invoices.data.map(a=>a.invoice_number).join(\"','\")"
+      "RadioGroup1.selectedOptionValue == 'invoice_search'?\nget_all_invoices.data.map(a=>a.invoice_number).join(\"','\"): shop_wise_invoices.data.map(a=>a.invoice_number).join(\"','\")"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

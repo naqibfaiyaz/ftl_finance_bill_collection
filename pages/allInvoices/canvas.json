@@ -447,7 +447,11 @@
                     {
                       "boxShadow": "none",
                       "widgetName": "isInvalidCheckBoxCopy",
-                      "dynamicPropertyPathList": [],
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "onCheckChange"
+                        }
+                      ],
                       "displayName": "Checkbox",
                       "iconSVG": "/static/media/icon.aaab032b.svg",
                       "topRow": 20,
@@ -466,7 +470,7 @@
                       "leftColumn": 10,
                       "dynamicBindingPathList": [],
                       "labelPosition": "Right",
-                      "onCheckChange": "{{get_all_invoices.run()}}",
+                      "onCheckChange": "{{RadioGroup1.selectedOptionValue == 'invoice_search'?\nget_all_invoices.run():shop_wise_invoices.run()}}",
                       "isDisabled": false,
                       "key": "f7odl3q26v",
                       "labelTextSize": "0.875rem",
@@ -1774,7 +1778,11 @@
                     {
                       "boxShadow": "none",
                       "widgetName": "isInvalidCheckBox",
-                      "dynamicPropertyPathList": [],
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "onCheckChange"
+                        }
+                      ],
                       "displayName": "Checkbox",
                       "iconSVG": "/static/media/icon.aaab032b.svg",
                       "topRow": 20,
@@ -1793,7 +1801,7 @@
                       "leftColumn": 0,
                       "dynamicBindingPathList": [],
                       "labelPosition": "Right",
-                      "onCheckChange": "{{get_all_invoices.run()}}",
+                      "onCheckChange": "{{RadioGroup1.selectedOptionValue == 'invoice_search'?\nget_all_invoices.run():shop_wise_invoices.run()}}",
                       "isDisabled": false,
                       "key": "f7odl3q26v",
                       "labelTextSize": "0.875rem",
@@ -7462,7 +7470,7 @@
               "pluginType": "DB",
               "jsonPathKeys": [
                 "parseInt(search_shop_id.selectedOptionValue)",
-                "isInvalidCheckBox.isChecked==true && isInvalidCheckBoxCopy.isChecked==true?\n\t\"and status in ('Invalid') and ((total_price_after_vat_ait - received_amount)<= 0 or status ='receiving-complete')\":\nisInvalidCheckBox.isChecked==true && isInvalidCheckBoxCopy.isChecked==false?\n\"and status in ('Invalid') and (total_price_after_vat_ait != received_amount)\" : isInvalidCheckBox.isChecked==false && isInvalidCheckBoxCopy.isChecked==false?\n\t\"and status not in ('Invalid')\":\"status not in ('Invalid') and ((total_price_after_vat_ait - received_amount)<= 0 or status ='receiving-complete')\""
+                "isInvalidCheckBox.isChecked==true && isInvalidCheckBoxCopy.isChecked==true?\n\t\"and status in ('Invalid') and ((total_price_after_vat_ait - received_amount)<= 0 or status ='receiving-complete')\":\nisInvalidCheckBox.isChecked==true && isInvalidCheckBoxCopy.isChecked==false?\n\"and status in ('Invalid')\" : isInvalidCheckBox.isChecked==false && isInvalidCheckBoxCopy.isChecked==false?\n\t\"and status not in ('Invalid')\":\"and status not in ('Invalid') and ((total_price_after_vat_ait - received_amount)<= 0 or status ='receiving-complete')\""
               ],
               "timeoutInMillisecond": 10000000
             },
@@ -7484,7 +7492,7 @@
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
-                "get_all_invoices.data.map(a=>a.invoice_number).join(\"','\")"
+                "RadioGroup1.selectedOptionValue == 'invoice_search'?\nget_all_invoices.data.map(a=>a.invoice_number).join(\"','\"): shop_wise_invoices.data.map(a=>a.invoice_number).join(\"','\")"
               ],
               "timeoutInMillisecond": 10000
             }
