@@ -373,7 +373,7 @@
                   "widgetName": "Canvas1",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 1270,
+                  "bottomRow": 1260,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
@@ -617,7 +617,7 @@
                       "onSort": "",
                       "isVisibleDownload": true,
                       "iconSVG": "/static/media/icon.db8a9cbd.svg",
-                      "topRow": 24,
+                      "topRow": 25,
                       "isSortable": true,
                       "type": "TABLE_WIDGET",
                       "animateLoading": true,
@@ -952,7 +952,7 @@
                         }
                       ],
                       "displayName": "Table",
-                      "bottomRow": 117,
+                      "bottomRow": 118,
                       "parentRowSpace": 10,
                       "defaultSelectedRow": "0",
                       "hideCard": false,
@@ -2840,9 +2840,13 @@
                     {
                       "boxShadow": "none",
                       "widgetName": "IconButton1",
-                      "onClick": "{{closeModal('receivedFromInvoiceModal')}}",
+                      "onClick": "{{\ncloseModal('receivedFromInvoiceModal') && \nresetWidget(\"proofReceivedFilePicker\") && \nresetWidget(\"vat_proof\") && \nresetWidget(\"ait_proof\")\n}}",
                       "buttonColor": "#2E3D49",
-                      "dynamicPropertyPathList": [],
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "displayName": "Icon Button",
                       "iconSVG": "/static/media/icon.1a0c634a.svg",
                       "topRow": 0,
@@ -3263,9 +3267,6 @@
                                 },
                                 {
                                   "key": "defaultText"
-                                },
-                                {
-                                  "key": "validation"
                                 }
                               ],
                               "labelPosition": "Left",
@@ -3273,7 +3274,7 @@
                               "inputType": "TEXT",
                               "isDisabled": false,
                               "key": "tv860i56gz",
-                              "validation": "{{\nparseInt(collected_ait.text) <= (parseInt(readyInvoiceTbl.selectedRow.ait)- parseInt(readyInvoiceTbl.selectedRow.received_ait_amount)).toFixed(2)}}",
+                              "validation": "",
                               "labelTextSize": "0.875rem",
                               "isRequired": true,
                               "isDeprecated": false,
@@ -3828,9 +3829,6 @@
                                 },
                                 {
                                   "key": "defaultText"
-                                },
-                                {
-                                  "key": "validation"
                                 }
                               ],
                               "labelPosition": "Left",
@@ -3838,7 +3836,7 @@
                               "inputType": "TEXT",
                               "isDisabled": false,
                               "key": "tv860i56gz",
-                              "validation": "{{\nparseInt(collected_vat.text) <= (parseInt(readyInvoiceTbl.selectedRow.vat)- parseInt(readyInvoiceTbl.selectedRow.received_vat_amount)).toFixed(2)}}",
+                              "validation": "",
                               "labelTextSize": "0.875rem",
                               "isRequired": true,
                               "isDeprecated": false,
@@ -7414,6 +7412,18 @@
           ],
           [
             {
+              "id": "allInvoices_billing_formats",
+              "name": "billing_formats",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "appsmith.store.session"
+              ],
+              "timeoutInMillisecond": 100000000
+            }
+          ],
+          [
+            {
               "id": "allInvoices_get_received_details",
               "name": "get_received_details",
               "confirmBeforeExecute": false,
@@ -7421,6 +7431,16 @@
               "jsonPathKeys": [
                 "readyInvoiceTbl.selectedRow.id",
                 "readyInvoiceTbl.selectedRow.invoice_number"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "allInvoices_get_shops",
+              "name": "get_shops",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "appsmith.store.access_token"
               ],
               "timeoutInMillisecond": 10000
             },
@@ -7458,28 +7478,6 @@
             }
           ],
           [
-            {
-              "id": "allInvoices_billing_formats",
-              "name": "billing_formats",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "appsmith.store.session"
-              ],
-              "timeoutInMillisecond": 100000000
-            }
-          ],
-          [
-            {
-              "id": "allInvoices_get_shops",
-              "name": "get_shops",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "appsmith.store.access_token"
-              ],
-              "timeoutInMillisecond": 10000
-            },
             {
               "id": "allInvoices_payment_method",
               "name": "payment_method",
