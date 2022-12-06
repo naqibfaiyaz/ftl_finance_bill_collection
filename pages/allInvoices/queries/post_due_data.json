@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "add_remarks",
+    "name": "post_due_data",
     "datasource": {
       "name": "Postgres_latest",
       "pluginId": "postgres-plugin",
@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "INSERT INTO invoice_collectable_remarks (\n            remarks, remarks_added_by,invoice_number,finance_trip_invoices_id\n        )\n    select {{Input1.text}}, {{appsmith.store.user_data}},{{readyInvoiceTbl.selectedRow.invoice_number}},\n\t\t{{readyInvoiceTbl.selectedRow.id}}\n\n\t\n",
+      "body": "WITH\nins_trip_revenue_collection_log AS (UPDATE finance_trip_invoices\n  SET due_amount = {{parseFloat(due_amount.text) + parseFloat(readyInvoiceTbl.selectedRow.due_amount)}}\t\t\t\t\t\t\t\t\t\t\n  WHERE id = {{ readyInvoiceTbl.selectedRow.id }}\n\tRETURNING id, invoice_number)\n\tINSERT INTO invoice_collectable_received (\n            due_amount, user_data, finance_trip_invoices_id,invoice_number, due_reason, due_additional_remarks\n        )\n    select {{parseFloat(due_amount.text)}}, {{appsmith.store.user_data}}, (select id from ins_trip_revenue_collection_log),{{readyInvoiceTbl.selectedRow.invoice_number}}, {{due_reason.selectedOptionLabel}}, {{due_remarks.text}}",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -36,8 +36,11 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "Input1.text",
       "appsmith.store.user_data",
+      "due_reason.selectedOptionLabel",
+      "due_remarks.text",
+      "parseFloat(due_amount.text)",
+      "parseFloat(due_amount.text) + parseFloat(readyInvoiceTbl.selectedRow.due_amount)",
       "readyInvoiceTbl.selectedRow.id",
       "readyInvoiceTbl.selectedRow.invoice_number"
     ],
@@ -46,7 +49,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "allInvoices_add_remarks",
+  "id": "allInvoices_post_due_data",
   "deleted": false,
-  "gitSyncId": "6231701cf1c0af1ceded5043_6327089f8d5c9931d1f70876"
+  "gitSyncId": "6231701cf1c0af1ceded5043_638f8a3f0429d6318bbe4af7"
 }
