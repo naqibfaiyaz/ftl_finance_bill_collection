@@ -1280,7 +1280,7 @@
                           "enableSort": true,
                           "isVisible": true,
                           "isDisabled": false,
-                          "isCellVisible": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( appsmith.store.is_kam?true:appsmith.store.is_baki_user?true:false))}}",
+                          "isCellVisible": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( \ntrue\n//appsmith.store.is_kam?true:appsmith.store.is_baki_user?true:false\n))}}",
                           "isDerived": true,
                           "label": "Add remarks",
                           "computedValue": "",
@@ -1648,7 +1648,7 @@
                           "enableSort": true,
                           "isVisible": true,
                           "isDisabled": false,
-                          "isCellVisible": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( appsmith.store.is_kam?true:appsmith.store.is_baki_user?true:false))}}",
+                          "isCellVisible": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( \ntrue\n//appsmith.store.is_kam?true:appsmith.store.is_baki_user?true:false\n))}}",
                           "isDerived": true,
                           "label": "Add remarks",
                           "computedValue": "",
@@ -3520,7 +3520,7 @@
                               "borderRadius": "0px",
                               "maxDynamicHeight": 9000,
                               "iconAlign": "left",
-                              "defaultText": "{{\nreadyInvoiceTbl.selectedRow.net_to_redx_invoice_amount_wo_vat_ait_-(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait==null?0:parseFloat(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait))>0?(readyInvoiceTbl.selectedRow.net_to_redx_invoice_amount_wo_vat_ait_-(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait==null?0:parseFloat(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait))):0\n}}",
+                              "defaultText": "{{\nreadyInvoiceTbl.selectedRow.net_to_redx_invoice_amount_wo_vat_ait_-(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait==null?0:parseFloat(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait))>0?(readyInvoiceTbl.selectedRow.net_to_redx_invoice_amount_wo_vat_ait_-(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait==null?0:parseFloat(readyInvoiceTbl.selectedRow.received_amount_wo_vat_ait))).toFixed(2):0\n}}",
                               "minDynamicHeight": 4
                             },
                             {
