@@ -871,6 +871,12 @@
                         },
                         {
                           "key": "primaryColumns.due_amount.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn12.computedValue"
+                        },
+                        {
+                          "key": "derivedColumns.customColumn12.computedValue"
                         }
                       ],
                       "leftColumn": 0,
@@ -962,7 +968,8 @@
                         "customColumn8",
                         "customColumn9",
                         "customColumn10",
-                        "customColumn11"
+                        "customColumn11",
+                        "customColumn12"
                       ],
                       "dynamicPropertyPathList": [
                         {
@@ -1656,6 +1663,23 @@
                           "label": "due_amount",
                           "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( currentRow.due_amount))}}",
                           "cellBackground": ""
+                        },
+                        "customColumn12": {
+                          "index": 31,
+                          "width": 150,
+                          "id": "customColumn12",
+                          "columnType": "number",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": true,
+                          "label": "is_settled(customColumn12)",
+                          "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( parseFloat(currentRow.invoice_amount) \n== parseFloat(currentRow.received_amount_w_vat_ait) + parseFloat(currentRow.due_amount)?1:0\n))}}",
+                          "buttonStyle": "rgb(3, 179, 101)",
+                          "labelColor": "#FFFFFF",
+                          "iconName": ""
                         }
                       },
                       "onRowSelected": "",
@@ -1872,6 +1896,23 @@
                           "buttonColor": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( appsmith.theme.colors.primaryColor))}}",
                           "buttonLabel": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( 'Action'))}}",
                           "onClick": "{{showModal('Modal3')}}"
+                        },
+                        "customColumn12": {
+                          "index": 31,
+                          "width": 150,
+                          "id": "customColumn12",
+                          "columnType": "number",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": true,
+                          "label": "is_settled(customColumn12)",
+                          "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( parseFloat(currentRow.invoice_amount) \n== parseFloat(currentRow.received_amount_w_vat_ait) + parseFloat(currentRow.due_amount)?1:0\n))}}",
+                          "buttonStyle": "rgb(3, 179, 101)",
+                          "labelColor": "#FFFFFF",
+                          "iconName": ""
                         }
                       },
                       "labelTextSize": "0.875rem",
@@ -7508,7 +7549,7 @@
                               "maxChars": "",
                               "isDisabled": false,
                               "key": "r21rim2ct1",
-                              "validation": "{{\nparseFloat(due_amount.text) <=readyInvoiceTbl.selectedRow.total_receivable_with_vat_ait}}",
+                              "validation": "{{\nparseFloat(due_amount.text) <=(parseFloat(readyInvoiceTbl.selectedRow.total_receivable_with_vat_ait)-parseFloat(readyInvoiceTbl.selectedRow.due_amount)).toFixed(2)}}",
                               "labelTextSize": "0.875rem",
                               "isRequired": true,
                               "isDeprecated": false,
@@ -7658,7 +7699,7 @@
                                 }
                               ],
                               "labelPosition": "Top",
-                              "options": "[\n  {\n    \"label\": \"Bad dept\",\n    \"value\": \"bad_dept\"\n  },\n  {\n    \"label\": \"Amount mismatch\",\n    \"value\": \"amount_mismatch\"\n  },\n  {\n    \"label\": \"Other\",\n    \"value\": \"Other\"\n  }\n]",
+                              "options": "[\n  {\n    \"label\": \"Bad dept\",\n    \"value\": \"bad_dept\"\n  },\n  {\n    \"label\": \"Amount mismatch\",\n    \"value\": \"amount_mismatch\"\n  },\n  {\n    \"label\": \"VAT mismatch\",\n    \"value\": \"vat_mismatch\"\n  },\n  {\n    \"label\": \"AIT mismatch\",\n    \"value\": \"ait_mismatch\"\n  },\n  {\n    \"label\": \"Other\",\n    \"value\": \"Other\"\n  }\n]",
                               "labelStyle": "BOLD",
                               "placeholderText": "Select reason of due",
                               "isDisabled": false,
