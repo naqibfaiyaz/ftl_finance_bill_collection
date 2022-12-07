@@ -868,6 +868,9 @@
                         },
                         {
                           "key": "derivedColumns.customColumn11.buttonLabel"
+                        },
+                        {
+                          "key": "primaryColumns.due_amount.computedValue"
                         }
                       ],
                       "leftColumn": 0,
@@ -919,11 +922,12 @@
                         "collectable": 149,
                         "received_amount_wo_vat_ait": 211,
                         "hard_copy_of_bill": 157,
-                        "total_receivable_with_vat_ait": 152,
+                        "total_receivable_with_vat_ait": 227,
                         "created_at": 187,
                         "customColumn10": 170,
                         "customColumn11": 174,
-                        "net_to_redx_invoice_amount_wo_vat_ait_": 107
+                        "net_to_redx_invoice_amount_wo_vat_ait_": 107,
+                        "received_amount_w_vat_ait": 208
                       },
                       "widgetName": "readyInvoiceTbl",
                       "defaultPageSize": 0,
@@ -948,6 +952,7 @@
                         "received_vat_amount",
                         "ait",
                         "received_ait_amount",
+                        "due_amount",
                         "customColumn1",
                         "customColumn2",
                         "customColumn3",
@@ -1632,6 +1637,25 @@
                           "buttonColor": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( appsmith.theme.colors.primaryColor))}}",
                           "buttonLabel": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( 'Action'))}}",
                           "onClick": "{{showModal('reason_of_unreceived_amount')}}"
+                        },
+                        "due_amount": {
+                          "index": 20,
+                          "width": 150,
+                          "id": "due_amount",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "due_amount",
+                          "computedValue": "{{readyInvoiceTbl.sanitizedTableData.map((currentRow) => ( currentRow.due_amount))}}",
+                          "cellBackground": ""
                         }
                       },
                       "onRowSelected": "",
@@ -7475,16 +7499,13 @@
                                   "key": "defaultText"
                                 },
                                 {
-                                  "key": "maxChars"
-                                },
-                                {
                                   "key": "validation"
                                 }
                               ],
                               "labelPosition": "Top",
                               "labelStyle": "BOLD",
                               "inputType": "TEXT",
-                              "maxChars": "{{readyInvoiceTbl.selectedRow.total_receivable_with_vat_ait}}",
+                              "maxChars": "",
                               "isDisabled": false,
                               "key": "r21rim2ct1",
                               "validation": "{{\nparseFloat(due_amount.text) <=readyInvoiceTbl.selectedRow.total_receivable_with_vat_ait}}",
@@ -7495,6 +7516,7 @@
                               "dynamicHeight": "FIXED",
                               "widgetId": "dato9934ab",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "errorMessage": "Due amount can not be greater than total receivable",
                               "isVisible": true,
                               "label": "Input unreceived amount",
                               "version": 2,
@@ -7505,15 +7527,20 @@
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                               "maxDynamicHeight": 9000,
                               "iconAlign": "left",
-                              "defaultText": "{{readyInvoiceTbl.selectedRow.total_receivable_with_vat_ait}}",
+                              "defaultText": "{{(parseFloat(readyInvoiceTbl.selectedRow.total_receivable_with_vat_ait)-parseFloat(readyInvoiceTbl.selectedRow.due_amount)).toFixed(2)}}",
                               "minDynamicHeight": 4
                             },
                             {
                               "resetFormOnClick": true,
                               "boxShadow": "none",
                               "widgetName": "Button7",
-                              "onClick": "{{post_due_data.run(() => closeModal('reason_of_unreceived_amount'), () => {})}}",
+                              "onClick": "{{post_due_data.run(() =>\nRadioGroup1.selectedOptionValue == 'invoice_search'?\nget_all_invoices.run(()=>closeModal('reason_of_unreceived_amount')):shop_wise_invoices.run(()=>closeModal('reason_of_unreceived_amount'))\t)}}",
                               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "dynamicPropertyPathList": [
+                                {
+                                  "key": "onClick"
+                                }
+                              ],
                               "displayName": "Button",
                               "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
                               "searchTags": [
