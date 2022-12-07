@@ -19,7 +19,7 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 69,
+          "version": 70,
           "minHeight": 860,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
@@ -3386,16 +3386,6 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "collection_declaration_get_collection_declarations_v2",
-              "name": "get_collection_declarations_v2",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
               "id": "collection_declaration_get_shops_v4",
               "name": "get_shops_v4",
               "confirmBeforeExecute": false,
@@ -3403,6 +3393,16 @@
               "jsonPathKeys": [
                 "appsmith.store.access_token"
               ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "collection_declaration_get_collection_declarations_v2",
+              "name": "get_collection_declarations_v2",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
             }
           ]
