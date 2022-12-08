@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "--UPDATE finance_trip_invoices set received_amount = 0, last_user_data = null, last_collection_medium = null, last_trx_id = null,\n--last_proof_type = null, received_vat_amount = 0, received_ait_amount = 0, vat_proof_type = null, ait_proof_type = null,\n--vat_collection_medium = null, ait_collection_medium = NULL, received_amount_wo_vat_ait = 0\n--where invoice_number in ('TSi-22-Nov-15-CR-486-1') and id = 2885\n\n--select * from invoice_collectable_received order by id desc limit 2\nselect * from finance_trip_invoices where id = 3135\n",
+      "body": "--UPDATE finance_trip_invoices set received_amount = 0, last_user_data = null, last_collection_medium = null, last_trx_id = null,\n--last_proof_type = null, received_vat_amount = 0, received_ait_amount = 0, vat_proof_type = null, ait_proof_type = null,\n--vat_collection_medium = null, ait_collection_medium = NULL, received_amount_wo_vat_ait = 0\n--where invoice_number in ('TSi-22-Nov-15-CR-486-1') and id = 2885\n\n--select * from invoice_collectable_received order by id desc limit 2\nselect * from finance_trip_invoices where id = 3194\n--update finance_trip_invoices set generated_pdf = null where id = 3194\n",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
