@@ -3104,12 +3104,12 @@
                           "widgetName": "Canvas5",
                           "displayName": "Canvas",
                           "topRow": 0,
-                          "bottomRow": 390,
+                          "bottomRow": 280,
                           "parentRowSpace": 1,
                           "type": "CANVAS_WIDGET",
                           "canExtend": false,
                           "hideCard": true,
-                          "minHeight": 400,
+                          "minHeight": 280,
                           "parentColumnSpace": 1,
                           "leftColumn": 0,
                           "dynamicBindingPathList": [],
@@ -3912,7 +3912,7 @@
                               "resetFormOnClick": true,
                               "boxShadow": "none",
                               "widgetName": "Button1",
-                              "onClick": "{{\nparseInt(collected_net_to_redx.text) == parseInt(readyInvoiceTbl.selectedRow.total_receivable_with_vat_ait)?\n\t(post_received_data.run(\n()=>\n\tRadioGroup1.selectedOptionValue == 'invoice_search'?\n\tget_all_invoices.run(\n() => set_status_to_received.run(() =>closeModal('receivedFromInvoiceModal') )):shop_wise_invoices.run(\n() => set_status_to_received.run(() =>closeModal('receivedFromInvoiceModal') ))\n\n))\n\n:(post_received_data.run(\n()=>\n\tRadioGroup1.selectedOptionValue == 'invoice_search'?get_all_invoices.run(\n() =>closeModal('receivedFromInvoiceModal') ):shop_wise_invoices.run(\n() =>closeModal('receivedFromInvoiceModal') )\n))\n\t}}",
+                              "onClick": "{{\npost_received_data.run(\n()=>\nRadioGroup1.selectedOptionValue == 'invoice_search'?\n\tget_all_invoices.run(\n() => closeModal('receivedFromInvoiceModal') ) :shop_wise_invoices.run(\n() => \ncloseModal('receivedFromInvoiceModal') ) )\n\n\t}}",
                               "buttonColor": "#38AFF4",
                               "dynamicPropertyPathList": [
                                 {
@@ -7855,18 +7855,6 @@
           ],
           [
             {
-              "id": "allInvoices_billing_formats",
-              "name": "billing_formats",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "appsmith.store.session"
-              ],
-              "timeoutInMillisecond": 100000000
-            }
-          ],
-          [
-            {
               "id": "allInvoices_get_received_details",
               "name": "get_received_details",
               "confirmBeforeExecute": false,
@@ -7874,16 +7862,6 @@
               "jsonPathKeys": [
                 "readyInvoiceTbl.selectedRow.invoice_number",
                 "readyInvoiceTbl.selectedRow.id"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "allInvoices_get_shops",
-              "name": "get_shops",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "appsmith.store.access_token"
               ],
               "timeoutInMillisecond": 10000
             },
@@ -7921,6 +7899,28 @@
             }
           ],
           [
+            {
+              "id": "allInvoices_billing_formats",
+              "name": "billing_formats",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "appsmith.store.session"
+              ],
+              "timeoutInMillisecond": 100000000
+            }
+          ],
+          [
+            {
+              "id": "allInvoices_get_shops",
+              "name": "get_shops",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "appsmith.store.access_token"
+              ],
+              "timeoutInMillisecond": 10000
+            },
             {
               "id": "allInvoices_payment_method",
               "name": "payment_method",
