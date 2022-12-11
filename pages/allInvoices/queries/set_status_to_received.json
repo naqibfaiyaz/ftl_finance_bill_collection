@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "update finance_trip_invoices as u set\n\tstatus = 'receiving-complete'\n\t--u2.status\nfrom (values\n\t\t\t{{shop_wise_invoices.data.map((a)=>\"(\" + \n\t\t\ta.id+\",\"+\n\t\t\ta.total_receivable_with_vat_ait +\")\").join()}}\n) as u2(id,status)\nwhere u2.id = u.id\nand u2.total_receivable_with_vat_ait as float <=0\n;\n\t\n\t",
+      "body": "update finance_trip_invoices as u set\n\tstatus = 'receiving-complete'\n\t--u2.status\nfrom (values\n\t\t\t{{shop_wise_invoices.data.map((a)=>\"(\" + \n\t\t\ta.id+\",\"+\n\t\t\ta.total_receivable_with_vat_ait +\")\").join()}}\n) as u2(id,status)\nwhere u2.id = u.id\nand u2.total_receivable_with_vat_ait as float <=0;\t",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {

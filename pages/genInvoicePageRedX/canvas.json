@@ -1002,7 +1002,7 @@
                               ],
                               "borderWidth": "1",
                               "truncateButtonColor": "#FFC13D",
-                              "text": "{{get_shop_data.data.body.requests[0].pickupPoint}}",
+                              "text": "{{billing_format.data[0].Bill_Collection_POC_Address}}",
                               "key": "wucil5yk8c",
                               "labelTextSize": "0.875rem",
                               "rightColumn": 64,
@@ -1066,7 +1066,7 @@
                             },
                             {
                               "boxShadow": "none",
-                              "widgetName": "Input1",
+                              "widgetName": "poc_name",
                               "displayName": "Input",
                               "iconSVG": "/static/media/icon.9f505595.svg",
                               "topRow": 26,
@@ -1083,6 +1083,9 @@
                               "dynamicBindingPathList": [
                                 {
                                   "key": "accentColor"
+                                },
+                                {
+                                  "key": "defaultText"
                                 }
                               ],
                               "labelStyle": "",
@@ -1104,7 +1107,7 @@
                               "borderRadius": "0px",
                               "maxDynamicHeight": 9000,
                               "iconAlign": "left",
-                              "defaultText": "",
+                              "defaultText": "{{billing_format.data[0].Bill_Collection_POC_Name}}",
                               "minDynamicHeight": 4
                             }
                           ],
@@ -3654,13 +3657,11 @@
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [
-                "appsmith.URL.queryParams.shop_id",
-                "appsmith.store.session"
+                "appsmith.store.session",
+                "appsmith.URL.queryParams.shop_id"
               ],
               "timeoutInMillisecond": 100000000
-            }
-          ],
-          [
+            },
             {
               "id": "genInvoicePageRedX_get_topsheet_data_v2",
               "name": "get_topsheet_data_v2",
@@ -3686,19 +3687,6 @@
           ],
           [
             {
-              "id": "genInvoicePageRedX_get_shop_data",
-              "name": "get_shop_data",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "appsmith.URL.queryParams.shop_id",
-                "appsmith.store.access_token"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
               "id": "genInvoicePageRedX_get_parcel_details",
               "name": "get_parcel_details",
               "confirmBeforeExecute": false,
@@ -3709,6 +3697,19 @@
                 "Table3.tableData.map(a=>a.fleet_tracking_id).join(\",\")"
               ],
               "timeoutInMillisecond": 100000000
+            }
+          ],
+          [
+            {
+              "id": "genInvoicePageRedX_get_shop_data",
+              "name": "get_shop_data",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "appsmith.URL.queryParams.shop_id",
+                "appsmith.store.access_token"
+              ],
+              "timeoutInMillisecond": 10000
             }
           ]
         ],

@@ -889,7 +889,7 @@
                               ],
                               "borderWidth": "1",
                               "truncateButtonColor": "#FFC13D",
-                              "text": "{{get_shop_data.data.body.requests[0].pickupPoint}}",
+                              "text": "{{billing_format.data[0].Bill_Collection_POC_Address}}",
                               "key": "wucil5yk8c",
                               "labelTextSize": "0.875rem",
                               "rightColumn": 64,
@@ -953,7 +953,7 @@
                             },
                             {
                               "boxShadow": "none",
-                              "widgetName": "Input1",
+                              "widgetName": "poc_name",
                               "displayName": "Input",
                               "iconSVG": "/static/media/icon.9f505595.svg",
                               "topRow": 26,
@@ -964,11 +964,15 @@
                               "hideCard": false,
                               "animateLoading": true,
                               "parentColumnSpace": 6.83203125,
+                              "dynamicTriggerPathList": [],
                               "resetOnSubmit": true,
                               "leftColumn": 0,
                               "dynamicBindingPathList": [
                                 {
                                   "key": "accentColor"
+                                },
+                                {
+                                  "key": "defaultText"
                                 }
                               ],
                               "labelStyle": "",
@@ -982,7 +986,7 @@
                               "widgetId": "hdg4535s4o",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                               "isVisible": true,
-                              "label": "",
+                              "label": "Attn",
                               "version": 2,
                               "parentId": "lo8kxe0zn2",
                               "renderMode": "CANVAS",
@@ -990,7 +994,7 @@
                               "borderRadius": "0px",
                               "maxDynamicHeight": 9000,
                               "iconAlign": "left",
-                              "defaultText": "",
+                              "defaultText": "{{billing_format.data[0].Bill_Collection_POC_Name}}",
                               "minDynamicHeight": 4
                             }
                           ],
@@ -3607,6 +3611,18 @@
           ],
           [
             {
+              "id": "genInvoicePageMokam_get_invoice",
+              "name": "get_invoice",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "appsmith.URL.queryParams.InvoiceNumber"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
               "id": "genInvoicePageMokam_billing_format",
               "name": "billing_format",
               "confirmBeforeExecute": false,
@@ -3618,14 +3634,16 @@
               "timeoutInMillisecond": 100000000
             },
             {
-              "id": "genInvoicePageMokam_get_invoice",
-              "name": "get_invoice",
+              "id": "genInvoicePageMokam_get_parcel_details",
+              "name": "get_parcel_details",
               "confirmBeforeExecute": false,
-              "pluginType": "DB",
+              "pluginType": "API",
               "jsonPathKeys": [
-                "appsmith.URL.queryParams.InvoiceNumber"
+                "appsmith.store.session",
+                "parseInt(Table3.tableData[0].shop_id)",
+                "Table3.tableData.map(a=>a.fleet_tracking_id).join(\",\")"
               ],
-              "timeoutInMillisecond": 10000
+              "timeoutInMillisecond": 100000000
             }
           ],
           [
@@ -3639,20 +3657,6 @@
                 "appsmith.store.access_token"
               ],
               "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "genInvoicePageMokam_get_parcel_details",
-              "name": "get_parcel_details",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "appsmith.store.session",
-                "parseInt(Table3.tableData[0].shop_id)",
-                "Table3.tableData.map(a=>a.fleet_tracking_id).join(\",\")"
-              ],
-              "timeoutInMillisecond": 100000000
             }
           ]
         ],
