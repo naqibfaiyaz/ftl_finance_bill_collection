@@ -18,20 +18,29 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "--with abc as (\n\t--select id,received_amount, received_vat_amount, received_ait_amount, received_amount_wo_vat_ait  from trip_level_invoice where id in (14797,19398)\n--)\n--,\n--def as(\nselect id,received_amount, received_vat_amount, received_ait_amount, received_amount_wo_vat_ait  from finance_trip_invoices where id in (3135,2889,2889,3135)\n--)\n--select id,received_amount, received_vat_amount, received_ait_amount, received_amount_wo_vat_ait  from finance_trip_invoices where id in (1234,3137)\n--update trip_level_invoice set received_amount = 0, received_vat_amount = 0, received_ait_amount = 0, received_amount_wo_vat_ait = 0 where id in (14797,19398)",
+      "body": "--select * from customer_collection_declation where shop_id = {{search_shop_id.selectedOptionValue}}\n--select * from single_customer_collection_declation where id ={{appsmith.URL.queryParams.collection_id}}\n\n--select * from customer_collection_declation_log where single_customer_collection_declation_id ={{appsmith.URL.queryParams.collection_id}}\n\n--select * from finance_trip_invoices where id in --({{trip_table.selectedRows.map(a=>a.finance_trip_invoice_id).join(\",\")}})\n\n--select * from trip_level_invoice where id in ({{trip_table.selectedRows.map(a=>a.id).join(\",\")}})\n\nupdate single_customer_collection_declation\nset unadjusted_amount = received_amount\nwhere id ={{appsmith.URL.queryParams.collection_id}} \n",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
-          "value": true
+          "value": false
         }
       ]
     },
     "executeOnLoad": false,
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "appsmith.URL.queryParams.collection_id",
+      "search_shop_id.selectedOptionValue",
+      "trip_table.selectedRows.map(a=>a.finance_trip_invoice_id).join(\",\")",
+      "trip_table.selectedRows.map(a=>a.id).join(\",\")"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],

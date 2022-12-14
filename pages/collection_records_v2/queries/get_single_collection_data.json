@@ -18,6 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
+      "body": "--select * from single_customer_collection_declation where id={{appsmith.URL.queryParams.collection_id}}\n--select * from customer_collection_declation_log where single_customer_collection_declation_id={{appsmith.URL.queryParams.collection_id}}\n\n--update customer_collection_declation set adjusted_amount =0, unadjusted_amount = received_amount where shop_id = 634816\n\nselect * from customer_collection_declation where shop_id = 634816",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -26,10 +27,17 @@
       ]
     },
     "executeOnLoad": false,
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "appsmith.URL.queryParams.collection_id"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],

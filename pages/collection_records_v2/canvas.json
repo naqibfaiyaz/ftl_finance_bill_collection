@@ -19,7 +19,7 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 70,
+          "version": 71,
           "minHeight": 860,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
@@ -422,36 +422,6 @@
                         },
                         {
                           "key": "boxShadow"
-                        },
-                        {
-                          "key": "childStylesheet.button.buttonColor"
-                        },
-                        {
-                          "key": "childStylesheet.button.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.menuButton.menuColor"
-                        },
-                        {
-                          "key": "childStylesheet.menuButton.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.iconButton.buttonColor"
-                        },
-                        {
-                          "key": "childStylesheet.iconButton.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.editActions.saveButtonColor"
-                        },
-                        {
-                          "key": "childStylesheet.editActions.saveBorderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.editActions.discardButtonColor"
-                        },
-                        {
-                          "key": "childStylesheet.editActions.discardBorderRadius"
                         },
                         {
                           "key": "primaryColumns.Amount.computedValue"
@@ -1952,12 +1922,12 @@
                   "widgetName": "Canvas1",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 1290,
+                  "bottomRow": 1370,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
                   "hideCard": true,
-                  "minHeight": 400,
+                  "minHeight": 1370,
                   "parentColumnSpace": 1,
                   "leftColumn": 0,
                   "dynamicBindingPathList": [
@@ -1988,36 +1958,6 @@
                         },
                         {
                           "key": "boxShadow"
-                        },
-                        {
-                          "key": "childStylesheet.button.buttonColor"
-                        },
-                        {
-                          "key": "childStylesheet.button.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.menuButton.menuColor"
-                        },
-                        {
-                          "key": "childStylesheet.menuButton.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.iconButton.buttonColor"
-                        },
-                        {
-                          "key": "childStylesheet.iconButton.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.editActions.saveButtonColor"
-                        },
-                        {
-                          "key": "childStylesheet.editActions.saveBorderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.editActions.discardButtonColor"
-                        },
-                        {
-                          "key": "childStylesheet.editActions.discardBorderRadius"
                         },
                         {
                           "key": "tableData"
@@ -2397,36 +2337,6 @@
                           "key": "boxShadow"
                         },
                         {
-                          "key": "childStylesheet.button.buttonColor"
-                        },
-                        {
-                          "key": "childStylesheet.button.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.menuButton.menuColor"
-                        },
-                        {
-                          "key": "childStylesheet.menuButton.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.iconButton.buttonColor"
-                        },
-                        {
-                          "key": "childStylesheet.iconButton.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.editActions.saveButtonColor"
-                        },
-                        {
-                          "key": "childStylesheet.editActions.saveBorderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.editActions.discardButtonColor"
-                        },
-                        {
-                          "key": "childStylesheet.editActions.discardBorderRadius"
-                        },
-                        {
                           "key": "primaryColumns.Amount.computedValue"
                         },
                         {
@@ -2673,36 +2583,6 @@
                           "key": "boxShadow"
                         },
                         {
-                          "key": "childStylesheet.button.buttonColor"
-                        },
-                        {
-                          "key": "childStylesheet.button.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.menuButton.menuColor"
-                        },
-                        {
-                          "key": "childStylesheet.menuButton.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.iconButton.buttonColor"
-                        },
-                        {
-                          "key": "childStylesheet.iconButton.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.editActions.saveButtonColor"
-                        },
-                        {
-                          "key": "childStylesheet.editActions.saveBorderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.editActions.discardButtonColor"
-                        },
-                        {
-                          "key": "childStylesheet.editActions.discardBorderRadius"
-                        },
-                        {
                           "key": "tableData"
                         },
                         {
@@ -2851,6 +2731,7 @@
                         }
                       },
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "originalBottomRow": 127,
                       "primaryColumnId": "id",
                       "defaultSelectedRowIndices": [
                         0
@@ -2897,7 +2778,11 @@
                         "goods_type",
                         "vehicle_type"
                       ],
-                      "dynamicPropertyPathList": [],
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "onRowSelected"
+                        }
+                      ],
                       "displayName": "Table",
                       "bottomRow": 127,
                       "columnWidthMap": {
@@ -2912,7 +2797,11 @@
                       "parentRowSpace": 10,
                       "hideCard": false,
                       "parentColumnSpace": 19.5,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onRowSelected"
+                        }
+                      ],
                       "borderWidth": "1",
                       "primaryColumns": {
                         "status": {
@@ -2934,7 +2823,8 @@
                           "label": "status",
                           "computedValue": "{{trip_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"status\"]))}}",
                           "validation": {},
-                          "labelColor": "#FFFFFF"
+                          "labelColor": "#FFFFFF",
+                          "cellBackground": ""
                         },
                         "id": {
                           "allowCellWrapping": false,
@@ -2949,7 +2839,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellEditable": false,
                           "isEditable": false,
@@ -2959,7 +2849,8 @@
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{trip_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id\"]))}}",
-                          "validation": {}
+                          "validation": {},
+                          "cellBackground": ""
                         },
                         "fleet_tracking_id": {
                           "allowCellWrapping": false,
@@ -2984,7 +2875,8 @@
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{trip_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"fleet_tracking_id\"]))}}",
-                          "validation": {}
+                          "validation": {},
+                          "cellBackground": ""
                         },
                         "created_at": {
                           "allowCellWrapping": false,
@@ -2999,7 +2891,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellEditable": false,
                           "isEditable": false,
@@ -3009,7 +2901,8 @@
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{trip_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"created_at\"]))}}",
-                          "validation": {}
+                          "validation": {},
+                          "cellBackground": ""
                         },
                         "updated_at": {
                           "allowCellWrapping": false,
@@ -3024,7 +2917,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellEditable": false,
                           "isEditable": false,
@@ -3034,7 +2927,8 @@
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{trip_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"updated_at\"]))}}",
-                          "validation": {}
+                          "validation": {},
+                          "cellBackground": ""
                         },
                         "invoice_number": {
                           "allowCellWrapping": false,
@@ -3059,7 +2953,8 @@
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{trip_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"invoice_number\"]))}}",
-                          "validation": {}
+                          "validation": {},
+                          "cellBackground": ""
                         },
                         "fleet_id": {
                           "allowCellWrapping": false,
@@ -3074,7 +2969,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellEditable": false,
                           "isEditable": false,
@@ -3084,7 +2979,8 @@
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{trip_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"fleet_id\"]))}}",
-                          "validation": {}
+                          "validation": {},
+                          "cellBackground": ""
                         },
                         "required_date": {
                           "allowCellWrapping": false,
@@ -3109,7 +3005,8 @@
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{trip_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"required_date\"]))}}",
-                          "validation": {}
+                          "validation": {},
+                          "cellBackground": ""
                         },
                         "payment_method": {
                           "allowCellWrapping": false,
@@ -3134,7 +3031,8 @@
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{trip_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"payment_method\"]))}}",
-                          "validation": {}
+                          "validation": {},
+                          "cellBackground": ""
                         },
                         "shop_id": {
                           "allowCellWrapping": false,
@@ -3159,7 +3057,8 @@
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{trip_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"shop_id\"]))}}",
-                          "validation": {}
+                          "validation": {},
+                          "cellBackground": ""
                         },
                         "shop_name": {
                           "allowCellWrapping": false,
@@ -3184,7 +3083,8 @@
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{trip_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"shop_name\"]))}}",
-                          "validation": {}
+                          "validation": {},
+                          "cellBackground": ""
                         },
                         "challan_number": {
                           "allowCellWrapping": false,
@@ -3199,7 +3099,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellEditable": false,
                           "isEditable": false,
@@ -3209,7 +3109,8 @@
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{trip_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"challan_number\"]))}}",
-                          "validation": {}
+                          "validation": {},
+                          "cellBackground": ""
                         },
                         "tracking_id": {
                           "allowCellWrapping": false,
@@ -3224,7 +3125,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellEditable": false,
                           "isEditable": false,
@@ -3234,7 +3135,8 @@
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{trip_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"tracking_id\"]))}}",
-                          "validation": {}
+                          "validation": {},
+                          "cellBackground": ""
                         },
                         "vehicle_number": {
                           "allowCellWrapping": false,
@@ -3249,7 +3151,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellEditable": false,
                           "isEditable": false,
@@ -3259,7 +3161,8 @@
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{trip_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"vehicle_number\"]))}}",
-                          "validation": {}
+                          "validation": {},
+                          "cellBackground": ""
                         },
                         "load_point": {
                           "allowCellWrapping": false,
@@ -3284,7 +3187,8 @@
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{trip_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"load_point\"]))}}",
-                          "validation": {}
+                          "validation": {},
+                          "cellBackground": ""
                         },
                         "unload_point": {
                           "allowCellWrapping": false,
@@ -3299,7 +3203,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellEditable": false,
                           "isEditable": false,
@@ -3309,7 +3213,8 @@
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{trip_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"unload_point\"]))}}",
-                          "validation": {}
+                          "validation": {},
+                          "cellBackground": ""
                         },
                         "truck_price": {
                           "allowCellWrapping": false,
@@ -3324,7 +3229,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellEditable": false,
                           "isEditable": false,
@@ -3334,7 +3239,8 @@
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{trip_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"truck_price\"]))}}",
-                          "validation": {}
+                          "validation": {},
+                          "cellBackground": ""
                         },
                         "additional_fee": {
                           "allowCellWrapping": false,
@@ -3359,7 +3265,8 @@
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{trip_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"additional_fee\"]))}}",
-                          "validation": {}
+                          "validation": {},
+                          "cellBackground": ""
                         },
                         "total_revenue": {
                           "allowCellWrapping": false,
@@ -3384,7 +3291,8 @@
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{trip_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"total_revenue\"]))}}",
-                          "validation": {}
+                          "validation": {},
+                          "cellBackground": ""
                         },
                         "ait": {
                           "allowCellWrapping": false,
@@ -3409,7 +3317,8 @@
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{trip_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"ait\"]))}}",
-                          "validation": {}
+                          "validation": {},
+                          "cellBackground": ""
                         },
                         "vat": {
                           "allowCellWrapping": false,
@@ -3434,7 +3343,8 @@
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{trip_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"vat\"]))}}",
-                          "validation": {}
+                          "validation": {},
+                          "cellBackground": ""
                         },
                         "spread": {
                           "allowCellWrapping": false,
@@ -3449,7 +3359,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellEditable": false,
                           "isEditable": false,
@@ -3459,7 +3369,8 @@
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{trip_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"spread\"]))}}",
-                          "validation": {}
+                          "validation": {},
+                          "cellBackground": ""
                         },
                         "sourcing_cost": {
                           "allowCellWrapping": false,
@@ -3474,7 +3385,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellEditable": false,
                           "isEditable": false,
@@ -3484,7 +3395,8 @@
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{trip_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"sourcing_cost\"]))}}",
-                          "validation": {}
+                          "validation": {},
+                          "cellBackground": ""
                         },
                         "serial_for_challan": {
                           "allowCellWrapping": false,
@@ -3499,7 +3411,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellEditable": false,
                           "isEditable": false,
@@ -3509,7 +3421,8 @@
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{trip_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"serial_for_challan\"]))}}",
-                          "validation": {}
+                          "validation": {},
+                          "cellBackground": ""
                         },
                         "collectable": {
                           "allowCellWrapping": false,
@@ -3530,11 +3443,12 @@
                           "isEditable": false,
                           "isCellVisible": true,
                           "isDerived": false,
-                          "label": "collectable",
+                          "label": "net_to_redx",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{trip_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"collectable\"]))}}",
-                          "validation": {}
+                          "validation": {},
+                          "cellBackground": ""
                         },
                         "total_price_after_vat_ait": {
                           "allowCellWrapping": false,
@@ -3559,7 +3473,8 @@
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{trip_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"total_price_after_vat_ait\"]))}}",
-                          "validation": {}
+                          "validation": {},
+                          "cellBackground": ""
                         },
                         "additional_fee_remarks": {
                           "allowCellWrapping": false,
@@ -3584,7 +3499,8 @@
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{trip_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"additional_fee_remarks\"]))}}",
-                          "validation": {}
+                          "validation": {},
+                          "cellBackground": ""
                         },
                         "truck_price_with_ait": {
                           "allowCellWrapping": false,
@@ -3599,7 +3515,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellEditable": false,
                           "isEditable": false,
@@ -3609,7 +3525,8 @@
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{trip_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"truck_price_with_ait\"]))}}",
-                          "validation": {}
+                          "validation": {},
+                          "cellBackground": ""
                         },
                         "truck_price_ait_evat": {
                           "allowCellWrapping": false,
@@ -3624,7 +3541,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellEditable": false,
                           "isEditable": false,
@@ -3634,7 +3551,8 @@
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{trip_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"truck_price_ait_evat\"]))}}",
-                          "validation": {}
+                          "validation": {},
+                          "cellBackground": ""
                         },
                         "additional_fee_ait_evat": {
                           "allowCellWrapping": false,
@@ -3649,7 +3567,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellEditable": false,
                           "isEditable": false,
@@ -3659,7 +3577,8 @@
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{trip_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"additional_fee_ait_evat\"]))}}",
-                          "validation": {}
+                          "validation": {},
+                          "cellBackground": ""
                         },
                         "finance_trip_invoice_id": {
                           "allowCellWrapping": false,
@@ -3674,7 +3593,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellEditable": false,
                           "isEditable": false,
@@ -3684,7 +3603,8 @@
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{trip_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"finance_trip_invoice_id\"]))}}",
-                          "validation": {}
+                          "validation": {},
+                          "cellBackground": ""
                         },
                         "truck_price_remarks": {
                           "allowCellWrapping": false,
@@ -3709,7 +3629,8 @@
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{trip_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"truck_price_remarks\"]))}}",
-                          "validation": {}
+                          "validation": {},
+                          "cellBackground": ""
                         },
                         "received_amount": {
                           "allowCellWrapping": false,
@@ -3838,7 +3759,7 @@
                           "fontStyle": "",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellEditable": false,
                           "isEditable": false,
@@ -3866,7 +3787,7 @@
                           "fontStyle": "",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellEditable": false,
                           "isEditable": false,
@@ -3880,6 +3801,7 @@
                           "cellBackground": ""
                         }
                       },
+                      "onRowSelected": "{{\nText7.text == 'true' ?\nshowAlert('Do not have enough balance to adjust these trips','warning'): ''}}",
                       "key": "pmls00y2qf",
                       "isDeprecated": false,
                       "rightColumn": 63,
@@ -3892,7 +3814,9 @@
                       "renderMode": "CANVAS",
                       "horizontalAlignment": "LEFT",
                       "isVisibleSearch": true,
+                      "originalTopRow": 81,
                       "isVisiblePagination": true,
+                      "cellBackground": "",
                       "verticalAlignment": "CENTER"
                     },
                     {
@@ -3972,36 +3896,6 @@
                         },
                         {
                           "key": "boxShadow"
-                        },
-                        {
-                          "key": "childStylesheet.button.buttonColor"
-                        },
-                        {
-                          "key": "childStylesheet.button.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.menuButton.menuColor"
-                        },
-                        {
-                          "key": "childStylesheet.menuButton.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.iconButton.buttonColor"
-                        },
-                        {
-                          "key": "childStylesheet.iconButton.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.editActions.saveButtonColor"
-                        },
-                        {
-                          "key": "childStylesheet.editActions.saveBorderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.editActions.discardButtonColor"
-                        },
-                        {
-                          "key": "childStylesheet.editActions.discardBorderRadius"
                         },
                         {
                           "key": "primaryColumns.id.computedValue"
@@ -4846,11 +4740,14 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button2",
-                      "onClick": "{{showModal('Modal1')}}",
+                      "onClick": "{{\npost_collection.run(\n() => get_history_collections.run(()=>get_collectables.run((get_trip_collectables.run(() => showAlert('Collection marked successfully','success'))))), () => showAlert('ERROR','error'))}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "dynamicPropertyPathList": [
                         {
                           "key": "isDisabled"
+                        },
+                        {
+                          "key": "onClick"
                         }
                       ],
                       "displayName": "Button",
@@ -4861,6 +4758,7 @@
                       ],
                       "topRow": 77,
                       "bottomRow": 81,
+                      "tooltip": "",
                       "parentRowSpace": 10,
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
@@ -4956,6 +4854,63 @@
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "buttonVariant": "PRIMARY",
                       "placement": "CENTER"
+                    },
+                    {
+                      "widgetName": "Text7",
+                      "displayName": "Text",
+                      "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
+                      "searchTags": [
+                        "typography",
+                        "paragraph",
+                        "label"
+                      ],
+                      "topRow": 77,
+                      "bottomRow": 81,
+                      "parentRowSpace": 10,
+                      "type": "TEXT_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "overflow": "NONE",
+                      "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+                      "parentColumnSpace": 17.625,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 6,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "truncateButtonColor"
+                        },
+                        {
+                          "key": "fontFamily"
+                        },
+                        {
+                          "key": "borderRadius"
+                        },
+                        {
+                          "key": "text"
+                        }
+                      ],
+                      "shouldTruncate": false,
+                      "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "text": "{{\nget_history_collections.data[0].unadjusted_amount<\ntrip_table.selectedRows.reduce((partialSum, a) => partialSum + parseFloat(a.total_price_after_vat_ait), 0)-trip_table.selectedRows.reduce((partialSum, a) => partialSum + parseFloat(a.received_amount),0)\n}}",
+                      "key": "12s5su59kn",
+                      "isDeprecated": false,
+                      "rightColumn": 22,
+                      "textAlign": "LEFT",
+                      "dynamicHeight": "AUTO_HEIGHT",
+                      "widgetId": "ic3qleld25",
+                      "isVisible": false,
+                      "fontStyle": "BOLD",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "parentId": "45usit4r4e",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "originalTopRow": 77,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "maxDynamicHeight": 9000,
+                      "originalBottomRow": 81,
+                      "fontSize": "1rem",
+                      "minDynamicHeight": 4
                     }
                   ],
                   "key": "d1c1yx40a7",
