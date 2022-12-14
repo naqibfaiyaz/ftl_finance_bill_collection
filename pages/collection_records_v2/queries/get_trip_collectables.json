@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT * FROM trip_level_invoice where finance_trip_invoice_id in ({{invoice_table.selectedRows.map((a)=>a.id).join()}}) and status in ('Bill-accepted-by-client')",
+      "body": "SELECT * FROM trip_level_invoice where finance_trip_invoice_id in ({{invoice_table.selectedRows.map((a)=>a.id).join()}})\n--and id in (14797,19398)",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {

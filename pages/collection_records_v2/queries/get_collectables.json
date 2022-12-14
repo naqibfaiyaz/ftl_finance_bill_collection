@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT * FROM finance_trip_invoices where shop_id={{search_shop_id.selectedOptionValue}} and status in ('Bill-accepted-by-client')",
+      "body": "SELECT id,invoice_number, trip_counts, trip_total_revenue,client_name, trip_month,\ncreated_at, vat, ait, banner, status,collectable as net_to_redx, total_price_after_vat_ait, shop_id,\nreceived_amount, hard_copy_receiving_date, received_vat_amount, received_ait_amount,received_amount_wo_vat_ait,due_amount\n\nFROM finance_trip_invoices where shop_id={{search_shop_id.selectedOptionValue}}\n--and id in (2885,3137)\n",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
