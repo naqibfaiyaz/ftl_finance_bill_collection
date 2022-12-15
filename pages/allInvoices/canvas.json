@@ -19,7 +19,7 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 70,
+          "version": 71,
           "minHeight": 730,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
@@ -2779,36 +2779,6 @@
                           "key": "boxShadow"
                         },
                         {
-                          "key": "childStylesheet.button.buttonColor"
-                        },
-                        {
-                          "key": "childStylesheet.button.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.menuButton.menuColor"
-                        },
-                        {
-                          "key": "childStylesheet.menuButton.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.iconButton.buttonColor"
-                        },
-                        {
-                          "key": "childStylesheet.iconButton.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.editActions.saveButtonColor"
-                        },
-                        {
-                          "key": "childStylesheet.editActions.saveBorderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.editActions.discardButtonColor"
-                        },
-                        {
-                          "key": "childStylesheet.editActions.discardBorderRadius"
-                        },
-                        {
                           "key": "primaryColumns.Amount.computedValue"
                         },
                         {
@@ -5115,36 +5085,6 @@
                           "key": "boxShadow"
                         },
                         {
-                          "key": "childStylesheet.button.buttonColor"
-                        },
-                        {
-                          "key": "childStylesheet.button.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.menuButton.menuColor"
-                        },
-                        {
-                          "key": "childStylesheet.menuButton.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.iconButton.buttonColor"
-                        },
-                        {
-                          "key": "childStylesheet.iconButton.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.editActions.saveButtonColor"
-                        },
-                        {
-                          "key": "childStylesheet.editActions.saveBorderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.editActions.discardButtonColor"
-                        },
-                        {
-                          "key": "childStylesheet.editActions.discardBorderRadius"
-                        },
-                        {
                           "key": "tableData"
                         },
                         {
@@ -5530,36 +5470,6 @@
                         },
                         {
                           "key": "boxShadow"
-                        },
-                        {
-                          "key": "childStylesheet.button.buttonColor"
-                        },
-                        {
-                          "key": "childStylesheet.button.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.menuButton.menuColor"
-                        },
-                        {
-                          "key": "childStylesheet.menuButton.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.iconButton.buttonColor"
-                        },
-                        {
-                          "key": "childStylesheet.iconButton.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.editActions.saveButtonColor"
-                        },
-                        {
-                          "key": "childStylesheet.editActions.saveBorderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.editActions.discardButtonColor"
-                        },
-                        {
-                          "key": "childStylesheet.editActions.discardBorderRadius"
                         },
                         {
                           "key": "tableData"
@@ -7855,18 +7765,6 @@
           ],
           [
             {
-              "id": "allInvoices_billing_formats",
-              "name": "billing_formats",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "appsmith.store.session"
-              ],
-              "timeoutInMillisecond": 100000000
-            }
-          ],
-          [
-            {
               "id": "allInvoices_get_received_details",
               "name": "get_received_details",
               "confirmBeforeExecute": false,
@@ -7874,16 +7772,6 @@
               "jsonPathKeys": [
                 "readyInvoiceTbl.selectedRow.invoice_number",
                 "readyInvoiceTbl.selectedRow.id"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "allInvoices_get_shops",
-              "name": "get_shops",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "appsmith.store.access_token"
               ],
               "timeoutInMillisecond": 10000
             },
@@ -7921,6 +7809,28 @@
             }
           ],
           [
+            {
+              "id": "allInvoices_billing_formats",
+              "name": "billing_formats",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "appsmith.store.session"
+              ],
+              "timeoutInMillisecond": 100000000
+            }
+          ],
+          [
+            {
+              "id": "allInvoices_get_shops",
+              "name": "get_shops",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "appsmith.store.access_token"
+              ],
+              "timeoutInMillisecond": 10000
+            },
             {
               "id": "allInvoices_payment_method",
               "name": "payment_method",

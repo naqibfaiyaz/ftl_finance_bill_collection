@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1450,
+          "bottomRow": 1670,
           "containerStyle": "none",
           "snapRows": 85,
           "parentRowSpace": 1,
@@ -62,7 +62,7 @@
                   "canExtend": true,
                   "hideCard": true,
                   "shouldScrollContents": false,
-                  "minHeight": 898,
+                  "minHeight": 796,
                   "parentColumnSpace": 1,
                   "leftColumn": 0,
                   "dynamicBindingPathList": [
@@ -959,12 +959,15 @@
                                 },
                                 {
                                   "key": "borderRadius"
+                                },
+                                {
+                                  "key": "defaultText"
                                 }
                               ],
                               "labelPosition": "Left",
                               "labelStyle": "",
                               "inputType": "TEXT",
-                              "isDisabled": false,
+                              "isDisabled": true,
                               "key": "tv860i56gz",
                               "validation": "",
                               "labelTextSize": "0.875rem",
@@ -984,7 +987,7 @@
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                               "maxDynamicHeight": 9000,
                               "iconAlign": "left",
-                              "defaultText": "0",
+                              "defaultText": "{{trip_table.selectedRows.map(a=>a.ait).reduce((partialSum, a) => partialSum + a, 0).toFixed(1)}}",
                               "minDynamicHeight": 4
                             },
                             {
@@ -1128,7 +1131,7 @@
                               "leftColumn": 0,
                               "dynamicBindingPathList": [],
                               "truncateButtonColor": "#FFC13D",
-                              "text": "Enter collected amount(net to redx)",
+                              "text": "Collected amount(net to redx)",
                               "key": "pphqnvj989",
                               "labelTextSize": "0.875rem",
                               "rightColumn": 13,
@@ -1181,7 +1184,7 @@
                               ],
                               "labelStyle": "",
                               "inputType": "NUMBER",
-                              "isDisabled": false,
+                              "isDisabled": true,
                               "key": "mebc20zfb0",
                               "validation": "{{\nparseInt(collected_net_to_redx.text) <= collection_summary.tableData[1]['Due receivable']}}",
                               "labelTextSize": "0.875rem",
@@ -1437,7 +1440,7 @@
                               "resetFormOnClick": true,
                               "boxShadow": "none",
                               "widgetName": "Button1Copy",
-                              "onClick": "",
+                              "onClick": "{{\npost_collection.run(\n()=>post_received_data.run(\t\n() => get_history_collections.run(()=>get_collectables.run((get_trip_collectables.run(\t\n\t() => showAlert('Collection marked successfully','success'))))), () => showAlert('ERROR inserting in log','error')), () => showAlert('ERROR','error'))}}",
                               "buttonColor": "#38AFF4",
                               "dynamicPropertyPathList": [
                                 {
@@ -1511,12 +1514,15 @@
                                 },
                                 {
                                   "key": "borderRadius"
+                                },
+                                {
+                                  "key": "defaultText"
                                 }
                               ],
                               "labelPosition": "Left",
                               "labelStyle": "",
                               "inputType": "TEXT",
-                              "isDisabled": false,
+                              "isDisabled": true,
                               "key": "tv860i56gz",
                               "validation": "",
                               "labelTextSize": "0.875rem",
@@ -1537,7 +1543,7 @@
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                               "maxDynamicHeight": 9000,
                               "iconAlign": "left",
-                              "defaultText": "0",
+                              "defaultText": "{{trip_table.selectedRows.map(a=>a.vat).reduce((partialSum, a) => partialSum + a, 0).toFixed(1)}}",
                               "minDynamicHeight": 4
                             },
                             {
@@ -1575,7 +1581,7 @@
                               ],
                               "shouldTruncate": false,
                               "truncateButtonColor": "#FFC13D",
-                              "text": "Enter collected VAT amount",
+                              "text": "Collected VAT amount",
                               "key": "jzfmutwpgm",
                               "isDeprecated": false,
                               "rightColumn": 50,
@@ -1871,7 +1877,7 @@
                 }
               ],
               "key": "2ndwsp5gmi",
-              "height": 898,
+              "height": 796,
               "isDeprecated": false,
               "rightColumn": 0,
               "detachFromLayout": true,
@@ -1885,7 +1891,7 @@
               "isLoading": false,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "width": 1216,
+              "width": 1102,
               "minDynamicHeight": 4
             },
             {
@@ -1944,7 +1950,7 @@
                       "borderColor": "#E0DEDE",
                       "isVisibleDownload": true,
                       "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
-                      "topRow": 18,
+                      "topRow": 1,
                       "isSortable": true,
                       "type": "TABLE_WIDGET_V2",
                       "inlineEditingSaveOption": "ROW_LEVEL",
@@ -1993,7 +1999,7 @@
                           "key": "primaryColumns.unadjusted_amount.computedValue"
                         }
                       ],
-                      "leftColumn": 0,
+                      "leftColumn": 17,
                       "delimiter": ",",
                       "defaultSelectedRowIndex": 0,
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -2045,13 +2051,13 @@
                       ],
                       "dynamicPropertyPathList": [],
                       "displayName": "Table",
-                      "bottomRow": 39,
+                      "bottomRow": 13,
                       "columnWidthMap": {
                         "task": 245,
                         "step": 62,
                         "status": 75,
                         "customColumn3": 77,
-                        "received_amount": 106,
+                        "received_amount": 167,
                         "receive_date": 115,
                         "shop_name": 134,
                         "id": 75
@@ -2203,7 +2209,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellEditable": false,
                           "isEditable": false,
@@ -2230,7 +2236,7 @@
                           "fontStyle": "",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellEditable": false,
                           "isEditable": false,
@@ -2302,7 +2308,7 @@
                       },
                       "key": "ezdwdfizp1",
                       "isDeprecated": false,
-                      "rightColumn": 26,
+                      "rightColumn": 63,
                       "textSize": "0.875rem",
                       "widgetId": "qobew9qpmc",
                       "tableData": "{{get_history_collections.data}}",
@@ -2318,253 +2324,11 @@
                     },
                     {
                       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
-                      "borderColor": "#E0DEDE",
-                      "isVisibleDownload": false,
-                      "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
-                      "topRow": 18,
-                      "isSortable": false,
-                      "type": "TABLE_WIDGET_V2",
-                      "inlineEditingSaveOption": "ROW_LEVEL",
-                      "animateLoading": false,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "accentColor"
-                        },
-                        {
-                          "key": "borderRadius"
-                        },
-                        {
-                          "key": "boxShadow"
-                        },
-                        {
-                          "key": "primaryColumns.Amount.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.Actual_Amount.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.Collected_Amount.computedValue"
-                        },
-                        {
-                          "key": "tableData"
-                        },
-                        {
-                          "key": "primaryColumns.Due_receivable.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.id.computedValue"
-                        }
-                      ],
-                      "leftColumn": 26,
-                      "delimiter": ",",
-                      "defaultSelectedRowIndex": 0,
-                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "isVisibleFilters": false,
-                      "isVisible": true,
-                      "enableClientSideSearch": true,
-                      "version": 1,
-                      "totalRecordsCount": 0,
-                      "isLoading": false,
-                      "childStylesheet": {
-                        "button": {
-                          "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
-                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                          "boxShadow": "none"
-                        },
-                        "menuButton": {
-                          "menuColor": "{{appsmith.theme.colors.primaryColor}}",
-                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                          "boxShadow": "none"
-                        },
-                        "iconButton": {
-                          "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
-                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                          "boxShadow": "none"
-                        },
-                        "editActions": {
-                          "saveButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-                          "saveBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                          "discardButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-                          "discardBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
-                        }
-                      },
-                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "defaultSelectedRowIndices": [
-                        0
-                      ],
-                      "widgetName": "Table4Copy",
-                      "defaultPageSize": 0,
-                      "columnOrder": [
-                        "id",
-                        "Amount",
-                        "Actual_Amount",
-                        "Collected_Amount",
-                        "Due_receivable"
-                      ],
-                      "dynamicPropertyPathList": [],
-                      "displayName": "Table",
-                      "bottomRow": 39,
-                      "columnWidthMap": {
-                        "task": 245,
-                        "step": 62,
-                        "status": 75,
-                        "Amount": 197,
-                        "id": 60
-                      },
-                      "parentRowSpace": 10,
-                      "hideCard": false,
-                      "parentColumnSpace": 16.96875,
-                      "dynamicTriggerPathList": [],
-                      "borderWidth": "1",
-                      "primaryColumns": {
-                        "Amount": {
-                          "allowCellWrapping": false,
-                          "index": 3,
-                          "width": 150,
-                          "originalId": "Amount",
-                          "id": "Amount",
-                          "alias": "Amount",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellEditable": false,
-                          "isEditable": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "Amount",
-                          "isSaveVisible": true,
-                          "isDiscardVisible": true,
-                          "computedValue": "{{Table4Copy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Amount\"]))}}",
-                          "validation": {}
-                        },
-                        "Actual_Amount": {
-                          "allowCellWrapping": false,
-                          "index": 3,
-                          "width": 150,
-                          "originalId": "Actual Amount",
-                          "id": "Actual_Amount",
-                          "alias": "Actual Amount",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellEditable": false,
-                          "isEditable": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "Actual Amount",
-                          "isSaveVisible": true,
-                          "isDiscardVisible": true,
-                          "computedValue": "{{Table4Copy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Actual Amount\"]))}}",
-                          "validation": {}
-                        },
-                        "Collected_Amount": {
-                          "allowCellWrapping": false,
-                          "index": 3,
-                          "width": 150,
-                          "originalId": "Collected Amount",
-                          "id": "Collected_Amount",
-                          "alias": "Collected Amount",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellEditable": false,
-                          "isEditable": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "Collected Amount",
-                          "isSaveVisible": true,
-                          "isDiscardVisible": true,
-                          "computedValue": "{{Table4Copy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Collected Amount\"]))}}",
-                          "validation": {}
-                        },
-                        "Due_receivable": {
-                          "allowCellWrapping": false,
-                          "index": 3,
-                          "width": 150,
-                          "originalId": "Due receivable",
-                          "id": "Due_receivable",
-                          "alias": "Due receivable",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellEditable": false,
-                          "isEditable": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "Due receivable",
-                          "isSaveVisible": true,
-                          "isDiscardVisible": true,
-                          "computedValue": "{{Table4Copy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Due receivable\"]))}}",
-                          "validation": {}
-                        },
-                        "id": {
-                          "allowCellWrapping": false,
-                          "index": 0,
-                          "width": 150,
-                          "originalId": "id",
-                          "id": "id",
-                          "alias": "id",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "number",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellEditable": false,
-                          "isEditable": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "id",
-                          "isSaveVisible": true,
-                          "isDiscardVisible": true,
-                          "computedValue": "{{Table4Copy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id\"]))}}",
-                          "validation": {}
-                        }
-                      },
-                      "key": "crm2quaeqg",
-                      "isDeprecated": false,
-                      "rightColumn": 64,
-                      "textSize": "0.875rem",
-                      "widgetId": "tnjq2wq1l0",
-                      "tableData": "[\n  {\n\t\"id\": 1,\n    \"Amount\": \"Invoice Amount(with VAT/AIT)\",\n    \"Actual Amount\": {{trip_table.selectedRows.map(a=>a.total_price_after_vat_ait).reduce((partialSum, a) => partialSum + a, 0).toFixed(1)}},\n    \"Collected Amount\": {{parseInt(trip_table.selectedRows.map(a=>a.received_amount).reduce((partialSum, a) => partialSum + a, 0).toFixed(1))}},\n    \"Due receivable\": {{((trip_table.selectedRows.map(a=>a.total_price_after_vat_ait).reduce((partialSum, a) => partialSum + a, 0).toFixed(1))-(trip_table.selectedRows.map(a=>a.received_amount).reduce((partialSum, a) => partialSum + a, 0).toFixed(1))).toFixed(2)\n\t }}\n  },\n  {\n\t\"id\": 2,\n    \"Amount\": \"Net to RedX (w/o VAT AIT)\",\n    \"Actual Amount\": {{trip_table.selectedRows.map(a=>a.collectable).reduce((partialSum, a) => partialSum + a, 0).toFixed(1)}},\n    \"Collected Amount\": {{trip_table.selectedRows.map(a=>a.received_amount_wo_vat_ait).reduce((partialSum, a) => partialSum + a, 0).toFixed(1)}},\n    \"Due receivable\": {{(trip_table.selectedRows.map(a=>a.collectable).reduce((partialSum, a) => partialSum + a, 0).toFixed(1)- (trip_table.selectedRows.map(a=>a.received_amount_wo_vat_ait).reduce((partialSum, a) => partialSum + a, 0).toFixed(1))).toFixed(2)}}\n\t},\n  {\n\t\"id\": 3,\n    \"Amount\": \"VAT\",\n    \"Actual Amount\": {{trip_table.selectedRows.map(a=>a.vat).reduce((partialSum, a) => partialSum + a, 0).toFixed(1)}},\n    \"Collected Amount\": {{trip_table.selectedRows.map(a=>a.received_vat_amount).reduce((partialSum, a) => partialSum + a, 0).toFixed(1)}},\n    \"Due receivable\": {{(trip_table.selectedRows.map(a=>a.vat).reduce((partialSum, a) => partialSum + a, 0).toFixed(1)- trip_table.selectedRows.map(a=>a.received_vat_amount).reduce((partialSum, a) => partialSum + a, 0).toFixed(1)).toFixed(2)}}\n  },\n  {\n\t\"id\": 4,\n    \"Amount\": \"AIT\",\n    \"Actual Amount\": {{trip_table.selectedRows.map(a=>a.ait).reduce((partialSum, a) => partialSum + a, 0).toFixed(1)}},\n    \"Collected Amount\": {{trip_table.selectedRows.map(a=>a.received_ait_amount).reduce((partialSum, a) => partialSum + a, 0).toFixed(1)}},\n    \"Due receivable\": {{\n(trip_table.selectedRows.map(a=>a.ait).reduce((partialSum, a) => partialSum + a, 0).toFixed(1)- trip_table.selectedRows.map(a=>a.received_ait_amount).reduce((partialSum, a) => partialSum + a, 0).toFixed(1)).toFixed(2)}}\n  }\n]",
-                      "label": "Data",
-                      "searchKey": "",
-                      "parentId": "45usit4r4e",
-                      "renderMode": "CANVAS",
-                      "horizontalAlignment": "LEFT",
-                      "isVisibleSearch": false,
-                      "isVisiblePagination": false,
-                      "verticalAlignment": "CENTER"
-                    },
-                    {
-                      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
                       "multiRowSelection": true,
                       "borderColor": "#E0DEDE",
                       "isVisibleDownload": true,
                       "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
-                      "topRow": 81,
+                      "topRow": 53,
                       "isSortable": true,
                       "type": "TABLE_WIDGET_V2",
                       "inlineEditingSaveOption": "ROW_LEVEL",
@@ -2731,7 +2495,7 @@
                         }
                       },
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "originalBottomRow": 127,
+                      "originalBottomRow": 198,
                       "primaryColumnId": "id",
                       "defaultSelectedRowIndices": [
                         0
@@ -2739,6 +2503,7 @@
                       "widgetName": "trip_table",
                       "defaultPageSize": 0,
                       "columnOrder": [
+                        "finance_trip_invoice_id",
                         "status",
                         "id",
                         "fleet_tracking_id",
@@ -2769,7 +2534,6 @@
                         "truck_price_ait_evat",
                         "truck_price_with_ait",
                         "additional_fee_ait_evat",
-                        "finance_trip_invoice_id",
                         "truck_price_remarks",
                         "received_amount",
                         "received_vat_amount",
@@ -2784,7 +2548,7 @@
                         }
                       ],
                       "displayName": "Table",
-                      "bottomRow": 127,
+                      "bottomRow": 99,
                       "columnWidthMap": {
                         "task": 245,
                         "step": 62,
@@ -3593,7 +3357,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": false,
+                          "isVisible": true,
                           "isDisabled": false,
                           "isCellEditable": false,
                           "isEditable": false,
@@ -3814,7 +3578,7 @@
                       "renderMode": "CANVAS",
                       "horizontalAlignment": "LEFT",
                       "isVisibleSearch": true,
-                      "originalTopRow": 81,
+                      "originalTopRow": 152,
                       "isVisiblePagination": true,
                       "cellBackground": "",
                       "verticalAlignment": "CENTER"
@@ -3859,7 +3623,7 @@
                       "key": "lbfj3kw6qe",
                       "labelTextSize": "0.875rem",
                       "isRequired": false,
-                      "rightColumn": 21,
+                      "rightColumn": 16,
                       "dynamicHeight": "FIXED",
                       "widgetId": "vu1zq7pfuv",
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -3879,7 +3643,7 @@
                       "borderColor": "#E0DEDE",
                       "isVisibleDownload": true,
                       "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
-                      "topRow": 50,
+                      "topRow": 19,
                       "isSortable": true,
                       "type": "TABLE_WIDGET_V2",
                       "inlineEditingSaveOption": "ROW_LEVEL",
@@ -4036,7 +3800,7 @@
                       ],
                       "dynamicPropertyPathList": [],
                       "displayName": "Table",
-                      "bottomRow": 77,
+                      "bottomRow": 46,
                       "columnWidthMap": {
                         "task": 245,
                         "step": 62,
@@ -4697,8 +4461,8 @@
                         "click",
                         "submit"
                       ],
-                      "topRow": 4,
-                      "bottomRow": 8,
+                      "topRow": 9,
+                      "bottomRow": 13,
                       "parentRowSpace": 10,
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
@@ -4709,7 +4473,7 @@
                           "key": "onClick"
                         }
                       ],
-                      "leftColumn": 21,
+                      "leftColumn": 6,
                       "dynamicBindingPathList": [
                         {
                           "key": "buttonColor"
@@ -4718,11 +4482,11 @@
                           "key": "borderRadius"
                         }
                       ],
-                      "text": "Search",
+                      "text": "Get unsettled invoices",
                       "isDisabled": false,
                       "key": "q3jbo57vex",
                       "isDeprecated": false,
-                      "rightColumn": 31,
+                      "rightColumn": 16,
                       "isDefaultClickDisabled": true,
                       "widgetId": "wugrjykb20",
                       "isVisible": true,
@@ -4733,14 +4497,14 @@
                       "isLoading": false,
                       "disabledWhenInvalid": false,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "buttonVariant": "SECONDARY",
+                      "buttonVariant": "PRIMARY",
                       "placement": "CENTER"
                     },
                     {
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button2",
-                      "onClick": "{{\npost_collection.run(\n() => get_history_collections.run(()=>get_collectables.run((get_trip_collectables.run(() => showAlert('Collection marked successfully','success'))))), () => showAlert('ERROR','error'))}}",
+                      "onClick": "{{showModal('Modal1')}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "dynamicPropertyPathList": [
                         {
@@ -4756,8 +4520,8 @@
                         "click",
                         "submit"
                       ],
-                      "topRow": 77,
-                      "bottomRow": 81,
+                      "topRow": 49,
+                      "bottomRow": 53,
                       "tooltip": "",
                       "parentRowSpace": 10,
                       "type": "BUTTON_WIDGET",
@@ -4816,8 +4580,8 @@
                         "click",
                         "submit"
                       ],
-                      "topRow": 46,
-                      "bottomRow": 50,
+                      "topRow": 14,
+                      "bottomRow": 18,
                       "parentRowSpace": 10,
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
@@ -4828,7 +4592,7 @@
                           "key": "onClick"
                         }
                       ],
-                      "leftColumn": 0,
+                      "leftColumn": 47,
                       "dynamicBindingPathList": [
                         {
                           "key": "buttonColor"
@@ -4837,11 +4601,11 @@
                           "key": "borderRadius"
                         }
                       ],
-                      "text": "Search",
+                      "text": "Get trip details",
                       "isDisabled": false,
                       "key": "gpvj12w2eo",
                       "isDeprecated": false,
-                      "rightColumn": 16,
+                      "rightColumn": 63,
                       "isDefaultClickDisabled": true,
                       "widgetId": "rxcc23bl5s",
                       "isVisible": true,
@@ -4864,8 +4628,8 @@
                         "paragraph",
                         "label"
                       ],
-                      "topRow": 77,
-                      "bottomRow": 81,
+                      "topRow": 49,
+                      "bottomRow": 53,
                       "parentRowSpace": 10,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
@@ -4905,10 +4669,64 @@
                       "parentId": "45usit4r4e",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "originalTopRow": 77,
+                      "originalTopRow": 49,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
-                      "originalBottomRow": 81,
+                      "originalBottomRow": 53,
+                      "fontSize": "1rem",
+                      "minDynamicHeight": 4
+                    },
+                    {
+                      "widgetName": "Text8",
+                      "displayName": "Text",
+                      "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
+                      "searchTags": [
+                        "typography",
+                        "paragraph",
+                        "label"
+                      ],
+                      "topRow": 49,
+                      "bottomRow": 53,
+                      "parentRowSpace": 10,
+                      "type": "TEXT_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "overflow": "NONE",
+                      "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+                      "parentColumnSpace": 17.625,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 23,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "truncateButtonColor"
+                        },
+                        {
+                          "key": "fontFamily"
+                        },
+                        {
+                          "key": "borderRadius"
+                        }
+                      ],
+                      "shouldTruncate": false,
+                      "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "text": "",
+                      "key": "2xw87ehhwm",
+                      "isDeprecated": false,
+                      "rightColumn": 39,
+                      "textAlign": "LEFT",
+                      "dynamicHeight": "AUTO_HEIGHT",
+                      "widgetId": "5v69rve7ap",
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "parentId": "45usit4r4e",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "originalTopRow": 49,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "maxDynamicHeight": 9000,
+                      "originalBottomRow": 53,
                       "fontSize": "1rem",
                       "minDynamicHeight": 4
                     }
@@ -4944,6 +4762,248 @@
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
               "minDynamicHeight": 4
+            },
+            {
+              "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+              "borderColor": "#E0DEDE",
+              "isVisibleDownload": false,
+              "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
+              "topRow": 138,
+              "isSortable": false,
+              "type": "TABLE_WIDGET_V2",
+              "inlineEditingSaveOption": "ROW_LEVEL",
+              "animateLoading": false,
+              "dynamicBindingPathList": [
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "boxShadow"
+                },
+                {
+                  "key": "primaryColumns.Amount.computedValue"
+                },
+                {
+                  "key": "primaryColumns.Actual_Amount.computedValue"
+                },
+                {
+                  "key": "primaryColumns.Collected_Amount.computedValue"
+                },
+                {
+                  "key": "tableData"
+                },
+                {
+                  "key": "primaryColumns.Due_receivable.computedValue"
+                },
+                {
+                  "key": "primaryColumns.id.computedValue"
+                }
+              ],
+              "leftColumn": 0,
+              "delimiter": ",",
+              "defaultSelectedRowIndex": 0,
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "isVisibleFilters": false,
+              "isVisible": false,
+              "enableClientSideSearch": true,
+              "version": 1,
+              "totalRecordsCount": 0,
+              "isLoading": false,
+              "childStylesheet": {
+                "button": {
+                  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                },
+                "menuButton": {
+                  "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                },
+                "iconButton": {
+                  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                },
+                "editActions": {
+                  "saveButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "saveBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "discardButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "discardBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
+                }
+              },
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "defaultSelectedRowIndices": [
+                0
+              ],
+              "widgetName": "Table4Copy",
+              "defaultPageSize": 0,
+              "columnOrder": [
+                "id",
+                "Amount",
+                "Actual_Amount",
+                "Collected_Amount",
+                "Due_receivable"
+              ],
+              "dynamicPropertyPathList": [],
+              "displayName": "Table",
+              "bottomRow": 159,
+              "columnWidthMap": {
+                "task": 245,
+                "step": 62,
+                "status": 75,
+                "Amount": 197,
+                "id": 60
+              },
+              "parentRowSpace": 10,
+              "hideCard": false,
+              "parentColumnSpace": 16.96875,
+              "dynamicTriggerPathList": [],
+              "borderWidth": "1",
+              "primaryColumns": {
+                "Amount": {
+                  "allowCellWrapping": false,
+                  "index": 3,
+                  "width": 150,
+                  "originalId": "Amount",
+                  "id": "Amount",
+                  "alias": "Amount",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "Amount",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table4Copy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Amount\"]))}}",
+                  "validation": {}
+                },
+                "Actual_Amount": {
+                  "allowCellWrapping": false,
+                  "index": 3,
+                  "width": 150,
+                  "originalId": "Actual Amount",
+                  "id": "Actual_Amount",
+                  "alias": "Actual Amount",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "Actual Amount",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table4Copy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Actual Amount\"]))}}",
+                  "validation": {}
+                },
+                "Collected_Amount": {
+                  "allowCellWrapping": false,
+                  "index": 3,
+                  "width": 150,
+                  "originalId": "Collected Amount",
+                  "id": "Collected_Amount",
+                  "alias": "Collected Amount",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "Collected Amount",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table4Copy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Collected Amount\"]))}}",
+                  "validation": {}
+                },
+                "Due_receivable": {
+                  "allowCellWrapping": false,
+                  "index": 3,
+                  "width": 150,
+                  "originalId": "Due receivable",
+                  "id": "Due_receivable",
+                  "alias": "Due receivable",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "Due receivable",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table4Copy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Due receivable\"]))}}",
+                  "validation": {}
+                },
+                "id": {
+                  "allowCellWrapping": false,
+                  "index": 0,
+                  "width": 150,
+                  "originalId": "id",
+                  "id": "id",
+                  "alias": "id",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "number",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "id",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table4Copy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id\"]))}}",
+                  "validation": {}
+                }
+              },
+              "key": "crm2quaeqg",
+              "isDeprecated": false,
+              "rightColumn": 38,
+              "textSize": "0.875rem",
+              "widgetId": "tnjq2wq1l0",
+              "tableData": "[\n  {\n\t\"id\": 1,\n    \"Amount\": \"Invoice Amount(with VAT/AIT)\",\n    \"Actual Amount\": {{trip_table.selectedRows.map(a=>a.total_price_after_vat_ait).reduce((partialSum, a) => partialSum + a, 0).toFixed(1)}},\n    \"Collected Amount\": {{parseInt(trip_table.selectedRows.map(a=>a.received_amount).reduce((partialSum, a) => partialSum + a, 0).toFixed(1))}},\n    \"Due receivable\": {{((trip_table.selectedRows.map(a=>a.total_price_after_vat_ait).reduce((partialSum, a) => partialSum + a, 0).toFixed(1))-(trip_table.selectedRows.map(a=>a.received_amount).reduce((partialSum, a) => partialSum + a, 0).toFixed(1))).toFixed(2)\n\t }}\n  },\n  {\n\t\"id\": 2,\n    \"Amount\": \"Net to RedX (w/o VAT AIT)\",\n    \"Actual Amount\": {{trip_table.selectedRows.map(a=>a.collectable).reduce((partialSum, a) => partialSum + a, 0).toFixed(1)}},\n    \"Collected Amount\": {{trip_table.selectedRows.map(a=>a.received_amount_wo_vat_ait).reduce((partialSum, a) => partialSum + a, 0).toFixed(1)}},\n    \"Due receivable\": {{(trip_table.selectedRows.map(a=>a.collectable).reduce((partialSum, a) => partialSum + a, 0).toFixed(1)- (trip_table.selectedRows.map(a=>a.received_amount_wo_vat_ait).reduce((partialSum, a) => partialSum + a, 0).toFixed(1))).toFixed(2)}}\n\t},\n  {\n\t\"id\": 3,\n    \"Amount\": \"VAT\",\n    \"Actual Amount\": {{trip_table.selectedRows.map(a=>a.vat).reduce((partialSum, a) => partialSum + a, 0).toFixed(1)}},\n    \"Collected Amount\": {{trip_table.selectedRows.map(a=>a.received_vat_amount).reduce((partialSum, a) => partialSum + a, 0).toFixed(1)}},\n    \"Due receivable\": {{(trip_table.selectedRows.map(a=>a.vat).reduce((partialSum, a) => partialSum + a, 0).toFixed(1)- trip_table.selectedRows.map(a=>a.received_vat_amount).reduce((partialSum, a) => partialSum + a, 0).toFixed(1)).toFixed(2)}}\n  },\n  {\n\t\"id\": 4,\n    \"Amount\": \"AIT\",\n    \"Actual Amount\": {{trip_table.selectedRows.map(a=>a.ait).reduce((partialSum, a) => partialSum + a, 0).toFixed(1)}},\n    \"Collected Amount\": {{trip_table.selectedRows.map(a=>a.received_ait_amount).reduce((partialSum, a) => partialSum + a, 0).toFixed(1)}},\n    \"Due receivable\": {{\n(trip_table.selectedRows.map(a=>a.ait).reduce((partialSum, a) => partialSum + a, 0).toFixed(1)- trip_table.selectedRows.map(a=>a.received_ait_amount).reduce((partialSum, a) => partialSum + a, 0).toFixed(1)).toFixed(2)}}\n  }\n]",
+              "label": "Data",
+              "searchKey": "",
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "horizontalAlignment": "LEFT",
+              "isVisibleSearch": false,
+              "isVisiblePagination": false,
+              "verticalAlignment": "CENTER"
             }
           ]
         },

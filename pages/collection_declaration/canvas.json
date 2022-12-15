@@ -115,11 +115,7 @@
                       "boxShadow": "none",
                       "widgetName": "proofTypeReceivedSelect",
                       "isFilterable": false,
-                      "dynamicPropertyPathList": [
-                        {
-                          "key": "isRequired"
-                        }
-                      ],
+                      "dynamicPropertyPathList": [],
                       "displayName": "Select",
                       "iconSVG": "/static/media/icon.bd99caba.svg",
                       "labelText": "",
@@ -139,9 +135,6 @@
                           "key": "accentColor"
                         },
                         {
-                          "key": "isRequired"
-                        },
-                        {
                           "key": "defaultOptionValue"
                         }
                       ],
@@ -150,7 +143,7 @@
                       "isDisabled": false,
                       "key": "k24skt0lp6",
                       "labelTextSize": "0.875rem",
-                      "isRequired": "{{parseInt(collected_net_to_redx.text)!=0}}",
+                      "isRequired": true,
                       "rightColumn": 31,
                       "dynamicHeight": "FIXED",
                       "widgetId": "piq8ykfgsa",
@@ -962,7 +955,7 @@
                       "textAlign": "LEFT",
                       "dynamicHeight": "FIXED",
                       "widgetId": "yoilp9niuo",
-                      "isVisible": true,
+                      "isVisible": false,
                       "fontStyle": "BOLD",
                       "textColor": "#231F20",
                       "version": 1,
