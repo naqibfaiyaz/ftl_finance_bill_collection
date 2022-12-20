@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "update trip_level_invoice set received_amount = 0, received_vat_amount = 0,\nreceived_ait_amount = 0, received_amount_wo_vat_ait = 0,\nstatus = 'receiving-in-progress'\nwhere shop_id = {{search_shop_id.selectedOptionValue}}",
+      "body": "WITH\nins_trip_revenue_collection_log AS (\nupdate single_customer_collection_declation\nset unadjusted_amount = received_amount, adjusted_amount = 0\nwhere id ={{appsmith.URL.queryParams.collection_id}}\n),\n\n\nabc as (\nupdate customer_collection_declation_log\nset unadjusted_amount = received_amount, adjusted_amount = 0\nwhere single_customer_collection_declation_id ={{appsmith.URL.queryParams.collection_id}}\n),\n\n\ndef as (\nupdate customer_collection_declation\nset unadjusted_amount = received_amount, adjusted_amount = 0\nwhere shop_id = {{search_shop_id.selectedOptionValue}}\n),\n\na as (\n\n\nupdate finance_trip_invoices set received_amount = 0, received_vat_amount = 0,\nreceived_ait_amount = 0, received_amount_wo_vat_ait = 0,\nstatus = 'receiving-in-progress'\nwhere shop_id = {{search_shop_id.selectedOptionValue}}\n)\n\nupdate trip_level_invoice set received_amount = 0, received_vat_amount = 0,\nreceived_ait_amount = 0, received_amount_wo_vat_ait = 0,\nstatus = 'receiving-in-progress'\nwhere shop_id = {{search_shop_id.selectedOptionValue}}",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -36,6 +36,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
+      "appsmith.URL.queryParams.collection_id",
       "search_shop_id.selectedOptionValue"
     ],
     "userSetOnLoad": false,
