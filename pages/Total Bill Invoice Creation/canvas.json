@@ -4482,12 +4482,12 @@
                           "widgetName": "Canvas4",
                           "displayName": "Canvas",
                           "topRow": 0,
-                          "bottomRow": 390,
+                          "bottomRow": 180,
                           "parentRowSpace": 1,
                           "type": "CANVAS_WIDGET",
                           "canExtend": false,
                           "hideCard": true,
-                          "minHeight": 400,
+                          "minHeight": 180,
                           "parentColumnSpace": 1,
                           "leftColumn": 0,
                           "dynamicBindingPathList": [],
@@ -7282,6 +7282,16 @@
           ],
           [
             {
+              "id": "Total Bill Invoice Creation_get_shops",
+              "name": "get_shops",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "appsmith.store.access_token"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
               "id": "Total Bill Invoice Creation_metabase_session.metabaseSession",
               "name": "metabase_session.metabaseSession",
               "collectionId": "Total Bill Invoice Creation_metabase_session",
@@ -7300,18 +7310,6 @@
               "jsonPathKeys": [
                 "Table2.tableData.map(a=>a.tracking_id).join(\"','\")",
                 "search_shop_id.selectedOptionValue"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "Total Bill Invoice Creation_get_shops",
-              "name": "get_shops",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "appsmith.store.access_token"
               ],
               "timeoutInMillisecond": 10000
             }
