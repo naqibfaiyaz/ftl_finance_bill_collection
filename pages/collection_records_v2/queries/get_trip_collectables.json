@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT * \nFROM \ntrip_level_invoice \nwhere finance_trip_invoice_id in ({{invoice_table.selectedRows.map((a)=>a.id).join()}})\nand status not in ('receiving-complete','Invalid','Ready-to-send')\n\t\t\t\t\t\t\t\t\t --or total_price_after_vat_ait-received_amount >=0)\norder by required_date,total_price_after_vat_ait\n\n--and id in (14797,19398)",
+      "body": "SELECT * \nFROM \ntrip_level_invoice \nwhere finance_trip_invoice_id in ({{invoice_table.selectedRows.map((a)=>a.id).join()}})\nand status not in ('receiving-complete','Invalid','Ready-to-send')\norder by required_date,total_price_after_vat_ait",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
