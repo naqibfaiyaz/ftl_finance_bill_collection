@@ -5572,6 +5572,9 @@
                         },
                         {
                           "key": "primaryColumns.netToRedX.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.delivery_date.computedValue"
                         }
                       ],
                       "leftColumn": 0,
@@ -5677,6 +5680,7 @@
                         "fleet_requested_at",
                         "demurrage_fee",
                         "collectible",
+                        "delivery_date",
                         "total_truck_price",
                         "demurrage_cost",
                         "Banner",
@@ -6380,7 +6384,7 @@
                           "isCellVisible": true,
                           "isDerived": false,
                           "label": "LC_number",
-                          "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.truckPriceRemarks))}}",
+                          "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.truckPriceRemarks?currentRow.truckPriceRemarks:''))}}",
                           "cellBackground": "transparent"
                         },
                         "vehicle_type": {
@@ -6528,6 +6532,25 @@
                           "isDerived": false,
                           "label": "netToRedX",
                           "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.netToRedX))}}",
+                          "cellBackground": "transparent"
+                        },
+                        "delivery_date": {
+                          "index": 29,
+                          "width": 150,
+                          "id": "delivery_date",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "delivery_date",
+                          "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.delivery_date))}}",
                           "cellBackground": "transparent"
                         }
                       },
