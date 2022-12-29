@@ -778,7 +778,7 @@
                       ],
                       "borderWidth": "1",
                       "truncateButtonColor": "#FFC13D",
-                      "text": "{{\n(function() {\t\n\tvar a = ['','One ','Two ','Three ','Four ', 'Five ','Six ','Seven ','Eight ','Nine ','Ten ','Eleven ','Twelve ','Thirteen ','Fourteen ','Fifteen ','Sixteen ','Seventeen ','Eighteen ','Nineteen '];\nvar b = ['', '', 'Twenty','Thirty','Forty','Fifty', 'Sixty','Seventy','Eighty','Ninety'];\n\n\tvar num = parseInt(get_invoice.data[0].total_price_after_vat_ait).toFixed(0)\n\n\tif ((num = num.toString()).length > 9) return 'overflow';\n    var n = ('000000000' + num).substr(-9).match(/^(\\d{2})(\\d{2})(\\d{2})(\\d{1})(\\d{2})$/);\n    if (!n) return; var str = '';\n    str += (n[1] != 0) ? (a[Number(n[1])] || b[n[1][0]] + ' ' + a[n[1][1]]) + 'Crore ' : '';\n    str += (n[2] != 0) ? (a[Number(n[2])] || b[n[2][0]] + ' ' + a[n[2][1]]) + 'Lakh ' : '';\n    str += (n[3] != 0) ? (a[Number(n[3])] || b[n[3][0]] + ' ' + a[n[3][1]]) + 'Thousand ' : '';\n    str += (n[4] != 0) ? (a[Number(n[4])] || b[n[4][0]] + ' ' + a[n[4][1]]) + 'Hundred ' : '';\n    str += (n[5] != 0) ? ((str != '') ? 'and ' : '') + (a[Number(n[5])] || b[n[5][0]] + ' ' + a[n[5][1]]) + 'Only ' : '';\n\t\n\treturn \"Taka \" + str\n})()\n}}",
+                      "text": "{{\n(function() {\t\n\tvar a = ['','One ','Two ','Three ','Four ', 'Five ','Six ','Seven ','Eight ','Nine ','Ten ','Eleven ','Twelve ','Thirteen ','Fourteen ','Fifteen ','Sixteen ','Seventeen ','Eighteen ','Nineteen '];\nvar b = ['', '', 'Twenty','Thirty','Forty','Fifty', 'Sixty','Seventy','Eighty','Ninety'];\n\n\tvar num = parseInt(get_invoice.data[0].total_price_after_vat_ait).toFixed(0)\n\n\tif ((num = num.toString()).length > 9) return 'overflow';\n    var n = ('000000000' + num).substr(-9).match(/^(\\d{2})(\\d{2})(\\d{2})(\\d{1})(\\d{2})$/);\n    if (!n) return; var str = '';\n    str += (n[1] != 0) ? (a[Number(n[1])] || b[n[1][0]] + ' ' + a[n[1][1]]) + 'Crore ' : '';\n    str += (n[2] != 0) ? (a[Number(n[2])] || b[n[2][0]] + ' ' + a[n[2][1]]) + 'Lakh ' : '';\n    str += (n[3] != 0) ? (a[Number(n[3])] || b[n[3][0]] + ' ' + a[n[3][1]]) + 'Thousand ' : '';\n    str += (n[4] != 0) ? (a[Number(n[4])] || b[n[4][0]] + ' ' + a[n[4][1]]) + 'Hundred ' : '';\n    str += (n[5] != 0) ? ((str != '') ? 'and ' : '') + (a[Number(n[5])] || b[n[5][0]] + ' ' + a[n[5][1]]) + 'Only ' : '';\n\t\n\treturn \"Taka \" + str + \"Only\"\n})()\n}}",
                       "key": "wucil5yk8c",
                       "labelTextSize": "0.875rem",
                       "rightColumn": 49,
@@ -3656,13 +3656,11 @@
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [
-                "appsmith.store.session",
-                "appsmith.URL.queryParams.shop_id"
+                "appsmith.URL.queryParams.shop_id",
+                "appsmith.store.session"
               ],
               "timeoutInMillisecond": 100000000
-            }
-          ],
-          [
+            },
             {
               "id": "genInvoicePageRedX_get_topsheet_data_v2",
               "name": "get_topsheet_data_v2",
@@ -3688,6 +3686,20 @@
           ],
           [
             {
+              "id": "genInvoicePageRedX_get_parcel_details",
+              "name": "get_parcel_details",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "Table3.tableData.map(a=>a.fleet_tracking_id).join(\",\")",
+                "appsmith.store.session",
+                "parseInt(Table3.tableData[0].shop_id)"
+              ],
+              "timeoutInMillisecond": 100000000
+            }
+          ],
+          [
+            {
               "id": "genInvoicePageRedX_get_shop_data",
               "name": "get_shop_data",
               "confirmBeforeExecute": false,
@@ -3697,20 +3709,6 @@
                 "appsmith.store.access_token"
               ],
               "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "genInvoicePageRedX_get_parcel_details",
-              "name": "get_parcel_details",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "appsmith.store.session",
-                "parseInt(Table3.tableData[0].shop_id)",
-                "Table3.tableData.map(a=>a.fleet_tracking_id).join(\",\")"
-              ],
-              "timeoutInMillisecond": 100000000
             }
           ]
         ],
