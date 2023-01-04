@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT date(required_date) as fleet_requested_at,fleet_id as ID,fleet_tracking_id , payment_method,shop_id, shop_name,vehicle_number, challan_number, truck_price_remarks as LC_number, load_point,unload_point, truck_price as base_fare, additional_fee as total_additional_fee, total_price_after_vat_ait as Total_Amount_Incl_SD_Vat,goods_type, additional_fee_remarks as REMARKS\nFROM trip_level_invoice where invoice_number={{appsmith.URL.queryParams.InvoiceNumber}} \nand status != 'Invalid'\n--order by serial_for_challan",
+      "body": "SELECT row_number() over (ORDER BY fleet_id), date(required_date) as fleet_requested_at,fleet_id as ID,fleet_tracking_id , payment_method,shop_id, shop_name,vehicle_number, challan_number, truck_price_remarks as LC_number, load_point,unload_point, truck_price as base_fare, additional_fee as total_additional_fee, total_price_after_vat_ait as Total_Amount_Incl_SD_Vat,goods_type, additional_fee_remarks as REMARKS\nFROM trip_level_invoice where invoice_number={{appsmith.URL.queryParams.InvoiceNumber}} \nand status != 'Invalid'\n--order by serial_for_challan",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
