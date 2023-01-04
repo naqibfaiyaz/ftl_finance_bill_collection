@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1470,
+          "bottomRow": 1570,
           "containerStyle": "none",
           "snapRows": 72,
           "parentRowSpace": 1,
@@ -3592,6 +3592,126 @@
               "maxDynamicHeight": 9000,
               "width": 1102,
               "minDynamicHeight": 4
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "total_base_fare",
+              "displayName": "Input",
+              "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
+              "searchTags": [
+                "form",
+                "text input",
+                "number",
+                "textarea"
+              ],
+              "topRow": 142,
+              "bottomRow": 149,
+              "parentRowSpace": 10,
+              "labelWidth": 5,
+              "autoFocus": false,
+              "type": "INPUT_WIDGET_V2",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 17.9375,
+              "dynamicTriggerPathList": [],
+              "resetOnSubmit": true,
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "defaultText"
+                }
+              ],
+              "labelPosition": "Top",
+              "labelStyle": "",
+              "inputType": "TEXT",
+              "isDisabled": false,
+              "key": "zms4ppg92w",
+              "labelTextSize": "0.875rem",
+              "isRequired": false,
+              "isDeprecated": false,
+              "rightColumn": 20,
+              "dynamicHeight": "FIXED",
+              "widgetId": "75wb2qm893",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "showStepArrows": false,
+              "isVisible": true,
+              "label": "Total_base_fare",
+              "version": 2,
+              "parentId": "0",
+              "labelAlignment": "left",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "maxDynamicHeight": 9000,
+              "iconAlign": "left",
+              "defaultText": "{{\n(function() {\t\nconst price = get_topsheet_data_v2.data.map((a)=>a.base_fare).reduce((sum, cost)=>sum+cost).toFixed(2);\n\nlet dollarUSLocale = Intl.NumberFormat(undefined, {\n\tstyle: 'currency',\n\tcurrency: 'BDT'\n});\n\treturn dollarUSLocale.format(price).replace('BDT','')\n})()\n\n}}",
+              "minDynamicHeight": 4
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "total_additional_fee",
+              "displayName": "Input",
+              "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
+              "searchTags": [
+                "form",
+                "text input",
+                "number",
+                "textarea"
+              ],
+              "topRow": 142,
+              "bottomRow": 149,
+              "parentRowSpace": 10,
+              "labelWidth": 5,
+              "autoFocus": false,
+              "type": "INPUT_WIDGET_V2",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 17.9375,
+              "dynamicTriggerPathList": [],
+              "resetOnSubmit": true,
+              "leftColumn": 20,
+              "dynamicBindingPathList": [
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "defaultText"
+                }
+              ],
+              "labelPosition": "Top",
+              "labelStyle": "",
+              "inputType": "TEXT",
+              "isDisabled": false,
+              "key": "zms4ppg92w",
+              "labelTextSize": "0.875rem",
+              "isRequired": false,
+              "isDeprecated": false,
+              "rightColumn": 40,
+              "dynamicHeight": "FIXED",
+              "widgetId": "u3jseto9j5",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "showStepArrows": false,
+              "isVisible": true,
+              "label": "Total_additional_fee",
+              "version": 2,
+              "parentId": "0",
+              "labelAlignment": "left",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "maxDynamicHeight": 9000,
+              "iconAlign": "left",
+              "defaultText": "{{\n(function() {\t\nconst price = get_topsheet_data_v2.data.map((a)=>a.total_additional_fee).reduce((sum, cost)=>sum+cost).toFixed(2);\n\nlet dollarUSLocale = Intl.NumberFormat(undefined, {\n\tstyle: 'currency',\n\tcurrency: 'BDT'\n});\n\treturn dollarUSLocale.format(price).replace('BDT','')\n})()\n\n}}",
+              "minDynamicHeight": 4
             }
           ]
         },
@@ -3651,8 +3771,8 @@
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [
-                "Table3.tableData.map(a=>a.fleet_tracking_id).join(\",\")",
                 "appsmith.store.session",
+                "Table3.tableData.map(a=>a.fleet_tracking_id).join(\",\")",
                 "parseInt(Table3.tableData[0].shop_id)"
               ],
               "timeoutInMillisecond": 100000000
