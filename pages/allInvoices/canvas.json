@@ -504,7 +504,13 @@
                           "key": "groupButtons.groupButton3.isVisible"
                         },
                         {
-                          "key": "isVisible"
+                          "key": "groupButtons.groupButton3.menuItems.menuItem1.isVisible"
+                        },
+                        {
+                          "key": "groupButtons.groupButton3.menuItems.menuItemdyi3f41say.isVisible"
+                        },
+                        {
+                          "key": "groupButtons.groupButton3.menuItems.menuItemnhihypd6ye.isVisible"
                         }
                       ],
                       "displayName": "Button Group",
@@ -531,7 +537,7 @@
                               "id": "menuItem1",
                               "widgetId": "",
                               "onClick": "{{navigateTo('finance_collection_settle', {},'NEW_WINDOW')}}",
-                              "isVisible": true,
+                              "isVisible": "{{appsmith.store.is_finance_user?true:false}}",
                               "isDisabled": false,
                               "index": 0
                             },
@@ -540,7 +546,7 @@
                               "label": "Invoice Creation Panel",
                               "widgetId": "kc47ekfs11",
                               "isDisabled": false,
-                              "isVisible": true,
+                              "isVisible": "{{appsmith.store.is_finance_user?true:false}}",
                               "index": 1,
                               "onClick": "{{navigateTo('Total Bill Invoice Creation', {},'SAME_WINDOW')}}"
                             },
@@ -550,7 +556,7 @@
                               "label": "Challan hardcopy panel",
                               "widgetId": "i54gcuaq9r",
                               "isDisabled": false,
-                              "isVisible": true,
+                              "isVisible": "{{appsmith.store.is_finance_user?true:false}}",
                               "onClick": "{{navigateTo('Challan hardcopy status', {},'SAME_WINDOW')}}"
                             },
                             "menuItemjvhxjhinc1": {
@@ -590,10 +596,16 @@
                       "leftColumn": 58,
                       "dynamicBindingPathList": [
                         {
-                          "key": "isVisible"
+                          "key": "accentColor"
                         },
                         {
-                          "key": "accentColor"
+                          "key": "groupButtons.groupButton3.menuItems.menuItem1.isVisible"
+                        },
+                        {
+                          "key": "groupButtons.groupButton3.menuItems.menuItemdyi3f41say.isVisible"
+                        },
+                        {
+                          "key": "groupButtons.groupButton3.menuItems.menuItemnhihypd6ye.isVisible"
                         }
                       ],
                       "isDisabled": false,
@@ -603,7 +615,7 @@
                       "rightColumn": 64,
                       "widgetId": "8yu77nhn1w",
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "isVisible": "{{appsmith.store.is_finance_user?true:false}}",
+                      "isVisible": true,
                       "version": 1,
                       "parentId": "c5u4zyt6mc",
                       "renderMode": "CANVAS",
