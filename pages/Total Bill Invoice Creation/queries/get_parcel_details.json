@@ -28,7 +28,7 @@
       "queryParameters": [
         {
           "key": "parameters",
-          "value": "[\t{\"type\":\"category\",\"value\":\"{{moment(DatePicker1.selectedDate).format('YYYY-MM-DD')}}\",\"target\":[\"variable\",[\"template-tag\",\"start\"]]},\t{\"type\":\"category\",\"value\":\"{{moment(DatePicker1Copy.selectedDate).format('YYYY-MM-DD')}}\",\"target\":[\"variable\",[\"template-tag\",\"end\"]]}, {\"type\":\"category\",\"value\":\"{{parseInt(search_shop_id.selectedOptionValue)}}\",\"target\":[\"variable\",[\"template-tag\",\"ShopID\"]]}]"
+          "value": "[{\"type\":\"category\",\"value\":\"{{moment(DatePicker1.selectedDate).format('YYYY-MM-DD')}}\",\"target\":[\"variable\",[\"template-tag\",\"start\"]]},\t{\"type\":\"category\",\"value\":\"{{moment(DatePicker1Copy.selectedDate).format('YYYY-MM-DD')}}\",\"target\":[\"variable\",[\"template-tag\",\"end\"]]}, {\"type\":\"category\",\"value\":\"{{parseInt(search_shop_id.selectedOptionValue)}}\",\"target\":[\"variable\",[\"template-tag\",\"ShopID\"]]}]"
         }
       ],
       "body": "",

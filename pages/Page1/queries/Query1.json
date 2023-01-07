@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "get_invoice",
+    "name": "Query1",
     "datasource": {
       "name": "Postgres_latest",
       "pluginId": "postgres-plugin",
@@ -13,12 +13,12 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "date_lot_product_redx_invoice",
+    "pageId": "Page1",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT * FROM finance_trip_invoices where invoice_number={{appsmith.URL.queryParams.InvoiceNumber}}\nand status != 'Invalid'",
+      "body": "",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -26,24 +26,18 @@
         }
       ]
     },
-    "executeOnLoad": true,
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
+    "executeOnLoad": false,
+    "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      "appsmith.URL.queryParams.InvoiceNumber"
-    ],
+    "jsonPathKeys": [],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "date_lot_product_redx_invoice_get_invoice",
+  "id": "Page1_Query1",
   "deleted": false,
-  "gitSyncId": "6231701cf1c0af1ceded5043_638db06f3b14013e8f50aca6"
+  "gitSyncId": "6231701cf1c0af1ceded5043_63b6c67896c9042751e536fb"
 }

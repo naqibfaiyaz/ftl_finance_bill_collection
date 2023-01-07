@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT id, invoice_number,status, trip_counts, trip_total_revenue, client_name, trip_month,\ncreated_at, vat, ait, banner, status, total_price_after_vat_ait, collectable, shop_id, user_data, vat_rate, sd_rate, received_amount, hard_copy_receiving_date, received_vat_amount, received_ait_amount, received_amount_wo_vat_ait, generated_pdf, due_amount\nFROM finance_trip_invoices where invoice_number={{appsmith.URL.queryParams.InvoiceNumber}}\nand status != 'Invalid'",
+      "body": "SELECT id, invoice_number,status,\n--trip_counts, trip_total_revenue, client_name, trip_month,\n--created_at, vat, ait, banner, status, total_price_after_vat_ait, collectable, shop_id, user_data, vat_rate, sd_rate, received_amount, hard_copy_receiving_date, received_vat_amount, received_ait_amount, received_amount_wo_vat_ait, \ngenerated_pdf\n--, due_amount\nFROM finance_trip_invoices where invoice_number={{appsmith.URL.queryParams.InvoiceNumber}}\nand status != 'Invalid'",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {

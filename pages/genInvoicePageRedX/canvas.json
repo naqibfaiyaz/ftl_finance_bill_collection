@@ -3780,9 +3780,7 @@
                 "appsmith.store.session"
               ],
               "timeoutInMillisecond": 100000000
-            }
-          ],
-          [
+            },
             {
               "id": "genInvoicePageRedX_get_topsheet_data_v2",
               "name": "get_topsheet_data_v2",
@@ -3808,19 +3806,6 @@
           ],
           [
             {
-              "id": "genInvoicePageRedX_get_shop_data",
-              "name": "get_shop_data",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "appsmith.URL.queryParams.shop_id",
-                "appsmith.store.access_token"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
               "id": "genInvoicePageRedX_get_parcel_details",
               "name": "get_parcel_details",
               "confirmBeforeExecute": false,
@@ -3831,6 +3816,19 @@
                 "parseInt(Table3.tableData[0].shop_id)"
               ],
               "timeoutInMillisecond": 100000000
+            }
+          ],
+          [
+            {
+              "id": "genInvoicePageRedX_get_shop_data",
+              "name": "get_shop_data",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "appsmith.URL.queryParams.shop_id",
+                "appsmith.store.access_token"
+              ],
+              "timeoutInMillisecond": 10000
             }
           ]
         ],
