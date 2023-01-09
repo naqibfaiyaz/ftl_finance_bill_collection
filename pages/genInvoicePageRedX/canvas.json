@@ -1872,6 +1872,9 @@
                         },
                         {
                           "key": "primaryColumns.goods_type.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.sl.computedValue"
                         }
                       ],
                       "leftColumn": 1,
@@ -1929,7 +1932,8 @@
                         "total_additional_fee",
                         "remarks",
                         "total_amount_incl_sd_vat",
-                        "goods_type"
+                        "goods_type",
+                        "sl"
                       ],
                       "dynamicPropertyPathList": [],
                       "displayName": "Table",
@@ -2385,6 +2389,34 @@
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"goods_type\"]))}}",
+                          "validation": {},
+                          "cellBackground": ""
+                        },
+                        "sl": {
+                          "allowCellWrapping": false,
+                          "index": 16,
+                          "width": 150,
+                          "originalId": "sl",
+                          "id": "sl",
+                          "alias": "sl",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "number",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "sl",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"sl\"]))}}",
                           "validation": {},
                           "cellBackground": ""
                         }

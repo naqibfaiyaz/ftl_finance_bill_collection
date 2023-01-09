@@ -28,7 +28,7 @@
         },
         {
           "key": "Authorization",
-          "value": "{{\"Bearer \" + appsmith.store.access_token}}"
+          "value": "{{\"JWT \" + appsmith.store.access_token}}"
         }
       ],
       "encodeParamsToggle": true,
@@ -44,6 +44,13 @@
           "key": "image",
           "value": "{{FilePicker1.files[0]}}",
           "type": "FILE"
+        },
+        {
+          "key": "entityType",
+          "value": "invoice"
+        },
+        {
+          "key": "entity"
         }
       ],
       "httpMethod": "POST",
@@ -60,17 +67,17 @@
     "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
-        "key": "bodyFormData[1].value"
+        "key": "headers[1].value"
       },
       {
-        "key": "headers[1].value"
+        "key": "bodyFormData[1].value"
       }
     ],
     "isValid": true,
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "\"Bearer \" + appsmith.store.access_token",
+      "\"JWT \" + appsmith.store.access_token",
       "FilePicker1.files[0]"
     ],
     "userSetOnLoad": false,
